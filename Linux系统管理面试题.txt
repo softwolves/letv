@@ -1,0 +1,28 @@
+1，列举常用的linux版本，至少五种，其中RedHat与CentOS有什么区别？
+2，分别描述一下GNU、GPL、LGPL
+3，简述开源的意思，列举常用的开源软件有那些？
+4，Linux内核版本有什么特点？
+5，Linux磁盘表示方法
+6，列举常用Linux目录结构，分别有什么作用？（至少6个）
+7，PATH作用？
+8，find查找时候 -mtime 4
+               -mtime -4
+               -mtime +4分别是什么意思？
+9，find查找时候 -perm 0644
+               -perm +0644
+    	       -perm -0644分别是什么意思？
+10，yum作用？yum的工作原理？
+11，源码包安装步骤？
+12，简述suid、sgid、sticky权限的特点？
+13，acl的作用？和之前学的权限有什么区别？
+14，分别说出/etc/fstab与autofs的特点与区别？
+15，quota的作用
+16，raid的作用，分别简述raid0、raid1、raid5、raid10的特点？
+17，lvm的作用？快照的作用？
+18，简述Linux启动流程
+19，at与cron的作用
+20，anacron的作用
+21，logrotate的作用
+22，ip地址的配置文件，网关和主机名的配置文件，dns的配置文件分别是什么？里面内容默写？
+23，增量备份与差异备份的特点？
+24，rsync的作用
