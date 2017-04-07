@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM</title>
+</head>
+<body>
+	<p id="p1">1.<b>读写</b>节点</p>
+	<p id="p2">2.<b>查询</b>节点</p>
+	<p id="p3">3.<b>增删</b>节点</p>
+	<p>
+		<img src="../images/01.jpg" id="i1"/>
+	</p>
+	<p>
+		<a href="http://www.tmooc.cn" id="a1">达内</a>
+	</p>
+	<script>
+		//1.读取节点的名称和类型
+		var p1 = document.getElementById("p1");
+		console.log(p1.nodeName);
+		console.log(p1.nodeType);
+		//2.读写节点的内容(<p>内容</p>)
+		//innerHTML：支持子标签
+		console.log(p1.innerHTML);
+		p1.innerHTML = "1.<u>读写</u>节点";
+		//innerText：不支持子标签
+		var p2 = document.getElementById("p2");
+		console.log(p2.innerText);
+		p2.innerText = "2.<u>查询</u>节点";
+		//3.读写节点的属性
+		//3.1标准的API
+		var img = document.getElementById("i1");
+		console.log(img.getAttribute("src"));
+		img.setAttribute("src","../images/02.jpg");
+		img.removeAttribute("src");
+		//3.2新的API(低版本浏览器不支持)
+		//节点.属性名(class除外->className)
+		//注意：节点.style、节点.className、
+		//节点.id是标准的
+		var a = document.getElementById("a1");
+		console.log(a.href);
+		a.href = "#";
+		//4.读写表单控件的值input.value
+		
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

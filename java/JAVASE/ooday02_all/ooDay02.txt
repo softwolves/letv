@@ -1,0 +1,671 @@
+回顾:
+1.什么是类?什么是对象?
+    类中可以包含:成员变量(属性)和方法(行为)
+    类是对象的模板，对象是类的具体的实例
+2.如何创建类?如何创建对象?
+3.引用类型之间画等号:指向同一个对象(房子钥匙)
+4.null和NullPointerException
+   空，没有指向任何对象
+   若引用值为null则不能再进行任何操作了
+   若操作则空指针异常
+
+
+
+
+
+
+Cell c = new Cell();
+c.row = 2;
+c.col = 5;
+c.drop();
+c.moveLeft(3);
+String str = c.getCellInfo();
+
+class Cell{
+  int row;
+  int col;
+  void drop(){
+    row++;
+  }
+  void moveLeft(int n){
+    col-=n;
+  }
+  void moveRight(int n){
+    col+=n;
+  }
+  String getCellInfo(){
+    return row+","+col;
+  }
+}
+
+
+
+
+笔记:
+0.方法的签名:方法名+参数列表
+1.方法的重载(Overload):
+  1)同一个类中，方法名称相同，参数列表不同
+  2)编译器在编译时自动根据方法的签名来绑定调用不同的方法
+2.构造方法(构造器、构建器、构造函数):
+  1)常常用于给成员变量赋初值
+  2)与类同名，没有返回类型
+  3)在创建(new)对象时被自动调用
+  4)若自己不写构造方法，则编译器默认提供无参构造
+    若自己写了构造，则不再默认提供
+  5)构造方法可以重载
+3.this:指代当前对象，哪个对象调指的就是哪个对象
+       方法中访问成员变量之前默认都有个this.
+  this的用法:
+    1)this.成员变量名----------访问成员变量
+    2)this.方法名()------------调用方法
+    3)this()-------------------调用构造方法
+4.引用类型数组:
+  1)Cell[] cells = new Cell[4];
+    cells[0] = new Cell(2,5);
+    cells[1] = new Cell(3,6);
+    cells[2] = new Cell(4,7);
+    cells[3] = new Cell(5,8);
+  2)Cell[] cells = new Cell[]{
+      new Cell(2,5),
+      new Cell(3,6),
+      new Cell(4,7),
+      new Cell(5,8)
+    };
+  3)int[][] arr = new int[3][];
+    arr[0] = new int[2];
+    arr[1] = new int[3];
+    arr[2] = new int[2];
+    arr[1][0] = 100; //给arr中第2个元素中的第1个元素赋值为100
+  4)int[][] arr = new int[3][4];
+    for(int i=0;i<arr.length;i++){
+      for(int j=0;j<arr[i].length;j++){
+        arr[i][j] = 100;
+      }
+    }
+
+
+任务:
+1.完成俄罗斯方块项目中的T类、J类等:
+  1)创建Cell类，包含:
+      属性: row、col
+      构造方法: 无参，一个参数，两个参数
+      方法: getCellInfo()
+  2)创建T类、J类、O类、L类、S类
+    并测试
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1)找对象:一堆T型，一堆J型，一堆I型......
+2)抽类:T,J,I,O,L,S,Z
+3)设计类中的成员变量和方法
+4)测试
+
+
+TJTest
+
+
+
+
+class T{
+  Cell[] cells;
+  T(){
+    this(0,0);
+  }
+  T(int row,int col){
+    cells = new Cell[4];
+    cells[0] = new Cell(row,col);
+    cells[1] = new Cell(row,col+1);
+    cells[2] = new Cell(row,col+2);
+    cells[3] = new Cell(row+1,col+1);
+  }
+  void drop(){
+    for(int i=0;i<cells.length;i++){
+      cells[i].row++;
+    }
+  }
+  void moveLeft(){
+    for(int i=0;i<cells.length;i++){
+      cells[i].col--;
+    }
+  }
+  void moveRight(){
+    for(int i=0;i<cells.length;i++){
+      cells[i].col++;
+    }
+  }
+  void print(){ //测试
+    for(int i=0;i<cells.length;i++){
+      String str = cells[i].getCellInfo();
+      System.out.println(str);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+T t1 = new T(); //00,01,02,11
+T t2 = new T(); //00,01,02,11
+T t3 = new T(); //00,01,02,11
+T t4 = new T(); //00,01,02,11
+
+
+T t1 = new T(2,5); //25,26,27,36
+T t2 = new T(1,3); //13,14,15,24
+T t3 = new T(0,0); //00,01,02,11
+T t4 = new T();    //00,01,02,11
+
+
+
+
+
+
+
+class J{
+  Cell[] cells;
+  J(){
+    this(0,0);
+  }
+  J(int row,int col){
+    cells = new Cell[4];
+    cells[0] = new Cell(row,col);
+    cells[1] = new Cell(row,col+1);
+    cells[2] = new Cell(row,col+2);
+    cells[3] = new Cell(row+1,col+2);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+行号和列号是T型的属性，还是格子的属性
+
+
+
+class Me{
+  姓名，年龄，地址
+  老公
+}
+
+class 老公{
+  姓名，年龄，工资
+}
+
+
+
+
+
+
+
+
+
+
+
+
+class J{
+}
+class I{
+}
+class O{
+}
+class L{
+}
+class S{
+}
+class Z{
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    i=0
+      j=0 00
+      j=1 01
+      j=2 02
+      j=3 03
+    i=1
+      j=0 10
+      j=1 11
+      j=2 12
+      j=3 13
+
+
+
+
+
+
+
+
+
+
+
+
+
+//声明int[]型数组arr，包含3个元素
+//每个元素都是int[]型，默认值为null
+int[][] arr = new int[3][];
+arr[0]-----------int[]型
+arr[0] = new int[2];
+arr[1] = new int[3];
+arr[2] = new int[2];
+给arr中第2个元素中的第1个元素赋值为100
+arr[1][0] = 100;
+
+arr---------------int[][]
+arr[0]------------int[]
+arr[0][0]---------int
+
+
+
+
+
+
+
+
+
+
+
+
+int   [] arr   = new int[3];
+Cell  [] cells = new Cell[4];
+
+
+//声明int[]型数组arr，包含3个元素
+//每个元素都是int[]型，默认值为null
+int[] [] arr   = new int[3][];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int[] arr = new int[]{
+  2,
+  5,
+  8
+};
+Cell[] cells = new Cell[]{
+  new Cell(2,5),
+  new Cell(3,6),
+  new Cell(4,7),
+  new Cell(5,8)
+};
+
+
+
+
+
+
+
+
+Cell[] cells = new Cell[4];
+cells[0] = new Cell(2,5);
+cells[1] = new Cell(3,6);
+cells[2] = new Cell(4,7);
+cells[3] = new Cell(5,8);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//声明int型数组arr，包含3个元素
+//每个元素都是int型，默认值为0
+int [] arr   = new int[3];
+arr[0]---------int类型
+arr[0] = 5;
+int a  = 5;
+
+
+//声明Cell型数组cells，包含4个元素
+//每个元素都是Cell型，默认值为null
+Cell[] cells = new Cell[4]; //创建Cell数组对象
+cells[0]-------Cell类型
+cells[0] = new Cell(2,5); //创建Cell对象
+Cell  c  = new Cell(2,5);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cell c = new Cell(2,5);
+
+Cell c = new Cell();
+c.row = 2;
+c.col = 5;
+
+class Cell{
+  int row;
+  int col;
+  Cell(){
+    this(0);
+  }
+  Cell(int n){
+    this(n,n);
+  }
+  Cell(int row,int col){
+    this.row = row;
+    this.col = col;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+Cell c = new Cell();
+c.row = 2;
+c.col = 5;
+c.drop();
+
+
+Cell c = new Cell(2,5);
+c.drop();
+
+
+
+
+class Cell{
+  int row; //成员变量
+  int col;
+  Cell(int row,int col){
+    this.row = row; //c.row=2
+    this.col = col; //c.col=5
+  }
+  void drop(){
+    this.row++; //c.row++;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cell c = new Cell();
+c.row = 2;
+c.col = 5;
+c.drop();
+c.moveLeft(3);
+String str = c.getCellInfo();
+
+Cell cc = new Cell();
+cc.row = 4;
+cc.col = 8;
+cc.drop();
+cc.moveLeft(2);
+
+
+class Cell{
+  int row;
+  int col;
+  void drop(){
+    this.row++; //cc.row++;----c.row=3
+  }
+  void moveLeft(int n){
+    this.col-=n; //cc.col-=3;----c.col=2
+  }
+  String getCellInfo(){
+    return this.row+","+this.col; //cc.row+","+c.col----3,2
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Cell{
+  int row;
+  int col;
+  Cell(int row1,int col1){
+    row = row1;
+    col = col1;
+  }
+}
+Cell c = new Cell(); //编译错误，没有无参构造
+Cell c = new Cell(2,5);
+
+
+
+
+class Cell{
+  int row;
+  int col;
+  Cell(){
+    row=0;
+    col=0;
+  }
+  Cell(int row1,int col1){
+    row=row1;
+    col=col1;
+  }
+}
+Cell c = new Cell();
+Cell c = new Cell(2,5);
+
+
+
+
+Cell c = new Cell();
+c.row = 2;
+c.col = 5;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Student zs = new Student();
+zs.name="zhangsan";
+zs.age=25;
+zs.address="河北廊坊";
+
+Student ls = new Student();
+ls.name="lisi";
+ls.age=26;
+ls.address="黑龙江佳木斯";
+
+Student zs = new Student();
+zs.setInfo("zhangsan",25,"廊坊");
+
+Student ls = new Student();
+ls.setInfo("lisi",26,"佳木斯");
+
+//1.创建一个学生对象
+//2.调用了Student的无参构造方法
+Student zs = new Student();
+
+ 
+
+Student zs = new Student("zhangsan",25,"廊坊");
+Student ls = new Student("lisi",26,"佳木斯");
+Student ww = new Student(); //编译错误
+
+class Student{
+  String name;
+  int age;
+  String address;
+  Student(){
+  }
+  //给成员变量赋初值
+  Student(String name1,int age1,String address1){
+    name=name1;
+    age=age1;
+    address=address1;
+  }
+}
+
+
+
+
+
+
+
+
+调方法的时候，参数类型必须匹配
+
+main(){
+  sayHi();
+  sayHi(250);
+  sayHi("zhangsan");
+}
+public static void sayHi(String name){
+}
+
+
+
+void printlnString(String a){}
+void printlnInt(int a){}
+void printlnDouble(double a){}
+void printlnBoolean(boolean a){}
+void printlnChar(char a){}
+
+
+System.out.println("HelloWorld");
+System.out.println(5);
+System.out.println(5.8);
+System.out.println(true);
+System.out.println('中');
+
+
+
+
+
+
+
+
+
+
+
+
+

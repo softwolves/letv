@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>事件</title>
+<script>
+	//1.直接绑定事件
+	function f1(e) {
+		alert("AAA");
+		console.log(arguments[0]);
+		console.log(e);
+	}
+	//2.后绑定事件(页面加载后)
+	//2.1在body之后写代码
+	//2.2在onload里写代码(推荐)
+	window.onload = function() {
+		var btn = document.getElementById("b");
+		btn.onclick = function(e) {
+			alert("BBB");
+			console.log(arguments[0]);
+			console.log(e);
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="AAA" 
+		id="a" onclick="f1(event);"/>
+	<input type="button" value="BBB" id="b"/>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<!-- 
+	namespace:命名空间，用来区分同名的sql。
+	id:在同一个文件里面唯一。
+	parameterType:参数类型。
+	resultType:返回的结果类型。
+	#{ename}: ename是Emp的属性(mybatis
+	会利用反射机制读取emp对象的属性值)。
+	注意：
+		如果使用Mapper映射器，namespace
+		必须等Mapper接口的完整的名称。
+ -->
+<mapper namespace="dao.EmpDAO">
+	<insert id="save" 
+		parameterType="entity.Emp">
+		INSERT INTO emp 
+		VALUES(emp_seq.nextval,#{ename},#{age})
+	</insert>
+	
+	<select id="findAll" 
+		resultType="entity.Emp">
+		SELECT * FROM emp
+	</select>
+	<!-- java.lang.Integer可以简写为int -->
+	<select id="findById" 
+		parameterType="int" 
+		resultType="entity.Emp">
+		SELECT * FROM emp
+		WHERE id = #{id1}
+	</select>
+	
+	<update id="modify" 
+		parameterType="entity.Emp">
+		UPDATE emp SET ename = #{ename},
+		age = #{age} WHERE id = #{id}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		DELETE FROM emp WHERE id = #{id}
+	</delete>
+	
+	<!-- 返回Map类型的值 -->
+	<!-- java.util.Map可以简化为map -->
+	<select id="findById2" 
+		parameterType="int" 
+				resultType="map">
+		SELECT * FROM emp WHERE id = #{id}		
+	</select>
+	
+	<!-- 解决属性名与字段名不一致的情况 -->
+	<select id="findById3" 
+		parameterType="int" 
+		resultMap="emp2Map">
+		SELECT * FROM emp WHERE id = #{id}
+	</select>
+	
+	<!-- 
+		告诉mybatis如何将字段名与实体类的
+		属性名对应起来。
+		只需要将不一样的列出来即可。
+		property:实体类的属性名。
+		column:字段名。
+	 -->
+	<resultMap type="entity.Emp2" 
+		id="emp2Map">
+		<result property="empNo" column="id"/>
+		<result property="name" column="ename"/>
+	</resultMap>
+	
+</mapper>

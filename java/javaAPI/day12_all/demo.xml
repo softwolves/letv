@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 第一个XML -->
+<books>
+	<book id="b1" lang="中文">
+		<name>
+			鬼吹灯
+		</name>
+		<author>天下霸唱</author>
+	</book>
+	
+	<book id="b2" lang="中文">
+		<name>那些年我们追过的女孩</name>
+		<author>九把刀</author>
+	</book>
+	
+	<book id="b3" lang="中文">
+		<name>乡关何处</name>
+		<author>土家野夫</author>
+	</book>
+	
+	<book>
+		<name>围城</name>
+		<author></author>
+		<author/>
+	</book>
+	
+	<book>
+		<name>小于号 &lt; 大于号 &gt; 的用法 </name>
+		<abstract>
+		 	<![CDATA[
+				< 小于号 > 大于号 的用法
+				<hello>
+			]]>
+		</abstract>
+	</book>
+</books>
+
+ 
+
+
+
+
+

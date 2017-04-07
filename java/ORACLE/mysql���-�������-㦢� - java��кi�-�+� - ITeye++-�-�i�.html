@@ -1,0 +1,566 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0040)http://honly-java.iteye.com/blog/1633033 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站</title>
+    <meta name="description" content=" 字符串的拼接  1，Mysql    在Java、C#等编程语言中字符串的拼接可以通过加号“+”来实现，比如：&quot;1&quot;+&quot;3&quot;、&quot;a&quot;+&quot;b&quot;。在MYSQL中也可以使用加号“+”来连接两个字符串，比如下面的SQL：   SELECT &#39;12&#39;+&#39;33&#39;,FAge+&#39;1&#39; FROM T_Employee      执行结果 ...">
+    <meta name="keywords" content="sql, oracle, mysql mysql中的字符串的拼接">
+    <link rel="shortcut icon" href="http://honly-java.iteye.com/images/favicon.ico" type="image/x-icon">
+    <link rel="search" type="application/opensearchdescription+xml" href="http://honly-java.iteye.com/open_search.xml" title="ITeye">
+    <link href="http://honly-java.iteye.com/rss" rel="alternate" title="java初学者随记" type="application/rss+xml">
+    <link href="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/blog.css" media="screen" rel="stylesheet" type="text/css">
+<link href="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/blue.css" media="screen" rel="stylesheet" type="text/css">
+    <script src="http://pagead2.googlesyndication.com/pub-config/r20160212/ca-pub-8990951720398508.js"></script><script type="text/javascript" async="" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/ga.js"></script><script src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/application.js" type="text/javascript"></script>    
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-535605-1']);
+  _gaq.push(['_setDomainName', 'iteye.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+      <link href="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/SyntaxHighlighter.css" media="screen" rel="stylesheet" type="text/css">
+  <script src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/shCoreCommon.js" type="text/javascript"></script>
+<script src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/hotkey.js" type="text/javascript"></script>
+  <script src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/code_favorites.js" type="text/javascript"></script>
+<script src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/weiboshare.js" type="text/javascript"></script>
+    
+  <style type="text/css">.dp-sql .func { color: #ff1493; }.dp-sql .op { color: #808080; }</style><style type="text/css">.dp-sql .func { color: #ff1493; }.dp-sql .op { color: #808080; }</style><style type="text/css">.dp-sql .func { color: #ff1493; }.dp-sql .op { color: #808080; }</style><style type="text/css">.dp-xml .cdata { color: #ff1493; }.dp-xml .tag, .dp-xml .tag-name { color: #069; font-weight: bold; }.dp-xml .attribute { color: red; }.dp-xml .attribute-value { color: blue; }</style><style type="text/css">.dp-sql .func { color: #ff1493; }.dp-sql .op { color: #808080; }</style><style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style><style type="text/css">.dp-sql .func { color: #ff1493; }.dp-sql .op { color: #808080; }</style><style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style><style type="text/css">.dp-sql .func { color: #ff1493; }.dp-sql .op { color: #808080; }</style><style type="text/css">.dp-xml .cdata { color: #ff1493; }.dp-xml .tag, .dp-xml .tag-name { color: #069; font-weight: bold; }.dp-xml .attribute { color: red; }.dp-xml .attribute-value { color: blue; }</style><style type="text/css">.dp-sql .func { color: #ff1493; }.dp-sql .op { color: #808080; }</style><style type="text/css">.dp-xml .cdata { color: #ff1493; }.dp-xml .tag, .dp-xml .tag-name { color: #069; font-weight: bold; }.dp-xml .attribute { color: red; }.dp-xml .attribute-value { color: blue; }</style><style type="text/css">.dp-sql .func { color: #ff1493; }.dp-sql .op { color: #808080; }</style><style type="text/css">.dp-xml .cdata { color: #ff1493; }.dp-xml .tag, .dp-xml .tag-name { color: #069; font-weight: bold; }.dp-xml .attribute { color: red; }.dp-xml .attribute-value { color: blue; }</style><script src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/get_ads.php" type="text/javascript"></script></head>
+  <body>
+    <div id="header">
+      <div id="blog_site_nav">
+  <a href="http://www.iteye.com/" class="homepage">首页</a>
+  <a href="http://www.iteye.com/news">资讯</a>
+  <a href="http://www.iteye.com/magazines">精华</a>
+  <a href="http://www.iteye.com/forums">论坛</a>
+  <a href="http://www.iteye.com/ask">问答</a>
+  <a href="http://www.iteye.com/blogs">博客</a>
+  <a href="http://www.iteye.com/blogs/subjects">专栏</a>
+  <a href="http://www.iteye.com/groups">群组</a>
+  <a href="http://honly-java.iteye.com/blog/1633033#" onclick="return false;" id="msna"><u>更多</u> <small>▼</small></a>
+  <div class="quick_menu" style="display:none;">
+    <a target="_blank" href="http://job.iteye.com/iteye">知识库</a>
+    <a href="http://www.iteye.com/search">搜索</a>
+  </div>
+</div>
+
+      <div id="user_nav">
+      <a href="http://honly-java.iteye.com/login" class="welcome" title="登录">您还未登录 !</a>
+    <a href="http://honly-java.iteye.com/login">登录</a>
+    <a href="http://honly-java.iteye.com/signup" class="nobg">注册</a>
+  </div>
+
+    </div>
+
+    <div id="page">
+      <div id="branding" class="clearfix">
+        <div id="blog_name">
+          <h1><a href="http://honly-java.iteye.com/">java初学者随记</a></h1>
+        </div>
+        <div id="fd"></div>
+        <div id="blog_navbar">
+          <ul>
+            <li class="blog_navbar_for"><a href="http://honly-java.iteye.com/"><strong>博客</strong></a></li>
+            <li><a href="http://honly-java.iteye.com/weibo">微博</a></li>
+            <li><a href="http://honly-java.iteye.com/album">相册</a></li>
+            <li><a href="http://honly-java.iteye.com/link">收藏</a></li>
+            <li><a href="http://honly-java.iteye.com/blog/guest_book">留言</a></li>
+            <li><a href="http://honly-java.iteye.com/blog/profile">关于我</a></li>
+          </ul>
+    
+          <div class="search">
+            <form action="http://honly-java.iteye.com/blog/search" method="get">
+              <input class="search_text" id="query" name="query" style="margin-left: 10px;width: 110px;" type="text" value="">
+              <input class="submit_search" type="submit" value="">
+            </form>
+          </div> 
+          <div id="fd"></div>         
+        </div>
+      </div>
+      
+      <div id="content" class="clearfix">
+        <div id="main">
+          
+
+
+
+          
+
+
+<div class="h-entry" style="display:none">
+  <a href="http://honly-java.iteye.com/" class="p-author" target="_blank">Honly_java</a>
+</div>
+
+
+<div class="blog_main">
+  <div class="blog_title">
+    <h3>
+      <a href="http://honly-java.iteye.com/blog/1633033">mysql中的字符串的拼接</a>
+      <em class="actions">      </em>
+    </h3>
+    <ul class="blog_categories"><strong>博客分类：</strong> <li><a href="http://honly-java.iteye.com/category/236985">sql</a></li> </ul>
+        <div class="news_tag"><a href="http://www.iteye.com/blogs/tag/sql">sql</a><a href="http://www.iteye.com/blogs/tag/oracle">oracle</a><a href="http://www.iteye.com/blogs/tag/mysql">mysql</a>&nbsp;</div>
+    	  
+    	
+    	
+  		
+      </div>
+
+  <div id="blog_content" class="blog_content">
+    <div class="iteye-blog-content-contain" style="font-size: 14px;">
+<p>字符串的拼接</p>
+<p>1，Mysql</p>
+<p>&nbsp; 在Java、C#等编程语言中字符串的拼接可以通过加号“+”来实现，比如："1"+"3"、"a"+"b"。<br>在MYSQL中也可以使用加号“+”来连接两个字符串，比如下面的SQL：&nbsp;</p>
+<div class="dp-highlighter" id=""><div class="bar"><div class="tools">Sql代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=SELECT%20&#39;12&#39;%2B&#39;33&#39;%2CFAge%2B&#39;1&#39;%20FROM%20T_Employee%20%0A" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;"><img class="star" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/icon_star.png" alt="收藏代码"><img class="spinner" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/spinner.gif" style="display:none"></a></div></div><ol start="1" class="dp-sql"><li><span><span class="keyword">SELECT</span><span>&nbsp;</span><span class="string">'12'</span><span>+</span><span class="string">'33'</span><span>,FAge+</span><span class="string">'1'</span><span>&nbsp;</span><span class="keyword">FROM</span><span>&nbsp;T_Employee&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><pre name="code" class="sql" codeable_id="" codeable_type="BlogComment" source_url="http://honly-java.iteye.com/blog/1633033#" pre_index="0" title="mysql中的字符串的拼接" style="display: none;">SELECT '12'+'33',FAge+'1' FROM T_Employee 
+</pre>
+<p>&nbsp;执行结果</p>
+<div class="dp-highlighter" id=""><div class="bar"><div class="tools">Sql代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=&#39;12&#39;%2B&#39;33&#39;%20%20FAge%2B&#39;1&#39;%20%0A45%20%20%20%2026%20%0A45%20%2029%20%0A45%20%2024%20%0A45%20%2026%20%0A45%20%2029%20%0A45%20%2028%20%0A45%20%2024%20%0A45%20%2029%20%0A45%20%2023%20" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;"><img class="star" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/icon_star.png" alt="收藏代码"><img class="spinner" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/spinner.gif" style="display:none"></a></div></div><ol start="1" class="dp-sql"><li><span><span class="string">'12'</span><span>+</span><span class="string">'33'</span><span>&nbsp;&nbsp;FAge+</span><span class="string">'1'</span><span>&nbsp;&nbsp;&nbsp;</span></span></li><li><span>45&nbsp;&nbsp;&nbsp;&nbsp;26&nbsp;&nbsp;&nbsp;</span></li><li><span>45&nbsp;&nbsp;29&nbsp;&nbsp;&nbsp;</span></li><li><span>45&nbsp;&nbsp;24&nbsp;&nbsp;&nbsp;</span></li><li><span>45&nbsp;&nbsp;26&nbsp;&nbsp;&nbsp;</span></li><li><span>45&nbsp;&nbsp;29&nbsp;&nbsp;&nbsp;</span></li><li><span>45&nbsp;&nbsp;28&nbsp;&nbsp;&nbsp;</span></li><li><span>45&nbsp;&nbsp;24&nbsp;&nbsp;&nbsp;</span></li><li><span>45&nbsp;&nbsp;29&nbsp;&nbsp;&nbsp;</span></li><li><span>45&nbsp;&nbsp;23&nbsp;&nbsp;&nbsp;</span></li></ol></div><pre name="code" class="sql" codeable_id="" codeable_type="BlogComment" source_url="http://honly-java.iteye.com/blog/1633033#" pre_index="1" title="mysql中的字符串的拼接" style="display: none;">'12'+'33'  FAge+'1' 
+45    26 
+45  29 
+45  24 
+45  26 
+45  29 
+45  28 
+45  24 
+45  29 
+45  23 </pre>
+<p>&nbsp;<br>MYSQL会尝试将加号两端的字段值尝试转换为数字类型，如果转换失败则认为字段值为<br>0，比如我们执行下面的SQL语句：&nbsp;</p>
+<div class="dp-highlighter" id=""><div class="bar"><div class="tools">Sql代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=SELECT%20&#39;abc&#39;%2B&#39;123&#39;%2CFAge%2B&#39;a&#39;%20FROM%20T_Employee%20%0A" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;"><img class="star" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/icon_star.png" alt="收藏代码"><img class="spinner" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/spinner.gif" style="display:none"></a></div></div><ol start="1" class="dp-sql"><li><span><span class="keyword">SELECT</span><span>&nbsp;</span><span class="string">'abc'</span><span>+</span><span class="string">'123'</span><span>,FAge+</span><span class="string">'a'</span><span>&nbsp;</span><span class="keyword">FROM</span><span>&nbsp;T_Employee&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><pre name="code" class="sql" codeable_id="" codeable_type="BlogComment" source_url="http://honly-java.iteye.com/blog/1633033#" pre_index="2" title="mysql中的字符串的拼接" style="display: none;">SELECT 'abc'+'123',FAge+'a' FROM T_Employee 
+</pre>
+<p>&nbsp;</p>
+<p>&nbsp; 执行完毕我们就能在输出结果中看到下面的执行结果： &nbsp;</p>
+<div class="dp-highlighter" id=""><div class="bar"><div class="tools">Html代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=%20%0A&#39;abc&#39;%2B&#39;123&#39;%20%20FAge%2B&#39;a&#39;%20%0A123%20%2025%20%0A123%20%2028%20%0A123%20%2023%20%0A123%20%2025%20%0A123%20%2028%20%0A123%20%2027%20%0A123%20%2023%20%0A123%20%2028%20%0A123%20%2022%20" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;"><img class="star" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/icon_star.png" alt="收藏代码"><img class="spinner" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/spinner.gif" style="display:none"></a></div></div><ol start="1" class="dp-xml"><li><span><span>&nbsp;&nbsp;&nbsp;</span></span></li><li><span>'abc'+'123'&nbsp;&nbsp;FAge+'a'&nbsp;&nbsp;&nbsp;</span></li><li><span>123&nbsp;&nbsp;25&nbsp;&nbsp;&nbsp;</span></li><li><span>123&nbsp;&nbsp;28&nbsp;&nbsp;&nbsp;</span></li><li><span>123&nbsp;&nbsp;23&nbsp;&nbsp;&nbsp;</span></li><li><span>123&nbsp;&nbsp;25&nbsp;&nbsp;&nbsp;</span></li><li><span>123&nbsp;&nbsp;28&nbsp;&nbsp;&nbsp;</span></li><li><span>123&nbsp;&nbsp;27&nbsp;&nbsp;&nbsp;</span></li><li><span>123&nbsp;&nbsp;23&nbsp;&nbsp;&nbsp;</span></li><li><span>123&nbsp;&nbsp;28&nbsp;&nbsp;&nbsp;</span></li><li><span>123&nbsp;&nbsp;22&nbsp;&nbsp;&nbsp;</span></li></ol></div><pre name="code" class="html" codeable_id="" codeable_type="BlogComment" source_url="http://honly-java.iteye.com/blog/1633033#" pre_index="3" title="mysql中的字符串的拼接" style="display: none;"> 
+'abc'+'123'  FAge+'a' 
+123  25 
+123  28 
+123  23 
+123  25 
+123  28 
+123  27 
+123  23 
+123  28 
+123  22 </pre>
+<p>&nbsp;&nbsp; 在MYSQL中进行字符串的拼接要使用CONCAT函数，CONCAT函数支持一个或者多个参数，<br>参数类型可以为字符串类型也可以是非字符串类型，对于非字符串类型的参数MYSQL将尝试<br>将其转化为字符串类型，CONCAT函数会将所有参数按照参数的顺序拼接成一个字符串做为<br>返回值。比如下面的SQL语句用于将用户的多个字段信息以一个计算字段的形式查询出来：</p>
+<div class="dp-highlighter" id=""><div class="bar"><div class="tools">Sql代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=SELECT%20CONCAT(&#39;%E5%B7%A5%E5%8F%B7%E4%B8%BA%3A&#39;%2CFNumber%2C&#39;%E7%9A%84%E5%91%98%E5%B7%A5%E7%9A%84%E5%B9%B8%E7%A6%8F%E6%8C%87%E6%95%B0%3A&#39;%2CFSalary%2F(FAge-21))%20%0A" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;"><img class="star" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/icon_star.png" alt="收藏代码"><img class="spinner" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/spinner.gif" style="display:none"></a></div></div><ol start="1" class="dp-sql"><li><span><span class="keyword">SELECT</span><span>&nbsp;CONCAT(</span><span class="string">'工号为:'</span><span>,FNumber,</span><span class="string">'的员工的幸福指数:'</span><span>,FSalary/(FAge-21))&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><pre name="code" class="sql" codeable_id="" codeable_type="BlogComment" source_url="http://honly-java.iteye.com/blog/1633033#" pre_index="4" title="mysql中的字符串的拼接" style="display: none;">SELECT CONCAT('工号为:',FNumber,'的员工的幸福指数:',FSalary/(FAge-21)) 
+</pre>
+<p>&nbsp;</p>
+<p>FROM T_Employee&nbsp; 执行完毕我们就能在输出结果中看到下面的执行结果：</p>
+<div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=CONCAT(&#39;%E5%B7%A5%E5%8F%B7%E4%B8%BA%3A&#39;%2CFNumber%2C&#39;%E7%9A%84%E5%91%98%E5%B7%A5%E7%9A%84%E5%B9%B8%E7%A6%8F%E6%8C%87%E6%95%B0%3A&#39;%2CFSalary%2F(FAge-21))%20%0A%E5%B7%A5%E5%8F%B7%E4%B8%BA%3ADEV001%E7%9A%84%E5%91%98%E5%B7%A5%E7%9A%84%E5%B9%B8%E7%A6%8F%E6%8C%87%E6%95%B0%3A2075.000000%20%0A%E5%B7%A5%E5%8F%B7%E4%B8%BA%3ADEV002%E7%9A%84%E5%91%98%E5%B7%A5%E7%9A%84%E5%B9%B8%E7%A6%8F%E6%8C%87%E6%95%B0%3A328.685714%20%0A%E5%B7%A5%E5%8F%B7%E4%B8%BA%3AHR001%E7%9A%84%E5%91%98%E5%B7%A5%E7%9A%84%E5%B9%B8%E7%A6%8F%E6%8C%87%E6%95%B0%3A1100.440000%20" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;"><img class="star" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/icon_star.png" alt="收藏代码"><img class="spinner" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/spinner.gif" style="display:none"></a></div></div><ol start="1" class="dp-j" id="aeaoofnhgocdbnbeljkmbjdmhbcokfdb-mousedown"><li><span><span>CONCAT(</span><span class="string">'工号为:'</span><span>,FNumber,</span><span class="string">'的员工的幸福指数:'</span><span>,FSalary/(FAge-</span><span class="number">21</span><span>))&nbsp;&nbsp;&nbsp;</span></span></li><li><span>工号为:DEV001的员工的幸福指数:<span class="number">2075.000000</span><span>&nbsp;&nbsp;&nbsp;</span></span></li><li><span>工号为:DEV002的员工的幸福指数:<span class="number">328.685714</span><span>&nbsp;&nbsp;&nbsp;</span></span></li><li><span>工号为:HR001的员工的幸福指数:<span class="number">1100.440000</span><span>&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><pre name="code" class="java" codeable_id="" codeable_type="BlogComment" source_url="http://honly-java.iteye.com/blog/1633033#" pre_index="5" title="mysql中的字符串的拼接" style="display: none;">CONCAT('工号为:',FNumber,'的员工的幸福指数:',FSalary/(FAge-21)) 
+工号为:DEV001的员工的幸福指数:2075.000000 
+工号为:DEV002的员工的幸福指数:328.685714 
+工号为:HR001的员工的幸福指数:1100.440000 </pre>
+<p>MYSQL中还提供了另外一个进行字符串拼接的函数CONCAT_WS，<br>CONCAT_WS可以在待拼接的字符串之间加入指定的分隔符，它的第一个参数值为采用的分<br>隔符，而剩下的参数则为待拼接的字符串值，比如执行下面的SQL：&nbsp;</p>
+<div class="dp-highlighter" id=""><div class="bar"><div class="tools">Sql代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=SELECT%20CONCAT_WS(&#39;%2C&#39;%2CFNumber%2CFAge%2CFDepartment%2CFSalary)%20FROM%20T_Employee%20%0A" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;"><img class="star" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/icon_star.png" alt="收藏代码"><img class="spinner" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/spinner.gif" style="display:none"></a></div></div><ol start="1" class="dp-sql"><li><span><span class="keyword">SELECT</span><span>&nbsp;CONCAT_WS(</span><span class="string">','</span><span>,FNumber,FAge,FDepartment,FSalary)&nbsp;</span><span class="keyword">FROM</span><span>&nbsp;T_Employee&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><pre name="code" class="sql" codeable_id="" codeable_type="BlogComment" source_url="http://honly-java.iteye.com/blog/1633033#" pre_index="6" title="mysql中的字符串的拼接" style="display: none;">SELECT CONCAT_WS(',',FNumber,FAge,FDepartment,FSalary) FROM T_Employee 
+</pre>
+<p>&nbsp;</p>
+<p>&nbsp; 执行完毕我们就能在输出结果中看到下面的执行结果：</p>
+<div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=CONCAT_WS(&#39;%2C&#39;%2CFNumber%2CFAge%2CFDepartment%2CFSalary)%20%0ADEV001%2C25%2CDevelopment%2C8300.00%20%0ADEV002%2C28%2CDevelopment%2C2300.80%20%0AHR001%2C23%2CHumanResource%2C2200.88%20%0AHR002%2C25%2CHumanResource%2C5200.36%20%0AIT001%2C28%2CInfoTech%2C3900.00%20%0AIT002%2C27%2CInfoTech%2C2800.00%20%0ASALES001%2C23%2CSales%2C5000.00%20%0ASALES002%2C28%2CSales%2C6200.00%20%0ASALES003%2C22%2CSales%2C1200.00%20" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;"><img class="star" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/icon_star.png" alt="收藏代码"><img class="spinner" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/spinner.gif" style="display:none"></a></div></div><ol start="1" class="dp-j"><li><span><span>CONCAT_WS(</span><span class="string">','</span><span>,FNumber,FAge,FDepartment,FSalary)&nbsp;&nbsp;&nbsp;</span></span></li><li><span>DEV001,<span class="number">25</span><span>,Development,</span><span class="number">8300.00</span><span>&nbsp;&nbsp;&nbsp;</span></span></li><li><span>DEV002,<span class="number">28</span><span>,Development,</span><span class="number">2300.80</span><span>&nbsp;&nbsp;&nbsp;</span></span></li><li><span>HR001,<span class="number">23</span><span>,HumanResource,</span><span class="number">2200.88</span><span>&nbsp;&nbsp;&nbsp;</span></span></li><li><span>HR002,<span class="number">25</span><span>,HumanResource,</span><span class="number">5200.36</span><span>&nbsp;&nbsp;&nbsp;</span></span></li><li><span>IT001,<span class="number">28</span><span>,InfoTech,</span><span class="number">3900.00</span><span>&nbsp;&nbsp;&nbsp;</span></span></li><li><span>IT002,<span class="number">27</span><span>,InfoTech,</span><span class="number">2800.00</span><span>&nbsp;&nbsp;&nbsp;</span></span></li><li><span>SALES001,<span class="number">23</span><span>,Sales,</span><span class="number">5000.00</span><span>&nbsp;&nbsp;&nbsp;</span></span></li><li><span>SALES002,<span class="number">28</span><span>,Sales,</span><span class="number">6200.00</span><span>&nbsp;&nbsp;&nbsp;</span></span></li><li><span>SALES003,<span class="number">22</span><span>,Sales,</span><span class="number">1200.00</span><span>&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><pre name="code" class="java" codeable_id="" codeable_type="BlogComment" source_url="http://honly-java.iteye.com/blog/1633033#" pre_index="7" title="mysql中的字符串的拼接" style="display: none;">CONCAT_WS(',',FNumber,FAge,FDepartment,FSalary) 
+DEV001,25,Development,8300.00 
+DEV002,28,Development,2300.80 
+HR001,23,HumanResource,2200.88 
+HR002,25,HumanResource,5200.36 
+IT001,28,InfoTech,3900.00 
+IT002,27,InfoTech,2800.00 
+SALES001,23,Sales,5000.00 
+SALES002,28,Sales,6200.00 
+SALES003,22,Sales,1200.00 </pre>
+<p>&nbsp;</p>
+<p>2，oracle</p>
+<p>&nbsp; Oracle中使用“||”进行字符串拼接，其使用方式和MSSQLServer中的加号“+”一样。<br>比如执行下面的SQL语句：</p>
+<div class="dp-highlighter" id=""><div class="bar"><div class="tools">Sql代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=SELECT%20&#39;%E5%B7%A5%E5%8F%B7%E4%B8%BA&#39;%7C%7CFNumber%7C%7C&#39;%E7%9A%84%E5%91%98%E5%B7%A5%E5%A7%93%E5%90%8D%E4%B8%BA&#39;%7C%7CFName%20FROM%20T_Employee%20%0AWHERE%20FName%20IS%20NOT%20NULL%20%0A" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;"><img class="star" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/icon_star.png" alt="收藏代码"><img class="spinner" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/spinner.gif" style="display:none"></a></div></div><ol start="1" class="dp-sql"><li><span><span class="keyword">SELECT</span><span>&nbsp;</span><span class="string">'工号为'</span><span>||FNumber||</span><span class="string">'的员工姓名为'</span><span>||FName&nbsp;</span><span class="keyword">FROM</span><span>&nbsp;T_Employee&nbsp;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">WHERE</span><span>&nbsp;FName&nbsp;</span><span class="keyword">IS</span><span>&nbsp;</span><span class="op">NOT</span><span>&nbsp;</span><span class="op">NULL</span><span>&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><pre name="code" class="sql" codeable_id="" codeable_type="BlogComment" source_url="http://honly-java.iteye.com/blog/1633033#" pre_index="8" title="mysql中的字符串的拼接" style="display: none;">SELECT '工号为'||FNumber||'的员工姓名为'||FName FROM T_Employee 
+WHERE FName IS NOT NULL 
+</pre>
+<p>&nbsp;</p>
+<p>执行完毕我们就能在输出结果中看到下面的执行结果：</p>
+<div class="dp-highlighter" id=""><div class="bar"><div class="tools">Html代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=%E5%B7%A5%E5%8F%B7%E4%B8%BA%7C%7CFNUMBER%7C%7C%E7%9A%84%E5%91%98%E5%B7%A5%E5%A7%93%E5%90%8D%E4%B8%BA%7C%7CFNAME%20%0A%E5%B7%A5%E5%8F%B7%E4%B8%BADEV001%E7%9A%84%E5%91%98%E5%B7%A5%E5%A7%93%E5%90%8D%E4%B8%BATom%20%0A%E5%B7%A5%E5%8F%B7%E4%B8%BADEV002%E7%9A%84%E5%91%98%E5%B7%A5%E5%A7%93%E5%90%8D%E4%B8%BAJerry%20%0A%E5%B7%A5%E5%8F%B7%E4%B8%BASALES001%E7%9A%84%E5%91%98%E5%B7%A5%E5%A7%93%E5%90%8D%E4%B8%BAJohn%20%0A%E5%B7%A5%E5%8F%B7%E4%B8%BASALES002%E7%9A%84%E5%91%98%E5%B7%A5%E5%A7%93%E5%90%8D%E4%B8%BAKerry%20%0A%E5%B7%A5%E5%8F%B7%E4%B8%BASALES003%E7%9A%84%E5%91%98%E5%B7%A5%E5%A7%93%E5%90%8D%E4%B8%BAStone%20%0A%E5%B7%A5%E5%8F%B7%E4%B8%BAHR001%E7%9A%84%E5%91%98%E5%B7%A5%E5%A7%93%E5%90%8D%E4%B8%BAJane%20%0A%E5%B7%A5%E5%8F%B7%E4%B8%BAHR002%E7%9A%84%E5%91%98%E5%B7%A5%E5%A7%93%E5%90%8D%E4%B8%BATina%20%0A%E5%B7%A5%E5%8F%B7%E4%B8%BAIT001%E7%9A%84%E5%91%98%E5%B7%A5%E5%A7%93%E5%90%8D%E4%B8%BASmith%20" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;"><img class="star" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/icon_star.png" alt="收藏代码"><img class="spinner" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/spinner.gif" style="display:none"></a></div></div><ol start="1" class="dp-xml"><li><span><span>工号为||FNUMBER||的员工姓名为||FNAME&nbsp;&nbsp;&nbsp;</span></span></li><li><span>工号为DEV001的员工姓名为Tom&nbsp;&nbsp;&nbsp;</span></li><li><span>工号为DEV002的员工姓名为Jerry&nbsp;&nbsp;&nbsp;</span></li><li><span>工号为SALES001的员工姓名为John&nbsp;&nbsp;&nbsp;</span></li><li><span>工号为SALES002的员工姓名为Kerry&nbsp;&nbsp;&nbsp;</span></li><li><span>工号为SALES003的员工姓名为Stone&nbsp;&nbsp;&nbsp;</span></li><li><span>工号为HR001的员工姓名为Jane&nbsp;&nbsp;&nbsp;</span></li><li><span>工号为HR002的员工姓名为Tina&nbsp;&nbsp;&nbsp;</span></li><li><span>工号为IT001的员工姓名为Smith&nbsp;&nbsp;&nbsp;</span></li></ol></div><pre name="code" class="html" codeable_id="" codeable_type="BlogComment" source_url="http://honly-java.iteye.com/blog/1633033#" pre_index="9" title="mysql中的字符串的拼接" style="display: none;">工号为||FNUMBER||的员工姓名为||FNAME 
+工号为DEV001的员工姓名为Tom 
+工号为DEV002的员工姓名为Jerry 
+工号为SALES001的员工姓名为John 
+工号为SALES002的员工姓名为Kerry 
+工号为SALES003的员工姓名为Stone 
+工号为HR001的员工姓名为Jane 
+工号为HR002的员工姓名为Tina 
+工号为IT001的员工姓名为Smith </pre>
+<p>&nbsp;&nbsp; 除了“||”，Oracle还支持使用CONCAT()函数进行字符串拼接，比如执行下面的SQL语句：</p>
+<div class="dp-highlighter" id=""><div class="bar"><div class="tools">Sql代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=SELECT%20CONCAT(&#39;%E5%B7%A5%E5%8F%B7%3A&#39;%2CFNumber)%20FROM%20T_Employee%20%0A" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;"><img class="star" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/icon_star.png" alt="收藏代码"><img class="spinner" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/spinner.gif" style="display:none"></a></div></div><ol start="1" class="dp-sql"><li><span><span class="keyword">SELECT</span><span>&nbsp;CONCAT(</span><span class="string">'工号:'</span><span>,FNumber)&nbsp;</span><span class="keyword">FROM</span><span>&nbsp;T_Employee&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><pre name="code" class="sql" codeable_id="" codeable_type="BlogComment" source_url="http://honly-java.iteye.com/blog/1633033#" pre_index="10" title="mysql中的字符串的拼接" style="display: none;">SELECT CONCAT('工号:',FNumber) FROM T_Employee 
+</pre>
+<p>&nbsp;</p>
+<p>执行完毕我们就能在输出结果中看到下面的执行结果：</p>
+<div class="dp-highlighter" id=""><div class="bar"><div class="tools">Html代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=CONCAT(%E5%B7%A5%E5%8F%B7%3A%2CFNUMBER)%20%0A%E5%B7%A5%E5%8F%B7%3ADEV001%20%0A%E5%B7%A5%E5%8F%B7%3ADEV002%20%0A%E5%B7%A5%E5%8F%B7%3AHR001%20%0A%E5%B7%A5%E5%8F%B7%3AHR002%20%0A%E5%B7%A5%E5%8F%B7%3AIT001%20%0A%E5%B7%A5%E5%8F%B7%3AIT002%20%0A%E5%B7%A5%E5%8F%B7%3ASALES001%20%0A%E5%B7%A5%E5%8F%B7%3ASALES002%20%0A%E5%B7%A5%E5%8F%B7%3ASALES003%20%20" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;"><img class="star" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/icon_star.png" alt="收藏代码"><img class="spinner" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/spinner.gif" style="display:none"></a></div></div><ol start="1" class="dp-xml"><li><span><span>CONCAT(工号:,FNUMBER)&nbsp;&nbsp;&nbsp;</span></span></li><li><span>工号:DEV001&nbsp;&nbsp;&nbsp;</span></li><li><span>工号:DEV002&nbsp;&nbsp;&nbsp;</span></li><li><span>工号:HR001&nbsp;&nbsp;&nbsp;</span></li><li><span>工号:HR002&nbsp;&nbsp;&nbsp;</span></li><li><span>工号:IT001&nbsp;&nbsp;&nbsp;</span></li><li><span>工号:IT002&nbsp;&nbsp;&nbsp;</span></li><li><span>工号:SALES001&nbsp;&nbsp;&nbsp;</span></li><li><span>工号:SALES002&nbsp;&nbsp;&nbsp;</span></li><li><span>工号:SALES003&nbsp;&nbsp;&nbsp;&nbsp;</span></li></ol></div><pre name="code" class="html" codeable_id="" codeable_type="BlogComment" source_url="http://honly-java.iteye.com/blog/1633033#" pre_index="11" title="mysql中的字符串的拼接" style="display: none;">CONCAT(工号:,FNUMBER) 
+工号:DEV001 
+工号:DEV002 
+工号:HR001 
+工号:HR002 
+工号:IT001 
+工号:IT002 
+工号:SALES001 
+工号:SALES002 
+工号:SALES003  </pre>
+<p>&nbsp;如果CONCAT中连接的值不是字符串，Oracle会尝试将其转换为字符串，</p>
+<p>&nbsp; 与MYSQL的CONCAT()函数不同，Oracle的CONCAT()函数只支持两个参数，不支持两个以<br>上字符串的拼接。如果要进行多个字符串的拼接的话，可以使用多个CONCAT()函数嵌套使用。</p>
+<div class="dp-highlighter" id=""><div class="bar"><div class="tools">Sql代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=SELECT%20CONCAT(CONCAT(CONCAT(&#39;%E5%B7%A5%E5%8F%B7%E4%B8%BA&#39;%2CFNumber)%2C&#39;%E7%9A%84%E5%91%98%E5%B7%A5%E5%A7%93%E5%90%8D%E4%B8%BA&#39;)%2CFName)%20FROM%20%0AT_Employee%20%0AWHERE%20FName%20IS%20NOT%20NULL%20%0A" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;"><img class="star" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/icon_star.png" alt="收藏代码"><img class="spinner" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/spinner.gif" style="display:none"></a></div></div><ol start="1" class="dp-sql"><li><span><span class="keyword">SELECT</span><span>&nbsp;CONCAT(CONCAT(CONCAT(</span><span class="string">'工号为'</span><span>,FNumber),</span><span class="string">'的员工姓名为'</span><span>),FName)&nbsp;</span><span class="keyword">FROM</span><span>&nbsp;&nbsp;&nbsp;</span></span></li><li><span>T_Employee&nbsp;&nbsp;&nbsp;</span></li><li><span><span class="keyword">WHERE</span><span>&nbsp;FName&nbsp;</span><span class="keyword">IS</span><span>&nbsp;</span><span class="op">NOT</span><span>&nbsp;</span><span class="op">NULL</span><span>&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><pre name="code" class="sql" codeable_id="" codeable_type="BlogComment" source_url="http://honly-java.iteye.com/blog/1633033#" pre_index="12" title="mysql中的字符串的拼接" style="display: none;">SELECT CONCAT(CONCAT(CONCAT('工号为',FNumber),'的员工姓名为'),FName) FROM 
+T_Employee 
+WHERE FName IS NOT NULL 
+</pre>
+<p>&nbsp;</p>
+<p>执行完毕我们就能在输出结果中看到下面的执行结果：</p>
+<div class="dp-highlighter" id=""><div class="bar"><div class="tools">Html代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=CONCAT(CONCAT(CONCAT(%E5%B7%A5%E5%8F%B7%E4%B8%BA%2CFNUMBER)%2C%E7%9A%84%E5%91%98%E5%B7%A5%E5%A7%93%E5%90%8D%E4%B8%BA)%2CFNAME)%20%0A%E5%B7%A5%E5%8F%B7%E4%B8%BADEV001%E7%9A%84%E5%91%98%E5%B7%A5%E5%A7%93%E5%90%8D%E4%B8%BATom%20%0A%E5%B7%A5%E5%8F%B7%E4%B8%BADEV002%E7%9A%84%E5%91%98%E5%B7%A5%E5%A7%93%E5%90%8D%E4%B8%BAJerry%20%0A%E5%B7%A5%E5%8F%B7%E4%B8%BASALES001%E7%9A%84%E5%91%98%E5%B7%A5%E5%A7%93%E5%90%8D%E4%B8%BAJohn%20%0A%E5%B7%A5%E5%8F%B7%E4%B8%BASALES002%E7%9A%84%E5%91%98%E5%B7%A5%E5%A7%93%E5%90%8D%E4%B8%BAKerry%20%0A%E5%B7%A5%E5%8F%B7%E4%B8%BASALES003%E7%9A%84%E5%91%98%E5%B7%A5%E5%A7%93%E5%90%8D%E4%B8%BAStone%20%0A%E5%B7%A5%E5%8F%B7%E4%B8%BAHR001%E7%9A%84%E5%91%98%E5%B7%A5%E5%A7%93%E5%90%8D%E4%B8%BAJane%20%0A%E5%B7%A5%E5%8F%B7%E4%B8%BAHR002%E7%9A%84%E5%91%98%E5%B7%A5%E5%A7%93%E5%90%8D%E4%B8%BATina%20%0A%E5%B7%A5%E5%8F%B7%E4%B8%BAIT001%E7%9A%84%E5%91%98%E5%B7%A5%E5%A7%93%E5%90%8D%E4%B8%BASmith%20" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;"><img class="star" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/icon_star.png" alt="收藏代码"><img class="spinner" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/spinner.gif" style="display:none"></a></div></div><ol start="1" class="dp-xml"><li><span><span>CONCAT(CONCAT(CONCAT(工号为,FNUMBER),的员工姓名为),FNAME)&nbsp;&nbsp;&nbsp;</span></span></li><li><span>工号为DEV001的员工姓名为Tom&nbsp;&nbsp;&nbsp;</span></li><li><span>工号为DEV002的员工姓名为Jerry&nbsp;&nbsp;&nbsp;</span></li><li><span>工号为SALES001的员工姓名为John&nbsp;&nbsp;&nbsp;</span></li><li><span>工号为SALES002的员工姓名为Kerry&nbsp;&nbsp;&nbsp;</span></li><li><span>工号为SALES003的员工姓名为Stone&nbsp;&nbsp;&nbsp;</span></li><li><span>工号为HR001的员工姓名为Jane&nbsp;&nbsp;&nbsp;</span></li><li><span>工号为HR002的员工姓名为Tina&nbsp;&nbsp;&nbsp;</span></li><li><span>工号为IT001的员工姓名为Smith&nbsp;&nbsp;&nbsp;</span></li></ol></div><pre name="code" class="html" codeable_id="" codeable_type="BlogComment" source_url="http://honly-java.iteye.com/blog/1633033#" pre_index="13" title="mysql中的字符串的拼接" style="display: none;">CONCAT(CONCAT(CONCAT(工号为,FNUMBER),的员工姓名为),FNAME) 
+工号为DEV001的员工姓名为Tom 
+工号为DEV002的员工姓名为Jerry 
+工号为SALES001的员工姓名为John 
+工号为SALES002的员工姓名为Kerry 
+工号为SALES003的员工姓名为Stone 
+工号为HR001的员工姓名为Jane 
+工号为HR002的员工姓名为Tina 
+工号为IT001的员工姓名为Smith </pre>
+<p>&nbsp;</p>
+</div>
+  </div>
+
+  
+
+  
+  <div class="J_adv" data-view="true" data-mod="ad_popu_171" data-mtp="43" data-order="93" data-con="ad_content_488" style="width: 680px; height: 90px;"><script src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-8990951720398508" data-ad-slot="8267689356/1918544322" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:468px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:468px;background-color:transparent"><iframe width="468" height="60" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/saved_resource.html"></iframe></ins></ins></ins><script>(adsbygoogle=window.adsbygoogle || []).push({});</script></div>
+  
+
+  <div id="bottoms" class="clearfix">
+    
+    <div id="share_weibo">分享到：
+      <a data-type="sina" href="javascript:;" title="分享到新浪微博"><img src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/sina.jpg"></a>
+      <a data-type="qq" href="javascript:;" title="分享到腾讯微博"><img src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/tec.jpg"></a>
+    </div>
+  </div>
+
+  <div class="blog_nav">
+    <div class="pre_next">
+      <a href="http://honly-java.iteye.com/blog/1633152" class="next" title="数据库中时间时期的使用">数据库中时间时期的使用</a>
+      |
+      <a href="http://honly-java.iteye.com/blog/1632955" class="pre" title="数据处理函数">数据处理函数</a>
+    </div>
+  </div>
+  <div class="blog_bottom">
+    <ul>
+      <li>2012-08-15 17:20</li>
+      <li>浏览 96183</li>
+      <li><a href="http://honly-java.iteye.com/blog/1633033#comments">评论(4)</a></li>
+      
+      
+      <li>分类:<a href="http://www.iteye.com/blogs/category/database">数据库</a></li>      
+      <li class="last"><a href="http://www.iteye.com/wiki/blog/1633033" target="_blank" class="more">相关推荐</a></li>
+    </ul>    
+  </div>
+  
+		    
+		
+<div class="boutique-curr-box blog_comment">
+	  <div class="boutique-curr clearfix">
+	    <h5 class="h3titles">参考知识库</h5>
+	    
+	    <dl class="dlnewlist">
+	    
+          <dd><a target="_blank" href="http://lib.csdn.net/base/mysql"><img src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/1454051093684_684.jpg" width="58" height="58" alt=""></a></dd>
+          <dt>
+              <a target="_blank" href="http://lib.csdn.net/base/mysql" classs="title">MySQL知识库</a>
+              <span>
+                 <em>10287</em>&nbsp;&nbsp;关注 <i>|</i> <em>1351</em>&nbsp;&nbsp;收录                  
+              </span>
+          </dt>
+      
+	    </dl>
+	    
+	  </div>
+</div>
+ 		
+      
+  <div class="blog_comment">
+    <h5>评论</h5>
+    <a id="comments" name="comments"></a>
+    <div id="bc2390498">
+  <div class="comment_title">
+    4 楼
+    <a href="http://actinian.iteye.com/" target="_blank" title="Actinian">Actinian</a>
+    2016-06-16&nbsp;&nbsp;
+    
+    
+  </div>
+  <div class="comment_content"><img src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/icon_idea.gif">&nbsp;<img src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/icon_idea.gif"> 非常有用！</div>
+</div>
+
+<div id="bc2373004">
+  <div class="comment_title">
+    3 楼
+    <a href="http://ronqi.iteye.com/" target="_blank" title="RonQi">RonQi</a>
+    2015-06-04&nbsp;&nbsp;
+    
+    
+  </div>
+  <div class="comment_content">有用的内容,MSServer,MySQL,Oracel的连接字符串方法都不一样</div>
+</div>
+
+<div id="bc2370171">
+  <div class="comment_title">
+    2 楼
+    <a href="http://power-song.iteye.com/" target="_blank" title="Power_Song">Power_Song</a>
+    2015-04-13&nbsp;&nbsp;
+    
+    
+  </div>
+  <div class="comment_content"><img src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/icon_idea.gif"> </div>
+</div>
+
+<div id="bc2329343">
+  <div class="comment_title">
+    1 楼
+    <a href="http://domiyoung.iteye.com/" target="_blank" title="domiyoung">domiyoung</a>
+    2013-10-25&nbsp;&nbsp;
+    
+    
+  </div>
+  <div class="comment_content">[color=red][/color]哈哈</div>
+</div>
+
+
+    
+    
+  </div>
+
+  <div class="blog_comment">
+    <h5>发表评论</h5>
+            <p style="text-align:center; margin-top:30px;margin-bottom:0px;"><a href="http://honly-java.iteye.com/login" style="background-color:white;"> <img src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/login_icon.png" style="vertical-align:middle; margin-right: 10px;"></a><a href="http://honly-java.iteye.com/login">  您还没有登录,请您登录后再发表评论 </a></p>
+      </div>
+</div>
+
+
+<script type="text/javascript">
+  dp.SyntaxHighlighter.HighlightAll('code', true, true);
+
+  $$('#main .blog_content pre[name=code]').each(function(pre, index){ // blog content
+    var post_id = 1633033;
+    var location = window.location;
+    source_url = location.protocol + "//" + location.host + location.pathname + location.search;
+    pre.writeAttribute('codeable_id', post_id);
+    pre.writeAttribute('codeable_type', "Blog");
+    pre.writeAttribute('source_url', source_url);
+    pre.writeAttribute('pre_index', index);
+    pre.writeAttribute('title', 'mysql中的字符串的拼接');
+  });
+
+  fix_image_size($$('div.blog_content img'), 700);
+
+  function processComment() {
+    $$('#main .blog_comment > div').each(function(comment){// comment
+      var post_id = comment.id.substr(2);
+      $$("#"+comment.id+" pre[name=code]").each(function(pre, index){
+        var location = window.location;
+        source_url = location.protocol + "//" + location.host + location.pathname + location.search;
+        source_url += "#" + comment.id;
+        pre.writeAttribute('codeable_id', post_id);
+        pre.writeAttribute('codeable_type', "BlogComment");
+        pre.writeAttribute('source_url', source_url);
+        pre.writeAttribute('pre_index', index);
+        pre.writeAttribute('title', 'mysql中的字符串的拼接');
+      });
+    });
+  }
+
+  function quote_comment(id) {
+    new Ajax.Request('/editor/quote', {
+      parameters: {'id':id, 'type':'BlogComment'},
+      onSuccess:function(response){editor.bbcode_editor.textarea.insertAfterSelection(response.responseText);
+        Element.scrollTo(editor.bbcode_editor.textarea.element);}
+    });
+  }
+
+  code_favorites_init();
+  processComment();
+  new WeiboShare({share_buttons: $('share_weibo'), img_scope: $('blog_content')});
+</script>
+
+
+
+
+        </div>
+
+        <div id="local">
+          <div class="local_top"></div>
+          <div id="blog_owner">
+  <div id="blog_owner_logo"><a href="http://honly-java.iteye.com/"><img alt="Honly_java的博客" class="logo" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/544be979-6b1b-3063-98da-5a83f4ca9760.jpg" title="Honly_java的博客: java初学者随记" width=""></a></div>
+  <div id="blog_owner_name">Honly_java</div>
+</div>
+
+          <div id="blog_actions">
+            <ul>
+              <li>浏览: 119753 次</li>
+              <li>性别: <img alt="Icon_minigender_1" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/icon_minigender_1.gif" title="男"></li>
+              <li>来自: 北京</li>
+              <li><img src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/offline.gif"></li>
+              
+            </ul>
+          </div>
+          <div id="user_visits" class="clearfix">
+            <h5>最近访客 <span style="font-weight:normal;font-size:12px;padding-left:30px;"><a href="http://honly-java.iteye.com/blog/user_visits">更多访客&gt;&gt;</a></span></h5>
+            
+              <div class="user_visit">
+                <div class="logo"><a href="http://ebeyond.iteye.com/" target="_blank"><img alt="ebeyond的博客" class="logo" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/user-logo-thumb.gif" title="ebeyond的博客: " width="48px"></a></div>
+                <div class="left"><a href="http://ebeyond.iteye.com/" target="_blank" title="ebeyond">ebeyond</a></div>
+              </div>
+            
+              <div class="user_visit">
+                <div class="logo"><a href="http://prayjourney.iteye.com/" target="_blank"><img alt="prayjourney的博客" class="logo" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/629b9c2d-1d47-36ac-914e-162da983bdc8-thumb.jpg" title="prayjourney的博客: " width="48px"></a></div>
+                <div class="left"><a href="http://prayjourney.iteye.com/" target="_blank" title="prayjourney">prayjourney</a></div>
+              </div>
+            
+              <div class="user_visit">
+                <div class="logo"><a href="http://rubyeye.iteye.com/" target="_blank"><img alt="rubyeye的博客" class="logo" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/user-logo-thumb.gif" title="rubyeye的博客:  行有不得,反求诸己" width="48px"></a></div>
+                <div class="left"><a href="http://rubyeye.iteye.com/" target="_blank" title="rubyeye">rubyeye</a></div>
+              </div>
+            
+              <div class="user_visit">
+                <div class="logo"><a href="http://john-zh.iteye.com/" target="_blank"><img alt="John_Zh的博客" class="logo" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/user-logo-thumb.gif" title="John_Zh的博客: " width="48px"></a></div>
+                <div class="left"><a href="http://john-zh.iteye.com/" target="_blank" title="John_Zh">John_Zh</a></div>
+              </div>
+            
+          </div>
+
+          
+
+                      <div id="blog_menu">
+              <h5>文章分类</h5>
+              <ul>
+                <li><a href="http://honly-java.iteye.com/">全部博客 (31)</a></li>
+                
+                  <li><a href="http://honly-java.iteye.com/category/234769">java (1)</a></li>
+                
+                  <li><a href="http://honly-java.iteye.com/category/234795">struts2 (10)</a></li>
+                
+                  <li><a href="http://honly-java.iteye.com/category/235401">ognl (0)</a></li>
+                
+                  <li><a href="http://honly-java.iteye.com/category/236985">sql (4)</a></li>
+                
+                  <li><a href="http://honly-java.iteye.com/category/237832">oracle (1)</a></li>
+                
+                  <li><a href="http://honly-java.iteye.com/category/237848">ext (0)</a></li>
+                
+                  <li><a href="http://honly-java.iteye.com/category/239561">mysql (0)</a></li>
+                
+                  <li><a href="http://honly-java.iteye.com/category/239574">数据库 (6)</a></li>
+                
+                  <li><a href="http://honly-java.iteye.com/category/240766">数学 (1)</a></li>
+                
+                  <li><a href="http://honly-java.iteye.com/category/243918">html (4)</a></li>
+                
+                  <li><a href="http://honly-java.iteye.com/category/245411">javascript (3)</a></li>
+                
+                  <li><a href="http://honly-java.iteye.com/category/245418">面试相关 (1)</a></li>
+                
+                  <li><a href="http://honly-java.iteye.com/category/247310">微博 (0)</a></li>
+                
+                  <li><a href="http://honly-java.iteye.com/category/247876">歌曲 (0)</a></li>
+                
+              </ul>
+            </div>
+            <div id="month_blogs">
+              <h5>社区版块</h5>
+              <ul>
+                <li><a href="http://honly-java.iteye.com/blog/news">我的资讯</a> (0)</li>
+                <li>
+                  <a href="http://honly-java.iteye.com/blog/post">我的论坛</a> (0)
+                </li>
+                <li><a href="http://honly-java.iteye.com/blog/answered_problems">我的问答</a> (0)</li>
+              </ul>
+            </div>
+            <div id="month_blogs">
+              <h5>存档分类</h5>
+              <ul>
+                
+                  <li><a href="http://honly-java.iteye.com/blog/monthblog/2014-05">2014-05</a> (2)</li>
+                
+                  <li><a href="http://honly-java.iteye.com/blog/monthblog/2013-09">2013-09</a> (2)</li>
+                
+                  <li><a href="http://honly-java.iteye.com/blog/monthblog/2012-10">2012-10</a> (2)</li>
+                
+                <li><a href="http://honly-java.iteye.com/blog/monthblog_more">更多存档...</a></li>
+              </ul>
+            </div>
+            
+            
+
+            <div id="guest_books">
+              <h5>最新评论</h5>
+              <ul>
+                
+                <li>
+                  <a href="http://actinian.iteye.com/" target="_blank" title="Actinian">Actinian</a>： 
+                  &nbsp; 非常有用！<br>
+                  <a href="http://honly-java.iteye.com/blog/1633033#bc2390498">mysql中的字符串的拼接</a>
+                </li>
+                
+                <li>
+                  <a href="http://wow4464.iteye.com/" target="_blank" title="wow4464">wow4464</a>： 
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                  <a href="http://honly-java.iteye.com/blog/1699040#bc2375176">java面试之抽象类和接口</a>
+                </li>
+                
+                <li>
+                  <a href="http://ronqi.iteye.com/" target="_blank" title="RonQi">RonQi</a>： 
+                  有用的内容,MSServer,MySQL,Oracel的连接字 ...<br>
+                  <a href="http://honly-java.iteye.com/blog/1633033#bc2373004">mysql中的字符串的拼接</a>
+                </li>
+                
+                <li>
+                  <a href="http://power-song.iteye.com/" target="_blank" title="Power_Song">Power_Song</a>： 
+                   ...<br>
+                  <a href="http://honly-java.iteye.com/blog/1633033#bc2370171">mysql中的字符串的拼接</a>
+                </li>
+                
+                <li>
+                  <a href="http://ipuhua201208012404.iteye.com/" target="_blank" title="李涤尘">李涤尘</a>： 
+                  很简洁明了<br>
+                  <a href="http://honly-java.iteye.com/blog/1665348#bc2357029">oracle中的分组函数group by和having</a>
+                </li>
+                
+              </ul>
+            </div>
+
+            <div class="local_bottom"></div>
+          
+        </div>
+      </div>
+
+      <div id="footer" class="clearfix">
+        <div id="copyright">
+          <hr>
+          声明：ITeye文章版权属于作者，受法律保护。没有作者书面许可不得转载。若作者同意转载，必须以超链接形式标明文章原始出处和作者。<br>
+          © 2003-2016 ITeye.com.   All rights reserved.  [ 京ICP证110151号  京公网安备110105010620 ]
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+  document.write("<img src='http://stat.iteye.com/?url="+ encodeURIComponent(document.location.href) + "&referrer=" + encodeURIComponent(document.referrer) + "&user_id=' width='0' height='0' />");
+</script><img src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/saved_resource" width="0" height="0">
+
+<script src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/tracking.js" type="text/javascript"></script>
+
+    
+    
+    <script language="javascript" type="text/javascript" src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/async_new.js"></script>
+<script src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">var $csdn_iteye_jq = jQuery.noConflict();// 解决jq与prototype.js命名空间冲突的问题</script>
+<script src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/tracking(1).js" type="text/javascript"></script>
+    
+	    
+	    <script src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/web-storage-cache.min.js" type="text/javascript"></script>
+	    <script src="./mysql中的字符串的拼接 - java初学者随记 - ITeye技术网站_files/replace.min.js" type="text/javascript"></script>
+    
+    
+  
+
+</body></html>

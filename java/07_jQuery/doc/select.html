@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>多选</title>
+		<style rel="stylesheet" type="text/css">
+			h1 {
+				text-align:center;	
+			}
+			#main {
+				width:720px;
+				margin:20px auto;	
+			}
+			#left, #middle, #right {
+				float:left;	
+				text-align:center;
+				width:300px;	
+				height:400px;
+				border:1px solid #ccc;
+			}
+			#middle {
+				width:100px;
+				border-left:0;	
+				border-right:0;
+			}
+			#middle p {
+				margin-top:45px;	
+			}
+			select {
+				margin:50px;
+				width:200px;	
+				height:300px;
+			}
+			option {
+				padding:10px;
+				text-align:center;
+			}
+			input {
+				border:2px solid #ccc;
+				background-color:#fff;
+				width:60px;
+				height:40px;
+				font-size:25px;
+			}
+		</style>
+		<script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+	</head>
+	<body>
+			<h1>多选</h1>
+			<div id="main">
+				<div id="left">
+					<select multiple>
+						<option>北京市</option>	
+						<option>上海市</option>
+						<option>广州市</option>
+						<option>深圳市</option>
+						<option>杭州市</option>
+						<option>南京市</option>
+						<option>无锡市</option>
+						<option>宁波市</option>
+					</select>
+				</div>
+				<div id="middle">
+					<p><input type="button" value=">"/></p>
+					<p><input type="button" value=">>"/></p>
+					<p><input type="button" value="&lt;"/></p>
+					<p><input type="button" value="&lt;&lt;"/></p>
+				</div>
+				<div id="right">
+					<select multiple>
+						<option></option>	
+					</select>
+				</div>
+				<div style="clear:both;border:0;"></div>
+			</div>
+	</body>
+</html>

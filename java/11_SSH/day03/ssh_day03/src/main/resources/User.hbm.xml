@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.tedu.entity.User" 
+			table="cn_user">
+		<!-- 定义主键映射 -->
+		<id name="id" column="cn_user_id" 
+			type="string">
+		</id>
+		<!-- 定义非主键映射 -->
+		<property name="name" 
+			column="cn_user_name" 
+			type="string">
+		</property>
+		<property name="password" 
+			column="cn_user_password"
+			type="string">
+		</property>
+		<property name="token" 
+			column="cn_user_token"
+			type="string">
+		</property>
+		<property name="nick" 
+			column="cn_user_nick"
+			type="string">
+		</property>
+	</class>
+</hibernate-mapping>

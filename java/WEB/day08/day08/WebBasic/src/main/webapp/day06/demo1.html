@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>内置对象</title>
+<script>
+	//1.正则对象RegExp
+	var str = "no zuo no die, no can no bb.";
+	var reg = /no/;
+	//RegExp包含2个方法:test*、exec
+	//reg.test(str)
+	//检测str中是否包含与reg匹配的部分
+	console.log(reg.test(str));
+	//reg.exec(str)
+	//非全局：从str中找出和reg首次匹配的子串
+	console.log(reg.exec(str));
+	//全局：第n次调用该函数，则从str中
+	//找出第n个与reg匹配的子串
+	reg = /no/g;
+	console.log(reg.exec(str)); //1 no
+	console.log(reg.exec(str)); //2 no
+	console.log(reg.exec(str)); //3 no
+	console.log(reg.exec(str)); //4 no
+	console.log(reg.exec(str)); //null
+	
+	//2.String对正则的支持
+	//replace*、match、search
+	//str.replace(reg,目标)
+	//将str中和reg匹配的部分替换成目标
+	console.log(str.replace(reg,"bu"));
+	//str.match(reg)
+	//从str中找出和reg匹配的子串
+	console.log(str.match(reg));
+	//str.search(reg)
+	//从str中找出和reg首次匹配的子串的索引
+	console.log(str.search(reg));
+	
+	//3.Function
+	//用function关键字声明的函数
+	//是一个Function对象
+	function sum() {
+		if(arguments.length==0) {
+			return 0;
+		}
+		var s = 0;
+		for(var i=0;i<arguments.length;i++) {
+			s += arguments[i];
+		}
+		return s;
+	}
+	
+	console.log(sum(3,4,5,6));
+	
+</script>
+</head>
+<body>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+

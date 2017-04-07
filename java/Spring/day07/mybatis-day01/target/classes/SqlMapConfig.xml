@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE configuration PUBLIC "-//ibatis.apache.org//DTD Config 3.0//EN" 
+	"http://ibatis.apache.org/dtd/ibatis-3-config.dtd">
+<configuration>
+	<environments default="environment">
+		<environment id="environment">
+			<transactionManager type="JDBC" />
+			<!-- mybatis使用自己的数据源，需要
+			提供数据库的连接参数值 -->
+			<dataSource type="POOLED">
+				<property name="driver" value="oracle.jdbc.OracleDriver" />
+				<property name="url"
+					value="jdbc:oracle:thin:@localhost:1521:xe" />
+				<property name="username" value="jsd1604" />
+				<property name="password" value="1234" />
+			</dataSource>
+		</environment>
+	</environments>
+	<!-- 配置映射文件的位置 -->
+	<mappers>
+		<mapper resource="entity/EmpMapper.xml" />
+	</mappers>
+</configuration> 

@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function getXhr(){
+	var xhr = null;
+	if(window.XMLHttpRequest){
+		//非ie
+		xhr = new XMLHttpRequest();
+	}else{
+		//ie
+		xhr = new ActiveXObject(
+				'Microsoft.XMLHttp');
+	}
+	return xhr;
+}
+</script>
+</head>
+<body style="font-size:30px;">
+	<a href="javascript:alert(getXhr());">
+	ClickMe</a>
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>阶乘</title>
+<script>
+	function jc() {
+		//获取文本框内的值
+		var n = 
+			document.getElementById("num").value;
+		//获取span
+		var span = 
+			document.getElementById("result");
+		//判断该值是否合法
+		if(isNaN(n)) {
+			span.innerHTML = "请输入数字";
+		} else if(n<0) {
+			span.innerHTML = "不能小于0";
+		} else if(n==0) {
+			//0的阶乘固定是1
+			span.innerHTML = 1;
+		} else {
+			//从1累乘到n
+			var s = 1;
+			for(var i=n;i;i--) {
+				s *= i;
+			}
+			span.innerHTML = s;
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="num"/>
+	<input type="button" value="阶乘"
+		onclick="jc();"/>
+	= <span id="result"></span>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>Jsp6</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>hello</servlet-name>
+  	<servlet-class>web.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>hello</servlet-name>
+  	<url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 声明Filter -->
+  <filter>
+  	<filter-name>first</filter-name>
+  	<filter-class>web.FirstFilter</filter-class>
+  </filter>
+  <!-- 声明此Filter可以过滤/拦截哪些请求 -->
+  <filter-mapping>
+  	<filter-name>first</filter-name>
+  	<!-- 可以拦截的Servlet的访问路径 -->
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+  	<filter-name>second</filter-name>
+  	<filter-class>web.SecondFilter</filter-class>
+  	<!-- 给当前的filter预置一个参数 -->
+  	<init-param>
+  		<param-name>city</param-name>
+  		<param-value>北京</param-value>
+  	</init-param>
+  </filter>
+  <filter-mapping>
+  	<filter-name>second</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <listener>
+  	<listener-class>web.MyListener</listener-class>
+  </listener>
+  
+</web-app>
+
+
+
+
+
+
+

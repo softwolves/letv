@@ -1,0 +1,10 @@
+﻿作业
+
+1.创建项目SerlvetA，写HiServlet，
+  向浏览器输出"HI"。
+2.创建项目ServletB，写RanServlet，
+  向浏览器输出一个随机整数。
+3.创建项目ServletC，写DateServlet，
+  向浏览器输出当前系统日期，要求
+  格式为yyyy-MM-dd。
+

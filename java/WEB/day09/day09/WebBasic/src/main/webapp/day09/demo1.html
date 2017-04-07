@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>自定义对象</title>
+<script>
+	function f1() {
+		var stu = {"name":"张三","age":25,
+			"work":function(){alert("我学Java")}};
+		alert(stu.name);
+		alert(stu.age);
+		stu.work();
+	}
+	function f2() {
+		var tch = new Object();
+		tch.name = "苍老师";
+		tch.age = 18;
+		tch.work = function() {
+			alert("我教Java");
+		}
+		alert(tch.name);
+		alert(tch.age);
+		tch.work();
+	}
+	
+	//自定义构造器
+	//1.通常首字母大写
+	//2.声明好要传入的参数
+	//3.将参数存入对象内部
+	function Coder(name,age,work) {
+		//this就是当前创建出来的对象
+		//this.name是给该对象增加一个属性
+		//=name是将参数name赋值给这个属性
+		this.name = name;
+		this.age = age;
+		this.work = work;
+	}
+	function f3() {
+		var coder = new Coder(
+			"李四",30,function(){alert("我写Java")});
+		alert(coder.name);
+		alert(coder.age);
+		coder.work();
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="直接量"
+		onclick="f1();"/>
+	<input type="button" value="预置构造器"
+		onclick="f2();"/>
+	<input type="button" value="自定义构造器"
+		onclick="f3();"/>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

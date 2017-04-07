@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>day03</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>Struts</h1>
+<h2>值栈 ValueStack</h2>
+<ol>
+<li>从控制器向页面传输值的缓存区</li>
+<li>
+ValueStack 包含当前环境相关的全部 对象
+<ul>
+<li>request</li>
+<li>session</li>
+<li>application 等</li>
+</ul>
+</li>
+<li>
+ValueStack 包含两个区域
+<ul>
+<li>root: 一个List（栈）存储值  
+</li>
+<li>context: 一个区域是Map存储环境相关的全部 对象  
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>提示： 在Struts2中ValueStack是软件的消息中心的作用。软件的数据和相关环境信息都缓存在这个对象中。其作用于JSP中的 pageContext 类似。</p>
+<p>JSP 页面中使用 &lt;s:debug/&gt; 标签可以展示 ValueStack 的内容</p>
+</blockquote>
+<h2>OGNL 表达式</h2>
+<p>OGNL 可以在网页 struts 标签中使用，在Struts2中用于读写ValueStack的数据。</p>
+<ol>
+<li>
+读取root区域数据
+<ul>
+<li>从栈顶到栈底逐一搜索 Bean 属性，找到属性就输出</li>
+</ul>
+</li>
+<li>
+读写 context 区域使用 #key 的方式查找
+<ul>
+<li>#session.loginName</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>提示：OGNL与ValueStack配合可以从控制器向页面传递数据。</p>
+</blockquote>
+<h2>ValueStack与EL</h2>
+<p>Struts2 中的拦截了EL表达式，使其从ValueStack中获取数据，也就是说使用EL就可以很好的访问ValueStack.</p>
+<p>案例：</p>
+<p>DemoAction.java</p>
+<pre><code>@Controller
+public class DemoAction {
+
+    String message;
+    public String getMessage() {
+        return message;
+    }
+
+    public String test(){
+        ActionContext context = 
+            ActionContext.getContext();
+        ValueStack stack=context.getValueStack();
+
+        Person p = new Person(
+                1, &quot;Jerry&quot;, &quot;Hello Jerry&quot;);
+        //将数据添加到值栈中         
+        stack.push(p); 
+
+        context.getSession()
+            .put(&quot;loginName&quot;, &quot;Robin&quot;);
+
+        message = &quot;demo&quot;;
+        System.out.println(
+            &quot;Demo Action test()&quot;);
+        return &quot;success&quot;;
+    }
+}
+</code></pre>
+
+<p>Person.class</p>
+<pre><code>public class Person {
+    int id;
+    String pname;
+    String message;
+    public Person() {
+    }
+
+    public Person(int id, String pname, String message) {
+        super();
+        this.id = id;
+        this.pname = pname;
+        this.message = message;
+    }
+
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getPname() {
+        return pname;
+    }
+    public void setPname(String pname) {
+        this.pname = pname;
+    }
+    public String getMessage() {
+        return message;
+    }
+    public void setMessage(String message) {
+        this.message = message;
+    }
+}
+</code></pre>
+
+<p>struts.xml(局部)</p>
+<pre><code>&lt;package name=&quot;test&quot;
+    namespace=&quot;/test&quot;
+    extends=&quot;json-default&quot;&gt;
+    &lt;action name=&quot;demo&quot;
+        class=&quot;demoAction&quot;
+        method=&quot;test&quot;&gt;
+        &lt;result name=&quot;success&quot;&gt;
+            /WEB-INF/msg.jsp
+        &lt;/result&gt;
+    &lt;/action&gt;
+&lt;/package&gt;
+</code></pre>
+
+<p>msg.jsp</p>
+<pre><code>&lt;%@ page language=&quot;java&quot; 
+    contentType=&quot;text/html; charset=UTF-8&quot;
+    pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;!-- 引入struts2 标签库 --&gt;
+&lt;%@taglib prefix=&quot;s&quot; uri=&quot;/struts-tags&quot; %&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;test&lt;/h1&gt;
+    &lt;!-- 利用OGNL表达式读取值栈中的数据 --&gt;
+    &lt;s:property value=&quot;message&quot;/&gt; &lt;br&gt;
+    &lt;s:property value=&quot;#session.loginName&quot;/&gt;&lt;br&gt;
+    &lt;!-- 利用EL表达式读取值栈中的数据 --&gt;
+    ${message} &lt;br&gt;
+    ${loginName} 
+    &lt;!-- s:debug 标签可以输出 ValueStack 中的数据 --&gt;
+    &lt;s:debug&gt;&lt;/s:debug&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h2>Spring Struts2 MyBatis 整合应用</h2>
+<p>Spring Struts2 MyBatis 可以结合在一起整合应用</p>
+<p>整合过程：</p>
+<p>pom.xml(局部):</p>
+<pre><code>    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.struts&lt;/groupId&gt;
+        &lt;artifactId&gt;struts2-core&lt;/artifactId&gt;
+        &lt;version&gt;2.3.8&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.struts&lt;/groupId&gt;
+        &lt;artifactId&gt;struts2-spring-plugin&lt;/artifactId&gt;
+        &lt;version&gt;2.3.8&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.struts&lt;/groupId&gt;
+        &lt;artifactId&gt;struts2-json-plugin&lt;/artifactId&gt;
+        &lt;version&gt;2.3.8&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.mybatis&lt;/groupId&gt;
+        &lt;artifactId&gt;mybatis&lt;/artifactId&gt;
+        &lt;version&gt;3.2.8&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.mybatis&lt;/groupId&gt;
+        &lt;artifactId&gt;mybatis-spring&lt;/artifactId&gt;
+        &lt;version&gt;1.2.3&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;commons-dbcp&lt;/groupId&gt;
+        &lt;artifactId&gt;commons-dbcp&lt;/artifactId&gt;
+        &lt;version&gt;1.4&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;mysql&lt;/groupId&gt;
+        &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+        &lt;version&gt;5.1.36&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;aspectj&lt;/groupId&gt;
+        &lt;artifactId&gt;aspectjweaver&lt;/artifactId&gt;
+        &lt;version&gt;1.5.4&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-aop&lt;/artifactId&gt;
+        &lt;version&gt;3.0.5.RELEASE&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-jdbc&lt;/artifactId&gt;
+        &lt;version&gt;3.0.5.RELEASE&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;commons-codec&lt;/groupId&gt;
+        &lt;artifactId&gt;commons-codec&lt;/artifactId&gt;
+        &lt;version&gt;1.10&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;aopalliance&lt;/groupId&gt;
+        &lt;artifactId&gt;aopalliance&lt;/artifactId&gt;
+        &lt;version&gt;1.0&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;junit&lt;/groupId&gt;
+        &lt;artifactId&gt;junit&lt;/artifactId&gt;
+        &lt;version&gt;4.12&lt;/version&gt;
+    &lt;/dependency&gt;
+</code></pre>
+
+<p>添加配置文件</p>
+<p>web.xml(局部):</p>
+<pre><code>  &lt;listener&gt;
+    &lt;listener-class&gt;
+    org.springframework.web.context.ContextLoaderListener
+    &lt;/listener-class&gt;
+  &lt;/listener&gt;
+  &lt;!-- 配置Spring配置文件的位置 --&gt;
+  &lt;context-param&gt;
+    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+    &lt;param-value&gt;classpath:spring-*.xml&lt;/param-value&gt;
+  &lt;/context-param&gt;
+
+  &lt;filter&gt;
+    &lt;filter-name&gt;mvc&lt;/filter-name&gt;
+    &lt;filter-class&gt;      org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter
+    &lt;/filter-class&gt;
+  &lt;/filter&gt;
+  &lt;filter-mapping&gt;
+    &lt;filter-name&gt;mvc&lt;/filter-name&gt;
+    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+  &lt;/filter-mapping&gt;
+</code></pre>
+
+<p>struts.xml</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE struts PUBLIC
+    &quot;-//Apache Software Foundation//DTD Struts Configuration 2.3//EN&quot;
+    &quot;http://struts.apache.org/dtds/struts-2.3.dtd&quot;&gt;
+&lt;struts&gt;
+&lt;/struts&gt;
+</code></pre>
+
+<p>spring-context.xml(局部):</p>
+<pre><code>&lt;context:component-scan base-package=&quot;com.tedu&quot;/&gt;
+</code></pre>
+
+<p>spring-aop.xml（局部）：</p>
+<pre><code>&lt;!-- 开启AOP注解配置,支持切面,通知,切入点注解标记 --&gt;
+&lt;aop:aspectj-autoproxy /&gt;
+</code></pre>
+
+<p>spring-mybatis.xml（局部）：</p>
+<pre><code>&lt;!-- 定义DataSource --&gt;
+&lt;bean id=&quot;dbcp&quot; 
+class=&quot;org.apache.commons.dbcp.BasicDataSource&quot;&gt;
+    &lt;property name=&quot;username&quot; value=&quot;root&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;password&quot; value=&quot;123456&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;driverClassName&quot;  value=&quot;com.mysql.jdbc.Driver&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;url&quot; value=&quot;jdbc:mysql:///cloud_note?useUnicode=true&amp;amp;characterEncoding=utf8&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+&lt;!-- 定义SqlSessionFactoryBean --&gt;
+&lt;bean id=&quot;ssf&quot; class=&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&gt;
+    &lt;!-- 指定dataSource --&gt;
+    &lt;property name=&quot;dataSource&quot; ref=&quot;dbcp&quot;&gt;&lt;/property&gt;
+    &lt;!-- 指定SQL定义文件 --&gt;
+    &lt;property name=&quot;mapperLocations&quot; value=&quot;classpath:mapper/*.xml&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;!-- 定义MapperScanner --&gt;
+&lt;bean id=&quot;mapperScanner&quot; 
+class=&quot;org.mybatis.spring.mapper.MapperScannerConfigurer&quot;&gt;
+    &lt;!-- 指定Mapper接口 --&gt;
+    &lt;property name=&quot;basePackage&quot; value=&quot;com.tedu.cloudnote.dao&quot;&gt;&lt;/property&gt;
+    &lt;!-- 指定SqlSessionFactory,省略 --&gt;
+&lt;/bean&gt;
+</code></pre>
+
+<p>spring-transaction.xml（局部）：</p>
+<pre><code>&lt;!-- Spring事务控制 --&gt;
+&lt;!-- 定义事务管理bean --&gt;
+&lt;bean id=&quot;txManager&quot; 
+class=&quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;&gt;
+    &lt;property name=&quot;dataSource&quot; ref=&quot;dbcp&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+&lt;!-- 开启事务注解配置@transactional --&gt;
+&lt;tx:annotation-driven transaction-manager=&quot;txManager&quot;/&gt;
+</code></pre>
+
+<p>开发案例：</p>
+<p>实体类：</p>
+<pre><code>public class User implements Serializable{
+    private String cn_user_id;
+    private String cn_user_name;
+    private String cn_user_password;
+    private String cn_user_token;
+    private String cn_user_nick;
+    //追加关联属性,用于加载相关的多个Book
+    private List&lt;Book&gt; books;
+
+    public List&lt;Book&gt; getBooks() {
+        return books;
+    }
+    public void setBooks(List&lt;Book&gt; books) {
+        this.books = books;
+    }
+    public String getCn_user_id() {
+        return cn_user_id;
+    }
+    public void setCn_user_id(String cn_user_id) {
+        this.cn_user_id = cn_user_id;
+    }
+    public String getCn_user_name() {
+        return cn_user_name;
+    }
+    public void setCn_user_name(String cn_user_name) {
+        this.cn_user_name = cn_user_name;
+    }
+    public String getCn_user_password() {
+        return cn_user_password;
+    }
+    public void setCn_user_password(String cn_user_password) {
+        this.cn_user_password = cn_user_password;
+    }
+    public String getCn_user_token() {
+        return cn_user_token;
+    }
+    public void setCn_user_token(String cn_user_token) {
+        this.cn_user_token = cn_user_token;
+    }
+    public String getCn_user_nick() {
+        return cn_user_nick;
+    }
+    public void setCn_user_nick(String cn_user_nick) {
+        this.cn_user_nick = cn_user_nick;
+    }
+    @Override
+    public String toString() {
+        return &quot;User [cn_user_id=&quot; + cn_user_id + &quot;, cn_user_name=&quot; + cn_user_name + &quot;, cn_user_password=&quot;
+                + cn_user_password + &quot;, cn_user_token=&quot; + cn_user_token + &quot;, cn_user_nick=&quot; + cn_user_nick + &quot;, books=&quot;
+                + books + &quot;]&quot;;
+    }
+}
+</code></pre>
+
+<p>mapper接口 UserDao.java：</p>
+<pre><code>public interface UserDao {
+    public void save(User user);
+    public User findByName(String name);
+}
+</code></pre>
+
+<p>mapper 映射文件 UserMapper.xml：</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;  
+&lt;!DOCTYPE mapper PUBLIC &quot;-//ibatis.apache.org//DTD Mapper 3.0//EN&quot;      
+ &quot;http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd&quot;&gt;
+&lt;mapper namespace=&quot;com.tedu.cloudnote.dao.UserDao&quot;&gt;
+    &lt;insert id=&quot;save&quot; parameterType=&quot;com.tedu.cloudnote.entity.User&quot;&gt;
+        insert into cn_user 
+        (cn_user_id,cn_user_name,
+        cn_user_password,cn_user_nick) values 
+        (#{cn_user_id},#{cn_user_name}, #{cn_user_password},#{cn_user_nick})
+    &lt;/insert&gt;
+    &lt;select id=&quot;findByName&quot; parameterType=&quot;string&quot;
+        resultType=&quot;com.tedu.cloudnote.entity.User&quot;&gt;
+        select * from cn_user
+        where cn_user_name = #{name}
+    &lt;/select&gt;
+&lt;/mapper&gt; 
+</code></pre>
+
+<p>测试案例：</p>
+<pre><code>@Test
+public void testUser(){
+    ClassPathXmlApplicationContext ctx=
+        new ClassPathXmlApplicationContext(
+        &quot;spring-aop.xml&quot;, 
+        &quot;spring-context.xml&quot;,
+        &quot;spring-mybatis.xml&quot;,
+        &quot;spring-transaction.xml&quot;);
+    UserDao dao=ctx.getBean(
+            &quot;userDao&quot;, UserDao.class);
+    User user=dao.findByName(&quot;tedu&quot;);
+    System.out.println(user);
+}
+</code></pre>
+
+<p>业务层接口 UserService.java</p>
+<pre><code>public interface UserService {
+    public NoteResult addUser(
+        String name,String nick,String password);
+    public NoteResult checkLogin(
+        String name,String password);
+}
+</code></pre>
+
+<p>业务层实现类 UserServiceImpl.java：</p>
+<pre><code>@Service(&quot;userService&quot;)//扫描
+@Transactional
+public class UserServiceImpl implements UserService{
+    @Resource
+    private UserDao userDao;//注入
+
+    @Transactional(readOnly=true)
+    public NoteResult checkLogin(
+            String name, String password) {
+        NoteResult result = new NoteResult();
+        //判断用户名
+        User user = userDao.findByName(name);
+        if(user==null){
+            result.setStatus(1);
+            result.setMsg(&quot;用户名不存在&quot;);
+            return result;
+        }
+        //判断密码
+        //将用户输入的明文加密
+        try{
+            String md5_pwd = NoteUtil.md5(password);
+            if(!user.getCn_user_password()
+                    .equals(md5_pwd)){
+                result.setStatus(2);
+                result.setMsg(&quot;密码错误&quot;);
+                return result;
+            }
+        }catch(Exception e){
+            throw new NoteException(
+                &quot;密码加密异常&quot;, e);   
+        }
+        //登录成功
+        result.setStatus(0);
+        result.setMsg(&quot;登录成功&quot;);
+        user.setCn_user_password(&quot;&quot;);//把密码屏蔽不返回
+        result.setData(user);//返回user信息
+        return result;
+    }
+
+    @Transactional
+    public NoteResult addUser(
+        String name, String nick, String password) {
+        NoteResult result = new NoteResult();
+        try{
+            //检测是否重名
+            User has_user = 
+                userDao.findByName(name);
+            if(has_user != null){
+                result.setStatus(1);
+                result.setMsg(&quot;用户名已被占用&quot;);
+                return result;
+            }
+            //执行用户注册
+            User user = new User();
+            user.setCn_user_name(name);//设置用户名
+            user.setCn_user_nick(nick);//设置昵称
+            String md5_pwd = NoteUtil.md5(password);
+            user.setCn_user_password(md5_pwd);//设置加密密码
+            String userId = NoteUtil.createId();
+            user.setCn_user_id(userId);//设置用户ID
+            userDao.save(user);
+            //创建返回结果
+            result.setStatus(0);
+            result.setMsg(&quot;注册成功&quot;);
+            //模拟异常
+            String s = null;
+            s.length();//抛一个空指针异常
+            return result;
+        }catch(Exception e){
+            throw new NoteException(&quot;用户注册异常&quot;,e);
+        }
+
+    }
+}   
+</code></pre>
+
+<p>编写控制器的基础类, 抽象出控制器的公共代码，复用这些代码以后简化控制器子类：</p>
+<pre><code>public abstract class BaseAction
+    extends ActionSupport
+    implements Serializable,
+    SessionAware, RequestAware,
+    ApplicationAware{
+
+    protected Map&lt;String, Object&gt; request;
+    protected Map&lt;String, Object&gt; session;
+    protected Map&lt;String, Object&gt; application;
+
+    public void setRequest(
+            Map&lt;String, Object&gt; request) {
+        this.request=request;
+    }
+
+    public void setSession(Map&lt;String, Object&gt; session) {
+        this.session = session;
+    }
+
+    public void setApplication(Map&lt;String, Object&gt; application) {
+        this.application = application;
+    }
+
+    @Resource
+    protected UserService userService;
+
+    /** JSON 返回值 **/
+    protected NoteResult result;
+    public NoteResult getResult() {
+        return result;
+    }
+    public void setResult(NoteResult result) {
+        this.result = result;
+    }
+
+} 
+</code></pre>
+
+<p>编写登录功能控制器：</p>
+<pre><code>@Controller
+@Scope(&quot;prototype&quot;)
+public class UserAction extends BaseAction{
+
+    private String username;
+    private String password;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    public String login(){
+        NoteResult result = 
+                userService.checkLogin(
+                username, password);
+        this.result=result;
+        if(result.getStatus()==0){
+            User user=(User)result.getData();
+            session.put(&quot;loginUser&quot;, user);
+        }
+        return &quot;success&quot;;
+    }
+}
+</code></pre>
+
+<p>配置控制器到struts.xml</p>
+<pre><code>&lt;package name=&quot;login&quot; namespace=&quot;/login&quot;    extends=&quot;json-default&quot;&gt;
+    &lt;action name=&quot;login&quot; class=&quot;userAction&quot; method=&quot;login&quot;&gt;
+        &lt;result name=&quot;success&quot; type=&quot;json&quot;&gt;
+            &lt;param name=&quot;root&quot;&gt;result&lt;/param&gt;
+        &lt;/result&gt;
+    &lt;/action&gt;
+&lt;/package&gt;
+</code></pre>
+
+<p>测试：</p>
+<pre><code>请求： http://localhost:8080/struts2_day03/login/login.action?username=spring&amp;password=123456
+
+返回结果：
+{&quot;data&quot;:{&quot;books&quot;:null,&quot;cn_user_id&quot;:&quot;022ada2e14f544dbb49468b7cb6f3d42&quot;,&quot;cn_user_name&quot;:&quot;spring&quot;,&quot;cn_user_nick&quot;:&quot;spring&quot;,&quot;cn_user_password&quot;:&quot;&quot;,&quot;cn_user_token&quot;:null},&quot;msg&quot;:&quot;登录成功&quot;,&quot;status&quot;:0}
+</code></pre>
+
+<h2>添加显示全部用户列表的功能</h2>
+<p>步骤：
+1. 修改MyBatis Mapper接口，添加查询方法 findAllUsers()
+2. 修改Mapper配置文件，增加查询SQL
+3. 修改业务接口，添加查询业务方法：  findAll()
+4. 在业务实现类中实现业务接口方法。
+5. 在UserAction中增加控制器方法list
+6. 修改struts.xml 配置控制器流转过程，成功时候转发到listUsers.jsp
+7. 创建listUsers.jsp 页面利用JSTL显示查询结果</p>
+<blockquote>
+<p>提示：采用Map封装查询结果，使查询更加灵活方便</p>
+</blockquote>
+<h3>1. 修改MyBatis Mapper接口，添加查询方法 findAllUsers()</h3>
+<p>UserDao.java</p>
+<pre><code>public interface UserDao {
+    public void save(User user);
+    public User findByName(String name);
+    public List&lt;Map&lt;String, Object&gt;&gt; 
+        findAllUsers();
+}
+</code></pre>
+
+<h3>2. 修改Mapper配置文件，增加查询SQL</h3>
+<p>userMapper.xml(局部):</p>
+<pre><code>&lt;select id=&quot;findAllUsers&quot; resultType=&quot;java.util.Map&quot;&gt;
+    select cn_user_id as id, cn_user_name as name
+    from cn_user 
+&lt;/select&gt;
+</code></pre>
+
+<h3>3. 修改业务接口，添加查询业务方法：  findAll()</h3>
+<p>UserService.java</p>
+<pre><code>public interface UserService {
+    public NoteResult addUser(
+        String name,String nick,String password);
+    public NoteResult checkLogin(
+        String name,String password);
+
+    List&lt;Map&lt;String, Object&gt;&gt; findAll();
+}
+</code></pre>
+
+<h3>4. 在业务实现类中实现业务接口方法。</h3>
+<p>UserServiceImpl.java</p>
+<pre><code>@Transactional(readOnly=true)
+public List&lt;Map&lt;String,Object&gt;&gt; 
+    findAll() {
+    return userDao.findAllUsers();
+}
+</code></pre>
+
+<h3>5. 在UserAction中增加控制器方法list</h3>
+<p>UserAction.java</p>
+<pre><code>private List&lt;Map&lt;String, Object&gt;&gt; list;
+public List&lt;Map&lt;String, Object&gt;&gt; getList() {
+    return list;
+}
+public String list(){
+    try{
+        list=userService.findAll();
+        return SUCCESS;
+    }catch(Exception e){
+        e.printStackTrace();
+        return ERROR;
+    }
+}
+</code></pre>
+
+<h3>6. 修改struts.xml 配置控制器流转过程，成功时候转发到listUsers.jsp</h3>
+<p>struts.xml: </p>
+<pre><code>&lt;package name=&quot;user&quot; namespace=&quot;/user&quot; extends=&quot;json-default&quot;&gt;
+    &lt;action name=&quot;list&quot; class=&quot;userAction&quot; method=&quot;list&quot;&gt;
+        &lt;result name=&quot;success&quot;&gt;/WEB-INF/listUsers.jsp&lt;/result&gt;
+        &lt;result name=&quot;error&quot;&gt;/WEB-INF/error.jsp&lt;/result&gt;    
+    &lt;/action&gt;
+&lt;/package&gt;
+</code></pre>
+
+<h3>7. 创建listUsers.jsp 页面利用JSTL显示查询结</h3>
+<p>listUsers.jsp:</p>
+<pre><code>&lt;%@ page language=&quot;java&quot; 
+    contentType=&quot;text/html; charset=UTF-8&quot;
+    pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;%@taglib prefix=&quot;c&quot; 
+    uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Insert title here&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;用户列表&lt;/h1&gt;
+    &lt;table border=&quot;1&quot;&gt;
+        &lt;tr&gt;
+            &lt;th&gt;编号&lt;/th&gt;&lt;th&gt;用户名&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;c:forEach var=&quot;user&quot; 
+            items=&quot;${list}&quot;&gt;
+            &lt;tr&gt;
+                &lt;td&gt;${user.id}&lt;/td&gt;
+                &lt;td&gt;${user.name}&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/c:forEach&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h1>Hibernate (冬眠)</h1>
+<p>其想法是将Java的实体对象映射存储到数据库的表中， 只需要将实体与表的映射关系定义好，Hibernate会自动的生成数据库的SQL语句。</p>
+<p>Hibernate 称为 ORM（对象关系映射） 框架。</p>
+<blockquote>
+<p>Hibernate 是一种不要写SQL的框架。</p>
+</blockquote>
+<h2>使用Hibernate</h2>
+<p>使用步骤：
+1. 导入Hibernate的相关包
+2. 导入数据库的驱动程序
+3. 添加Hibernate主配置文件
+4. 添加Hibernate映射配置文件
+5. 添加实体类
+6. 调用Hibernate API 就可以自动生成SQL访问数据库了</p>
+<h3>1. 导入Hibernate的相关包</h3>
+<blockquote>
+<p>由于是开源软件，其包的依赖关系不够完善，有的Hibernate 版本在导入以后会出现 ClassNotFound 异常。请尝试更换其他版本。</p>
+</blockquote>
+<p>Hibernate pom.xml 坐标：</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.hibernate&lt;/groupId&gt;
+    &lt;artifactId&gt;hibernate-core&lt;/artifactId&gt;
+    &lt;version&gt;3.6.9.Final&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;javassist&lt;/groupId&gt;
+    &lt;artifactId&gt;javassist&lt;/artifactId&gt;
+    &lt;version&gt;3.8.0.GA&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<h3>2. 导入数据库的驱动程序</h3>
+<p>JDBC 驱动 pom.xml 坐标</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;mysql&lt;/groupId&gt;
+    &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+    &lt;version&gt;5.1.36&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<ol>
+<li>添加Hibernate主配置文件</li>
+</ol>
+<p>hibernate.cfg.xml:</p>
+<pre><code>&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+&lt;!DOCTYPE hibernate-configuration PUBLIC
+    &quot;-//Hibernate/Hibernate Configuration DTD 3.0//EN&quot;
+    &quot;http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd&quot;&gt;
+&lt;hibernate-configuration&gt;
+
+    &lt;session-factory&gt;
+        &lt;property name=&quot;dialect&quot;&gt;
+            org.hibernate.dialect.MySQLDialect
+        &lt;/property&gt;
+        &lt;property name=&quot;connection.url&quot;&gt;
+jdbc:mysql://localhost:3306/cloud_note?useUnicode=true&amp;amp;characterEncoding=utf8
+        &lt;/property&gt;
+        &lt;property name=&quot;connection.username&quot;&gt;root&lt;/property&gt;
+        &lt;property name=&quot;connection.password&quot;&gt;123456&lt;/property&gt;
+        &lt;property name=&quot;connection.driver_class&quot;&gt;
+            com.mysql.jdbc.Driver
+        &lt;/property&gt;
+
+        &lt;!-- 加载映射描述文件 --&gt;
+        &lt;mapping resource=&quot;User.hbm.xml&quot; /&gt;
+
+    &lt;/session-factory&gt;
+
+&lt;/hibernate-configuration&gt;
+</code></pre>
+
+<h3>4. 添加Hibernate映射配置文件</h3>
+<p>User.hbm.xml</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!DOCTYPE hibernate-mapping PUBLIC 
+ &quot;-//Hibernate/Hibernate Mapping DTD 3.0//EN&quot;
+ &quot;http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd&quot;&gt;
+&lt;hibernate-mapping&gt;
+    &lt;class name=&quot;com.tedu.entity.User&quot; 
+            table=&quot;cn_user&quot;&gt;
+        &lt;!-- 定义主键映射 --&gt;
+        &lt;id name=&quot;id&quot; column=&quot;cn_user_id&quot; 
+            type=&quot;string&quot;&gt;
+        &lt;/id&gt;
+        &lt;!-- 定义非主键映射 --&gt;
+        &lt;property name=&quot;name&quot; 
+            column=&quot;cn_user_name&quot; 
+            type=&quot;string&quot;&gt;
+        &lt;/property&gt;
+        &lt;property name=&quot;password&quot; 
+            column=&quot;cn_user_password&quot;
+            type=&quot;string&quot;&gt;
+        &lt;/property&gt;
+        &lt;property name=&quot;token&quot; 
+            column=&quot;cn_user_token&quot;
+            type=&quot;string&quot;&gt;
+        &lt;/property&gt;
+        &lt;property name=&quot;nick&quot; 
+            column=&quot;cn_user_nick&quot;
+            type=&quot;string&quot;&gt;
+        &lt;/property&gt;
+    &lt;/class&gt;
+&lt;/hibernate-mapping&gt;
+</code></pre>
+
+<h3>5. 添加实体类</h3>
+<blockquote>
+<p>注意：建议有ID的实体类实现 equals 和 hashCode 方法！ 使用Eclipse生成即可。</p>
+</blockquote>
+<p>User.java</p>
+<pre><code>package com.tedu.entity;
+
+import java.io.Serializable;
+
+public class User implements Serializable{
+    private String id;
+    private String name;
+    private String password;
+    private String token;
+    private String nick;
+
+    public User() {
+    }
+
+    public User(String id, String name, String password, String token, String nick) {
+        super();
+        this.id = id;
+        this.name = name;
+        this.password = password;
+        this.token = token;
+        this.nick = nick;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public String getNick() {
+        return nick;
+    }
+
+    public void setNick(String nick) {
+        this.nick = nick;
+    }
+
+    @Override
+    public String toString() {
+        return &quot;User [id=&quot; + id + &quot;, name=&quot; + name + &quot;, password=&quot; + password + &quot;, token=&quot; + token + &quot;, nick=&quot; + nick
+                + &quot;]&quot;;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((id == null) ? 0 : id.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        User other = (User) obj;
+        if (id == null) {
+            if (other.id != null)
+                return false;
+        } else if (!id.equals(other.id))
+            return false;
+        return true;
+    }
+
+}
+</code></pre>
+
+<h3>6. 调用Hibernate API 就可以自动生成SQL访问数据库了</h3>
+<pre><code>@Test
+public void test1(){
+    Configuration cfg = new Configuration();
+    //读取数据库连接参数
+    cfg.configure(&quot;hibernate.cfg.xml&quot;);
+    SessionFactory factory = cfg.buildSessionFactory();
+    //获取Session对象
+    Session session = factory.openSession();
+    //session 可以自动生成SQL查询DB
+    String id = &quot;022ada2e14f544dbb49468b7cb6f3d42&quot;;
+    User u=(User)session.get( User.class, id);
+    System.out.println(u); 
+    session.close();
+}
+</code></pre>
+
+<hr />
+<h2>作业</h2>
+<ol>
+<li>搭建 Spring + Struts2 + MyBatis 环境</li>
+<li>用上述环境实现云笔记中登录功能</li>
+</ol>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery对象</title>
+<script src="../js/jquery-1.11.1.js"></script>
+<script>
+	//使用jQuery时可能存在3种对象：
+	//1.jQuery对象
+	// - 选择器选中的目标即为jQuery对象
+	// - 一般jQuery方法若返回节点则是jQuery对象
+	// - 一般jQuery赋值的方法返回的是jQuery对象
+	//2.DOM对象
+	// - 从jQuery中获取一个DOM
+	// - $obj[i] / $obj.get(i)
+	//3.内置对象(String)
+	// - 一般jQuery方法若返回具体的值则是String
+	//也可以输出对象观察。
+	function print() {
+		var $ps = $("p");
+		console.log($ps);
+		for(var i=0;i<$ps.length;i++) {
+			console.log($ps[i]);
+			alert($ps[i].innerHTML);
+		}
+	}
+	//传入的this是正在点击的那张图片
+	//此处的this(img)是一个DOM对象
+	function chg(img) {
+		console.log($(img).width());
+		if($(img).width()=="218") {
+			$(img).width("250px").height("250px");
+		} else {
+			$(img).width("218px").height("218px");
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="打印"
+		onclick="print();"/>
+	<p>1.jQuery对象本质上是DOM数组</p>
+	<p>2.jQuery对象和DOM对象可以互转</p>
+	<p>3.jQuery只能调用jQuery方法</p>
+	<p>4.DOM对象只能调用DOM方法</p>
+	<div>
+		<img src="../images/01.jpg" 
+			onclick="chg(this);"/>
+		<img src="../images/02.jpg"
+			onclick="chg(this);"/>
+		<img src="../images/03.jpg"
+			onclick="chg(this);"/>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

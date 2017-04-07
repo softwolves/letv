@@ -1,0 +1,192 @@
+/*0.前期准备：初始化一些样式。*/
+/*星是通用选择器，可以选择一切元素。*/
+* {
+	padding: 0;
+	margin: 0;
+}
+/*统一给分区加边框，为了便于调试。*/
+div {
+	border: 1px solid red;
+}
+
+/*1.布局：给分区元素设置尺寸*/
+div {
+	margin: 0 auto;
+}
+.logo {
+	width: 960px;
+	height: 61px;
+}
+.nav {
+	height: 91px;
+}
+.core {
+	height: 410px;
+	/*预留出摆放渐变条的空间*/
+	padding-top: 10px;
+}
+.copy {
+	width: 960px;
+	height: 50px;
+}
+.content {
+	width: 950px;
+	height: 390px;
+	border: 5px solid #8ac1db;
+}
+.content div {
+	width:910px;
+	height: 40px;
+}
+.content .data {
+	height: 310px;
+}
+
+/*2.背景*/
+body {
+	background-color: #0EA8D8;
+}
+.logo {
+	background: 
+		url(../img/top_bg.png);
+}
+.nav {
+	background-color: #0488BB;
+}
+.core {
+	background: 
+		url(../img/content_bg.png)
+		repeat-x top;
+}
+.content {
+	background-color: #e8f3f8;
+}
+
+/*3.设置文本样式*/
+body {
+	font-family: 
+		"微软雅黑","文泉驿正黑","黑体";
+	font-size: 14px;
+}
+/*logo区*/
+.logo {
+	text-align: right;
+	line-height: 61px;
+}
+.logo a {
+	margin-right: 40px;
+	color: #FFF;
+	text-decoration: none;
+}
+.logo a:hover {
+	font-weight: bold;
+}
+/*版权区*/
+.copy p {
+	text-align: center;
+	color: #FFF;
+	line-height: 25px;
+}
+
+/*4.设置表格样式*/
+.data table {
+	width: 100%;
+	border: 1px solid #ccc;
+	/*边框合并，必须写在table上*/
+	border-collapse: collapse;
+}
+/*通过css给表格加边框，table和td需要分别加边框。*/
+.data td {
+	border: 1px solid #ccc;
+	text-align: center;
+}
+/*标题行的单元格*/
+.data thead td {
+	background-color: #fbedce;
+	font-weight: bold;
+	height: 40px;
+}
+/*数据行的单元格*/
+.data tbody tr {
+	background-color: #FFF;
+	height: 32px;
+}
+/*鼠标悬停在数据行上时，其背景色加深*/
+.data tbody tr:hover {
+	background-color: pink;
+}
+/*设置修改、删除按钮样式*/
+.modify {
+	padding-left: 15px;
+	background:
+		#FFF url(../img/modification.png)
+		no-repeat left;
+	border: 0;
+}
+.delete {
+	padding-left: 13px;
+	background:
+		#FFF url(../img/delete.png)
+		no-repeat left;
+	border: 0;
+}
+
+
+/*5.定位*/
+/*logo图片定位到左侧：左浮动、绝对定位都行。*/
+.logo img {
+	float: left;
+}
+/*消息框定位到内容区中心：绝对定位。*/
+.content {
+	position: relative;
+}
+.content .message {
+	position: absolute;
+	left: 250px;
+	top: 100px;
+	width: 400px;
+	height: 80px;
+}
+/*调整消息框的细节样式*/
+.content .message img {
+	float: right;
+}
+.content .message p {
+	line-height: 80px;
+}
+.content .message {
+	padding: 10px 10px 10px 38px;
+	border: 1px solid #F68A8A;
+	background: #FDECEC 
+		url(../img/ok.png)
+		no-repeat 10px 42px;
+}
+.content .message img {
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

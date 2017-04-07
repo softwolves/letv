@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<students>
+  <student id="s1" type="正式">
+    <name>Tom</name>
+    <course>java</course>
+  </student>
+  <student id="s2" type="业余">
+    <name>Jerry</name>
+    <course>PHP</course>
+  </student>
+  <student id="s3" type="业余">
+    <name>范传奇</name>
+    <course>Python</course>
+  </student>
+</students>

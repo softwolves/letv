@@ -1,0 +1,12 @@
+﻿作业
+
+1.创建InitServlet，在启动tomcat时，在
+  它的init()内向context里写一个变量，
+  count=0。然后在访问FindDeptServlet和
+  FindEmpServlet时分别获取并修改此值。
+2.创建HiServlet，并增加成员变量sal=1000，
+  每次调用service()时将sal加100。然后 
+  休眠10S。使用2个浏览器依次访问它，
+  观察数据的变化，并解决并发的问题。
+3.创建demo.jsp，使用循环的方式，输出
+  30个li，且每个li内输出一个随机数。

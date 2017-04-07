@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>文本元素</title>
+</head>
+<body>
+	<!-- 1.标题 -->
+	<h1>苍老师</h1>
+	<h2>范传奇</h2>
+	<h3>王克晶</h3>
+	<!-- 2.段落 -->
+	<p>范传奇暗恋王克晶</p>
+	<p><a href="#cang">苍老师</a>吃醋</p>
+	<!-- 3.列表 -->
+	<!-- 3.1有序列表 -->
+	<ol>
+		<li>浙江省</li>
+		<li>江苏省</li>
+		<li>河北省</li>
+	</ol>
+	<!-- 3.2无序列表 -->
+	<ul>
+		<li>北京</li>
+		<li>上海</li>
+		<li>广州</li>
+	</ul>
+	<!-- 3.3列表嵌套 -->
+	<ol>
+		<li>
+			山东省
+			<ul>
+				<li>济南</li>
+				<li>青岛</li>
+				<li>德州</li>
+			</ul>
+		</li>
+		<li>
+			陕西省
+			<ul>
+				<li>西安</li>
+				<li>宝鸡</li>
+				<li>咸阳</li>
+			</ul>
+		</li>
+	</ol>
+	<!-- 4.行内 -->
+	<p>
+		北京市<i>海淀</i>区北<b>三环</b>西路甲<u>18</u>号<span style="color:red;">中鼎大厦</span>B座8层
+	</p>
+	<!-- 5.空格折叠 -->
+	<p>
+		那是一个&nbsp;&nbsp;&nbsp;秋天，<br>
+		看着传奇&nbsp;&nbsp;&nbsp;跑偏。<br>
+		奔着克晶&nbsp;&nbsp;&nbsp;而去，<br>
+		误入老苍&nbsp;&nbsp;&nbsp;心间。<br>
+	</p>
+	<!-- 6.图片 -->
+	<!-- 6.1绝对路径
+		从盘符开始写出图片存储的完整路径，如
+			D:/day01/images/1.jpg
+			/home/soft01/day01/images/1.jpg
+		这样将路径写死，将来项目给用户使用时，
+		一旦用户将项目放在其他的盘符下，就会
+		导致所有图片的路径都错。 -->
+	<!-- 6.2相对路径(*)
+		以当前页面(HTML)为起点，写出图片的相对位置即可。
+		项目交付客户时，若放到其他盘符下，由于页面和
+		图片的相对位置不变，所以路径没错。
+		a.图片和页面平级: 1.jpg
+		b.图片在页面下级: a/1.jpg
+		c.图片在页面上级: ../1.jpg -->
+	<p>
+		<img src="01.jpg"/>
+		<img src="a/02.jpg"/>
+		<img src="../03.jpg"/>
+		<!-- 通常这样用 -->
+		<img src="../images/04.jpg"/>
+	</p>
+	<!-- 7.1超链接 -->
+	<p>
+		<a href="http://www.tmooc.cn" target="_blank">达内幕课</a>
+	</p>
+	<!-- 7.2锚点：可以作为链接的目标 -->
+	<p>
+		<a name="cang">苍老师</a>是一个好老师，不但教Java，还会拍片子。
+	</p>
+	<!-- 7.3页面顶部默认是一个锚点，且没有名字 -->
+	<p>
+		<a href="#">回到顶部</a>
+	</p>
+	<!-- 8.1表格 -->
+	<table border="1" cellspacing="0" width="30%">
+		<tr>
+			<td>苍老师</td>
+			<td>泽老师</td>
+		</tr>
+		<tr>
+			<td>范老师</td>
+			<td>王老师</td>
+		</tr>
+	</table>
+	<!-- 8.2跨列 -->
+	<table border="1" cellspacing="0" width="30%">
+		<tr>
+			<!-- 2.设置跨几列 -->
+			<td colspan="2">苍老师</td>
+			<!-- 1.删除被跨的目标 -->
+			<!-- <td>泽老师</td> -->
+		</tr>
+		<tr>
+			<td>范老师</td>
+			<td>王老师</td>
+		</tr>
+	</table>
+	<!-- 8.3跨行 -->
+	<table border="1" cellspacing="0" width="30%">
+		<tr>
+			<td rowspan="2">苍老师</td>
+			<td>泽老师</td>
+		</tr>
+		<tr>
+			<!-- <td>范老师</td> -->
+			<td>王老师</td>
+		</tr>
+	</table>
+	<!-- 8.4行分组
+		就是对行进行分区，目的是便于对
+		某一组的行统一设置样式方便。 -->
+	<table border="1" cellspacing="0" width="40%">
+		<thead>
+			<tr>
+				<td>编号</td>
+				<td>名称</td>
+				<td>金额</td>
+			</tr>
+		</thead>
+		<tbody style="color:red;">
+			<tr>
+				<td>001</td>
+				<td>鼠标</td>
+				<td>50</td>
+			</tr>
+			<tr>
+				<td>002</td>
+				<td>键盘</td>
+				<td>100</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="2">合计</td>
+				<td>150</td>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

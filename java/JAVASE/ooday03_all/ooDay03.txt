@@ -1,0 +1,544 @@
+回顾:
+1.方法签名:方法名+参数列表
+2.方法的重载(overload):
+    同一个类中，方法名称相同，参数列表不同
+    编译器在编译时会自动根据签名来绑定调用不同的方法
+3.构造方法:
+    给成员变量初始化
+    与类同名，没有返回类型
+    创建对象时被自动调用
+    不写则默认无参构造，自己写了则不再默认提供
+    可以重载
+4.this:指代当前对象，哪个对象调用指的就是哪个对象
+       方法中访问成员变量之前默认有个this.
+       this.成员变量名
+       this.方法名()
+       this()
+5.引用类型数组:
+    Cell[] cells = new Cell[4]; //创建Cell数组对象
+    cells[0] = new Cell(2,5); //创建Cell对象
+
+    int[][] arr = new int[3][];
+    arr[0] = new int[2];
+
+
+
+Cell c = new Cell();
+c.row = 2;
+c.col = 5;
+c.drop();
+
+Cell cc = new Cell();
+cc.drop();
+
+class Cell{
+  int row;
+  int col;
+  Cell(int row,int col){
+    this.row=row;
+    this.col=col;
+  }
+  void drop(){
+    this.row++;
+  }
+}
+
+
+
+class O{
+  Cell[] cells;
+  O(int row,int col){
+    cells = new Cell[4];
+    cells[0] = new Cell(row,col);
+    cells[1] = new Cell(row,col+1);
+    cells[2] = new Cell(row+1,col);
+    cells[3] = new Cell(row+1,col+1);
+  }
+  void drop(){}
+  void moveLeft(){}
+  void moveRight(){}
+  void print(){}
+}
+
+
+
+
+
+
+
+
+
+笔记:
+1.内存管理:由JVM来管理----了解内容
+  1)堆:
+    1.1)用于存储所有new出来的对象(包括成员变量)
+    1.2)成员变量的生命周期:
+          创建(new)对象时存在堆中，对象被GC回收时一并消失
+    1.3)垃圾:没有任何引用所指向的对象
+        垃圾回收器(GC)不定时到堆中查看，看到垃圾则自动回收
+	回收过程是透明的，并不是一看到垃圾就马上回收
+	若想让它快一些收，可以调用System.gc()
+    1.4)内存泄露:不再使用的对象没有被及时的回收
+                 建议:当对象不再使用时应及时将引用设置为null
+  2)栈:
+    2.1)用于存储正在调用中方法的所有局部变量(包括参数)
+    2.2)调用方法时在栈中为该方法分配一块对应的栈桢，
+        栈桢中包含所有的局部变量(包括参数)，
+	方法调用结束时，栈桢消失，局部变量一并消失
+    2.3)局部变量的生命周期:
+          调用方法时存在栈中，方法调用结束时与栈桢一并消失
+  3)方法区:
+    3.1)用于存储.class字节码文件(包括方法)
+    3.2)方法只有一份，通过this来区分具体是哪个引用
+2.继承:
+  1)目的:避免代码重复，有利于代码的重用
+  2)通过extends实现继承
+  3)父类/基类:所有子类所共有的属性和行为
+    子类/派生类:子类所特有的属性和行为
+  4)子类继承父类后，子类具有:
+      子类+父类
+  5)一个父类可以有多个子类
+    一个子类只能有一个父类----单一继承
+  6)继承具有传递性
+  7)java规定:构造子类之前必须先构造父类
+    子类构造中若没有调用父类的构造，则默认super()来调父类的无参构造
+    若自己调了，则不再默认提供
+    super()调用父类构造，必须位于子类构造的第一句
+3.super:指代当前对象的父类对象
+  用法:
+    super.成员变量名-------访问父类的成员变量
+    super.方法名()---------调用父类的方法
+    super()----------------调用父类的构造方法
+4.向上造型:
+  1)父类型的引用指向子类的对象
+  2)能点出来什么，看引用的类型
+
+
+任务:
+1.继承的方式实现T、J、O、L、S类，并测试
+  要求:
+    1)创建Cell格子类
+    2)创建Tetromino四格拼板父类
+    3)创建T类继承Tetromino
+    4)创建J类继承Tetromino
+    5)创建O类继承Tetromino
+    6)创建L类继承Tetromino
+    7)创建S类继承Tetromino
+    8)创建TJTest做测试--打墙+打图形(T,J,O,L,S)
+
+当日事当日毕
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+长，写得代码多，错的就多，改的就多，会的就多
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+UpDemo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tetromino o1 = new T(); //向上造型
+Tetromino o2 = new J();
+Tetromino o3 = new O();
+Tetromino o4 = new L();
+Tetromino o5 = new I();
+Tetromino o6 = new S();
+Tetromino o7 = new Z();
+
+
+
+
+
+
+
+
+
+
+
+
+
+Person o1 = new Student(); //向上造型
+Person o2 = new Teacher();
+Person o3 = new Doctor();
+
+
+
+
+
+
+
+
+
+
+
+
+//动物是动物
+Animal o1 = new Animal();
+//老虎是老虎
+Tiger o2 = new Tiger();
+
+//老虎是动物
+Animal o3 = new Tiger(); //向上造型
+
+
+
+
+
+//动物是老虎----错误的
+Tiger o4 = new Animal(); //编译错误
+
+
+class Animal{
+}
+class Tiger extends Animal{  //is a的关系
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+T型参数，只能接收T型对象
+J型参数，只能接收J型对象
+O型参数，只能接收O型对象
+L型参数，只能接收L型对象
+I型参数，只能接收I型对象
+S型参数，只能接收S型对象
+Z型参数，只能接收Z型对象-----重载(代码重复)
+
+假如我有一种类型，------Tetromino
+  既能接收T型对象
+  也能接收J型对象
+  也能接收O型对象
+  也能接收L型对象
+  也能接收I型对象
+  也能接收S型对象
+  也能接收Z型对象--------不需要重载了
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+是和1个格没配上就打-，还是和所有格都没配上才打-
+
+并非一次判断得到最终结果---------开关
+
+何时打*()---------行列匹配就打*
+何时打-()---------4个格都没配上才打-
+
+
+
+
+//效率高但扩展性差
+if(i==t.cells[0].row && j==t.cells[0].col
+   ||
+   i==t.cells[1].row && j==t.cells[1].col
+   ||
+   i==t.cells[2].row && j==t.cells[2].col
+   ||
+   i==t.cells[3].row && j==t.cells[3].col){
+   
+}
+
+
+
+
+
+
+
+
+Coo o = new Coo();
+o.c = 1;
+o.b = 2;
+o.a = 3;
+
+class Aoo{
+  int a;
+}
+class Boo extends Aoo{
+  int b;
+}
+class Coo extends Boo{
+  int c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+程序中的继承:
+  代码不用自己写，自己也能用
+
+Student zs = new Student();
+zs.className/study();
+zs.name/age/address/eat()/sleep();
+
+class Person{ //父类
+  String name;
+  int age;
+  String address;
+  void eat(){}
+  void sleep(){}
+}
+class Aoo{
+}
+class Student extends Person,Aoo{ //子类
+  String className;
+  void study(){}
+}
+class Teacher extends Person{ //子类
+  double salary;
+  void teach(){}
+}
+class Doctor extends Person{ //子类
+  String level;
+  void cut(){}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+生活中的继承:
+1.继承财产:
+    钱不用自己挣，自己也能花
+2.继承皇位:
+    江山不用自己打，自己也能坐
+3.继承工作:
+    工作不用自己找，自己也能干
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+每个对象有自己对应的row和col
+所有对象共享一个drop()方法
+  drop()中如何区分到底是哪个对象下落
+
+Cell c1 = new Cell();
+c1.row = 2;
+c1.col = 5;
+c1.drop();
+
+Cell c2 = new Cell();
+c2.row = 1;
+c2.col = 6;
+c2.drop();
+
+
+class Cell{
+  int row;
+  int col;
+  void drop(){
+    row++;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Aoo{
+  int a;
+  void show(){
+    int b;
+    System.out.println(a);
+    System.out.println(b); //编译错误
+  }
+}
+
+Aoo o = new Aoo();
+
+
+
+成员变量:
+1.类中，方法外
+2.new时存在堆中，对象被回收时消失
+3.有默认值
+局部变量:
+1.方法中
+2.调方法时存在栈中，方法调用结束时与栈桢一并消失
+3.没有默认值
+
+
+
+
+
+
+
+
+
+class Aoo{
+  int a;
+  void show(int b){
+    int c=5;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cell c = new Cell();
+.....
+.....
+
+
+
+
+
+
+
+自动垃圾回收机制-----GC垃圾回收器
+
+C++:自己回收垃圾
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+java程序，运行运行，报内存不足
+中关村买了一个2G内存条，装到我的电脑上
+
+运行----------依然是内存不足
+如何解决?-----给JVM扩大内存
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

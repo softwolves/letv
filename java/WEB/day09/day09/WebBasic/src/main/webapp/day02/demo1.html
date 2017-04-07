@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>表单</title>
+</head>
+<body>
+	<!-- 1.表单元素：
+		action：声明表单提交的目标；
+		method/enctype：将来再说。 -->
+	<form action="http://www.tmooc.cn">
+		<!-- 2.表单控件：
+			input元素：
+				- 文本框、密码框
+				- 单选框、多选框
+				- 文件框、隐藏框
+				- 提交按钮、重置按钮、普通按钮
+			其他元素：
+				label、下拉选、文本域 -->
+		<!-- 文本框
+			value：设置默认值；
+			maxlength：设置输入的最大长度；
+			readonly：设置只读； -->
+		<p>
+			账号:<input type="text" value="Tarena"
+				maxlength="10" readonly/>
+		</p>
+		<!-- 密码框：属性同上。 -->
+		<p>
+			密码:<input type="password"/>
+		</p>
+		<!-- 单选框
+			name：设置组名，同组radio彼此互斥；
+			checked：设置默认选中；
+			value：将来再讲。 -->
+		<p>
+			性别:
+			<input type="radio" name="sex" checked/>男
+			<input type="radio" name="sex"/>女
+		</p>
+		<!-- 多选框
+			checked：设置默认选中；
+			name/value：将来再讲。 -->
+		<p>
+			兴趣:
+			<input type="checkbox" checked/>篮球
+			<input type="checkbox" checked/>足球
+			<input type="checkbox"/>桌球
+		</p>
+		<!-- 文件框 -->
+		<p>
+			头像:<input type="file"/>
+		</p>
+		<!-- 隐藏框：
+			是看不见的文本框，用来传输一些
+			秘密的数据，其值通过value预置。 -->
+		<p>
+			<input type="hidden" value="123"/>
+		</p>
+		<!-- 按钮：
+			提交：触发表单数据的提交；
+			重置：将表单中的数据重置为初始值；
+			普通：默认没有功能，需通过js自定义功能；
+			按钮的名字通过value属性设置。 -->
+		<p>
+			<input type="submit" value="注册"/>
+			<input type="reset" value="重置"/>
+			<input type="button" value="测试"/>
+		</p>
+		<!-- label：用来管理表单中的文本，可以将
+			文本与控件绑定，从而增大控件的受力面积。
+			1) 给控件增加id
+			2) 在label上增加for="id"
+			任何元素都有id属性，是元素的唯一标识。 -->
+		<p>
+			<input type="checkbox" id="c1"/>
+			<label for="c1">我已阅读并自愿遵守此协议！</label>
+		</p>
+		<!-- 下拉选
+			selected：用来设置默认选中；
+			value：将来再讲。 -->
+		<p>
+			城市:
+			<select>
+				<option>请选择</option>
+				<option>北京</option>
+				<option selected>上海</option>
+				<option>广州</option>
+				<option>深圳</option>
+			</select>
+		</p>
+		<!-- 文本域
+			rows：设置高度；
+			cols：设置宽度； -->
+		<p>
+			简介:
+			<textarea rows="5" cols="30">哈哈哈</textarea>
+		</p>
+	</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

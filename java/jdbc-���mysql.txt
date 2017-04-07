@@ -1,0 +1,6 @@
+Class.forName("com.mysql.jdbc.Driver");
+
+conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test?user=root&password=0000");
+
+备注:localhost 为本机地址
+	test 为mysql的库（要使用的库）

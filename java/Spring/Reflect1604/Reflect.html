@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reflect</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>反射</h1>
+<p>是Java中动态特性API。可以完成如下功能：</p>
+<ol>
+<li>动态加载类</li>
+<li>动态创建对象</li>
+<li>动态获取类信息（属性、方法构、造器等）</li>
+<li>动态调用方法</li>
+<li>动态获取、设置属性的值</li>
+<li>动态处理“注解”信息。</li>
+</ol>
+<blockquote>
+<p>常见框架的底层都采用了反射API。</p>
+</blockquote>
+<p>反射的优缺点：</p>
+<ol>
+<li>优点：动态执行，可以在事先不知道类名，方法名情况下加载类，创建对象，执行方法，访问属性。</li>
+<li>缺点：编程复杂，性能稍差。</li>
+</ol>
+<h2>静态执行</h2>
+<pre><code>Person p = new Person();
+String name = p.getName();
+System.out.println(name);
+</code></pre>
+
+<h2>动态执行</h2>
+<p>在运行期间再确定具体的执行规则，再运行期间再确定软件的执行次序，成为动态执行</p>
+<h2>反射API</h2>
+<p>被测试的案例类 Foo</p>
+<p>案例：</p>
+<pre><code>public class Foo {
+
+    @MyLove
+    public void f(){
+        System.out.println(&quot;f&quot;);
+    }
+
+    public String test(){
+        System.out.println(&quot;Hello&quot;);
+        return &quot;World!&quot;;
+    }   
+    public void test(int n){
+        System.out.println(&quot;test(int)&quot;);
+    }
+
+    public void test2(){
+        System.out.println(&quot;test2&quot;); 
+    }
+}
+</code></pre>
+
+<p>注解：</p>
+<pre><code>@Retention(RetentionPolicy.RUNTIME)
+public @interface MyLove {
+
+}
+</code></pre>
+
+<h3>动态加载类</h3>
+<p>再运行期间，根据动态给定的类名，动态加载类到方法区。</p>
+<p>api 代码：</p>
+<pre><code>Class.forName(类名);
+</code></pre>
+
+<p>案例：</p>
+<pre><code>Scanner in=new Scanner(System.in);
+System.out.print(&quot;输入类名：&quot;);
+String className=in.nextLine();
+//利用反射API，动态加载类到方法区
+Class cls=Class.forName(className);
+//cls 引用的对象就是通向方法区的通道
+//cls可以获取一切方法区中的信息
+System.out.println(cls.getName());
+</code></pre>
+
+<h3>反射动态创建对象</h3>
+<p>Class 提供的newInstance方法可以动态的调用类信息中的无参数构造器创建类的实例。</p>
+<p>案例</p>
+<pre><code>Scanner in=new Scanner(System.in);
+System.out.print(&quot;输入类名：&quot;);
+String className=in.nextLine();
+//利用反射API，动态加载类到方法区
+Class cls=Class.forName(className);
+//cls 引用的对象就是通向方法区的通道
+//cls可以获取一切方法区中的信息
+System.out.println(cls.getName());
+//动态调用类信息再的无参数构造器，
+// 创建对象. 在不知道类名时候使用！！
+Object obj = cls.newInstance();
+System.out.println(obj); 
+</code></pre>
+
+<h3>动态获取方法信息</h3>
+<p>Class 类提供了 getDeclaredMethods() 方法，这个方法可以获取类信息中的方法信息。</p>
+<p>案例:</p>
+<pre><code>Scanner in=new Scanner(System.in);
+System.out.print(&quot;输入类名：&quot;);
+String className=in.nextLine();
+//动态加载类
+Class cls=Class.forName(className);
+//动态获取类中的方法信息
+Method[] methods=
+    cls.getDeclaredMethods();
+//methods数组中的每个元素，都代表一个
+//方法信息。
+for(Method m:methods){
+    //m代码每个方法信息
+    System.out.println(m);
+}
+</code></pre>
+
+<h3>动态获取方法的详细信息</h3>
+<p>Method类提供了获取方法的详细信息方法：包括获取注解信息，方法参数信息，方法返回值信息等</p>
+<p>案例：</p>
+<pre><code>Scanner in=new Scanner(System.in);
+System.out.print(&quot;输入类名：&quot;);
+String className=in.nextLine();
+//动态加载类
+Class cls=Class.forName(className);
+//动态获取类中的方法信息
+Method[] methods=
+    cls.getDeclaredMethods();
+//methods数组中的每个元素，都代表一个
+//方法信息。
+for(Method m:methods){
+    //m代码每个方法信息
+    System.out.println(m);
+    //获取方法的注解信息
+    Annotation[] ans=
+        m.getAnnotations();
+    //获取方法的参数列表信息
+    Class[] params=
+        m.getParameterTypes();
+    System.out.println(
+        Arrays.toString(ans));
+    System.out.println(
+        Arrays.toString(params));
+}   
+</code></pre>
+
+<blockquote>
+<p>处理注解: 使用反射API在运行期间处理注解！！！</p>
+</blockquote>
+<h3>使用反射API调用方法</h3>
+<p>注意：</p>
+<ol>
+<li>
+对象上必须包含m方法！！！
+<ul>
+<li>否则会出现运行异常！！！</li>
+</ul>
+</li>
+<li>
+<p>方法必须包含相应参数</p>
+<ul>
+<li>否则出现异常</li>
+</ul>
+<p>Method m = ...
+m.invoke(对象, 参数列表);
+//再对象上执行m方法，向方法传递参数（参数列表）</p>
+</li>
+</ol>
+<p>案例：
+需求：</p>
+<p>有一个类，包含很多以test为开头的方法， 要求编写代码执行这个类中以test为开头的方法。
+这个类有无参数构造器， 这些方法都是无返回，无参数，非静态方法。</p>
+<p>分析：</p>
+<ol>
+<li>不知道类名</li>
+<li>不知道方法名</li>
+</ol>
+<p>必须使用动态反射API实现上述功能</p>
+<p>代码：</p>
+<pre><code>Scanner in = new Scanner(System.in);
+System.out.print(&quot;输入类名：&quot;);
+String className = in.nextLine();
+//动态加载类
+Class cls = Class.forName(className);
+//找到全部的方法信息
+Method[] methods=
+    cls.getDeclaredMethods();
+//找到全部以test为开头的无参数方法
+//String str = &quot;ABC&quot;;
+Object obj = cls.newInstance();
+for(Method m:methods){
+    String name=m.getName();
+    Class[] params=
+        m.getParameterTypes();
+    //找到了test开头的无参数方法
+    if(name.startsWith(&quot;test&quot;) &amp;&amp;
+        params.length==0){
+        System.out.println(m); 
+        Object val=m.invoke(obj);
+        System.out.println(val);
+    }
+}
+</code></pre>
+
+<h3>案例：模拟Spring框架</h3>
+<p>常见框架的底层都采用反射技术。Spring底层也是反射技术。</p>
+<p>案例：</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!-- demo/application.xml --&gt;
+&lt;beans&gt;
+    &lt;bean id=&quot;foo&quot; class=&quot;demo.Foo&quot;&gt;
+    &lt;/bean&gt;
+    &lt;bean id=&quot;date&quot; class=&quot;java.util.Date&quot;&gt;&lt;/bean&gt;
+    &lt;!-- .... --&gt;
+&lt;/beans&gt;
+
+
+public class ApplicationContext {
+    private Map&lt;String, Object&gt; beans=
+            new HashMap&lt;String, Object&gt;();
+    public ApplicationContext(String xml)
+        throws Exception {
+        //初始化Bean容器：根据配置文件，
+        //创建每个bean对象
+        SAXReader reader=new SAXReader();
+        //从包里面读取文件
+        InputStream in=
+            ApplicationContext.class
+            .getClassLoader()
+            .getResourceAsStream(xml);
+        Document doc=reader.read(in);
+        Element root=doc.getRootElement();
+        List&lt;Element&gt; els=root.elements();
+        for(Element e:els){
+            //e 就是xml 中的 bean 元素
+            String id=e.attributeValue(&quot;id&quot;);
+            String className=
+                e.attributeValue(&quot;class&quot;);
+            //利用反射动态创建bean对象
+            Class cls=Class.forName(className);
+            Object obj=cls.newInstance();
+            //将创建的bean对象保存到beans集合中
+            beans.put(id, obj);
+        }
+
+    }
+
+    public Object getBean(String id){
+        //返回容器中某个bean对象
+        return beans.get(id); 
+    }
+}
+</code></pre>
+
+<p>测试案例：</p>
+<pre><code>public class Demo05 {
+    public static void main(String[] args) 
+        throws Exception{
+
+        String xml=&quot;demo/application.xml&quot;;
+        ApplicationContext ctx = 
+            new ApplicationContext(xml);
+        Foo foo=(Foo)ctx.getBean(&quot;foo&quot;);
+        Date date=(Date)ctx.getBean(&quot;date&quot;);
+        System.out.println(foo);
+        System.out.println(date);
+    }
+
+}
+</code></pre>
+
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

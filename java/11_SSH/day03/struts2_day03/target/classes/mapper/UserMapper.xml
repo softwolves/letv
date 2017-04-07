@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.tedu.cloudnote.dao.UserDao">
+
+<select id="findAllUsers"
+	resultType="java.util.Map">
+	select cn_user_id as id,
+		cn_user_name as name
+	from cn_user 
+</select>
+
+<insert id="save" 
+parameterType="com.tedu.cloudnote.entity.User">
+insert into cn_user
+	(cn_user_id,cn_user_name,
+	cn_user_password,cn_user_nick)
+values (#{cn_user_id},#{cn_user_name},
+	#{cn_user_password},#{cn_user_nick})
+</insert>
+
+<select id="findByName" parameterType="string"
+resultType="com.tedu.cloudnote.entity.User">
+	select * from cn_user
+	where cn_user_name = #{name}
+</select>
+	
+</mapper> 

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- demo/application.xml -->
+<beans>
+	<bean id="foo" class="demo.Foo"></bean>
+	<bean id="date" class="java.util.Date"></bean>
+	<!-- .... -->
+</beans>

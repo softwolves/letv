@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.tedu.cloudnote.dao.NoteDao">
+
+<!-- in条件 --> 
+<delete id="batchDelete">
+delete from cn_note
+where cn_note_id in
+<foreach collection="array" item="id"
+	separator="," open="(" close=")">
+  #{id}
+</foreach>
+</delete>
+
+<!-- 动态更新 -->
+<update id="dynamicUpdate" 
+parameterType="com.tedu.cloudnote.entity.Note">
+update cn_note
+<set>
+	<if test="cn_note_type_id!=null">
+	 cn_note_type_id=#{cn_note_type_id},
+	</if>
+	<if test="cn_note_status_id!=null">
+		cn_note_status_id=#{cn_note_status_id},
+	</if>
+	<if test="cn_notebook_id!=null">
+		cn_notebook_id=#{cn_notebook_id},
+	</if>
+	<if test="cn_note_title!=null">
+		cn_note_title=#{cn_note_title},
+	</if>
+	<if test="cn_note_body!=null">
+		cn_note_body=#{cn_note_body},
+	</if>
+	<if test="cn_note_last_modify_time!=null">
+		cn_note_last_modify_time=#{cn_note_last_modify_time}
+	</if>
+</set>
+where cn_note_id=#{cn_note_id}
+</update>
+
+<!-- 组合查询 -->
+<select id="findNotes" parameterType="map"
+resultType="com.tedu.cloudnote.entity.Note">
+select * from cn_note
+<where>
+	<if test="title!=null">
+	 cn_note_title like #{title}
+	</if>
+	<if test="status!=null">
+	and cn_note_status_id=#{status}
+	</if>
+	<if test="begin!=null">
+	and cn_note_create_time>=#{begin}
+	</if>
+	<if test="end!=null">
+	and cn_note_create_time&lt;#{end}
+	</if>
+</where>
+</select>  
+
+<update id="updateTypeId" 
+	parameterType="string">
+update cn_note
+set cn_note_type_id='2'
+where cn_note_id=#{noteId}
+</update>
+
+<update id="updateBookId" 
+parameterType="com.tedu.cloudnote.entity.Note">
+update cn_note
+set cn_notebook_id=#{cn_notebook_id}
+where cn_note_id=#{cn_note_id}
+</update>
+
+<update id="updateStatus" 
+	parameterType="string">
+update cn_note
+set cn_note_status_id='2'
+where cn_note_id=#{noteId}
+</update>
+
+<insert id="save" 
+parameterType="com.tedu.cloudnote.entity.Note">
+insert into cn_note
+	(cn_note_id,cn_notebook_id,
+	cn_user_id,cn_note_status_id,
+	cn_note_type_id,cn_note_title,
+	cn_note_body,cn_note_create_time,
+	cn_note_last_modify_time)
+values (#{cn_note_id},#{cn_notebook_id},
+	#{cn_user_id},'1',
+	'1',#{cn_note_title},
+	'',#{cn_note_create_time},
+	#{cn_note_last_modify_time})
+</insert>
+
+<update id="updateNote" 
+parameterType="com.tedu.cloudnote.entity.Note">
+update cn_note
+set cn_note_title=#{cn_note_title},
+	cn_note_body=#{cn_note_body},
+	cn_note_last_modify_time=#{cn_note_last_modify_time}
+where cn_note_id=#{cn_note_id}
+</update>
+
+<select id="findById" parameterType="string"
+resultType="com.tedu.cloudnote.entity.Note">
+select * from cn_note
+where cn_note_id=#{id}
+</select>
+
+<select id="findByBookId" 
+	parameterType="string"
+	resultType="map">
+select cn_note_id,cn_note_title,
+	   cn_note_type_id 
+from cn_note
+where cn_notebook_id=#{bookId}
+  and cn_note_status_id='1'
+</select>
+
+</mapper>

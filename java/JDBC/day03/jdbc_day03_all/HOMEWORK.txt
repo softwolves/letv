@@ -1,0 +1,4 @@
+完成UserInfoDAO剩余方法，并在UserInfoService中进行测试。
+
+方法有:
+update,delete,findById

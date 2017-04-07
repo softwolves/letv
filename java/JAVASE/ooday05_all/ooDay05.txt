@@ -1,0 +1,564 @@
+回顾:
+1.方法的重写(override):重新写、覆盖
+  1)父子类中，方法签名相同，方法体不同
+  2)重写方法被调时，看对象的类型
+2.重写与重载的区别:
+  重写:父子类中，方法签名相同，方法体不同
+       看对象
+  重载:同一类中，方法名相同，参数列表不同
+       看引用
+3.package和import:
+4.访问控制修饰符:
+    public:公开的，任何类------行为公开化
+    private:私有的，本类-------数据私有化
+    protected:受保护的，本类、子类、同包类
+    默认的:什么也不写，本类、同包类
+5.static:静态的
+    静态变量:所有对象的数据都一样时使用
+    静态方法:没有隐式this，所以不能直接访问实例成员
+             方法的操作仅与参数相关而与对象无关
+    静态块:加载/初始化静态资源(图片、音频、视频......)
+6.final:不可改变的/最终的
+    修饰变量:变量不能被改变
+    修饰方法:方法不能被重写
+    修饰类:  类不能被继承
+
+
+Boo o = new Boo();
+o.show();
+o.show(2);
+
+class Aoo{
+  void show(){}
+}
+class Boo extends Aoo{
+  void show(int a){} //重载
+}
+
+
+
+package a;
+class Aoo{
+}
+
+package b;
+class Aoo{
+}
+
+同时使用不同包中相同类名的类
+package c;
+class Test{
+  void show(){
+    a.Aoo o = new a.Aoo();
+    b.Aoo o2 = new b.Aoo();
+  }
+}
+
+
+
+
+
+
+
+
+正课:
+1.static final常量:
+  1)必须声明同时初始化
+  2)通过类名点来访问，不能改变
+  3)建议:常量名所有字母都大写
+  4)在编译时被直接替换为具体的值，效率高
+2.抽象方法:
+  1)由abstract修饰
+  2)只有方法的定义，没有方法的实现(大括号都没有)
+3.抽象类:
+  1)由abstract修饰
+  2)包含抽象方法的类必须是抽象类
+    不包含抽象方法的类也可以声明为抽象类----我乐意
+  3)抽象类不能被实例化
+  4)抽象类是需要被继承的，子类:
+    4.1)重写所有抽象方法----常用
+    4.2)也声明为抽象类------不常用
+  5)抽象类的意义:
+    5.1)包含公共的属性和行为，被子类所共享--代码重用
+    5.2)为所有子类提供一种公共的类型--向上造型
+    5.3)包含抽象方法，为所有子类提供一个统一的入口
+        子类有不同的实现
+4.接口:
+  1)是一个标准、规范
+    遵守了这个标准，就能干某件事----API后了解
+  2)由interface定义
+  3)只能包含常量和抽象方法
+  4)接口不能被实例化
+  5)接口是需要被实现/继承的，实现类/子类:
+      必须重写接口中的所有抽象方法
+  6)一个类可以实现多个接口，用逗分隔
+    若又继承又实现时，应先继承extends后实现implements
+  7)接口可以继承接口
+
+接口是完全抽象的抽象类
+接口是继承的单根性的扩展----体会
+
+
+练习:完成银行卡系统
+
+任务一:
+  独立完成银行卡系统(写oo.day06的包中):
+    接口:UnionPay银联接口
+         ICBC工行接口
+	 ABC农行接口
+	 CCB建行接口
+    类:ICBCImpl工行卡
+       ABCImpl农行卡
+       CCBImpl建行卡
+任务二:
+  独立完成求一组图形中最大面积:
+    抽象类: Shape
+    类:Circle圆形
+       Square方形
+       Six六边形
+       ShapeTest测试
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+double num = input.nextDouble();
+
+
+余额-取的钱>100-----里面多于100
+余额-取的钱>=-100----透支100
+
+
+
+
+
+
+
+
+
+
+UnionPayTest
+
+
+ICBCImpl card1 = new ICBCImpl(); //工行卡
+ICBC     card2 = new ICBCImpl(); //工行卡
+UnionPay card3 = new ICBCImpl(); //银联卡--工行卡
+
+
+
+interface UnionPay{ //银联
+  void 存();
+  void 取();
+  void 转帐();
+  void 查询余额();
+}
+interface ICBC extends UnionPay{ //工行
+  void 在线支付();
+}
+interface ABC extends UnionPay{ //农行
+  void 支付电话费();
+}
+
+class ICBCImpl implements ICBC{ //工行卡
+  public void 存(){}
+  public void 取(){}
+  public void 转帐(){}
+  public void 查询余额(){}
+  public void 在线支付(){}
+}
+class ABCImpl implements ABC{ //农行卡
+  public void 存(){}
+  public void 取(){}
+  public void 转帐(){}
+  public void 查询余额(){}
+  public void 支付电话费(){}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+InterfaceDemo
+
+
+
+
+
+
+
+
+
+
+
+
+类对类-----------继承
+接口对接口-------继承
+类和接口---------实现
+
+
+Inter1 o1; //正确
+new Inter1(); //编译错误，接口不能被实例化
+Inter2 o2 = new Aoo(); //向上造型
+Inter1 o3 = new Aoo(); //向上造型
+
+interface Inter1{
+  void a();
+}
+interface Inter2 extends Inter1{
+  void b();
+}
+class Aoo implements Inter2{
+  public void b(){}
+  public void a(){}
+}
+
+
+
+interface Inter1{
+  void a();
+}
+interface Inter2{
+  void b();
+}
+abstract class Aoo{
+  abstract void c();
+}
+class Boo extends Aoo implements Inter1,Inter2{
+  public void a(){}
+  public void b(){}
+  void c(){}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+interface Inter1{
+  void a();
+  void b();
+}
+class Aoo implements Inter1{
+  public void a(){}
+  public void b(){}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+new Inter1(); //编译错误
+
+interface Inter1{
+  public static final int NUM = 5;
+  public abstract void show();
+
+  double PI = 3.14159; //默认public static final
+  void sayHi(); //默认public abstract
+
+  int num; //编译错误
+  public void say(){} //编译错误
+}
+
+
+
+
+
+
+生活中的接口:
+1.电脑厂商留的USB接口-------制定标准、规范
+  U盘、键盘、鼠标厂商-------遵守标准、规范
+2.国家对开发商--------------制定标准、规范
+  国家对家具厂商------------制定标准、规范
+  开发商、家具厂商----------遵守标准、规范
+3.银行----------------------制定标准、规范
+  银行卡--------------------遵守标准、规范
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ShapeTest
+
+
+
+
+
+
+
+
+
+
+
+abstract class Animal{ //是动物都能跑
+  abstract void run();
+}
+class Tiger extends Animal{
+  void run(){
+    在地上跑
+  }
+}
+class Bird extends Animal{
+  void run(){
+    在天上飞
+  }
+}
+class Fish extends Animal{
+  void run(){
+    在水里游
+  }
+}
+
+
+
+
+
+
+
+
+Shape s1 = new Square();
+Shape s2 = new Circle();
+Shape s3 = new Six();
+
+
+abstract class Shape{
+  double c;
+  abstract double area();
+}
+class Square extends Shape{
+  double area(){
+    return 0.0625*c*c;
+  }
+}
+class Circle extends Shape{
+  double area(){
+    return 0.0796*c*c;
+  }
+}
+
+
+
+new Tetromino(); //编译错误
+
+new T(),new J(),new O()....
+
+abstract class Tetromino{
+  Cell[] cells;
+  void drop(){}
+  void moveLeft(){}
+  void moveRight(){}
+  void print(){}
+}
+class T extends Tetromino{
+}
+class J extends Tetromino{
+}
+class O extends Tetromino{
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+需求:给我一组图形，找出这组图形的最大面积
+
+Square[] ss = new Square[3];
+ss[0] = new Square(1);
+ss[1] = new Square(2);
+ss[2] = new Square(3);
+
+Circle[] cs = new Circle[3];
+cs[0] = new Circle(1);
+cs[1] = new Circle(2);
+cs[2] = new Circle(3);
+
+Six[] sixes = new Six[3];
+sixes[0] = new Six(1);
+sixes[1] = new Six(2);
+sixes[2] = new Six(3);
+
+//代码重复，扩展性差，维护性差
+1.找到ss中最大面积sMax
+2.找到cs中最大面积cMax
+3.找到sixes中最大面积sixMax
+4.找到sMax与cMax以及sixMax的最大值max
+
+
+Shape s1 = new Square(1); //向上造型
+Shape s2 = new Circle(1);
+Shape s3 = new Six(1);
+
+
+
+
+
+
+//代码复用，扩展性好，维护性好
+Shape[] shapes = new Shape[12]; //创建Shape数组对象
+shapes[0] = new Square(1); //向上造型
+shapes[1] = new Square(2);
+shapes[2] = new Square(3);
+shapes[3] = new Circle(1);
+shapes[4] = new Circle(2);
+shapes[5] = new Circle(3);
+shapes[6] = new Six(1);
+shapes[7] = new Six(2);
+shapes[8] = new Six(3);
+
+double max = shapes[0].area();
+for(int i=1;i<shapes.length;i++){
+  double area = shapes[i].area();
+  if(area>max){
+    max=area;
+  }
+}
+System.out.println("最大面积为:"+max);
+
+
+
+
+
+
+
+
+
+
+new Shape(); //错
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+new Shape(); //编译错误
+Shape s = new Square(); //向上造型
+
+abstract class Shape{ //抽象类--不完整
+  double c;
+  abstract double area(); //抽象方法--不完整
+}
+
+class Square extends Shape{ //方形
+  double area(){ //重写抽象方法--变不完整为完整
+    return 0.0625*c*c;
+  }
+}
+class Circle extends Shape{ //圆形
+  double area(){
+    return 0.0796*c*c;
+  }
+}
+
+
+
+abstract class Six extends Shape{ //六边形
+}
+
+
+
+
+
+
+Shape s; //正确
+new Shape(); //编译错误
+
+
+创建汽车对象-----不合理
+
+abstract class Car{
+  void run(){
+  }
+  abstract void stop();
+}
+
+
+
+
+
+
+
+
+
+
+
+听不懂我讲了---------重听一次
+听得懂但写不出来-----欠练
+
+
+
+
+
+
+
+
+
+

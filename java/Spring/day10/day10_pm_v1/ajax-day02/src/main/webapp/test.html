@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" 
+src="js/prototype-1.6.0.3.js"></script>
+<script type="text/javascript">
+	/*
+		演示使用json语法表示一个对象。
+	*/
+	function f1(){
+		var obj = {"name":"Sally","age":22};
+		alert(obj.name);
+	}
+	
+	function f2(){
+		var obj = {"company":"达内",
+				"address":
+				{
+					"city":"北京",
+					"street":"北三环西路",
+					"room":18
+				}
+		};
+		alert(obj.address.street);
+	}
+	
+	//表示对象组成的数组
+	function f3(){
+		var arr = [{"name":"Sally","age":22},
+		           {"name":"Eric","age":32}];
+		alert(arr[1].name);
+	}
+	
+	//将json字符串转换成javascript对象
+	function f4(){
+		var str = '{"name":"Sally","age":22}';
+		var obj = str.evalJSON();
+		alert(obj.name);
+	}
+	
+	function f5(){
+		var str = '[{"name":"Sally","age":22},'
+         + '{"name":"Eric","age":32}]';
+		//返回的是javascript对象组成的数组
+		var arr = str.evalJSON();
+		alert(arr[1].name);
+	}
+	
+</script>
+</head>
+<body style="font-size:30px;">
+	<a href="javascript:f5();">ClickMe</a>
+	
+	
+	
+	
+</body>
+
+
+
+
+
+
+
+</html>
