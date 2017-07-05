@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS基本语法</title>
+<script>
+	//函数之外的JS，在页面加载时直接调用。
+	//函数之内的JS，在事件触发时调用。
+	
+	//1.声明变量
+	var x; //默认值为undefined
+	console.log(x);
+	x = 2;
+	console.log(x);
+	var y = 3;
+	console.log(y);
+	
+	//2.隐式转换
+	var s = "hello";
+	var n = 3.14;
+	var b = true;
+	console.log(s+n);
+	console.log(s+b);
+	console.log(n+b);
+	console.log(b+b);
+	
+	//3.强制转换
+	var m = 5;
+	var n = 6;
+	console.log(m.toString()+n.toString());
+	console.log(parseInt(3.14));
+	console.log(parseFloat("3.14")+1);
+	console.log(parseInt("abc"));
+	console.log(typeof(n));
+	//判断传入参数是否为NaN
+	console.log(isNaN(n));
+	
+	//4.运算符
+	console.log(5/2);
+	var aa = 9;
+	var bb = "9";
+	console.log(aa==bb);
+	console.log(aa===bb);
+	
+	//5.条件表达式
+	var d = NaN;
+	if(d) {
+		console.log("非空");
+	} else {
+		console.log("空值");
+	}
+	
+	var e = null;
+	e && console.log("ok");
+	
+</script>
+</head>
+<body>
+	<h1>JS语法很像Java</h1>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

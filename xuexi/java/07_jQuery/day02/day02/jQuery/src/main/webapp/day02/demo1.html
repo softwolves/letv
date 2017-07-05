@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>选择器</title>
+<script src="../js/jquery-1.11.1.js"></script>
+<script>
+	//$(function(){}) 类似于
+	//window.onload = function(){}
+	$(function(){
+		//1.基本选择器
+		//2.层次选择器
+		console.log($("#gz+"));
+		//3.过滤选择器
+		//3.1基本过滤(***)
+		console.log($("li:first"));
+		console.log($("li:even"));
+		console.log($("li:gt(2)"));
+		console.log($("li:not(#gz)"));
+		//3.2内容过滤
+		console.log($("li:contains('京')"));
+		//3.3可见性过滤
+		console.log($("li:visible"));
+		//3.4属性过滤
+		console.log($("li[id!='gz']"));
+		//3.5状态过滤(*)
+		console.log($("input:enabled"));
+		console.log($("input:checked"));
+		//4.表单选择器
+		console.log($("input:checkbox"));
+	});
+</script>
+</head>
+<body>
+	<ul>
+		<li>北京</li>
+		<li>上海</li>
+		<li id="gz">广州</li>
+		<li>深圳</li>
+		<li>南京</li>
+		<li style="display:none;">香港</li>
+	</ul>
+	<p>
+		<input type="text" disabled/>
+	</p>
+	<p>
+		<input type="password"/>
+	</p>
+	<p>
+		<input type="checkbox" checked/>
+		<input type="checkbox" checked/>
+		<input type="checkbox"/>
+	</p>
+</body>
+</html>
+
+
+
+
+
+
+
+

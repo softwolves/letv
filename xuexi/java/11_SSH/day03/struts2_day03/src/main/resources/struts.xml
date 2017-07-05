@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="test"
+		namespace="/test"
+		extends="json-default">
+		<action name="demo"
+			class="demoAction"
+			method="test">
+			<result name="success">
+				/WEB-INF/msg.jsp
+			</result>
+		</action>
+	</package>
+	<package name="login"
+		namespace="/login"
+		extends="json-default">
+		<action name="login"
+			class="userAction"
+			method="login">
+			<result name="success" 
+				type="json">
+				<param name="root">
+					result
+				</param>
+			</result>
+		</action>
+	</package>
+	
+	<package name="user" 
+		namespace="/user"
+		extends="json-default">
+		<action name="list"
+			class="userAction"
+			method="list">
+			<result name="success">
+				/WEB-INF/listUsers.jsp
+			</result>	
+			<result name="error">
+				/WEB-INF/error.jsp
+			</result>	
+		</action>
+	</package>
+</struts>
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>模拟操作</title>
+<script src="../js/jquery-1.11.1.js"></script>
+<script>
+	$(function(){
+		$(":button").click(function(){
+			var index = 0; //循环索引
+			//启动定时器，每2秒打个分
+			var id = setInterval(function(){
+				//触发当前文本框的光标切入事件(onfocus)
+				$(":text").eq(index).trigger("focus");
+				//生成随机分数
+				var score = parseInt(Math.random()*100);
+				//将分数写入当前文本框
+				$(":text").eq(index).val(score);
+				index++;
+				if(index==$(":text").length) {
+					clearInterval(id);
+				}
+			},2000);
+		});
+	});
+</script>
+</head>
+<body>
+	<p>
+		<input type="button" value="打分"/>
+	</p>
+	<p>
+		苍老师：<input type="text"/>
+	</p>
+	<p>
+		范传奇：<input type="text"/>
+	</p>
+	<p>
+		王克晶：<input type="text"/>
+	</p>
+	<p>
+		李洪鹤：<input type="text"/>
+	</p>
+	<p>
+		程祖红：<input type="text"/>
+	</p>
+	<p>
+		梁建全：<input type="text"/>
+	</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

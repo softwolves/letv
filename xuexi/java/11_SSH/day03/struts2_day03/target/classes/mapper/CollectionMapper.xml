@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.tedu.cloudnote.dao.CollectionDao">
+
+<!-- 通过一个join SQL加载User和books值 -->
+<select id="findAllUser" resultMap="userMap2">
+select * 
+from cn_user u 
+left outer join cn_notebook b
+on(u.cn_user_id=b.cn_user_id)
+</select>
+<resultMap id="userMap2" 
+type="com.tedu.cloudnote.entity.User">
+	<!-- 指定user字段的装载 -->
+	<id property="cn_user_id" column="cn_user_id"/>
+	<result property="cn_user_name" column="cn_user_name"/>
+	<result property="cn_user_password" column="cn_user_password"/>
+	<result property="cn_user_token" column="cn_user_token"/>
+	<result property="cn_user_nick" column="cn_user_nick"/>
+	<!-- 指定相关book字段的装载 -->
+	<collection property="books" 
+		javaType="java.util.List"
+	ofType="com.tedu.cloudnote.entity.Book">
+		<id property="cn_notebook_id" column="cn_notebook_id"/>
+		<!-- 
+		<result property="cn_user_id" column="cn_user_id"/>
+		 -->
+		<result property="cn_notebook_type_id" column="cn_notebook_type_id"/>
+		<result property="cn_notebook_name" column="cn_notebook_name"/>
+		<result property="cn_notebook_desc" column="cn_notebook_desc"/>
+		<result property="cn_notebook_createtime" column="cn_notebook_createtime"/>
+	</collection>
+</resultMap>
+
+
+<!-- 查询某个User及其相关的多个Book信息 -->
+<select id="findById" parameterType="string"
+ resultMap="userMap1">
+select * from cn_user
+where cn_user_id=#{userId}
+</select>
+<!-- 指定userMap1装载规则 -->
+<resultMap id="userMap1" 
+type="com.tedu.cloudnote.entity.User">
+	<!-- 指定cn_user表字段给User属性装载 -->
+	<!-- 字段名和属性名一致,省略 -->
+	<!-- 指定关联属性books,集合属性的加载 -->
+	<collection property="books" 
+		javaType="java.util.List"
+	ofType="com.tedu.cloudnote.entity.Book"
+	select="findBooks" column="cn_user_id">
+	</collection>
+</resultMap>
+<select id="findBooks" parameterType="string"
+resultType="com.tedu.cloudnote.entity.Book">
+select * from cn_notebook
+where cn_user_id=#{userId}
+</select>
+
+</mapper>
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- struts.xml -->
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 用于配置请求路径与控制器的匹配关系 -->
+	<!-- /test 请求被这个包进行处理 -->
+	<package name="test" namespace="/test"
+		extends="struts-default"> 
+		<!-- 请求/test/hello.action时候
+		执行HelloAction的execute()方法 -->
+		<action name="hello"
+			class="com.tedu.HelloAction">
+			<!-- execute方法返回success 
+			时候，转发到msg.jsp-->
+			<result name="success">
+				/WEB-INF/msg.jsp
+			</result>
+		</action>
+	</package>
+	
+	<package name="user"
+		namespace="/user" 
+		extends="struts-default">
+		<!--显示登录页面/user/loginForm.action-->
+		<action name="loginForm">
+			<result>/WEB-INF/login.jsp</result>
+		</action>
+		<!-- 处理登录请求/user/login.action -->
+		<action name="login"
+			class="com.tedu.LoginAction">
+			<result name="success">
+				/WEB-INF/ok.jsp
+			</result>
+		</action>
+		
+		<!-- 显示 login2.jsp -->
+		<action name="login2Form">
+			<result>/WEB-INF/login2.jsp</result>
+		</action>
+		<action name="login2"
+			class="com.tedu.Login2Action">
+			<result name="success">
+				/WEB-INF/ok.jsp
+			</result>
+			<result name="error">
+				/WEB-INF/login2.jsp	
+			</result>
+		</action>
+	</package>	
+</struts>
+
+
+
+
+
+
+
+
+
+

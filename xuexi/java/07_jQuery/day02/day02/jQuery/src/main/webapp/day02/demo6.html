@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>动画</title>
+<script src="../js/jquery-1.11.1.js"></script>
+<script>
+	function f1() {
+		$("img").fadeIn(3000,function(){
+			alert("ok");
+		});
+	}
+	function f2() {
+		$("img").fadeOut(3000,function(){
+			alert("ok");
+		});
+	}
+	function f3() {
+		$("p:last").fadeIn(500).fadeOut(3000);
+	}
+</script>
+</head>
+<body>
+	<p>
+		<input type="button" value="显示"
+			onclick="f1();"/>
+		<input type="button" value="隐藏"
+			onclick="f2();"/>
+		<input type="button" value="删除"
+			onclick="f3();"/>
+	</p>
+	<p>
+		<img src="../images/01.jpg"/>
+	</p>
+	<p style="display:none;">操作成功</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

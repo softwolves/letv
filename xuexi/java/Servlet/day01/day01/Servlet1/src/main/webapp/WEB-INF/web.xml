@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>Servlet1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 1.声明Servlet，并给它取一个别名。
+  		别名是便于在此文件中引用此类方便。 -->
+  <servlet>
+  	 <servlet-name>time</servlet-name>
+  	 <servlet-class>web.TimeServlet</servlet-class>
+  </servlet>
+  
+  <!-- 2.给此Servlet注册一个网名。
+  		网名是用来在互联网上访问此类的途径。 -->
+  <servlet-mapping>
+  	 <servlet-name>time</servlet-name>
+  	 <url-pattern>/tm</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
+
+
+
+
+
+
+
+
+
+
+
+
+

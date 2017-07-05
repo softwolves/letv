@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>动态时钟</title>
+<style>
+	#clock {
+		border: 3px solid #ccc;
+		width: 150px;
+		height: 30px;
+		line-height: 30px;
+		font-size: 20px;
+		text-align: center;
+	}
+</style>
+<script>
+	var id = null;
+	function start() {
+		//若已启动(id非空)定时器，就不要再次启动了
+		if(id) {
+			return;
+		}
+		id = setInterval(function(){
+			//获取当前客户机时间
+			var d = new Date();
+			//转换为本地格式的字符串
+			var now = d.toLocaleTimeString();
+			//将其写入p中
+			var p = document.getElementById("clock");
+			p.innerHTML = now;
+		},1000);
+	}
+	function stop() {
+		clearInterval(id);
+		id = null;
+	}
+</script>
+</head>
+<body>
+	<p>
+		<input type="button" value="开始"
+			onclick="start();"/>
+		<input type="button" value="停止"
+			onclick="stop();"/>
+	</p>
+	<p id="clock"></p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

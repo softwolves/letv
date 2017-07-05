@@ -1,0 +1,189 @@
+day04
+代理服务
+工作原理
+代理软件
+squid varniash  nginx
+用squid软件搭建代理服务器
+squid的优点
+
+代理类型
+
+普通代理：
+eth0
+tcp
+80
+http://172.16.0.1
+192.168.182.143                       172.16.0.1
+insidepc  ------ squid-server  ------ webserver
+                eth0       eth1
+     192.168.182.142       172.16.0.254
+
+
+
+
+server config
+yum -y install squid
+vim /etc/squid/squid.conf
+http_port  3128
+cache_mem  8 M
+cache_dir  ufs  /var/spool/squid   100  16  256
+visible_hostname 172.16.0.254
+maximum_object_size 4096 KB     缓存对象的大小   
+reply_body_max_size 10240000 allow all  限制访问对象的大小
+acl all src  0.0.0.0/0.0.0.0 
+http_access deny all -> http_access allow all
+
+srvice squid start/stop/restart/reload
+/etc/init.d/squid start/stop/restart/reload
+chkconfig --level 35 squid on
+
+
+client config
+ping -c 3 192.168.182.142
+在浏览器里指定代理服务器连接内网的Ip地址和监听的端口号
+http://公网web服务器的ip                        
+
+squid
+cat /var/log/squid/access_log
+
+httpd
+cat /etc/httpd/logs/acess_log
+
+
+透明代理、
+1
+vim /etc/squid/squid.conf
+http_port  3128  transparent
+:wq
+
+2 
+servie squid restart
+
+
+3
+service iptables start
+iptables -F
+service iptables save
+
+4
+格式：iptables -t  nat -A 链名  匹配条件 -j  处理动作
+
+iptables -t nat -A PREROUTING -i eth0 -s   
+192.168.182.0/24 -p tcp --dport 80 -j REDIRECT --to-ports 3128
+
+iptables -t nat -A PREROUTING -i eth0  -s     
+192.168.4.0/24 -p tcp --dport 443 -j REDIRECT --to-ports 3128
+
+service iptables save
+
+
+5 client 
+ping 192.168.182.142
+route add default gw 192.168.182.142
+                     (代理服务器连接内网接口ip地址elinks --dump http://172.16.0.1
+
+acl (访问控制列表)
+格式
+acl  acl名称  类型  控制的内容
+http_access  allow/deny  ACL名称列表 
+
+类型
+src    源地址
+dst    目标地址
+port    目标端口
+dstdomain    目标域
+time    访问时间
+maxconn    最大并发连接
+url_regex    目标URL地址
+Urlpath_regex    整个目标URL路径
+
+例子
+acl all src 0.0.0.0/0.0.0.0
+acl MYNET src 192.168.2.0/24 192.168.3.0/24
+acl WORK  time MTWHF 09:30-18:30
+http_access allow MYNET  WORK
+http_access deny all
+
+
+[root@localhost ~]# vi /etc/squid/ipblock.list
+61.135.16.36
+60.28.16.0/24
+[root@localhost ~]# vi /etc/squid/dmblock.list
+.qq.com
+.msn.com
+
+
+acl IPaddress dst "/etc/squid/ipblock.list"
+acl DMname dstdomain "/etc/squid/dmblock.list"
+http_access deny IPaddress
+http_access deny DMname
+
+
+acl  LAN1  src  192.168.1.0/24
+acl  PC1 src  192.168.1.66/32
+acl  Blk _ Domain  dstdomain   .qq.com  .kaixin001.com
+acl  Work _ Hours  time MTWHF  08:30-17:30
+acl  Max20_Conn maxconn  20
+acl  Blk_URL  url_regex  -i ^rtsp:// ^mms://
+acl  Blk_Words  urlpath_regex -i sex adult
+acl  RealFile  urlpath_regex -i \.rmvb$ \.rm$
+
+http_access deny  LAN1   Blk_URL
+http_access deny  LAN1   Blk_Words
+http_access deny  PC1      RealFile
+http_access deny  PC1      Max20_Conn
+http_access allow  LAN1   Work_Hours
+
+
+
+
+练习
+允许私有网段192.168.1.0/24网段内的所有主机通过代理服务器访问公的web服务，但只允许在周一到周五的09:30至18:00这个时间内访问，且ip地址是192.168.1.250的主机在任何时间都不可以通过代理服务器访问公的web服务
+
+CDN
+www.plj.com    CND加速
+CND服务商    权威DNS服务器 
+             本地DNS服务器
+         别名名称  IN     CNAME    真正主机名
+ 
+pc1  http://www.plj.com
+dns  IP   
+
+
+反向代理（代替公网用户访问内网的网站服务器）
+
+                        192.168.182.142/24
+192.168.182.143/24      eth0
+web-server(inside)------squid-server-------client(公网)    
+                                   eth1                  ip                                                        172.16.0.1
+                                   172.16.0.254/16
+
+1 squid-server
+service httpd stop
+chkconfig --level 35 httpd off
+
+vim /etc/squid/squid.conf
+http_port 80  vhost
+cache_peer  内网网站服务器的ip  parent  网站服务器监听端口  0  originserver
+
+
+
+2 内网的网站服务器是基于域名的虚拟主机
+cache_peer  内网网站服务器的ip  parent  网站服务器监听端口  0  originserver  name=自定义名
+
+cache_peer_domain  自定义名  虚拟主机名
+
+
+
+客户端访问
+要能够解析主机
+DNS
+/etc/hosts
+
+访问：
+elinks --dump http://www.plj.com    172.16.0.254 
+elinks --dump http://bbs.plj.com    172.16.0.254
+
+
+
+

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>netctoss</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>main</servlet-name>
+  	<servlet-class>web.MainServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>main</servlet-name>
+  	<url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 异常处理：告诉Tomcat在发生哪种异常时，
+  	要转发到对应的哪个错误页面，由它来实现转发。
+  	location：错误页面的路径，Tomcat会自动补充
+  		项目名，所以此处不要写项目名。 -->
+  <!-- 1.通过异常类型来告诉它 -->
+  <!-- 
+  <error-page>
+  	<exception-type>java.lang.Exception</exception-type>
+  	<location>/WEB-INF/error.jsp</location>
+  </error-page>
+  -->
+  <!-- 2.通过异常编号来告诉它 -->
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/WEB-INF/error.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/WEB-INF/error.jsp</location>
+  </error-page>
+  
+</web-app>
+
+
+
+
+
+
+
+
+
+
+
+
+

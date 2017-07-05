@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>简单计算器</title>
+<script>
+	function cal() {
+		//获取文本框
+		var input = document.getElementById("ss");
+		//获取框中的值
+		var ss = input.value;
+		//执行算式
+		try {
+			var result = eval(ss);
+			input.value = result;
+		} catch(e) {
+			input.value = "Error";
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="ss"/>
+	<input type="button" value="="
+		onclick="cal();"/>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

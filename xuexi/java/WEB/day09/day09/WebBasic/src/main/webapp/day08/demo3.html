@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>增删节点</title>
+<script>
+	function f1() {
+		//创建新节点(<li>天津</li>)
+		var li = document.createElement("li");
+		li.innerHTML = "天津";
+		//追加新节点
+		var ul = document.getElementById("city");
+		ul.appendChild(li);
+	}
+	function f2() {
+		//创建节点
+		var li = document.createElement("li");
+		li.innerHTML = "台北";
+		//插入节点
+		var ul = document.getElementById("city");
+		var gz = document.getElementById("gz");
+		ul.insertBefore(li,gz);
+	}
+	function f3() {
+		var sz = document.getElementById("sz");
+		sz.parentNode.removeChild(sz);
+	}
+</script>
+</head>
+<body>
+	<p>
+		<input type="button" value="增加"
+			onclick="f1();"/>
+		<input type="button" value="插入"
+			onclick="f2();"/>
+		<input type="button" value="删除"
+			onclick="f3();"/>
+	</p>
+	<ul id="city">
+		<li>北京</li>
+		<li>上海</li>
+		<li id="gz">广州</li>
+		<li id="sz">深圳</li>
+	</ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>box</title>
+<style>
+	div {
+		width: 100px;
+		height: 100px;
+		border: 1px solid red;
+	}
+	/*1.四边一起设置边距*/
+	#d2 {
+		padding: 20px;
+		margin: 30px;
+	}
+	/*2.四边一起设置不同的边距(上右下左)*/
+	#d3 {
+		padding: 10px 20px 30px 40px;
+		margin: 10px 20px 30px 40px;
+	}
+	/*3.单边设置边距(left/right/top/bottom)*/
+	#d4 {
+		padding-top: 20px;
+		margin-left: 30px;
+	}
+	/*4.对边(对称)设置边距(上下  左右)*/
+	#d5 {
+		padding: 20px 40px;
+		margin: 20px 40px;
+	}
+	/*5.特殊：当使用对称设置外边距时，
+		若第2个值为auto，则该元素水平居中。*/
+	#d6 {
+		margin: 10px auto;
+	}
+</style>
+</head>
+<body>
+	<div id="d1">d1</div>
+	<div id="d2">d2</div>
+	<div id="d3">d3</div>
+	<div id="d4">d4</div>
+	<div id="d5">d5</div>
+	<div id="d6">d6</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>发送消息</title>
+<script>
+	var id = null;
+	function send() {
+		//若"正在发送"(id非空)则不要再次发送了
+		if(id) {
+			return;
+		}
+		//显示"正在发送"
+		var p = document.getElementById("msg");
+		p.innerHTML = "正在发送";
+		//延迟3S，显示"已发送"
+		id = setTimeout(function(){
+			p.innerHTML = "已发送";
+			id = null; //重置id
+		},3000);
+	}
+	function cancel() {
+		if(id) {
+			var p = document.getElementById("msg");
+			p.innerHTML = "已取消";
+			clearTimeout(id);
+			id = null;
+		}
+	}
+	//注意：本案例中获取p的代码不能写在方法之外，
+	//因为写在方法之外的JS在页面加载时直接执行，
+	//其执行的时机早于body，因此无法获取到p。
+	//而写在方法内是可以的，因为方法是在页面加载后，
+	//在用户点击按钮时调用的，此时p已经被加载。
+</script>
+</head>
+<body>
+	<p>
+		<input type="button" value="发送"
+			onclick="send();"/>
+		<input type="button" value="取消"
+			onclick="cancel();"/>
+	</p>
+	<p id="msg"></p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

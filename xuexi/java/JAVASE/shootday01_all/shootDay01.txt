@@ -1,0 +1,259 @@
+Shoot射击游戏第一天:
+1.class FlyingObject{
+    image,width,height,x,y
+  }
+2.interface Enemy{
+    int getScore();
+  }
+3.interface Award{
+    DOUBLE_FILE,LIFE
+    int getType();
+  }
+4.class Airplane extends 1 implements 2{
+    speed
+    Airplane(){}
+    重写getScore()
+  }
+5.class Bee extends 1 implements 3{
+    xSpeed,ySpeed,awardType
+    Bee(){}
+    重写getType()
+  }
+6.class Bullet extends 1{
+    speed
+    Bullet(int x,int y){}
+  }
+7.class Hero extends 1{
+    life,doubleFire,images,index
+    Hero(){}
+  }
+8.class ShootGame extends JPanel{
+    WIDTH,HEIGHT
+    
+    background,start,pause,gameover
+    airplane,bee,bullet,hero0,hero1
+    static{} 
+
+    //做4个类的构造方法
+
+    main(){
+      ...
+      frame.setVisible(true); //1.可见 2.尽快调paint()
+    }
+
+    hero(Hero)
+    flyings(FlyingObject[])
+    bullets(Bullet[])
+    ShootGame(){初始化对象}
+    
+    重写paint(g){
+       画背景图
+       paintHero(g);
+       paintFlyingObjects(g);
+       paintBullets(g);
+    }
+    paintHero(g){} //画英雄机
+    paintFlyingObjects(g){} //画敌人
+    paintBullets(g){} //画子弹
+    
+  }
+
+
+
+任务1:
+  1)创建父类FlyingObject
+    创建接口Enemy和Award
+    创建类Airplane,Bee,Bullet,Hero
+  2)设置数据并完成构造
+任务2:
+  1)在ShootGame中实现画窗口
+  2)在ShootGame中实现画对象
+    (Airplane,Bee,Bullet,Hero)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Shoot游戏第一天:
+
+做项目是学东西最快的时期
+
+24个步骤:
+第一天:讲16个------页面上能画出4个对象
+第二天:讲4个-------所有对象动起来
+第三天:讲4个-------开打
+
+
+英雄机打掉一个敌机-----得5分
+英雄机可以发射子弹(单发或者双发)
+默认为单发(火力值为0)
+英雄机打掉小蜜蜂后得奖励，
+奖励分两种:一种是命，一种是火力值
+
+发射一次双倍减2
+一次得40火力值--------40
+发了5次---------------40-10=30
+得了一次火力----------30+40=70
+得了一次火力----------70+40=110
+火力值为10000
+英雄机死了一次--------0(单倍)
+
+从上往下随机产生敌人(敌机+小蜜蜂)
+
+
+BufferedImage
+
+class FlyingObject{ //飞行物
+  image,width,height,x,y
+}
+interface Enemy{ //敌机
+  int getScore();
+}  
+interface Award{ //奖励
+  int getType();
+}
+class Hero extends FlyingObject{ //英雄机
+}
+class Airplane extends FlyingObject implements Enemy{ //敌机
+}
+class Bee extends FlyingObject implements Award{ //小蜜蜂
+}
+class Bullet extends FlyingObject{ //子弹
+}
+class ShootGame{
+  public static void main(String[] args){
+    
+  }
+}
+
+
+gif
+
+
+
+
+MyShoot
+com.tarena.shoot
+FlyingObject
+Enemy
+Award
+Airplane
+Bee
+Bullet
+Hero
+ShootGame
+
+
+
+上午共15个
+此时完成了9个
+还剩下6个步骤:
+  前4个步骤------写4个类的构造方法
+  第5个步骤------画窗口
+  第6个步骤------在窗口画对象
+
+在窗口上画对象:
+1.有窗口------------完了
+2.有对象------------完了
+3.窗口上画对象
+
+
+frame.setVisible(true); //尽快调用paint()
+
+1.调用了paint()方法
+2.自己没有写paint()
+3.但是还不报错
+4.原因:
+    JPanel父类中有一个paint()方法，什么也没帮你画
+    需要重写paint()方法
+
+
+paint()方法非常特殊:只能由系统来调用
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hero hero = new Hero();
+Bullet[] bullets = {};
+FlyingObject[] flyings = {}; //敌人(敌机+小蜜蜂)
+
+
+
+
+
+
+
+
+int a = (int)(Math.random()*100); //0到99的
+
+Random rand = new Random();
+int a = rand.nextInt(100); //0到99的
+
+
+
+C/S:客户端/服务器
+B/S:浏览器/服务器
+
+
+
+swing:
+1.JFrame:框架
+2.JPanel:面板
+
+
+继承要符合is a的关系
+
+
+
+
+
+
+
+
+get???-----获取
+set???-----设置
+is???------判断是否，返回boolean
+
+
+
+
+
+

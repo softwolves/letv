@@ -1,0 +1,7 @@
+rpm -Uvh https://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
+rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
+yum install vlc -y
+
+把上面的俩个包安装到centOS7上，尝试多次目前只适合centOS7
+操作方法：
+totem file.flv

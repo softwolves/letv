@@ -1,0 +1,541 @@
+回顾:
+1.方法:
+    封装特定的逻辑功能，独立的事
+    多次调用，避免重复，复用，维护，团队协作开发
+2.定义:
+    修饰词 返回值类型 方法名(参数列表){
+      方法体
+    }
+3.调用:
+    无返回值: 方法名(有参传参);
+    有返回值: 数据类型 变量 = 方法名(有参传参);
+              方法名(有参传参); //正确，但不建议
+4.return:
+  1)return 值; //结束方法，返回结果给调用方法
+  2)return; //结束方法
+5.猜字符小游戏:
+   
+    
+
+
+请输入等级(5、7、9):
+4
+请输入等级(5、7、9):
+6
+请输入等级(5、7、9):
+3
+请输入等级(5、7、9):
+8
+请输入等级(5、7、9):
+7
+ABCDEFG
+
+
+
+
+
+
+
+
+
+public static int[] generateArray(int len,int max){
+  int[] arr = new int[len];
+  for(int i=0;i<arr.length;i++){
+    arr[i] = (int)(Math.radnom()*max);
+  }
+  return arr;
+}
+
+
+
+
+
+
+
+
+笔记:
+1.什么是类?什么是对象?
+  1)现实世界是由很多对象组成的
+    基于对象抽出了类
+  2)对象:真实存在的单个的个体
+    类:类型/类别，一类个体
+  3)类中可以包含:
+    3.1)所有对象所共有的特征/属性(静)----变量
+    3.2)所有对象所共有的行为(动)---------方法
+  4)一个类可以创建多个对象
+    同一个类的多个对象，结构相同，数据不同
+  5)类是对象的模板，对象是类的具体的实例
+2.如何创建类?如何创建对象?
+3.引用类型之间画等号:指向了同一个对象
+  1)对其中一个引用的修改会影响另一个引用
+  2)eg:房门钥匙
+  基本类型之间画等号:赋值
+  1)对其中一个值的修改不会影响另一个值
+  2)eg:身份证复印件
+4.null:空，没有指向任何对象
+       不能对null做任何操作，若操作则会报
+         NullPointerException空指针异常
+
+练习:
+1.创建类Demo，在main()中:
+  1)创建Cell类对象c1
+    创建Cell类对象c2并赋值为c1
+    c1.row=2; c2.row=5;  c1.row=?;-------???
+  2)创建Cell类对象c3
+    c3=null; c3.row=2;--------???
+任务:
+1.定义Cell类，包含:
+  1)属性:row(行号),col(列号)
+  2)方法:drop()用于实现下落一格
+         moveLeft()用于实现左移n格
+	 getCellInfo()用于实现获取格子行列号 
+2.创建CellTest类，其中:
+  1)设计方法printWall()用于实现打印墙+格
+  2)在main()方法中:
+      创建Cell对象c，行号为2，列号为5
+      调用printWall()打印输出
+      调用drop()后再次打印输出
+3.创建Car汽车类，包含:
+　  属性:brand(品牌),price(价格),color(颜色)
+　  方法:show()，用于输出汽车对象的3个属性
+　　　   startup()，用于输出brand品牌的汽车启动了
+  创建CarTest类，在main()中:
+    创建Car的两个对象，并给属性赋值，再调用方法
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+房子:只有一个
+
+房子原钥匙:
+配一把钥匙:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+成员变量:类中，方法外
+局部变量:方法中
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1)找对象:一堆小格子
+2)抽类:格子类Cell
+3)设计类中的成员变量和方法
+4)创建对象并测试
+
+
+class Cell{ //格子类
+  int row; //行号
+  int col; //列号
+  void drop(){ //下落一格
+    row++;
+  }
+  void moveLeft(int n){ //左移n格
+    col-=n;
+  }
+  String getCellInfo(){ //获取格子行号和列号
+    return row+","+col;
+  }
+}
+  
+        引用
+类型  引用类型变量  指向   对象
+Cell    c            =      new Cell();
+
+
+public static void main(String[] args){
+  int a = plus(5,6); //输出a
+
+  int m=5,n=6;
+  int b = plus(m,n);
+}
+
+public static int plus(int num1,int num2){
+  return num1+num2;
+}
+
+
+
+
+
+
+
+
+
+          引用
+类型    引用类型变量   指向    对象
+Student    zs            =     new Student();
+
+
+
+
+
+
+
+    基本类型变量----变量
+int a;
+
+
+
+
+
+
+
+
+Cell c1 = new Cell();
+
+
+
+
+
+
+
+
+
+
+
+
+
+new Student();
+new Student();
+new Student();
+
+
+Student zs = new Student();
+zs.name = "zhangsan";
+zs.age = 26;
+zs.address = "廊坊";
+
+
+
+
+
+
+
+
+
+
+
+int[] arr = new int[4]; //0,0,0,0
+
+
+周一到周四----经典案例(一小部分，以练习语法为主)
+
+
+
+
+
+
+
+
+
+oo.day01
+
+
+Student
+StudentTest
+
+
+
+
+
+
+
+
+
+
+
+
+类           对象
+月饼模子    月饼
+
+
+
+
+
+
+
+
+Student zs = new Student(); //创建学生对象
+zs.name="zhangsan";
+zs.age=25;
+zs.address="廊坊";
+zs.className="JSD1604";
+zs.eat();
+zs.sleep();
+zs.study();
+zs.abc=250; //编译错误
+
+
+Student ls = new Student();
+ls.name="lisi";
+ls.age=26;
+ls.address="佳木斯";
+ls.className="JSD1604";
+ls.eat();
+ls.sleep();
+ls.study();
+
+
+class Student{
+  String name;
+  int age;
+  String address;
+  String className;
+  void eat(){}
+  void sleep(){}
+  void study(){}
+}
+
+
+
+
+
+
+
+
+
+class Teacher{
+  String name;
+  int age;
+  String address;
+  double salary;
+  void eat(){}
+  void sleep(){}
+  void teach(){}
+}
+
+
+
+class Dog{
+  String name;
+  int age;
+  String address;
+  void fei(){}
+}
+
+class Car{
+  String type;
+  String color;
+  String id;
+  void start(){}
+  void run(){}
+  void back(){}
+  void stop(){}
+}
+
+
+
+
+
+
+
+对象            类
+WKJ             老师
+GJ
+ZWJ
+
+
+张三            学生
+李四
+王五
+
+
+
+小黑            狗
+小白
+小强
+
+
+
+宝马            汽车
+奥迪
+奥拓
+
+
+
+
+
+
+
+
+class Emp{ //Emp就是自己造的一个数据类型-雇员
+  String name;
+  int age;
+  double salary;
+  void print(){
+    System.out.println("姓名:"+name);
+    System.out.println("年龄:"+age);
+    System.out.println("工资:"+salary);
+  }
+}
+
+class Test{ //测试类
+  public static void main(String[] args){
+    Emp e = new Emp(); //创建了一个Emp的对象
+    e.name = "zhangsan";
+    e.age = 25;
+    e.salary = 5000;
+    e.print();
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+数据类型:
+1.基本类型------不够
+2.数组----------不行
+3.自己造一个数据类型----类
+
+
+所谓抽象数据类型:
+  将不同类型数据的集合封装在一起--来描述一个新的事物
+
+int   a;
+int[] b;
+Emp   e;
+
+
+面向过程的缺陷:
+1.缺乏对数据的封装
+2.数据和方法(操作数据的)的分离
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+晕乎乎的过来的----------------正常的
+
+
+不晕不正常:
+1.什么也不会
+2.自以为不晕----------非常非常非常不错的了
+
+
+好的代码:
+  复用性好、维护性好、扩展性好、
+  可移植性好、健壮性好......
+
+
+
+
+4个人----做一套框架
+
+
+
+福州增加的业务-----30万块钱
+
+
+每天一个小时，5天时间
+
+
+
+
+
+
+
+
+5个功能
+增加1个功能
+
+
+
+
+
+
+语言基础:
+1.固定(去银行取钱，画圆形)
+2.猜字符小游戏
+
+面向对象:
+1.抽象(向着社会主义发展，画图形)
+2.飞机大战
+
+
+
+
+
+
+
+

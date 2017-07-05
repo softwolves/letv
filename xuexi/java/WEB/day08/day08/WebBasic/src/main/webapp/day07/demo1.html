@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window</title>
+<script>
+	//弹出框
+	function f1() {
+		alert("你好");
+	}
+	//确认框
+	function f2() {
+		var b = confirm("你吃了吗？");
+		console.log(b);
+	}
+	//反馈框
+	function f3() {
+		var v = prompt("你吃了什么？");
+		console.log(v);
+	}
+	//周期性定时器
+	function f4() {
+		//启动定时器：
+		//1.每隔N毫秒调用一次function。
+		//2.启动定时器时返回其id，用于停止定时器。
+		var n = 5;
+		var id = setInterval(function(){
+			console.log(n--);
+			//停止定时器
+			if(n==0) {
+				clearInterval(id);
+			}
+		},1000);
+		//启动定时器相当于启动了一个支线程，
+		//当前方法(f4)相当于主线程(main)，
+		//主线程和支线程并发执行，不会等待。
+		console.log("hello");
+	}
+	//一次性定时器
+	var id;
+	function f5() {
+		//启动定时器：
+		//1.延迟N毫秒调用function。
+		//2.调用完成后该定时器自动停止。
+		//3.返回的id用于手动停止定时器，
+		//  但必须在N毫秒之内才有效。
+		id = setTimeout(function(){
+			console.log("我去");
+		},3000);
+		//主线程(f5)和支线程(定时器)并发执行，
+		//主线程不会等待支线程。
+		console.log("hi");
+	}
+	function f6() {
+		//停止一次性定时器
+		clearTimeout(id);
+	}
+</script>
+</head>
+<body>
+	<p>
+		<input type="button" value="弹出"
+			onclick="f1();"/>
+		<input type="button" value="确认"
+			onclick="f2();"/>
+		<input type="button" value="反馈"
+			onclick="f3();"/>
+	</p>
+	<p>
+		<input type="button" value="倒数"
+			onclick="f4();"/>
+		<input type="button" value="走你"
+			onclick="f5();"/>
+		<input type="button" value="取消"
+			onclick="f6();"/>
+	</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

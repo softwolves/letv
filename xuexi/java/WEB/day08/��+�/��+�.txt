@@ -1,0 +1,27 @@
+package day01;
+
+
+public class Boo extends Aoo{
+String name="¹ú";
+public Boo(){
+	super();
+	//¸øb¸³Öµ
+	System.out.println(name);
+}
+public void test(){
+	System.out.println("Boo "+a+","+name);
+}
+public static void main(String[] args) {
+	Boo b=new Boo();
+	
+}
+}
+class Aoo{
+	int a=1;
+	public Aoo(){
+		this.test();
+	}
+	public void test(){
+		System.out.println("Aoo"+a);
+	}
+}

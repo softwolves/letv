@@ -1,0 +1,35 @@
+1.netctoss
+	net：网络
+	c：China
+	t：Telecom	电信
+	o：Operation		运营
+	s：Support	支持
+	s：System		系统
+	中国电信运营支持系统-网络版
+	
+2.导包
+	1）JAVAEE
+	2）JSTL
+	3）JDBC
+	4）DBCP
+	注意事项：
+		- 使用Maven时要联网
+		- 搜索的包名看FTP上传的文件"导包.zip"
+		- 若导包后报错，提示下载失败。
+		    则需要删除下载失败的缓存文件，再次导入。
+		- 缓存文件看错误提示，
+		    或者看Libraries下jar包的位置提示。
+	手动导包：
+		- 在WEB-INF下创建文件夹lib
+		- 将jar包复制到lib下
+		- 在Java Build Path下添加这些jar
+
+		
+		
+
+
+
+	
+	
+	
+	

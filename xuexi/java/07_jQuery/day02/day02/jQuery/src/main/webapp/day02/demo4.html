@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>合成事件</title>
+<style>
+	.big {
+		width: 250px;
+		height: 250px;
+	}
+</style>
+<script src="../js/jquery-1.11.1.js"></script>
+<script>
+	$(function(){
+		//函数内直接写this，代表触发此函数的节点
+		$("img").hover(
+			function(){
+				//$(this).width("250px").height("250px");
+				//$(this).css("width","250px").css("height","250px");
+				$(this).addClass("big");
+			},//悬停时
+			function(){
+				//$(this).width("218px").height("218px");
+				//$(this).css("width","218px").css("height","218px");
+				$(this).removeClass("big");
+			} //离开时
+		);
+		
+		$(":button").click(function(){
+			//对图片触发切换事件
+			//使其在显示与隐藏间切换
+			$("img").toggle();
+		});
+		
+		//模拟按钮的单击事件
+		$(":button").trigger("click");
+		
+	});
+</script>
+</head>
+<body>
+	<input type="button" value="切换"/>
+	<p>
+		<img src="../images/01.jpg"/>
+		<img src="../images/02.jpg"/>
+		<img src="../images/03.jpg"/>
+	</p>
+</body>
+</html>
+
+
+
+
+
+
+
+

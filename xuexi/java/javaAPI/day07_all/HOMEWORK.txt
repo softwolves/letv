@@ -1,0 +1,13 @@
+1:使用文件流复制"myfile.txt"文件，并取名为"myfile1.txt"
+2:使用缓冲流复制"myfile.txt"文件，并取名为"myfile2.txt"  
+3:创建类:
+  public class Person{
+	private String name;
+	private int age;
+	private int salary;
+        //定义构造方法，以及属性get,set方法
+  }
+  实现序列化接口，并定义版本号。
+4:创建一个Person对象，内容：张三,25,5000
+  然后将该对象写入到文件MyPerson.obj中。
+5:读取MyPerson.obj文件，将Person对象读取出来并输出。  

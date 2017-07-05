@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM查询</title>
+</head>
+<body>
+	<ol>
+		<li>浙江省</li>
+		<li>山东省</li>
+		<li>河北省</li>
+	</ol>
+	<ul id="city">
+		<li>北京</li>
+		<li>上海</li>
+		<li id="gz">广州</li>
+		<li>深圳</li>
+		<li>杭州</li>
+	</ul>
+	<p>
+		<input type="radio" name="sex"/>男
+		<input type="radio" name="sex"/>女
+	</p>
+	<script>
+		//1.根据ID查询节点
+		var ul = document.getElementById("city");
+		var gz = document.getElementById("gz");
+		console.log(ul);
+		console.log(gz);
+		//2.根据标签名查询节点
+		//2.1在整个文档内查询(document)
+		var lis = 
+			document.getElementsByTagName("li");
+		console.log(lis);
+		//2.2在某个元素节点内查询(element)
+		lis = ul.getElementsByTagName("li");
+		console.log(lis);
+		//3.根据NAME查询节点(表单)
+		var inputs = 
+			document.getElementsByName("sex");
+		console.log(inputs);
+		//4.根据层次查询节点
+		//获取已得到的节点的父亲、孩子、兄弟
+		//4.1获取父亲
+		console.log(gz.parentNode);
+		//4.2获取孩子
+		//带空格，一般不使用
+		console.log(ul.childNodes);
+		//不带空格
+		console.log(ul.getElementsByTagName("li"));
+		//标准API中没有直接查询兄弟的方法，
+		//必须通过查询父亲、查询孩子来实现查询兄弟。
+		//e.parentNode.getElementsByTagName("")[i]
+		var hz = 
+			gz.parentNode.getElementsByTagName("li")[4];
+		console.log(hz);
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,631 @@
+Shoot射击游戏第一天:
+1.class FlyingObject{
+    image,width,height,x,y
+  }
+2.interface Enemy{
+    int getScore();
+  }
+3.interface Award{
+    DOUBLE_FILE,LIFE
+    int getType();
+  }
+4.class Airplane extends 1 implements 2{
+    speed
+    Airplane(){}
+    重写getScore()
+  }
+5.class Bee extends 1 implements 3{
+    xSpeed,ySpeed,awardType
+    Bee(){}
+    重写getType()
+  }
+6.class Bullet extends 1{
+    speed
+    Bullet(int x,int y){}
+  }
+7.class Hero extends 1{
+    life,doubleFire,images,index
+    Hero(){}
+  }
+8.class ShootGame extends JPanel{
+    WIDTH,HEIGHT
+    
+    background,start,pause,gameover
+    airplane,bee,bullet,hero0,hero1
+    static{} 
+    //做4个类的构造方法
+
+    main(){
+      ...
+      frame.setVisible(true); //1.可见 2.尽快调paint()
+    }
+
+    hero(Hero)
+    flyings(FlyingObject[])
+    bullets(Bullet[])
+    ShootGame(){初始化对象}
+    
+    重写paint(g){
+       画背景图
+       paintHero(g);
+       paintFlyingObjects(g);
+       paintBullets(g);
+    }
+    paintHero(g){} //画英雄机
+    paintFlyingObjects(g){} //画敌人
+    paintBullets(g){} //画子弹
+    
+  }
+
+
+
+
+
+Shoot射击游戏第二天:
+1.敌人入场的实现步骤:
+  1)main(){ game.action(); }
+  2)action(){
+      ...
+      run(){ //10毫秒定时执行
+        enteredAction(); //敌人入场
+	repaint();
+      }
+    }
+  3)int index = 0;
+    enteredAction(){ //10毫秒
+      index++;
+      if(index%40==0){  //40*10毫秒
+        FlyingObject one = nextOne(); //创建一个敌人对象
+        flyings = Arrays.copyOf(flyings,flyings.length+1); //扩容
+        flyings[flyings.length-1] = one; //将敌人对象添加到敌人数组中
+      }
+    }
+  4)nextOne(){
+      生成0到19间的随机数
+      为0时return new Bee();
+      否则return new Airplane();
+    }
+2.飞行物走一步的实现步骤:
+  1)FlyingObject----抽象方法step();
+  2)Airplane,Bee,Bullet,Hero---重写step()
+  3)action(){
+      run(){
+        enterAction();
+	stepAction();
+	repaint(); //重画
+      }
+    }
+  4)stepAction(){
+      遍历所有敌人,调用step()
+      遍历所有子弹,调用step()
+      hero.step();
+    }
+3.子弹入场的实现步骤:
+  1)Hero---shoot()英雄机发射子弹
+  2)action(){
+      run(){
+        ...
+	shootAction(); //发射子弹
+	repaint();
+      }
+    }
+  3)int shootIndex = 0;
+    shootAction(){ //10毫秒走一次
+      shootIndex++;
+      if(shootIndex%30==0){ //300毫秒
+        调用Hero的shoot()得到发射出的子弹数组bs
+	将bullets扩容(+bs.length)
+	将bs追加到bullets数组中--System.arraycopy()
+      }
+    }
+4.英雄机随着鼠标移动的实现步骤:
+  1)Hero---moveTo(int x,int y)
+  2)action(){
+      MouseAdapter l = new MouseAdapter(){
+         重写mouseMoved(){
+	   获取鼠标的x和y
+	   hero.moveTo(x,y); //移动
+	 }
+      };
+      this.addMouseMotionListener(l);
+      this.addMouseListener(l);
+
+      run(){
+        ...
+      }
+    }
+5.删除越界的敌人和子弹的实现步骤:
+  1)FlyingObject----abstract outOfBounds();
+  2)Airplane,bee,bullet,Hero--重写outOfBounds()
+  3)action(){
+      run(){
+        ...
+	outOfBoundsAction(); //删除越界的
+	repaint();
+      }
+    }
+  4)outOfBoundsAction(){
+      1)声明活着的数组
+      2)遍历flyings/bullets数组
+        判断对象是否不越界:
+        若true:
+          将对象添加到活着的数组中
+      3)将活着的数组复制到flyings/bullets数组中
+    }
+
+
+
+
+
+Shoot射击游戏第三天:
+1.子弹和敌人碰撞的实现步骤:
+  1)FlyingObject---shootBy(Bullet b)
+  2)Hero----addDoubleFire(),addLife()
+  3)action(){
+      run(){
+        ...
+	bangAction(); //检查碰撞
+	repaint();
+      }
+    }
+  4)bangAction(){ //所有子弹与所有敌人撞
+      遍历所有子弹，将子弹传给bang()方法
+    }
+  5)bang(Bullet b){ //1发子弹与所有敌人撞
+      遍历所有敌人，获取每一个敌人f
+      判断f是否与b撞上了
+      若撞上了:
+        5.1)得分或得奖励
+	      5.1.1)得到被撞敌人对象
+	      5.1.2)判断是敌人还是奖励
+	             若是敌人则增分
+		     若是奖励则得奖励类型
+		       判断不同的奖励类型：
+		         增命或增火力值
+	5.2)将被撞对象从flyings中删除
+	    5.2.1)将被撞敌人与最后一个元素交换(追尾并绕圈)
+	    5.2.2)缩容---删除最后一个元素(被撞的对象)
+    }
+2.画分和画命的实现步骤:
+  1)hero---getLife()获取命
+  2)paint(g){
+      ......
+      paintScore(g); //画分和命
+    }
+  3)paintScore(g){
+      设置颜色g.setColor(...)
+      设置字体g.setFont(...)
+      画分g.drawString(...);
+      画命g.drawString(...);
+    }
+3.英雄机与敌人碰撞的实现步骤:
+  1)Hero---boolean hit(FlyingObject other);
+  2)Hero---substractLife()
+           clearDoubleFire()
+  3)action(){
+      重写run(){
+        ...
+	checkGameOverAction(); //检测英雄机与敌人撞
+	repaint();
+      }
+    }
+  4)checkGameOverAction(){
+      if(isGameOver()){
+      }
+    }
+  5)isGameOver(){ //检测是否有命
+      遍历所有敌人，获取每一个敌人f
+      判断hero.hit(f){
+        减命
+	火力值清零
+	删除被撞的敌人(交换，缩容)
+      }
+      return hero.getLife()<=0;
+    }
+4.画状态的实现步骤:
+  1)START,RUNNING,PAUSE,GAME_OVER
+    state=START(存储当前状态)
+  2)paint(){
+      ...
+      paintState(g);
+    }
+  3)paintState(g){
+      START状态--贴start图
+      PAUSE状态--贴pause图
+      GAME_OVER状态--贴gameover图
+    }
+  4)run(){
+      if(state==RUNNING){
+        一堆action();
+      }
+      repaint();
+    }
+  5)mouseMoved(){
+      if(state== RUNNING){
+        获取x,y,调英雄机移动方法
+      }
+    }
+  6)重写mouseClicked(){
+      若为启动状态，则改为运行状态
+      若为游戏结束状态，则:
+        清理现场(hero,flyings,bullets,score)
+        改为启动状态
+    }
+  7)checkGameOverAction(){
+      if(isGameOver()){
+        state = GAME_OVER;
+      }
+    }
+  8)重写mouseExited(){
+      if(state == RUNNING){
+        state = PAUSE;
+      }
+    }
+  9)重写mouseEntered(){
+      if(state == PAUSE){
+        state = RUNNING;
+      }
+    }
+
+
+
+
+
+扩展功能:----原始功能非常清晰时再考虑
+1.子弹与敌人撞上后，子弹也消失
+2.Boss飞机----打3发才死，死后得40分
+3.大黄蜂----打5发才死，
+            死后得60分，并且获取奖励
+
+
+练习:
+1.保证程序的正确运行
+
+
+任务一:
+  1.实现子弹与敌人(敌机+小蜜蜂)的碰撞
+  2.画分和命
+任务二:
+  1.英雄机与敌人(敌机+小蜜蜂)的碰撞
+  2.画状态
+
+
+
+
+
+
+
+
+int a=5;
+printf("%d",a);
+for()-----------
+
+
+
+3500--------3年没涨工资
+培训1个月
+第二天，讲一个小框架
+12点之前没睡过觉
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Shoot射击游戏第三天:
+1.子弹与敌人(敌机+小蜜蜂)的碰撞
+2.画分和命
+3.英雄机与敌人(敌机+小蜜蜂)的碰撞
+4.画状态
+
+
+启动，运行，暂停，游戏结束
+
+对象乎乎的飞-------代码写在哪儿了
+
+
+
+
+
+若撞上了:
+1)英雄机减命、英雄机火力值归零
+2)敌人消失
+
+
+1个英雄机与所有敌人比
+
+public boolean isGameOver(){
+  for(int i=0;i<flyings.length;i++){
+    FlyingObject f = flyings[i];
+    if(hero.hit(f)){ //撞上了
+      hero.substractLife();
+      hero.clearDoubleFire();
+      交换并缩容
+    }
+  }
+  return hero.getLife()<=0; //英雄机命数<=0，即为游戏结束
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Hero{
+  //英雄机撞敌人
+  public boolean hit(FlyingObject obj){
+    this:英雄机
+    obj:敌人
+  }
+}
+
+class FlyingObject{
+  //敌人被英雄机撞
+  public boolean hitBy(Hero obj){
+    this:敌人
+    obj:英雄机
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RGB:三原色，三基色
+R:红色
+G:绿色
+B:蓝色
+
+0xFF0000----纯红
+0x00FF00----纯绿
+0x0000FF----纯蓝
+
+0x145856
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** 所有子弹与所有敌人的碰撞 */
+public void bangAction(){
+  for(int i=0;i<bullets.length;i++){
+    Bullet b = bullets[i];
+    bang(b);
+  }
+}
+int score = 0; //得分
+/** 1个子弹与所有敌人的碰撞 */
+public void bang(Bullet b){
+  int index = -1; //存储被撞敌人的下标
+  for(int i=0;i<flyings.length;i++){
+    FlyingObject f = flyings[i];
+    if(f.shootBy(b)){ //撞上了
+      index = i;
+      break;
+    }
+  }
+  one----Airplane,BossAirplane,Bee,BigYellowBee
+  if(index!=-1){
+    FlyingObject one = flyings[index]; //获取被撞的敌人
+    if(one instanceof Enemy){ //是敌人
+      Enemy e = (Enemy)one;
+      score+=e.getScore();
+    }
+    if(one instanceof Award){ //是奖励
+      Award a = (Award)one;
+      int type = a.getType();
+      switch(type){
+      case Award.DOUBLE_FIRE:
+        hero.addDoubleFire();
+	break;
+      case Award.LIFE:
+        hero.addLife();
+	break;
+      }
+    }
+
+    FlyingObject t = flyings[index];
+    flyings[index] = flyings[flyings.length-1];
+    flyings[flyings.length-1] = t;
+    flyings = Arrays.copyOf(flyings,flyings.length-1);
+
+  }
+}
+
+为什么敌人会在页面上出现?
+--------因为敌人在flyings数组中
+
+如何让敌人不出现在页面上?
+--------将敌人从flyings数组中删除
+
+
+
+10个敌人-----flyings-----9个敌人
+
+缩容
+
+
+
+
+
+
+
+
+
+
+class Airplane extends FlyingObject implements Enemy{
+  public int getScore(){
+    return 5;
+  }
+}
+class BossAirplane extends FlyingObject implements Enemy{
+  public int getScore(){
+    return 20;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+A: 1个子弹与1个敌人撞
+B: 1个子弹与多个敌人撞
+C: 多个子弹与1个敌人撞
+D: 多个子弹与多个敌人撞
+
+
+
+
+
+
+
+
+
+
+1)判断是否撞上了
+2)若撞上了:
+    敌人消失
+    可能加分，可能加奖励(加命或加火力值)
+
+
+
+
+
+
+
+
+
+
+class Bullet{ //子弹
+  //子弹射击敌人
+  public boolean shoot(FlyingObject obj){
+    this:子弹
+    obj:敌人
+  }
+}
+
+class FlyingObject{ //敌人
+  //敌人被子弹射击
+  public boolean shootBy(Bullet obj){
+    this:敌人
+    obj:子弹
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1)先看功能是否是某个对象的行为
+  1.1)若是对象的行为，则写在相应的类中
+  1.2)若不是对象的行为，则写在ShootGame中
+2)在ShootGame中调用行为
+
+
+
+
+
+
+
+
+
+
+
+
+敌人-----消失
+英雄机---减命、火力值归零
+
+
+
+
+
+
+
+
+
+
+打的是敌机-----玩家得5分
+打的是小蜜蜂---英雄机可能得命，也可能得火力
+敌人(敌机+小蜜蜂)消失
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>冒泡机制</title>
+<style>
+	#d1 {
+		width: 200px;
+		border: 1px solid red;
+		padding: 30px;
+	}
+	#p1 {
+		border: 1px solid blue;
+		padding: 20px;
+	}
+	#d2 {
+		border: 1px solid red;
+		width: 500px;
+		padding: 30px;
+		margin: 30px;
+	}
+</style>
+<script>
+	function f1(e) {
+		alert("AAA");
+		//取消事件冒泡机制
+		if(e.stopPropagation) {
+			e.stopPropagation();
+		} else {
+			e.cancelBubble = true;
+		}
+	}
+	function f2(e) {
+		//获取事件源
+		//事件发生的具体位置(来源)
+		var obj = e.srcElement || e.target;
+		console.log(obj);
+	}
+</script>
+</head>
+<body>
+	<div id="d1" onclick="alert('div');">
+		<p id="p1" onclick="alert('p');">
+			<input type="button" value="AAA"
+				onclick="f1(event);"/>
+		</p>
+	</div>
+	<div id="d2" onclick="f2(event);">
+		<input type="button" value="BBB"/>
+		<a href="#">TOP</a>
+		<img src="../images/01.jpg"/>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

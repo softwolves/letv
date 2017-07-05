@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>猜数字</title>
+<script>
+	//页面加载时生成随机数，
+	//由于该代码未写在函数内，
+	//所以打开页面时立刻执行了。
+	var ran = parseInt(Math.random()*100);
+	
+	//在用户看到页面内容点击按钮前，
+	//随机数早已生成，所以此方法内可以使用它。
+	function guess() {
+		//获取文本框的值
+		var n = 
+			document.getElementById("num").value;
+		//获取span
+		var span = 
+			document.getElementById("result");
+		//判断该值是否为数字
+		if(isNaN(n)) {
+			//不是数字
+			span.innerHTML = "请输入数字";
+		} else {
+			//是数字
+			if(n>ran) {
+				span.innerHTML = "大了";
+			} else if(n<ran) {
+				span.innerHTML = "小了";
+			} else {
+				span.innerHTML = "对了";
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="num"/>
+	<input type="button" value="猜"
+		onclick="guess();"/>
+	<span id="result"></span>
+</body>
+</html>
+
+
+
+

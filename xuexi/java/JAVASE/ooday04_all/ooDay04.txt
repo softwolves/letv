@@ -1,0 +1,621 @@
+回顾:
+1.内存管理:堆、栈、方法区
+2.继承:
+    避免代码重复，有利于代码的重用
+    extends
+    父:共有的 子:特有的
+    子继承父，子具有:父+子
+    单一继承，传递性
+    构造子之前必须先构造父，子构造中若不写，则默认super()调父类的无参构造，若自己写了，则不再默认提供
+3.super:指代当前对象的父类对象
+    super.成员变量名
+    super.方法名()
+    super()
+4.向上造型:
+  1)父类型的引用指向子类的对象
+  2)能点出来什么，看引用的类型
+
+
+
+
+
+
+
+笔记:
+1.方法的重写(Override):
+  1)发生在父子类中，方法名相同，参数列表相同，方法体不同
+  2)重写方法被调用时，看对象的类型
+2.重写与重载的区别:----常见面试题
+  1)重写:父子类中，方法名相同，参数列表相同，方法体不同
+         遵循"运行期"绑定，根据对象的类型调用方法
+  2)重载:一个类中，方法名相同，参数列表不同，方法体不同
+         遵循"编译期"绑定，根据引用的类型绑定方法
+3.package:
+  1)作用:避免类的命名冲突
+  2)包名可以有层次结构
+  3)建议:包名所有字母都小写
+  4)类的完全限定名: 包名.类名
+  import:
+  1)作用:声明类/引入类
+  2)同包中的类可以直接访问
+    不同包中的类想访问:
+      2.1)先import声明类再访问类(建议)
+      2.2)类的全称-----太繁琐(不建议)
+4.访问控制修饰符:
+  1)public:公开的，任何类
+  2)private:私有的，本类
+  3)protected:受保护的，本类、子类、同包类
+  4)默认的:什么也不写，本类、同包类
+  类的访问修饰:public和默认的
+  类成员的访问修饰:如上4种都可以
+5.static:静态的
+  1)静态变量:
+    1.1)由static修饰
+    1.2)属于类的，存在方法区中，只有一份
+    1.3)常常通过类名.来访问
+    1.4)何时用:所有对象的数据都一样时使用
+  2)静态方法:
+    2.1)由static修饰
+    2.2)属于类的，存在方法区中，只有一份
+    2.3)常常通过类名.来访问
+    2.4)没有隐式的this传递
+        静态方法中不能直接访问实例成员
+    2.5)何时用:方法的操作仅与参数相关而与对象无关时使用
+  3)静态块:
+    3.1)由static修饰
+    3.2)属于类的，类被加载期间自动执行
+        类只被加载一次，所以静态块也只执行一次
+    3.3)何时用:常常用于加载/初始化静态资源(图片、音频、视频...)
+6.final:不能变
+  1)修饰变量:变量不能被改变
+  2)修饰方法:方法不能被重写
+  3)修饰类:  类不能被继承
+
+
+
+
+练习:
+1)final的练习
+
+
+
+
+任务1:
+  1)创建Cell类、Tetromino类、T类、J、O、L、I类
+    重写T类、J类、O类、L类、I类的print()方法
+    并测试
+任务2:
+  1)创建Person类，包含:
+      变量:name,age,address
+      方法:show()用于输出name,age和address
+    创建Student类，继承Person类，包括:
+      属性:className
+      方法:重写show，输出name,age,address和className
+    创建Teacher类，继承Person类，包括:
+      属性:salary
+      方法:重写show，输出name,age,address和salary
+    创建Doctor类，继承Person类，包括:
+      属性:level
+  2)自学static final-----明天讲  
+
+
+
+
+
+
+
+
+
+
+
+
+吸血鬼日记6
+大王叫我来巡山.mp3
+地图.png、装备、手枪、子弹......
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int[] a1 = Arrays.copyOf(a,6);
+double a = Math.random();
+double b = Math.sqrt(25);
+Arrays.sort(arr);
+
+
+drop()的操作与对象有关
+c1.drop();
+c2.drop();
+c3.drop();
+
+
+
+class Cell{
+  int row;
+  int col;
+  void drop(){ //不适合
+    row++;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+假设sort()不是静态的
+a1,a2,a3的引用访问sort()方法，最终结果都一样
+---sort()的操作与对象无关而仅与参数相关
+
+
+Arrays a1 = new Arrays();
+a1.sort(arr);
+
+Arrays a2 = new Arrays();
+a2.sort(arr);
+
+Arrays a3 = new Arrays();
+a3.sort(arr);
+
+
+
+
+
+
+
+
+
+
+
+
+假设sqrt()不是静态的-------
+m1,m2,m3的引用访问sqrt()方法，最终结果都一样
+------说明sqrt()的操作与对象无关，仅与参数相关
+
+
+Math m1 = new Math();
+double a = m1.sqrt(25);
+
+Math m2 = new Math();
+double b = m2.sqrt(25);
+
+Math m3 = new Math();
+double c = m3.sqrt(25);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+实例变量用得多还是静态变量用得多-----实例多
+实例方法用得多还是静态方法用得多-----实例多
+
+
+
+
+
+
+
+
+
+
+class Aoo{
+  int a; //实例变量----对象点来访问
+  static int b; //静态变量----类名点来访问
+  void show(){ //实例方法--隐式this
+    this.a++;
+    Aoo.b++;
+  }
+  static void test(){ //静态方法
+    a++; //编译错误
+    show(); //编译错误
+    b++;
+  }
+}
+
+没有this就意味着没有对象，
+而实例成员必须通过对象点来访问，
+所以静态方法中不能直接访问实例成员
+
+
+
+
+
+
+
+
+
+
+
+Student zs = new Student();
+zs.name = "zhangsan";
+zs.age = 25;
+zs.address = "廊坊";
+zs.className = "JSD1604";
+
+
+
+
+Student ls = new Student();
+ls.name = "lisi";
+ls.age = 26;
+ls.address = "佳木斯";
+
+
+
+ls.className = "JSD1604";
+Student.className = "JSD1604";
+
+
+class Student{
+  String name;
+  int age;
+  String address;
+  static String className;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+成员变量:
+1.实例变量:
+  1)属于对象的，存在堆中
+  2)有几个对象就有几份实例变量
+  3)必须通过对象名.来访问
+2.静态变量:
+  1)属于类的，存在方法区中
+  2)只有一份
+  3)常常通过类名.来访问
+
+
+Aoo o1 = new Aoo();
+Aoo o2 = new Aoo();
+o1.a = 1;
+o2.a = 2;
+
+class Aoo{
+  int a; //实例变量
+  static int b; //静态变量
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+建议: 数据私有化private，行为公开化public
+
+
+
+
+
+
+
+
+
+
+
+
+
+oo.day04.vis
+
+
+
+
+Joo
+
+
+
+
+
+
+
+
+
+
+
+
+
+ class Aoo{
+}
+
+
+
+
+
+
+
+
+
+数据私有化(private)，行为公开化(public)
+
+
+
+class Card{
+  private String cardId;  //卡号
+  private String cardPwd; //密码
+  private double balance; //余额
+
+  public boolean payMoney(double money){ //支付金额
+    if(balance>=money){
+      balance-=money;
+      return true;
+    }
+    return false;
+  }
+
+  public boolean checkPwd(string pwd){ //检查密码
+    if(cardPwd.equals(pwd)){
+      return true;
+    }
+    return false;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+package java.util;
+class Scanner{
+  public int nextInt(){ 
+  }
+  public double nextDouble(){
+  }
+}
+
+
+
+
+
+
+
+
+
+
+package a.b.c.d.e.f;
+class Aoo{
+}
+class Boo{
+  void show(){
+    Aoo o = new Aoo();
+  }
+}
+
+package b;
+import a.b.c.d.e.f.Aoo; 
+class Coo{
+  void show(){
+    Aoo o = new Aoo(); 
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+java项目比较大
+
+A公司:
+  package a.b.c;
+  class Aoo{
+  }
+B公司:
+  package a.b.c;
+  class Aoo{
+  }
+C公司:
+
+
+
+
+项目非常大的时候，建议:
+
+  域名反写 . 项目名称 . 模块名称   . 类名
+  cn.tedu  . manager   . stumanager . Student
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+同包中的类，不能同名
+
+package a.b.c.d.e.f.g;
+class Aoo{ //a.Aoo
+}
+
+package a;
+class Aoo{ //b.Aoo
+}
+
+
+
+
+
+
+
+
+
+重写print()
+
+
+
+
+
+
+
+
+
+类型从小到大依次为:
+ byte,short,int,long,float,double
+      char
+
+
+
+
+
+我继承了一个饭店(中餐)
+-------我还是中餐(不需要重写)
+-------我改为西餐(重写)
+-------我想中餐之上加个西餐(重写并super)
+
+
+
+
+
+
+
+
+
+Student zs = new Student();
+zs.name = "zhangsan";
+zs.age = 25;
+zs.address = "廊坊";
+zs.className = "JSD1604";
+zs.sayHi(); //zhangsan,25,廊坊,JSD1604
+
+Teacher wkj = new Teacher();
+wkj.name = "wangkejing";
+wkj.age = 37;
+wkj.address = "佳木斯";
+wkj.salary = 5000;
+wkj.sayHi(); //wangkejing,37,佳木斯
+
+Doctor doc = new Doctor();
+doc.name = "lisi";
+doc.age = 45;
+doc.address = "山东";
+doc.level = "主任医师";
+doc.sayHi(); //lisi,45,山东
+
+
+能点出来什么，看引用的类型
+重写方法被调用时，看对象的类型
+
+Student p2 = new Student();
+p2.sayHi(); //调Student的
+
+Person p1 = new Student();
+p1.sayHi(); //调Student的
+
+
+class Person{
+  String name;
+  int age;
+  String address;
+  void sayHi(){
+    System.out.println(name+","+age+","+address);
+  }
+}
+class Student extends Person{
+  String className;
+  void sayHi(){
+    System.out.println(name+","+age+","+address+","+className);
+  }
+}
+class Teacher extends Person{
+  double salary;
+  void sayHi(){
+    System.out.println(name+","+age+","+address+","+salary);
+  }
+}
+class Doctor extends Person{
+  String level;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.tedu.cloudnote.dao.AssociationDao">
+<!-- 用一个表关联SQL查出所有数据,
+    然后在封装成Book及user属性 -->
+<select id="findAllBook" resultMap="bookMap2">
+select * 
+from cn_notebook b 
+join cn_user u 
+on(b.cn_user_id=u.cn_user_id) 
+</select>
+<resultMap id="bookMap2" 
+type="com.tedu.cloudnote.entity.Book">
+	<!-- 即使属性和字段名一致也不能省略 -->
+	<id property="cn_notebook_id" column="cn_notebook_id"/>
+	<result property="cn_user_id" column="cn_user_id"/>
+	<result property="cn_notebook_type_id" column="cn_notebook_type_id"/>
+	<result property="cn_notebook_name" column="cn_notebook_name"/>
+	<result property="cn_notebook_desc" column="cn_notebook_desc"/>
+	<result property="cn_notebook_createtime" column="cn_notebook_createtime"/>
+	<!-- 加载关联user属性数据 -->
+	<association property="user" 
+javaType="com.tedu.cloudnote.entity.User">
+		<id property="cn_user_id" column="cn_user_id"/>
+		<result property="cn_user_name" column="cn_user_name"/>
+		<result property="cn_user_password" column="cn_user_password"/>
+		<result property="cn_user_token" column="cn_user_token"/>
+		<result property="cn_user_nick" column="cn_user_nick"/>
+	</association>
+</resultMap>
+
+<!-- 先用一个SQL查询Book，
+  然后又发送一个SQL加载user属性值 -->
+<select id="findById" 
+	parameterType="string"
+    resultMap="bookMap1">
+select * from cn_notebook
+where cn_notebook_id=#{bookId}
+</select>
+<!-- 自定义数据装载规则 -->
+<resultMap id="bookMap1" 
+type="com.tedu.cloudnote.entity.Book">
+	<!-- Book属性加载可以省略,名称一致 -->
+	<id property="cn_notebook_id" column="cn_notebook_id"/>
+	<result property="cn_notebook_name" column="cn_notebook_name"/>
+	<!-- 指定user属性的加载 -->
+	<association property="user" 
+ javaType="com.tedu.cloudnote.entity.User"
+ select="findUser" column="cn_user_id">
+	</association>
+</resultMap>
+
+<select id="findUser" parameterType="string"
+resultType="com.tedu.cloudnote.entity.User">
+select * from cn_user 
+where cn_user_id=#{userId}
+</select>
+
+</mapper>

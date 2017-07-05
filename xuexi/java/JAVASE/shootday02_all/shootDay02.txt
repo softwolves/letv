@@ -1,0 +1,557 @@
+Shoot射击游戏第一天:
+1.class FlyingObject{
+    image,width,height,x,y
+  }
+2.interface Enemy{
+    int getScore();
+  }
+3.interface Award{
+    DOUBLE_FILE,LIFE
+    int getType();
+  }
+4.class Airplane extends 1 implements 2{
+    speed
+    Airplane(){}
+    重写getScore()
+  }
+5.class Bee extends 1 implements 3{
+    xSpeed,ySpeed,awardType
+    Bee(){}
+    重写getType()
+  }
+6.class Bullet extends 1{
+    speed
+    Bullet(int x,int y){}
+  }
+7.class Hero extends 1{
+    life,doubleFire,images,index
+    Hero(){}
+  }
+8.class ShootGame extends JPanel{
+    WIDTH,HEIGHT
+    
+    background,start,pause,gameover
+    airplane,bee,bullet,hero0,hero1
+    static{} 
+    //做4个类的构造方法
+
+    main(){
+      ...
+      frame.setVisible(true); //1.可见 2.尽快调paint()
+    }
+
+    hero(Hero)
+    flyings(FlyingObject[])
+    bullets(Bullet[])
+    ShootGame(){初始化对象}
+    
+    重写paint(g){
+       画背景图
+       paintHero(g);
+       paintFlyingObjects(g);
+       paintBullets(g);
+    }
+    paintHero(g){} //画英雄机
+    paintFlyingObjects(g){} //画敌人
+    paintBullets(g){} //画子弹
+    
+  }
+
+
+Shoot射击游戏第二天:
+1.敌人入场的实现步骤:
+  1)main(){ game.action(); }
+  2)action(){
+      ...
+      run(){ //10毫秒定时执行
+        enteredAction(); //敌人入场
+	repaint();
+      }
+    }
+  3)int index = 0;
+    enteredAction(){ //10毫秒
+      index++;
+      if(index%40==0){  //40*10毫秒
+        FlyingObject one = nextOne(); //创建一个敌人对象
+        flyings = Arrays.copyOf(flyings,flyings.length+1); //扩容
+        flyings[flyings.length-1] = one; //将敌人对象添加到敌人数组中
+      }
+    }
+  4)nextOne(){
+      生成0到19间的随机数
+      为0时return new Bee();
+      否则return new Airplane();
+    }
+2.飞行物走一步的实现步骤:
+  1)FlyingObject----抽象方法step();
+  2)Airplane,Bee,Bullet,Hero---重写step()
+  3)action(){
+      run(){
+        enterAction();
+	stepAction();
+	repaint(); //重画
+      }
+    }
+  4)stepAction(){
+      遍历所有敌人,调用step()
+      遍历所有子弹,调用step()
+      hero.step();
+    }
+3.子弹入场的实现步骤:
+  1)Hero---shoot()英雄机发射子弹
+  2)action(){
+      run(){
+        ...
+	shootAction(); //发射子弹
+	repaint();
+      }
+    }
+  3)int shootIndex = 0;
+    shootAction(){ //10毫秒走一次
+      shootIndex++;
+      if(shootIndex%30==0){ //300毫秒
+        调用Hero的shoot()得到发射出的子弹数组bs
+	将bullets扩容(+bs.length)
+	将bs追加到bullets数组中--System.arraycopy()
+      }
+    }
+4.英雄机随着鼠标移动的实现步骤:
+  1)Hero---moveTo(int x,int y)
+  2)action(){
+      MouseAdapter l = new MouseAdapter(){
+         重写mouseMoved(){
+	   获取鼠标的x和y
+	   hero.moveTo(x,y); //移动
+	 }
+      };
+      this.addMouseMotionListener(l);
+      this.addMouseListener(l);
+
+      run(){
+        ...
+      }
+    }
+5.删除越界的敌人和子弹的实现步骤:
+  1)FlyingObject----abstract outOfBounds();
+  2)Airplane,bee,bullet,Hero--重写outOfBounds()
+  3)action(){
+      run(){
+        ...
+	outOfBoundsAction(); //删除越界的
+	repaint();
+      }
+    }
+  4)outOfBoundsAction(){
+      1)声明活着的数组
+      2)遍历flyings/bullets数组
+        判断对象是否不越界:
+        若true:
+          将对象添加到活着的数组中
+      3)将活着的数组复制到flyings/bullets数组中
+    }
+
+
+
+
+
+练习:
+1.删除越界的子弹
+2.保证程序的正确运行
+
+
+任务一:
+  完成如下功能:
+    1)敌人(敌机+小蜜蜂)入场
+    2)飞行物(敌机、小蜜蜂、子弹、英雄机)走一步
+任务二:
+  完成如下功能:
+    1)子弹入场
+    2)英雄机随着鼠标动
+    3)删除越界的飞行物
+
+
+
+
+
+
+
+
+
+
+Shoot射击游戏第二天:
+
+3.子弹入场
+4.英雄机随着鼠标动
+5.删除越界的飞行物
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+500000个元素，其中2000个越界了
+
+public void outOfBoundsAction(){  
+  int index = 0; //不越界的敌人个数
+  FlyingObject[] flyingLives = new FlyingObject[flyings.length];
+  for(int i=0;i<flyings.length;i++){
+    FlyingObject f = flyings[i];
+    if(!f.outOfBounds()){ //不越界
+      flyingLives[index] = f;
+      index++;
+    }
+  }
+  flyings = Arrays.copyOf(flyingLives,index);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+从flyings和bullets中 
+
+
+
+
+
+
+
+对象太多了
+
+1分钟----2个敌人+3个子弹==300个对象
+
+10分钟:遍历1800000个对象
+
+增加一个敌人
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+swing中的事件:
+1.事件:发生了一件事
+2.事件的处理:发生那个事之后所做的操作
+3.侦听器:
+
+
+侦听器:
+1.先有个侦听器
+2.把侦听器添加到面板上
+
+
+MouseListener l = new MouseListener(){
+  重写5个方法
+};
+MouseMotionListener ll = new MouseMotionListener(){
+  重写2个方法
+};
+
+
+
+
+
+
+MouseAdapter l = new MouseAdapter(){
+   重写鼠标移动事件
+   重写鼠标点击事件
+   ----用哪个重写哪个
+};
+
+this.addMouseListener(l);
+this.addMouseMotionListener(l);
+
+
+
+
+
+
+事件           事件处理
+鼠标点击       从启动状态变为运行状态
+鼠标移动       英雄机随着动
+鼠标移出       从运行状态变为暂停状态
+鼠标移入       从暂停状态变为运行状态
+
+
+
+
+
+
+
+
+
+
+Bullet[] bs = hero.shoot();
+bullets = Arrays.copyOf(bullets,bullets.length+bs.length);
+System.arraycopy(bs,0,bullets,bullets.length-bs.length,bs.length);
+
+
+
+
+
+
+
+
+
+
+打掉一个得40
+发射一次双倍火力减2
+
+
+
+
+
+敌人如何出现的?
+-----从系统随机产生的
+
+子弹如何出现的?
+-----由英雄机发射出来的
+
+
+
+
+
+
+
+
+
+
+
+子弹入场:
+1.创建子弹对象
+2.将子弹对象添加到bullets数组中
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bullets元素个数为0
+
+
+
+
+
+
+
+
+
+
+
+
+
+  1)FlyingObject----抽象方法step();
+  2)Airplane,Bee,Bullet,Hero---重写step()
+  3)action(){
+      run(){
+        enterAction();
+	stepAction();
+	repaint(); //重画
+      }
+    }
+  4)stepAction(){
+      遍历所有敌人,调用step()
+      遍历所有子弹,调用step()
+      hero.step();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+paint()调用方式两种:
+1.frame.setVisible(true); 
+2.repaint();
+
+
+
+
+
+
+
+
+
+
+
+
+5+2--------加
+5+(-2)-----减
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.敌人入场的实现步骤:
+  1)main(){ game.action(); }
+  2)action(){
+      ...
+      run(){ //10毫秒定时执行
+        enteredAction(); //敌人入场
+	
+      }
+    }
+  3)int index = 0;
+    enteredAction(){ //10毫秒
+      index++;
+      if(index%40==0){  //40*10毫秒
+        FlyingObject one = nextOne(); //创建一个敌人对象
+        flyings = Arrays.copyOf(flyings,flyings.length+1); //扩容
+        flyings[flyings.length-1] = one; //将敌人对象添加到敌人数组中
+      }
+    }
+  4)nextOne(){
+      生成0到19间的随机数
+      为0时return new Bee();
+      否则return new Airplane();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+敌人入场:定时发生的
+1.创建敌人(敌机+小蜜蜂)对象
+2.将敌人对象添加到flyings数组中
+
+
+有50个敌人了
+意味着flyings中有50个元素
+再来1个敌人
+-----flyings扩大一个容量
+
+
+
+
+
+
+
+TimerTask
+               TimerTask tt
+timer.schedule(new TimerTask(){
+  public void run(){ //定时干的那个事
+    
+  }
+},10,10);
+
+
+class Aoo extends TimerTask{
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+第一个10:从程序启动到第一次触发的时间间隔
+第二个10:第一次触发到第二次触发的时间间隔
+         第二次触发到第三次触发的时间间隔
+	 第三次触发到第四次触发的时间间隔
+
+
+定个表明天早上7点
+
+
+
+
+
+
+
+//生成敌人(敌机+小蜜蜂)对象
+public FlyingObject nextOne(){
+  return new Airplane();
+}
+
+
+
+
+
+
+
+
+子弹入场:
+1.创建子弹对象
+2.将子弹对象添加到bullets数组中
+
+
+
+
+
+

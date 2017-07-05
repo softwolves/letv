@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>事件</title>
+<script src="../js/jquery-1.11.1.js"></script>
+<script>
+	//$(function(){})和onload的区别：
+	//onload只能写一次，若写多次则后者覆盖前者。
+	//$(function(){})可以写多次，都有效。
+	$(function(){
+		$("#a").click(function(e){
+			alert("ok");
+			console.log(e);
+		});
+	});
+</script>
+</head>
+<body>
+	<input type="button" value="AAA" id="a"/>
+</body>
+</html>
+
+
+
+
+
+
+
+

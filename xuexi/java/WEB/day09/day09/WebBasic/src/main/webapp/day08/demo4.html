@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>联动菜单</title>
+<script>
+	//模拟查询所有城市
+	function loadCities() {
+		return [
+			["杭州","宁波","温州"],
+			["济南","青岛","烟台"],
+			["石家庄","保定","唐山"]
+		];
+	}
+	
+	//页面加载后自动查询所有城市
+	//onload是页面加载事件，在浏览器
+	//加载完页面后自动触发。
+	var cities;
+	window.onload = function() {
+		//此处的代码在页面加载后执行
+		cities = loadCities();
+	}
+	
+	function chg() {
+		//获取下拉选
+		var s1 = document.getElementById("province");
+		//获取选中的省份序号
+		var pindex = s1.value;
+		//根据省份序号获取对应城市
+		var pcities = cities[pindex];
+		//删除原来的城市
+		var s2 = document.getElementById("city");
+		//var options = 
+		//	s2.getElementsByTagName("option");
+		//for(var i=options.length-1;i>0;i--) {
+		//	s2.removeChild(options[i]);
+		//}
+		s2.innerHTML = "<option>请选择</option>";
+		//创建并追加新城市
+		if(pcities) {
+			for(var i=0;i<pcities.length;i++) {
+				var opn = document.createElement("option");
+				opn.innerHTML = pcities[i];
+				s2.appendChild(opn);
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	省:
+	<select onchange="chg();" id="province">
+		<option value="-1">请选择</option>
+		<option value="0">浙江省</option>
+		<option value="1">山东省</option>
+		<option value="2">河北省</option>
+	</select>
+	市:
+	<select id="city">
+		<option>请选择</option>
+	</select>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

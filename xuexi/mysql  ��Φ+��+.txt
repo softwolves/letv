@@ -1,0 +1,54 @@
+一、mysql 的安装配置
+1、卸载linux 自带的 mysql   yum -y remove mysql-sever mysql
+2、将原配置文件备份  mv  /etc/my.cnf  /etc/my.cnf.bak
+3、到官网下载rmp包  http://dev.mysql.com/downloads/mysql/
+4、tar -xf  
+5、 rpm -Uvh *.rpm
+6、启动 /etc/init.d/mysql start
+7、chkconfig  --list mysql
+8、也可以这样启动 service  mysql start
+9、cat  /root/.mysql_secret  随机生成的管理密码
+10、mysql -u root -p 登陆，输入管理密码 并重新设置管理密码  set password for 'root'@'localhost'=PASSWORD('1234567'); 然后退出
+11、建立my.cnf 配置文件  cp /usr/share/mysql/my-default.cnf   /etc/my.cnf  并更改配置文件 sql_mode=NO_ENINE_SUBSTITUTON,STRICT_TRANS_TABLES     explicit_defaults_for_timestamp=1
+12、service  mysql restart
+
+二、表的导入导出
+1、导入load  data infile ’文件名‘  into  table 表明  fields terminated by ’分隔符‘  lines terminated by '\n';
+2、导出select   要选择的内容   into  outfile '文件名'  fields terminated by '分隔符' lines terminated by '\n';
+3、查询 方式
+查询 条件   where
+分组  排序  限制条目  查询结果过滤 order  by / group by /limit /having 
+单表查询        select  。。  from   。。。where 
+嵌套查询     select。。。from  。。。where  。。。（select。。。）
+多表查询   select 。。from ，。。。表1，表2  where 。。
+左连接查询   select  。。。from  。。表a left join 表b on 表达式
+右连接查询  select 。。。from 。。。 表a  right join 表b on 表达式
+
+
+三、恢复mysql 管理密码（忘记密码）
+1、停止mysql 服务程序 
+2、跳过授权表启动  --skip-grant-tables
+3、重设密码（更新user表记录）update  mysql.user SET  password=PASSWORD('123456') where user='root'  and host='localhost'; 
+4、已正常方式重启mysql服务程序  并设置管理员密码   mysqladmin -u root -p password '123456'  验证旧密码
+5、 授权并取消授权  grant all on *。* to 用户@‘%’ IDENTIFIED BY '密码‘ with grant option；  权限 update select insert 
+授权权限 with grant option   % 代表所有主机   如果匹配单独网段192.168.1.%  或者匹配域%。le。comS
+  取消授权  REVOKE 权限列表  on   库名.表名 from  用户名@’主机名‘  ；
+
+四、备份和恢复
+ 1、冷备 -- 把数据库的各种库拷贝打包
+ 2、热备 --yum -y install per-DBD-MySQL （进适用于MyISAM引擎，备份过程中，数据插入和更新操作会被挂起）
+  备份库  mysqlhostcopy  -uroot -p123456 userdb  userdb2
+ 3、逻辑备份  （效率低，备份还原速度慢备份过程中数据插入和更新操作会被挂起）
+   备份	mysqldump -u root -p  源库名 > 路径/xxx.sql
+    恢复 mysql  -u root -p 目标库名 < 路径/xxx.sql
+--all-databases   所有库
+-数据库名         单个库
+-数据库名  表名   指定库的指定表
+- -B 数据库1 数据库2 备份多个库
+ 4、二进制日志进行增量备份和恢复
+    1>、配置 vim  /etc/my.cnf   show-query-log  启用查询日志  long-query-time=3 耗时3s才记录
+    2>、清理bin-log日志  PURGE   MASTER LOGS TO "bin-log文件"； RESET MASTER;  	
+    3>、使用mysqlbinlog 提取历史sql操作 通过管道交给mysql 命令重做
+   mysqlbinlog  mysql-bin.000001 | mysql -u root -p 123456
+ 5、XtraBackup 备份
+  

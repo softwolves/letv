@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>day01</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>Struts2</h1>
+<h2>Spring MVC</h2>
+<p><img src="SSM.png" /></p>
+<h2>Struts2 简介</h2>
+<ol>
+<li>来自Apache基金会的软件： http://struts.apache.org</li>
+<li>Struts2 与 Struts1 完全没有关系</li>
+<li>Struts2 的前身是 WebWorks </li>
+<li>
+Spring MVC\Struts2\Struts1 都是 MVC 模式的Web框架
+<ul>
+<li>MVC是非常流行的 用户界面设计模式。</li>
+<li>MVC是3层架构中的表现层。</li>
+</ul>
+</li>
+</ol>
+<p><img src="SSH.png" /></p>
+<h2>配置Struts2</h2>
+<p>配置步骤：</p>
+<ol>
+<li>
+下载Struts2的jar包
+<ul>
+<li>
+从struts.apache.org 下载
+<ol>
+<li>解压缩</li>
+<li>将*.jar复制到 /WEB-INF/lib 文件夹</li>
+</ol>
+</li>
+<li>
+使用maven下载
+<ul>
+<li>使用Eclipse内嵌搜索，搜索到 struts2-core 的“坐标(xml)”，保存pom.xml</li>
+<li>使用 maven.tedu.cn/nexus (maven.aliyun.com/nextus) 在线搜索, 搜索到 struts2-core 的“坐标(xml)”，保存pom.xml</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+配置主控制器
+<ul>
+<li>
+控制器类
+<ul>
+<li>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</li>
+<li>在struts-core-xxxx.jar 包中</li>
+</ul>
+</li>
+<li>
+编辑文件 web.xml(部署描述文件)
+<ul>
+<li>filter</li>
+<li>filter-mapping</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+添加struts的配置文件
+<ul>
+<li>位置：package中（classpath中）</li>
+<li>文件名：struts.xml, struts的filter会自动按照文件名struts.xml找到这个文件, 文件名不能错！！！</li>
+</ul>
+</li>
+</ol>
+<p>web.xml: </p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+    xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot;
+    xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot; 
+    version=&quot;2.5&quot;&gt;
+  &lt;!-- Struts2 MVC 配置 --&gt;
+  &lt;!-- filter 会自动找package中的struts.xml --&gt;
+  &lt;filter&gt;
+    &lt;filter-name&gt;mvc&lt;/filter-name&gt;
+    &lt;filter-class&gt;
+    org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter
+    &lt;/filter-class&gt;
+  &lt;/filter&gt;
+  &lt;filter-mapping&gt;
+    &lt;filter-name&gt;mvc&lt;/filter-name&gt;
+    &lt;url-pattern&gt;*.action&lt;/url-pattern&gt;
+  &lt;/filter-mapping&gt;
+
+&lt;/web-app&gt;
+</code></pre>
+
+<p>空白 struts.xml</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE struts PUBLIC
+    &quot;-//Apache Software Foundation//DTD Struts Configuration 2.3//EN&quot;
+    &quot;http://struts.apache.org/dtds/struts-2.3.dtd&quot;&gt;
+&lt;struts&gt;
+
+&lt;/struts&gt;
+</code></pre>
+
+<h2>Hello World！步骤</h2>
+<ol>
+<li>
+修改配置文件struts.xml 添加web请求的处理路径
+<ul>
+<li>
+<package name="test" namespace="/test" extends="struts-default">
+<ul>
+<li>namespace=&quot;/test&quot; 表示处理一级路径 /test</li>
+<li>extends=&quot;struts-default&quot; 继承现有struts的参数</li>
+</ul>
+</li>
+<li>
+<action name="hello" class="com.tedu.HelloAction">
+<ul>
+<li>name=&quot;hello&quot;处理2级路径 /test/hello.action</li>
+<li>
+class=&quot;com.tedu.HelloAction&quot; 
+<ul>
+<li>在处理url请求时候执行HelloAction 的 execute() 方法，</li>
+<li>execute方法一定有String返回值，常见的值有 &quot;success&quot; &quot;error&quot;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<result name="success">/WEB-INF/msg.jsp</result>
+<ul>
+<li>与action方法的返回值配合, 表示返回 “success”时候，转发到msg.jsp页面，msg.jsp作为用户看的视图。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+添加类 com.tedu.HelloAction
+<ul>
+<li>包含 String execute()</li>
+<li>方法中 return &quot;success&quot;;</li>
+</ul>
+</li>
+<li>添加  /WEB-INF/msg.jsp</li>
+</ol>
+<p>struts.xml 文件参考：</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!-- struts.xml --&gt;
+&lt;!DOCTYPE struts PUBLIC
+    &quot;-//Apache Software Foundation//DTD Struts Configuration 2.3//EN&quot;
+    &quot;http://struts.apache.org/dtds/struts-2.3.dtd&quot;&gt;
+&lt;struts&gt;
+    &lt;!-- 用于配置请求路径与控制器的匹配关系 --&gt;
+    &lt;!-- /test 请求被这个包进行处理 --&gt;
+    &lt;package name=&quot;test&quot; namespace=&quot;/test&quot;
+        extends=&quot;struts-default&quot;&gt; 
+        &lt;!-- 请求/test/hello.action时候
+        执行HelloAction的execute()方法 --&gt;
+        &lt;action name=&quot;hello&quot;
+            class=&quot;com.tedu.HelloAction&quot;&gt;
+            &lt;!-- execute方法返回success 
+            时候，转发到msg.jsp--&gt;
+            &lt;result name=&quot;success&quot;&gt;
+                /WEB-INF/msg.jsp
+            &lt;/result&gt;
+        &lt;/action&gt;
+    &lt;/package&gt;
+&lt;/struts&gt;
+</code></pre>
+
+<p>HelloAction.java :</p>
+<pre><code>package com.tedu;
+
+public class HelloAction {
+    /**
+     * 方法名必须是execute
+     */
+    public String execute(){
+        System.out.println(&quot;Hello World!&quot;); 
+        //返回值时候success
+        return &quot;success&quot;;
+    }
+}
+</code></pre>
+
+<p>msg.jsp:</p>
+<pre><code>&lt;%@ page language=&quot;java&quot; 
+    contentType=&quot;text/html; charset=UTF-8&quot;
+    pageEncoding=&quot;UTF-8&quot; %&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Hello&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h2>由控制器向页面传递消息</h2>
+<ol>
+<li>在控制器中添加属性，并且为属性添加get方法</li>
+<li>在控制器方法中向属性赋值</li>
+<li>
+在JSP页面上使用 EL 表达式读取属性值
+<ul>
+<li>EL表达式实际上执行属性的get方法，如果没有get方法就无法获取属性值。</li>
+</ul>
+</li>
+</ol>
+<p><img src="hello.png" /></p>
+<p>案例：</p>
+<p>HelloAction</p>
+<pre><code>public class HelloAction {
+    private String message;
+    public String getMessage() {
+        return message;
+    }
+    /**
+     * 方法名必须是execute
+     */
+    public String execute(){
+        message = &quot;Hi&quot;;
+        System.out.println(&quot;Hello World!&quot;); 
+        //返回值时候success
+        return &quot;success&quot;;
+    }
+}
+</code></pre>
+
+<p>msg.jsp</p>
+<pre><code>&lt;%@ page language=&quot;java&quot; 
+    contentType=&quot;text/html; charset=UTF-8&quot;
+    pageEncoding=&quot;UTF-8&quot; %&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Hello&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;!-- 自动调用getMessage方法获取信息 --&gt;
+    &lt;h2&gt;${message}&lt;/h2&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h2>从页面向控制器传递值</h2>
+<p>有两种方式可以从页面向控制器传输数据：</p>
+<ol>
+<li>基本属性传递方式</li>
+<li>域模型属性传递方式</li>
+</ol>
+<h3>1. 基本属性传递方式</h3>
+<ol>
+<li>在控制器中声明与html表单项 name 属性一致的Bean属性。</li>
+<li>添加Bean属性的getxxx setxxx方法。</li>
+<li>Struts会在接受请求时候，自动将表单属性值注入到 Bean 属性中</li>
+</ol>
+<p><img src="login.png" /></p>
+<p>代码：</p>
+<p>Login.jsp</p>
+<pre><code>&lt;%@ page language=&quot;java&quot; 
+    contentType=&quot;text/html; charset=UTF-8&quot;
+    pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;%@taglib prefix=&quot;c&quot; 
+    uri=&quot;http://java.sun.com/jsp/jstl/core&quot;%&gt;
+&lt;!DOCTYPE html&gt;
+&lt;!-- /WEB-INF/login.jsp --&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;登录&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;登录&lt;/h1&gt;
+    &lt;c:url var=&quot;url&quot; 
+        value=&quot;/user/login.action&quot;/&gt;
+    &lt;form action=&quot;${url}&quot; method=&quot;post&quot;&gt;
+        &lt;div&gt;
+            &lt;label&gt;用户名:&lt;/label&gt;
+            &lt;input type=&quot;text&quot; 
+                name=&quot;username&quot;/&gt;
+        &lt;/div&gt;      
+        &lt;div&gt;
+            &lt;label&gt;密码&lt;/label&gt;
+            &lt;input type=&quot;password&quot;
+              name=&quot;password&quot;&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;登录&quot;&gt;        
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>LoginAction.java</p>
+<pre><code>public class LoginAction {
+    private String username;
+    private String password;
+    //getxxx setxxx 称为：Bean 属性访问方法
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    public String getUsername() {
+        return username;
+    }
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String execute(){
+        System.out.println(
+            username + &quot;,&quot; + password);
+        //完整的登录逻辑...待续
+        return &quot;success&quot;;
+    }
+}
+</code></pre>
+
+<p>ok.jsp</p>
+<pre><code>&lt;%@ page language=&quot;java&quot; 
+    contentType=&quot;text/html; charset=UTF-8&quot;
+    pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;成功消息&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;欢迎 ${username}&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>struts.xml (片段)</p>
+<pre><code>&lt;package name=&quot;user&quot;
+    namespace=&quot;/user&quot; 
+    extends=&quot;struts-default&quot;&gt;
+    &lt;!--显示登录页面/user/loginForm.action--&gt;
+    &lt;action name=&quot;loginForm&quot;&gt;
+        &lt;result&gt;/WEB-INF/login.jsp&lt;/result&gt;
+    &lt;/action&gt;
+    &lt;!-- 处理登录请求/user/login.action --&gt;
+    &lt;action name=&quot;login&quot;
+        class=&quot;com.tedu.LoginAction&quot;&gt;
+        &lt;result name=&quot;success&quot;&gt;
+            /WEB-INF/ok.jsp
+        &lt;/result&gt;
+    &lt;/action&gt;
+&lt;/package&gt;  
+</code></pre>
+
+<h3>2. 域模型属性传递方式</h3>
+<p>利用域模型打包传递表单数据, 优点：
+1. 可以便捷的处理表单输入项目很多
+2. 特别是在表单被项目重用时候，显得更加方便。</p>
+<p>原理：</p>
+<p><img src="login2.png" /></p>
+<p>步骤：
+1. 创建域模型对象 User
+	- 添加属性 id 和 pwd
+	- 添加bean属性访问方法
+2. 在控制器中添加User属性user和get set方法
+3. 在表单中的输入项目name属性值为：user.id</p>
+<p>代码：</p>
+<p>User.java</p>
+<pre><code>public class User implements Serializable{
+
+    private String id;
+    private String pwd;
+
+    public String getId() {
+        return id;
+    }
+    public void setId(String id) {
+        this.id = id;
+    }
+    public String getPwd() {
+        return pwd;
+    }
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
+    }
+    @Override
+    public String toString() {
+        return &quot;User [id=&quot; + id + &quot;, pwd=&quot; + pwd + &quot;]&quot;;
+    }
+}
+</code></pre>
+
+<p>Login2Action.java</p>
+<pre><code>public class Login2Action {
+    private User user;
+    public void setUser(User user) {
+        this.user = user;
+    }
+    public User getUser() {
+        return user;
+    }
+    public String execute(){
+        System.out.println(user); 
+        //其他登录逻辑
+        return &quot;success&quot;;
+    }
+}   
+</code></pre>
+
+<p>login2.jsp (片段)</p>
+<pre><code>&lt;h1&gt;登录&lt;/h1&gt;
+&lt;c:url var=&quot;url&quot; 
+    value=&quot;/user/login2.action&quot;/&gt;
+&lt;form action=&quot;${url}&quot; method=&quot;post&quot;&gt;
+    &lt;div&gt;
+        &lt;label&gt;用户名:&lt;/label&gt;
+        &lt;input type=&quot;text&quot; name=&quot;user.id&quot;/&gt;
+    &lt;/div&gt;      
+    &lt;div&gt;
+        &lt;label&gt;密码&lt;/label&gt;
+        &lt;input type=&quot;password&quot; name=&quot;user.pwd&quot;&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;登录&quot;&gt;        
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>struts.xml(片段)</p>
+<pre><code>&lt;!-- 显示 login2.jsp --&gt;
+&lt;action name=&quot;login2Form&quot;&gt;
+    &lt;result&gt;/WEB-INF/login2.jsp&lt;/result&gt;
+&lt;/action&gt;
+&lt;action name=&quot;login2&quot;
+    class=&quot;com.tedu.Login2Action&quot;&gt;
+    &lt;result name=&quot;success&quot;&gt;
+        /WEB-INF/ok.jsp;
+    &lt;/result&gt;
+&lt;/action&gt;
+</code></pre>
+
+<h2>如何获取session对象</h2>
+<ol>
+<li>通过工厂方法获取session对象</li>
+<li>利用注入获得session对象</li>
+</ol>
+<h3>1. 通过工厂方法获取session对象</h3>
+<p>Struts 提供了ActionContext对象，这个对象可以获取session，并且访问session。</p>
+<p>案例：</p>
+<pre><code>//获取 ActionContext 对象
+ActionContext context = ActionContext.getContext();
+//获取 session 对象 
+Map&lt;String, Object&gt; session=
+        context.getSession();
+//将数据保存到session中    
+session.put(&quot;name&quot;, &quot;Jerry&quot;);
+</code></pre>
+
+<blockquote>
+<p>提示：Struts2 为了降低耦合性，将HttpSession封装在Map中，调用Map的put方法就可以将数据保存到session中。</p>
+</blockquote>
+<h3>2. 利用注入获得session对象</h3>
+<p>使用ActionContext 对象获取Session对象，其缺点是将代码与ActionContext 对象耦合在一起，耦合度增加了。为减少耦合，Struts2提供了Session注入方式。</p>
+<blockquote>
+<p>提示: 不仅仅Spring提供了注入功能，Struts2也利用注入方式工作。这里是Session就是注入得到，还可以注入Request对象。注入的好处是彻底实现了松耦合代码。</p>
+</blockquote>
+<p>步骤：</p>
+<ol>
+<li>
+在Action类上实现SessionAware接口
+<ul>
+<li>class Login2Action implements SessionAware </li>
+</ul>
+</li>
+<li>
+在Action类中添加Session属性，和属性访问方法
+<ul>
+<li>private Map&lt;String, Object&gt; session;</li>
+<li>public void setSession(Map&lt;String, Object&gt; session) {</li>
+<li>this.session = session;</li>
+<li>}</li>
+</ul>
+</li>
+<li>
+在execute方法中就可以利用 session 属性访问session了
+<ul>
+<li>session.put(&quot;loginUser&quot;, user);</li>
+</ul>
+</li>
+</ol>
+<p>案例：</p>
+<p>Login2Action.java</p>
+<pre><code>public class Login2Action 
+    implements SessionAware, RequestAware{
+
+    //注入session
+    private Map&lt;String, Object&gt; session;
+    public void setSession(Map&lt;String, Object&gt; session) {
+        this.session = session;
+    }
+    //注入request
+    private Map&lt;String, Object&gt; request;
+    public void setRequest(
+            Map&lt;String, Object&gt; req) {
+        this.request = req;
+    }
+
+    private User user;
+    public void setUser(User user) {
+        this.user = user;
+    }
+    public User getUser() {
+        return user;
+    }
+    public String execute(){
+        /*
+         * 利用ActionContext 对象可以
+         * 获取当前环境中的所有信息
+         *   session
+         *   request
+         *   application 
+         *   ...
+         */
+        //获取session对象
+        //ActionContext context = 
+        //      ActionContext.getContext();
+        //HttpSession.setAttribute(k,v);
+        //Map&lt;String, Object&gt; session=
+        //      context.getSession();
+        //session.put(&quot;name&quot;, &quot;Jerry&quot;);
+
+        System.out.println(user); 
+        //登录逻辑
+        //1. 获取表单信息
+        //2. 调用业务层 验证表单信息
+        //3. 登录成功
+        //   1. 保存用户信息到session！！！
+        //   2. 转发到登录成功页面
+        //4. 登录失败
+        //   1. 返回到登录页面
+        if(user.getId().equals(&quot;robin&quot;)
+            &amp;&amp; user.getPwd().equals(&quot;123&quot;)){
+            //登录成功
+            //将用户信息保存到session
+            session.put(&quot;loginUser&quot;, user);
+            //转发到ok.jsp
+            return &quot;success&quot;;   
+        }
+        //登录失败：转发返回login2.jsp
+        //利用request将消息发送到页面
+        request.put(&quot;message&quot;,
+                &quot;你想好了！！！&quot;);
+        return &quot;error&quot;;
+    }
+
+}   
+</code></pre>
+
+<p>login2.jsp(局部)</p>
+<pre><code>&lt;h1&gt;登录&lt;/h1&gt;
+&lt;c:url var=&quot;url&quot; 
+    value=&quot;/user/login2.action&quot;/&gt;
+&lt;form action=&quot;${url}&quot; method=&quot;post&quot;&gt;
+    &lt;!-- 获取request中的message信息 --&gt;
+    &lt;h2&gt;${message}&lt;/h2&gt;
+    &lt;div&gt;
+        &lt;label&gt;用户名:&lt;/label&gt;
+        &lt;input type=&quot;text&quot; 
+        name=&quot;user.id&quot; value=&quot;${user.id}&quot;/&gt;
+    &lt;/div&gt;      
+    &lt;div&gt;
+        &lt;label&gt;密码&lt;/label&gt;
+        &lt;input type=&quot;password&quot; name=&quot;user.pwd&quot;&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;登录&quot;&gt;        
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>ok.jsp (局部)</p>
+<pre><code>&lt;!-- 获取session中的loginUser信息 --&gt;
+&lt;h2&gt;${loginUser.id} 又登录了！&lt;/h2&gt;
+</code></pre>
+
+<p>struts.xml(局部)</p>
+<pre><code>&lt;!-- 显示 login2.jsp --&gt;
+&lt;action name=&quot;login2Form&quot;&gt;
+    &lt;result&gt;/WEB-INF/login2.jsp&lt;/result&gt;
+&lt;/action&gt;
+&lt;action name=&quot;login2&quot;
+    class=&quot;com.tedu.Login2Action&quot;&gt;
+    &lt;result name=&quot;success&quot;&gt;
+        /WEB-INF/ok.jsp
+    &lt;/result&gt;
+    &lt;!-- 登录失败时候返回登录界面 --&gt;
+    &lt;result name=&quot;error&quot;&gt;
+        /WEB-INF/login2.jsp 
+    &lt;/result&gt;
+&lt;/action&gt;
+</code></pre>
+
+<hr />
+<h2>作业</h2>
+<ol>
+<li>搭建Struts2环境，测试HelloWorld.</li>
+<li>利用 <strong>基本属性传递方式</strong> 实现登录过程</li>
+<li>利用 <strong>域模型属性传递方式</strong> 实现登录过程</li>
+</ol>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
