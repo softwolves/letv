@@ -1,0 +1,62 @@
+--- !ruby/object:Puppet::Node::Facts
+  expiration: 2013-11-22 18:46:33.224290 +08:00
+  name: cdn-test-nm-cnc-244
+  values: 
+    netmask: 255.255.255.240
+    kernelmajversion: "2.6"
+    uptime: 18 days
+    operatingsystem: CentOS
+    netmask_eth0: 255.255.255.240
+    kernelrelease: 2.6.32-903.279.9.1.letv.el6.x86_64
+    network_eth0: 110.18.247.240
+    processorcount: "4"
+    type: Main Server Chassis
+    swapsize: 5.86 GB
+    uptime_days: "18"
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEA7SbrceKwubYtA8q7jjKLO4bMeh0ZY64SAlp+dYsKDRGoGtBp3LvtbyGldAXdoGmflqDrT4z/Af+tdSS95aRhv08YCCS5yijmmLp17awVo01QHCr3v23/biko8kL+k8d1FlQZLOZ590rWBYoESl21NlVHA2lLxKWiR6C88nvLZcZGR+bRf2Z/Cdz1sAAk9kUHGVw4wOR/qDbjH1+2VyxySJkJiqbkUhEXqr9IZmE7EUak/s/KHq5rGciRr1Lff70p1hJhFRwm5U/KNr1tEQmvyT3wcZoE5owRdopIYIBEaCPpyKEZ1deDFEF2hI7vIATtgbwXSEaUFgEe/zH3F9n7Sw==
+    swapfree: 5.85 GB
+    manufacturer: Intel Corporation
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAOP9aiMCZyZPk9vsyoGYqHvYj0oMTUAxwd/Xz+sitk3j6iVeTaN0JuKxUtsrIuIpn8AE7WcfpV+YT4rG0FG6RhCfD+CCBjNLOWCOhCMqT9LyljbfcQ5dh60EqIs2pJvDwDtRWhZOWlFYH9n0lNmc2+h+npBfkrB6bRjhi8cViJBpAAAAFQCAnEqjZHzby05MH+eod5CrsigxrwAAAIEAtud8LgKMMtNLAnhpiEwKXtWtVYZvpjK6pCmMQot9dYiBvVPx353El43DRKayFgTcBQyR+jdAulIA8jA5uY6G4mTC3McAHQ27ArBA0/PwEmux/sN1xcXAdqv3mJu2QcNnU0P+fvGB0B80Vai/7u/FoRVZKizv8hGXA+vLxLXkRYkAAACBALbbl7g32LNo9VG+LS7Z74cGmVUPQM5YvU+sxuCrrkIP9Qx94tNejq9eXjV4PGM9pN50XHBULCfpV0yMCZd486RgqVp/9jEOSkSJ64shC26QxTfQA2BhtoCIg+K2wo2azncW5//xO0q4FQ7imOabAbipDlm8GvtgoC6cz+pTaI+x
+    memorysize: 7.62 GB
+    operatingsystemrelease: "6.3"
+    uniqueid: 007f0100
+    memoryfree: 6.41 GB
+    id: root
+    architecture: x86_64
+    serialnumber: ............
+    !ruby/sym _timestamp: 2013-11-22 18:31:33.387693 +08:00
+    selinux: "false"
+    uptime_seconds: "1567685"
+    ipaddress_lo: 127.0.0.1
+    ipaddress: 110.18.247.244
+    processor1: Intel(R) Xeon(R) CPU           E5506  @ 2.13GHz
+    processor0: Intel(R) Xeon(R) CPU           E5506  @ 2.13GHz
+    processor3: Intel(R) Xeon(R) CPU           E5506  @ 2.13GHz
+    macaddress_eth0: 00:15:17:FA:CE:94
+    macaddress_eth1: 00:15:17:FA:CE:95
+    processor2: Intel(R) Xeon(R) CPU           E5506  @ 2.13GHz
+    macaddress: 00:15:17:FA:CE:94
+    environment: production
+    rubyversion: 1.8.7
+    interfaces: "eth0,eth1,lo"
+    productname: S5500BC
+    clientversion: 2.6.11
+    facterversion: 1.6.0
+    ps: ps -ef
+    kernel: Linux
+    timezone: CST
+    puppetversion: 2.6.11
+    physicalprocessorcount: "1"
+    hostname: CDN-TEST-NM-CNC-244
+    clientcert: cdn-test-nm-cnc-244
+    uptime_hours: "435"
+    kernelversion: 2.6.32
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    network_lo: 127.0.0.0
+    virtual: physical
+    is_virtual: "false"
+    ipaddress_eth0: 110.18.247.244
+    hardwareisa: x86_64
+    hardwaremodel: x86_64
+    netmask_lo: 255.0.0.0

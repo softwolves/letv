@@ -1,0 +1,69 @@
+--- !ruby/object:Puppet::Node::Facts
+  expiration: 2013-11-18 18:36:01.879154 +08:00
+  name: cdn-hb-wh-aipu-153
+  values: 
+    ipaddress_eth0: 101.36.100.61
+    ipaddress_eth1: 183.95.134.153
+    hardwareisa: x86_64
+    id: root
+    macaddress_eth0: D4:AE:52:75:DE:0A
+    macaddress_eth1: D4:AE:52:75:DE:0B
+    netmask_lo: 255.0.0.0
+    environment: production
+    kernelmajversion: "2.6"
+    architecture: x86_64
+    physicalprocessorcount: "1"
+    network_lo: 127.0.0.0
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    operatingsystemrelease: "6.3"
+    swapfree: 5.85 GB
+    uptime: 31 days
+    puppetversion: 2.6.11
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAP3zwoyCn40Hzaon58PQsBKkGrfevS6gOhA1SXGQAavmKtz+FWOljRfjqtgAV+IBtPlwR3u2tDDCQzlhMwopO9d8brc2j1qJ+R1BcocUhJADJeLVwqIJ5fiPmxthltz2C3pYR3cjcDiwomiNmWmi9iQOVHr8vvFrWcUlBtdUF2QbAAAAFQC4d877+phtpQV7HzTqcxdy/JHVKwAAAIAmsAi0jfyJ+DK5q3w6fRkmM5LlsWCODHHPkJuQEZzPx3oTHBUfHlF7KdPqoEbFyzlhf+t54aWoagOSVViue/FIauGuieCJySGIpTaWMlS/gPorXtS6pAKjbusB0dhRO6SL58AEXqYA3cdrhzvI201JRRHLrHqyVUv0cOCtMtWVEgAAAIAqd2vWwP08EAv1/f9m7RzH3uW9fuLILZqk83/6b//EP3QjBdV3b91toLevs5drMMPlDu1Os8ph5rVV/hpo5lLLaIS/bAY2uuA2+GZtMEa+GZjhk1ZHlvOV+mv+E60LO7qDCAbW0kI/vb3Ic3LMuFzVfbU7pLZk4uzzopwnUsI+ng==
+    is_virtual: "false"
+    !ruby/sym _timestamp: 2013-11-18 18:21:01.995383 +08:00
+    macaddress: D4:AE:52:75:DE:0A
+    clientcert: cdn-hb-wh-aipu-153
+    operatingsystem: CentOS
+    ipaddress: 101.36.100.61
+    netmask_eth0: 255.255.255.0
+    netmask_eth1: 255.255.255.128
+    selinux: "false"
+    kernelrelease: 2.6.32-902.279.9.1.letv.el6.x86_64
+    ps: ps -ef
+    uptime_days: "31"
+    facterversion: 1.6.0
+    kernelversion: 2.6.32
+    timezone: CST
+    hostname: CDN-HB-WH-AiPu-153
+    netmask: 255.255.255.0
+    processorcount: "8"
+    memorysize: 23.45 GB
+    network_eth1: 183.95.134.128
+    network_eth0: 101.36.100.0
+    virtual: physical
+    clientversion: 2.6.11
+    kernel: Linux
+    uptime_hours: "759"
+    ipaddress_lo: 127.0.0.1
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEAppJbC7O66fetQHKBSTNA5y970hfEjRQRz0/Ptac0ALMBL8vvS/+JEj2lsZhGNJgC9wIxy2fTEvXVr5BFoxFr6QHfwaxVtSDwkZnG0mzkt3xpIsmVnOeRItyanlHpTg+p2yKpnkQVj7E6+l0tepr8PDvFeD7lG1uH1G0qNbP1P92buwc8OuPRJCcBH7lzoFlGhJ0sHDC95+l80qKFIcd57cFSq7JRMJ6woeGI9LkOi23tgNB4paPcF2G1tfIuazX18MzHvQxehjpCezqrKdMjSKbZ50EkUL8t4P2+VcKKD046Pi0McXRj3uw0qNntkoMfJhRL0YuxsSydJMav43l2hQ==
+    rubyversion: 1.8.7
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    processor6: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor1: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor5: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor0: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor4: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor3: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor7: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor2: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    type: Rack Mount Chassis
+    hardwaremodel: x86_64
+    manufacturer: Dell Inc.
+    memoryfree: 20.33 GB
+    uptime_seconds: "2733457"
+    uniqueid: fadc1240
+    interfaces: "eth0,eth1,lo"
+    serialnumber: 2ZZMC3X
+    swapsize: 5.86 GB
+    productname: PowerEdge R510

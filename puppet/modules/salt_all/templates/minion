@@ -1,0 +1,10 @@
+master:
+  - 117.121.54.74
+  - 117.121.54.97
+#  - 117.121.54.96
+id: <%= hostname.downcase %>
+master_port: 80
+#auth_timeout: 60
+#recon_default: 1000
+#recon_max: 299000
+#recon_randomize: True

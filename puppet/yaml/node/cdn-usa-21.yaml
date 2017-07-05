@@ -1,0 +1,80 @@
+--- !ruby/object:Puppet::Node
+  classes: []
+  environment: &id001 production
+  expiration: 2013-11-18 18:54:37.162592 +08:00
+  name: cdn-usa-21
+  parameters: 
+    type: Rack Mount Chassis
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEAs7GJx2dvUVPCLxKPk0J7kkH34AHz61ovtINWNwHVmKxS5IYtdR63TunNSRnRRaSjx+HzDU0ireOPQVDAW1KidSO1LXCQlGsSYAigfwOqbWgVgWKfPaIipIB36qxi1R7NQyXLBJRM0rNZu6aC8WsHqfIDbr7aAhwcYXz0khkpplvhjeFuKKQ+SPBQOzq+WdUh93nnmZ2b1rQ4cqX5uedZDUQVdX6gvHMGci5Y00IvriOOITjv87X9hsQhviLSXeVNBW/vL/FgG90hdX8wia/NIEGii74yadqCmaKlUIIjqsItZWHi1WU/FM4aDV1dwRmaj9kQPuzf+RI9v7gTtZocKQ==
+    clientversion: 2.6.11
+    macaddress_bond0: B8:CA:3A:60:28:F4
+    !ruby/sym _timestamp: 2013-11-18 18:24:37.019391 +08:00
+    ipaddress_bond0_2: 65.255.32.21
+    processor5: Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GHz
+    network_bond0_2: 65.255.32.0
+    macaddress_em2: B8:CA:3A:60:28:F5
+    memoryfree: 28.45 GB
+    hostname: CDN-USA-21
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    swapfree: 5.85 GB
+    processor2: Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GHz
+    operatingsystem: CentOS
+    interfaces: "bond0,bond0_1,bond0_2,em1,em2,em3,em4,lo"
+    netmask_bond0: 255.255.255.0
+    memorysize: 31.31 GB
+    timezone: CST
+    macaddress_bond0_1: B8:CA:3A:60:28:F4
+    hardwareisa: x86_64
+    productname: PowerEdge R720xd
+    selinux: "false"
+    operatingsystemrelease: "6.3"
+    hardwaremodel: x86_64
+    uptime_hours: "1499"
+    processor7: Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GHz
+    clientcert: cdn-usa-21
+    macaddress_em4: B8:CA:3A:60:28:F7
+    rubyversion: 1.8.7
+    ipaddress_lo: 127.0.0.1
+    network_lo: 127.0.0.0
+    netmask_lo: 255.0.0.0
+    ipaddress_bond0_1: 65.255.32.74
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    network_bond0_1: 65.255.32.0
+    processor4: Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GHz
+    kernelrelease: 2.6.32-902.279.9.1.letv.el6.x86_64
+    macaddress_em1: B8:CA:3A:60:28:F4
+    uptime: 62 days
+    architecture: x86_64
+    uniqueid: 007f0100
+    uptime_seconds: "5399529"
+    manufacturer: Dell Inc.
+    physicalprocessorcount: "2"
+    netmask_bond0_2: 255.255.255.0
+    processor1: Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GHz
+    kernelmajversion: "2.6"
+    serialnumber: 17QRGY1
+    netmask: 255.255.255.0
+    ipaddress: 65.255.32.106
+    network_bond0: 65.255.32.0
+    virtual: physical
+    processorcount: "8"
+    kernelversion: 2.6.32
+    processor6: Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GHz
+    macaddress_em3: B8:CA:3A:60:28:F6
+    kernel: Linux
+    ps: ps -ef
+    processor3: Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GHz
+    uptime_days: "62"
+    facterversion: 1.6.0
+    puppetversion: 2.6.11
+    is_virtual: "false"
+    macaddress_bond0_2: B8:CA:3A:60:28:F4
+    macaddress: B8:CA:3A:60:28:F4
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAPOxbp8PDCtU6+zRdwIIf0aMwAJIs84Vu6USrm0w67f4TYm59MUHY9wc8Q4qfaEGT0g5kvH9T6PQnZMSJ6q8oLHy0hWnC5VfXOB2rAYEf1Cl6U+Ufgu1A55DmZRbwS0nGvkvEPtqggQiGyee7qk+gNkmeUV7t0powcwWM/YBZ8DpAAAAFQDHMIsxf/UTUVTE44IPQGrJFwNDYwAAAIBfX0ztD6s1JgW6COl0cAKVhCVM031UXQWxFgjXlvdGMSrsgEBPEu01T8vKHSUx4qMYamYyWyS2AwJywY1SNFRIROpS753go+IU5Y9tJwMKljTzIiTHLaThDsgf1N0xBSjQO8xLdktKv0uiBzcVKoL2Hof9b7a93sOEUcRtbxhXAwAAAIAEPSe3Q6v98zMy6FKBb+NgXBnUMZy7yEsnpGaIzFO+Fb3vyH7T4iaciwawE6O8WWQsKhLRv221F0YB3N+BwIRsugKFBIU6EuFuNOAS/BqXzQ5o6loYoKVbcj17+a96Id3ilMpd1UdBYr7Xmnbgm61jhse1d0Quo0/BgVC1ZYF3ug==
+    ipaddress_bond0: 65.255.32.106
+    swapsize: 5.86 GB
+    netmask_bond0_1: 255.255.255.0
+    processor0: Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GHz
+    environment: *id001
+    id: root
+  time: 2013-11-18 18:24:37.157702 +08:00

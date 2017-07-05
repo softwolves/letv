@@ -1,0 +1,70 @@
+--- !ruby/object:Puppet::Node
+  classes: []
+  environment: &id001 production
+  expiration: 2013-11-22 19:00:57.358223 +08:00
+  name: cdn-bj-edu-233
+  parameters: 
+    kernelmajversion: "2.6"
+    operatingsystem: CentOS
+    uptime: 458 days
+    kernelrelease: 2.6.32-900.220.23.1.letv.el6.x86_64
+    processorcount: "8"
+    netmask: 255.255.254.0
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEAxsnKZfcr7UXUIXae2W9P/xHx4ZpCA4urKI/k05g/VTr+0aGR0MyAtk6fUWkUU5VZ5D9U9vQY14k8L4DrM5Atd/2zeLllqlYPTcbdAJ3Kph4McKTaDCSTkQYofCA8jrcy7FLTJ/6lWH4SU4gXTqBaR+Ztv7RgfQvzL0m0a9eUOOyT44NANrwP1L219HSTUDjU8siD/pFzrxfHygB+p3dAJIoNW6w36c9jt0I8ZIbNe+zbF7DBxiKjhaLnAmsoGyj+WwjWEeVUoepK2tF49nMpmANkKezWyfQyUxmFqG691iSeYPO2XKm9LurXPLDog83s/5vdBTrbMs3nqxcHYO0zZw==
+    swapsize: 5.86 GB
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    manufacturer: Dell Inc.
+    type: Rack Mount Chassis
+    uptime_days: "458"
+    swapfree: 5.85 GB
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAISC3t216XlQILngpYG8Nrzs45ee7KXGnDLXmKBvWncrsHquhb9imlbNtSwFViY2Lxq88Yc5PvStaREymhNATlOWpj+rw1F+ZmwgPQvemR2TSb0afpqLfWEIRB9IRzauahIonZCs5DmHRZ/WW65SCIBgyVidg4sN1v/c7XGsFcBhAAAAFQDybncUsmCFzP3QSYzEgcXZcLtHxQAAAIAtvWqjpJl/HFa3NY8cmMvcPYcm1rB/N+XpF2FElQOQclc6bNXqQLoHOR/ufLUFEJAuYYNx3lDcWUGzkrzRacYQc7ctK5zN3H3zvQBx7pDE1UxnMdvR496btgkzUSWncyOIQyYSYwdbDg6phrmPlaLB0taoeqRjGnmBIYfiBAg02gAAAIAFnbtU4qRgvXhOwUG81/b2Yy5KOdU5VeZInUsO9XhBHsn8QgJF3TuqciGn9HftUe50QpOF7uSSoorL3h1lgFs5JH+otGNuObnBHSZDUyQf6V+kwmzMkhD2VPqs23yWN5kIikjD3eNcsOlnuz4IhOl70kQtFtmCJWYit78trfLG8g==
+    macaddress_bond0: 78:2B:CB:5C:5C:8F
+    memoryfree: 8.93 GB
+    id: root
+    memorysize: 11.62 GB
+    operatingsystemrelease: "6.2"
+    uniqueid: 007f0100
+    architecture: x86_64
+    serialnumber: JX6F73X
+    !ruby/sym _timestamp: 2013-11-22 18:30:57.302762 +08:00
+    uptime_seconds: "39581233"
+    selinux: "false"
+    ipaddress: 101.4.61.233
+    ipaddress_lo: 127.0.0.1
+    processor3: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor2: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    macaddress: 78:2B:CB:5C:5C:8F
+    environment: *id001
+    processor1: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor0: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    macaddress_eth1: 78:2B:CB:5C:5C:90
+    macaddress_eth0: 78:2B:CB:5C:5C:8F
+    processor7: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor6: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor5: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor4: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    productname: PowerEdge R510
+    rubyversion: 1.8.7
+    interfaces: "bond0,eth0,eth1,lo"
+    clientversion: 2.6.11
+    facterversion: 1.6.0
+    ps: ps -ef
+    kernel: Linux
+    network_bond0: 101.4.60.0
+    hostname: CDN-BJ-EDU-233
+    puppetversion: 2.6.11
+    ipaddress_bond0: 101.4.61.233
+    timezone: CST
+    physicalprocessorcount: "1"
+    clientcert: cdn-bj-edu-233
+    kernelversion: 2.6.32
+    uptime_hours: "10994"
+    netmask_bond0: 255.255.254.0
+    hardwareisa: x86_64
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    hardwaremodel: x86_64
+    netmask_lo: 255.0.0.0
+    is_virtual: "false"
+    virtual: physical
+    network_lo: 127.0.0.0
+  time: 2013-11-22 18:30:57.354854 +08:00

@@ -1,0 +1,65 @@
+--- !ruby/object:Puppet::Node::Facts
+  expiration: 2013-11-22 18:46:05.963773 +08:00
+  name: cdn-test-zj-wz-cnc-78
+  values: 
+    network_eth0: 123.159.196.76
+    kernelrelease: 2.6.32-903.279.9.1.letv.el6.x86_64
+    uptime: 1:13 hours
+    operatingsystem: CentOS
+    kernelmajversion: "2.6"
+    processorcount: "4"
+    netmask: 255.255.255.252
+    netmask_eth0: 255.255.255.252
+    manufacturer: IBM
+    uptime_days: "0"
+    swapfree: 5.86 GB
+    type: Rack Mount Chassis
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    swapsize: 5.86 GB
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEA8wrEuIga4q/Tv+KLfszE44nbsanCoPxdBetsnwmYVVIoUWeusRiRFoalD2spIStaMJeZ3l7Kx7ryW/ogMh6r8XRJaimk6Zfv1kHZPGoD6pMnQOV0Hll6NSzcNveVHwkoKtJdGxjr1aa+qsu+OsZ7YbEyaMhBWcFPSlTEtNCR/s4UJ0KnTRcaqCToSxme6mJuzCic2w46RjS/Cf6wq/kUktF4r3K4ptQDYPay4m8z+Xc1PkKRrheAMb/6SPcx8g52H0Hg7tt/dzmEoOpTyq90sKRvnZRYE4VMt6eBZAUiJ42XQ+pwm52cMuAVOpsNvR+IVMFpfMwKEm41qzb57TmJjw==
+    id: root
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAIVVNuz6Nl2pCN7XqEpgGVCfi/eR5X2YrvydkOTcbnu+BHxRMvnxyPupQ+djqJJDSmx4coAb7oPkK/kkbCywdEGdZGZGsmSd0tFWG71oL0mMYIDT7HJf80zyOS7s0V/racx9CrQZRbzM5T0mDX0SsCAkSmzJJjQvZjyFA/Zmn9B1AAAAFQDem1duff8Zn4IPz/cOpBC5hMcGYwAAAIAQqHkrlJ2YQF3Dz2118khxhwGdyKurNNEXIrdFRn9oYk+Y/y91lZeq0+ltHCv1ugi+8tJGlpul75l2im3DMGC26U7a7OW24O5WQvQMrvMQGzeN4wkRfPh6bTnWT5cFPlfEwt+lw0xUV1iYKu4gV9xg5Ez2wS7+UYzQs15IM0feRgAAAIBdHWj8PFfB7Iz0bS/LyN80AQtMV/RAipyNYJgxA3Zsnu6/fV+n4bXVy0VnkBJ7Ss4vNGtykkLAZ8THuLWHWYgQdDLcdSc+12OC623ETTsg1zOk1cpYW1GjgdX8BQMJNKRL9DygOi856DIKoLJg9WK8xYriT2paBbLVvgW9R87XeQ==
+    uniqueid: 007f0100
+    memorysize: 7.66 GB
+    macaddress_usb0: 42:F2:E9:07:13:C1
+    memoryfree: 6.48 GB
+    operatingsystemrelease: "6.3"
+    serialnumber: 06MBNY4
+    architecture: x86_64
+    !ruby/sym _timestamp: 2013-11-22 18:31:11.084478 +08:00
+    uptime_seconds: "4404"
+    ipaddress: 123.159.196.78
+    selinux: "false"
+    ipaddress_lo: 127.0.0.1
+    processor2: Intel(R) Xeon(R) CPU E5-2603 0 @ 1.80GHz
+    processor1: Intel(R) Xeon(R) CPU E5-2603 0 @ 1.80GHz
+    processor0: Intel(R) Xeon(R) CPU E5-2603 0 @ 1.80GHz
+    processor3: Intel(R) Xeon(R) CPU E5-2603 0 @ 1.80GHz
+    macaddress_eth0: 40:F2:E9:07:13:C2
+    macaddress_eth1: 40:F2:E9:07:13:C3
+    macaddress_eth2: 40:F2:E9:07:13:C4
+    macaddress_eth3: 40:F2:E9:07:13:C5
+    environment: production
+    macaddress: 40:F2:E9:07:13:C2
+    clientversion: 2.6.11
+    rubyversion: 1.8.7
+    interfaces: "eth0,eth1,eth2,eth3,lo,usb0"
+    productname: "IBM System x3550 M4 Server -[7914I05]-"
+    facterversion: 1.6.0
+    ps: ps -ef
+    kernel: Linux
+    physicalprocessorcount: "1"
+    timezone: CST
+    hostname: CDN-TEST-ZJ-WZ-CNC-78
+    puppetversion: 2.6.11
+    clientcert: cdn-test-zj-wz-cnc-78
+    kernelversion: 2.6.32
+    uptime_hours: "1"
+    ipaddress_eth0: 123.159.196.78
+    virtual: physical
+    hardwareisa: x86_64
+    network_lo: 127.0.0.0
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    netmask_lo: 255.0.0.0
+    is_virtual: "false"
+    hardwaremodel: x86_64

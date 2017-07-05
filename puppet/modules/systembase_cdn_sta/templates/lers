@@ -1,0 +1,65 @@
+#!/bin/bash
+#build by gaoshichao   
+#2016.06.28
+#lers     This shell script takes care of starting and stopping lers 
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+#PIDFILE="/var/run/lers.pid"
+prog=lers
+lockfile=/var/lock/subsys/$prog
+pidfile=/var/run/lers.pid
+pidofnamed() {
+        pidofproc -p "$pidfile" "$prog";
+}
+start() {
+        [ "$EUID" != "0" ] && exit 4
+        [ -x /usr/local/sbin/lers ] || exit 5
+        [ -f /usr/local/etc/lers.cdn.lua ] || exit 6
+        # Start daemons.
+        echo -e "Starting $prog: "
+	if [ -n "`pidofnamed`" ]; then
+    	echo -e "$prog: already running"
+	else
+        touch $pidfile
+        chown www.root $pidfile
+	cd /home/update/core/
+	daemon /usr/local/sbin/lers -c /usr/local/etc/lers.cdn.lua
+
+        RETVAL=$?
+        echo
+        [ $RETVAL -eq 0 ] && touch $lockfile
+        return $RETVAL
+	fi
+}
+
+stop() {
+        [ "$EUID" != "0" ] && exit 4
+        echo -e $"Shutting down $prog: "
+        kill -9 `pidof $prog`
+        RETVAL=$?
+        echo
+        [ $RETVAL -eq 0 ] && rm -f $lockfile $pidfile
+        return $RETVAL
+}
+
+
+case "$1" in
+
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  restart)
+        stop
+        start
+        ;;
+  *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 2
+esac
+exit $RETVAL

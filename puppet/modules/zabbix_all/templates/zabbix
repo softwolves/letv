@@ -1,0 +1,13 @@
+zabbix          ALL=NOPASSWD: /sbin/ethtool
+zabbix          ALL=NOPASSWD: /usr/sbin/mtr
+zabbix          ALL=NOPASSWD: /bin/ping
+zabbix          ALL=NOPASSWD: /usr/sbin/megacli64
+zabbix          ALL=NOPASSWD: /usr/bin/ipmitool
+zabbix          ALL=NOPASSWD: /usr/sbin/hwconfig
+zabbix          ALL=NOPASSWD: /usr/sbin/dmidecode
+zabbix          ALL=NOPASSWD: /usr/bin/lsiutil
+zabbix		ALL=NOPASSWD: /usr/sbin/hpacucli
+zabbix          ALL=NOPASSWD: /usr/sbin/ss
+zabbix          ALL=NOPASSWD: /bin/cat
+zabbix          ALL=NOPASSWD: /usr/bin/tail
+zabbix          ALL=NOPASSWD: /bin/asdf

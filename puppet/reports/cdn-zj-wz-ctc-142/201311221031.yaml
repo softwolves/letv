@@ -1,0 +1,32 @@
+--- !ruby/object:Puppet::Transaction::Report
+  configuration_version: 
+  host: cdn-zj-wz-ctc-142
+  kind: apply
+  logs: 
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      message: "Could not retrieve catalog from remote server: Error 400 on SERVER: Could not find default node or by name with 'cdn-zj-wz-ctc-142' on node cdn-zj-wz-ctc-142"
+      source: Puppet
+      tags: 
+        - err
+      time: 2013-11-22 18:31:51.698880 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      message: Using cached catalog
+      source: Puppet
+      tags: 
+        - notice
+      time: 2013-11-22 18:31:51.756178 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      message: Could not retrieve catalog; skipping run
+      source: Puppet
+      tags: 
+        - err
+      time: 2013-11-22 18:31:51.756414 +08:00
+  metrics: {}
+  puppet_version: 2.6.11
+  report_format: 2
+  resource_statuses: {}
+  status: failed
+  time: 2013-11-22 18:31:49.012422 +08:00

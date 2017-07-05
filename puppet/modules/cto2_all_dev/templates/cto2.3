@@ -1,0 +1,93 @@
+#!/bin/bash
+# (c) 2015 , Tianbiao Zu <zutianbian@letv.com>
+#
+# 该脚本用于执行cto2.3的restart/start/stop操作
+##############################################################################
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
+export PATH
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+cto2="/cto2/ctod"
+prog="ctod"
+lockfile="/cto2/${prog}.lock"
+
+start() {
+[ -x $cto2 ] || exit 5
+echo -n $"Starting $prog: "
+killall ctoguard > /dev/null 2>&1
+daemon $cto2
+retval=$?
+echo
+[ $retval -eq 0 ] && touch $lockfile
+echo `pgrep ctod` > $lockfile
+return $retval
+}
+
+stop() {
+echo -n $"Stopping $prog: "
+killproc $prog -9 && /cto2/ctoclear
+retval=$?
+echo
+[ $retval -eq 0 ] && rm -f $lockfile
+return $retval
+}
+
+restart() {
+stop
+start
+}
+
+reload() {
+echo -n $"Reloading $prog: "
+/cto2/ctocmd -r
+RETVAL=$?
+echo
+}
+
+tcpstatus() {
+/cto2/ctocmd -m
+RETVAL=$?
+echo
+}
+
+udpstatus() {
+/cto2/ctocmd -s
+RETVAL=$?
+echo
+}
+
+clear() {
+/cto2/ctocmd -e
+RETVAL=$?
+echo
+}
+
+
+case "$1" in
+    start)
+        $1
+        ;;
+    stop)
+        $1
+        ;;
+    restart)
+        $1
+        ;;
+    reload)
+        $1
+        ;;
+    tcpstatus)
+        $1
+        ;;
+    udpstatus)
+        $1
+        ;;
+    clear)
+        $1
+        ;;
+    *)
+        echo $"Usage: $0 {start|stop|restart|reload|tcpstatus|udpstatus|clear}"
+        exit 2
+esac

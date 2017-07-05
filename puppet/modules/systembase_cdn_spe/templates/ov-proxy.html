@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>m</title>
+		<meta charset="utf-8">
+		<style>
+			*{margin: 0;padding: 0}
+		</style>
+	</head>
+	<body>
+		<div id="ov-video-con" style="background: #000"></div>
+		<script type="text/javascript">
+			var query = (function (qs) {
+				if (!qs) {return {}}
+				qs = qs.slice(1).split('&');
+				var res = {},
+					i = 0, l = qs.length,
+					p, j;
+				for (; i<l; i++) {
+					p = qs[i];
+					if (p) {
+						j = p.indexOf('=');
+						v = decodeURIComponent(p.slice(j + 1));
+						if (v && j>0) {
+							res[p.slice(0, j)] = v;
+						}
+					}
+				}
+				return res;
+			})(location.search);
+
+			var lib = {
+				getScript : function (url,id,cb) {
+					var head = document.head || document.getElementsByTagName('head')[0] || document.documentElement, s = document.createElement('script');
+					s.setAttribute('type', 'text/javascript');
+					s.setAttribute('src', url);
+					s.setAttribute('id', id);
+					s.onload = function(){
+						cb && cb();
+					};
+					head.insertBefore(s, head.firstChild);
+				}
+			};
+
+			var cont = document.getElementById('ov-video-con');
+	        cont.style.width = window.innerWidth + 'px';
+	        cont.style.height = window.innerHeight + 'px';
+
+	        window.parent.postMessage({
+                type : 'proxyPage'
+            },'*');
+
+	        var onMessages = function(evt){
+	        	if(evt.source != window.parent) return;
+                var _data = evt.data;
+ 				var ovPlayer;
+                if(_data && _data.type === 'initServerPlayer'){
+                	window.removeEventListener("message", onMessages, false);
+                	for(var k in query){
+						_data[k] = query[k];
+	                }
+	                if (query.callJsName) {
+						var jsSrc = 'http://sdk.m.le.com/ffp/'+ query.callJsName +'.js';
+						lib.getScript(jsSrc, 'ovServer', function () {
+							if(!ovPlayer){
+								ovPlayer = new LETV_PLAYER.ovPlayerServer(_data);
+							}
+						});
+					}
+                }
+                
+	        }
+	        window.addEventListener('message',onMessages,false);
+      	</script>
+	</body>
+</html>

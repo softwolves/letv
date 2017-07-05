@@ -1,0 +1,36 @@
+*/5 * * * * /bin/sh /usr/local/etc/linux_update.sh > /dev/null 2>&1
+*/5 * * * * /bin/sh /usr/local/etc/analyzelog.sh > /dev/null 2>&1
+*/3 * * * * /bin/sh /usr/local/etc/restart_centos6_nginx.sh > /dev/null 2>&1
+5 2 * * * /bin/sh /usr/local/etc/crond_nginx.sh > /dev/null 2>&1
+0 */1 * * * /bin/sh /letv/soft/tools/cdnwebtsd.sh > /dev/null 2>&1
+*/1 * * * * /bin/sh /usr/local/etc/restart_centos6_watchdog.sh > /dev/null 2>&1
+*/1 * * * * /bin/sh /usr/local/etc/check_ats.sh > /dev/null 2>&1
+20 */1 * * * /bin/sh /letv/soft/tools/syscheck.sh > /dev/null 2>&1
+*/6 * * * * /bin/sh /usr/local/zabbix/rsyslog_agent.sh > /dev/null 2>&1
+*/30 * * * * /bin/sh /usr/local/etc/deletefile.sh >/dev/null 2>&1
+# Run puppet 
+*/20 * * * * /bin/sh /letv/soft/tools/checkpuppet.sh > /dev/null 2>&1
+#ftp log for some node
+20 */1 * * * /bin/sh /usr/local/etc/logftp.sh > /dev/null 2>&1
+#curl check for monitor
+#*/10 * * * * /bin/sh /letv/soft/tools/mars.sh > /dev/null 2>&1
+#check 404 log for storage
+56 */1 * * * /bin/sh /letv/soft/tools/checkfile.sh > /dev/null 2>&1
+#检查磁盘改写上报域名
+*/1 * * * * /bin/sh /letv/soft/tools/disk_error_check.sh > /dev/null 2>&1
+##ping.py 链路探测
+#*/5 * * * * /letv/soft/tools/ping.py -n0 --keepalive -w 5 --add-ports=+50000 -f /letvabcdeasktf1M -d tcp://greenping.cdn.lecloud.com:9000 > /dev/null 2>&1
+###HIT&MISS统计
+30 2 * * * /bin/bash /letv/soft/tools/cdnlog.sh > /dev/null 2>&1
+###检查cto2状态
+*/5 * * * * /letv/soft/tools/checkcto2.py > /dev/null 2>&1
+###检查rtmp状态
+*/5 * * * * /letv/soft/tools/checklers.py > /dev/null 2>&1
+# for non-CTO
+*/5 * * * * /letv/soft/tools/ping.py -n0 --keepalive -w 5 --frequence=5:1 --processes=4 -f /letvabcdeasktf1M -d http://greenping.g3gather.lecloud.com/gather/upload > /dev/null 2>&1
+# for CTO
+*/18 * * * * /letv/soft/tools/ping.py -n0 --keepalive -w 18 --ready=1080 --frequence=3:1 --processes=4 --delay-revision='x*1080/5' --speed-revision='1.0/((x+10)/10)' --pingconf=/var/tmp/ping_cto.conf --lossconf=/var/tmp/ping_loss_cto.conf --fbs-domain='http://greenping.cdn.lecloud.com/fbs/hosts?flag=cto' --add-ports=+50000 --add-ports-only -f /letvabcdeasktf1M -d http://greenping.g3gather.lecloud.com/gather/upload > /dev/null 2>&1
+*/20 * * * * /bin/sh /letv/soft/tools/ntpupdate.sh > /dev/null 2>&1
+0 */1 * * * /bin/sh /letv/soft/tools/log_report_check.sh > /dev/null 2>&1
+#回源测试配置
+*/1 * * * * /letv/soft/tools/ping.py -n0 --ready=60 --keepalive -w 1 --frequence=5:1 --processes=4 --pingconf=/var/tmp/ping_retrieve.conf --fbs-domain='http://greenping.cdn.lecloud.com/fbs/hosts?flag=retrieve' -f /letvabcdeasktf1M -d http://greenping.g3gather.lecloud.com/gather/upload  > /dev/null 2>&1

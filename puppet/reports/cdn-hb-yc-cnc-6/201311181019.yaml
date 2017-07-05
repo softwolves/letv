@@ -1,0 +1,32 @@
+--- !ruby/object:Puppet::Transaction::Report
+  configuration_version: 
+  host: cdn-hb-yc-cnc-6
+  kind: apply
+  logs: 
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      message: "Could not retrieve catalog from remote server: Error 400 on SERVER: Could not find default node or by name with 'cdn-hb-yc-cnc-6' on node cdn-hb-yc-cnc-6"
+      source: Puppet
+      tags: 
+        - err
+      time: 2013-11-18 18:19:27.446688 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      message: Using cached catalog
+      source: Puppet
+      tags: 
+        - notice
+      time: 2013-11-18 18:19:27.517720 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      message: Could not retrieve catalog; skipping run
+      source: Puppet
+      tags: 
+        - err
+      time: 2013-11-18 18:19:27.518031 +08:00
+  metrics: {}
+  puppet_version: 2.6.11
+  report_format: 2
+  resource_statuses: {}
+  status: failed
+  time: 2013-11-18 18:19:14.779770 +08:00

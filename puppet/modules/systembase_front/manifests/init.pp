@@ -1,0 +1,29 @@
+class systembase_front{
+  include systembase_front::authorized_keys
+  include systembase_front::crond
+#  include systembase_front::crtmpserver
+  include systembase_front::ffmux
+  include systembase_front::hardinfo
+  include systembase_front::hostsdenyallow
+  include systembase_front::install
+  include systembase_front::profile
+  include systembase_front::service_stop
+  include systembase_front::service_start
+  include systembase_front::shellupdate
+  include systembase_front::smokeping
+  include systembase_front::sudoers
+  include systembase_front::sysctl
+  include systembase_front::tmpdir
+  include systembase_front::yumrepo
+  include systembase_front::dnsmasqservice
+  include systembase_front::dnsmasqinstall
+  include systembase_front::dnsmasqconf
+  include systembase_front::ntp_config
+  include systembase_front::ntp_service
+  include systembase_front::monit_config
+  include systembase_front::monit_service
+  include systembase_front::fsserver
+  include systembase_front::ssh_config
+  include systembase_front::ssh_service
+  include systembase_front::rsyslog_config
+}

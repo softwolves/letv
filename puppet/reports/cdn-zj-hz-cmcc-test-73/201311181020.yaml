@@ -1,0 +1,188 @@
+--- !ruby/object:Puppet::Transaction::Report
+  configuration_version: 1384770058
+  host: cdn-zj-hz-cmcc-test-73
+  kind: apply
+  logs: 
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym warning
+      message: Could not retrieve fact fqdn
+      source: Puppet
+      tags: 
+        - warning
+      time: 2013-11-18 18:20:35.087679 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      message: Finished catalog run in 0.03 seconds
+      source: Puppet
+      tags: 
+        - notice
+      time: 2013-11-18 18:20:58.386407 +08:00
+  metrics: 
+    changes: !ruby/object:Puppet::Util::Metric
+      label: Changes
+      name: changes
+      values: 
+        - - total
+          - Total
+          - 0
+    resources: !ruby/object:Puppet::Util::Metric
+      label: Resources
+      name: resources
+      values: 
+        - - total
+          - Total
+          - 7
+    time: !ruby/object:Puppet::Util::Metric
+      label: Time
+      name: time
+      values: 
+        - - config_retrieval
+          - Config retrieval
+          - 23.2938408851624
+        - - schedule
+          - Schedule
+          - 0.001311
+        - - total
+          - Total
+          - 23.2953628851624
+        - - filebucket
+          - Filebucket
+          - 0.000211
+    events: !ruby/object:Puppet::Util::Metric
+      label: Events
+      name: events
+      values: 
+        - - total
+          - Total
+          - 0
+  puppet_version: 2.6.11
+  report_format: 2
+  resource_statuses: 
+    "Schedule[monthly]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000214
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Schedule[monthly]"
+      resource_type: Schedule
+      skipped: false
+      tags: 
+        - schedule
+        - monthly
+      time: 2013-11-18 18:20:58.366941 +08:00
+      title: monthly
+    "Schedule[hourly]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000214
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Schedule[hourly]"
+      resource_type: Schedule
+      skipped: false
+      tags: 
+        - schedule
+        - hourly
+      time: 2013-11-18 18:20:58.366339 +08:00
+      title: hourly
+    "Schedule[daily]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000227
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Schedule[daily]"
+      resource_type: Schedule
+      skipped: false
+      tags: 
+        - schedule
+        - daily
+      time: 2013-11-18 18:20:58.365765 +08:00
+      title: daily
+    "Schedule[puppet]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000218
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Schedule[puppet]"
+      resource_type: Schedule
+      skipped: false
+      tags: 
+        - schedule
+        - puppet
+      time: 2013-11-18 18:20:58.364595 +08:00
+      title: puppet
+    "Filebucket[puppet]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000211
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Filebucket[puppet]"
+      resource_type: Filebucket
+      skipped: false
+      tags: 
+        - filebucket
+        - puppet
+      time: 2013-11-18 18:20:58.367525 +08:00
+      title: puppet
+    "Schedule[weekly]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000211
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Schedule[weekly]"
+      resource_type: Schedule
+      skipped: false
+      tags: 
+        - schedule
+        - weekly
+      time: 2013-11-18 18:20:58.365178 +08:00
+      title: weekly
+    "Schedule[never]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000227
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Schedule[never]"
+      resource_type: Schedule
+      skipped: false
+      tags: 
+        - schedule
+        - never
+      time: 2013-11-18 18:20:58.363997 +08:00
+      title: never
+  status: unchanged
+  time: 2013-11-18 18:20:35.051181 +08:00

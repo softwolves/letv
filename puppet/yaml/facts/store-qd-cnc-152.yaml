@@ -1,0 +1,62 @@
+--- !ruby/object:Puppet::Node::Facts
+  expiration: 2013-11-18 18:37:10.375551 +08:00
+  name: store-qd-cnc-152
+  values: 
+    ipaddress_eth0: 119.167.223.152
+    hardwareisa: x86_64
+    id: root
+    macaddress_eth1: 18:A9:05:74:99:B1
+    macaddress_eth0: 18:A9:05:74:99:B0
+    netmask_lo: 255.0.0.0
+    architecture: x86_64
+    kernelmajversion: "2.6"
+    environment: production
+    uptime: 14 days
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    operatingsystemrelease: "6.2"
+    network_lo: 127.0.0.0
+    swapfree: 5.86 GB
+    physicalprocessorcount: "1"
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAK3hWDL/iSw83p04S7BNZ8ptprsQVEK3hhrjilrmYrHiO6cLTTazXZFRlwbVGAQgA8hFMvRirhkhAZTx5p2X64Pm7f8/zOSsnRq1TrMPyNhcJsRyeBElbHcC+VRW5/N4IzYWF11BdLus3zpsNY6qw5dmGl9M9LupGUhJFru5+nrrAAAAFQDm/SgCriz0DTtWn4CCye3W1D4E4wAAAIBbj0KpE/4udr5FIAoD5OII1Z7QrgeCAY7ZZsp8z9TnqTf2wUOzwohIrDK+n4k+En+a7fq1lyBnHDHeuL67WV5sdG8tblLtjXmH0hsyWIIWdXOYYCRsyytsuC/vNZnzfbcBTZNB9PPjhjIqT+XNHjyjVLa3cFacoWxs5eNOvv8xggAAAIAmx0dQ3s1HID9dFYvIhRlZ0crp5RLeDBpMaISvJsoPC/qAWY8YLJ6fOfGGKOWRKGaR3JG8CGML/vXWpUwu9Ar+n6VUcJ3i3yVbOXsEK9Bh3i2lqGst+a2pdgKG8H74xnVXe0LXjKZ/pWLyqO0dEC5nEnaZrpczOyysuB828uFB4g==
+    clientcert: store-qd-cnc-152
+    macaddress: 18:A9:05:74:99:B0
+    puppetversion: 2.6.11
+    is_virtual: "false"
+    !ruby/sym _timestamp: 2013-11-18 18:22:10.544119 +08:00
+    operatingsystem: CentOS
+    selinux: "false"
+    netmask_eth0: 255.255.255.128
+    kernelrelease: 2.6.32-letv.2.220.4.1.el6.x86_64
+    ipaddress: 119.167.223.152
+    facterversion: 1.6.0
+    hostname: Store-QD-CNC-152
+    kernelversion: 2.6.32
+    timezone: CST
+    uptime_days: "14"
+    ps: ps -ef
+    network_eth0: 119.167.223.128
+    memorysize: 7.68 GB
+    virtual: physical
+    clientversion: 2.6.11
+    kernel: Linux
+    processorcount: "4"
+    netmask: 255.255.255.128
+    rubyversion: 1.8.7
+    processor3: Intel(R) Xeon(R) CPU           E5504  @ 2.00GHz
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEA3npYru5DYbbNxMwvzdXAqmrUY+gp+eNGsXZLSr3uCVwfbrqway8a4lPH6HlcO0QfvfGLdXo9CXmzuNkQRTxbzBNBO/1sin8XCwa3ubMdI+YPdXNJjjuetLZiqC0CN+lLlanBbWXj6KPq/iJcwxiRd+OjO3/G7Z5zpt7M2qVcMkUC7WFhKY86D9vM8gaJGt3+qx83HOwVMpsIOIHFp5u95E8IbG4+N0f1UYQrHCeEot6+4agWFnV5ICNr3R+vGULz3guTLmYTemT/iTwD+GB/ZVNvql9/poKAl7Y9+861L9t42uyIROCyF4NeBYm4DAPCQStRHl3NtsU39vOkZ1uv/w==
+    processor2: Intel(R) Xeon(R) CPU           E5504  @ 2.00GHz
+    processor1: Intel(R) Xeon(R) CPU           E5504  @ 2.00GHz
+    processor0: Intel(R) Xeon(R) CPU           E5504  @ 2.00GHz
+    uptime_hours: "343"
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    ipaddress_lo: 127.0.0.1
+    manufacturer: HP
+    type: Rack Mount Chassis
+    hardwaremodel: x86_64
+    uptime_seconds: "1236437"
+    memoryfree: 6.27 GB
+    productname: ProLiant DL180 G6
+    serialnumber: CNG951S5YM
+    swapsize: 5.86 GB
+    interfaces: "eth0,eth1,lo"
+    uniqueid: 007f0100

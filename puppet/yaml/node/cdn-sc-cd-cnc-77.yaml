@@ -1,0 +1,90 @@
+--- !ruby/object:Puppet::Node
+  classes: []
+  environment: &id001 production
+  expiration: 2013-11-22 18:58:37.449252 +08:00
+  name: cdn-sc-cd-cnc-77
+  parameters: 
+    clientcert: cdn-sc-cd-cnc-77
+    macaddress_bond0_3: D4:AE:52:75:DD:61
+    architecture: x86_64
+    serialnumber: 4XZMC3X
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAILoiwkDrR6s484BsS//E0P2TgZdK/wySKigZALflrycteWu9nPi4Mvyrjs1W63RDg4z+oYwI6RYpXrt1V/hi1OM86PiRx+eXNgOS+vXEBLMSg5ngiKWGixKX662L4iL6EPeOExVhyQXi9Kg1EjcKe0T3itKhPzuDXEWUZXC6lV5AAAAFQDQVS1naYyZ25RbLHOsC19iXcU4qQAAAIAmW+zEMr+4OM4GNHYCBK/mDlZmOGWiouQ+rp2QGZ9wE2Fx2bGMLL2NO8WinKLhDGhIa4JS8oRD46oFux6nvEJDoQg9aRQjnCi36QpVA16JM1RFCd1nQE90h5bqk8XxdXMHXSdaBhdySWvK9bETpR1pJQrO42jqF01HUHX5JyvcsgAAAIAB+oftEzrWO7fIAR7LE24xO3Xhmwx+rqUba6ltmsOf1v5gsN6tBRD8Qmgqk8PMnN10mdxokgjptdlZiuBqy9m4cDt9q+uOpFuX3I8VmfFtrSt6mmUbz0xfOgTH9kHh/i9nFpgxNvYtMM+nWT+s02Pmx5I2VVNwPvNnF+4iIkBMaw==
+    hostname: CDN-SC-CD-CNC-77
+    !ruby/sym _timestamp: 2013-11-22 18:28:37.406921 +08:00
+    memoryfree: 19.54 GB
+    type: Rack Mount Chassis
+    network_lo: 127.0.0.0
+    processor5: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    ipaddress_bond0_5: 124.161.62.50
+    timezone: CST
+    kernel: Linux
+    network_bond0_3: 124.161.62.0
+    operatingsystemrelease: "6.2"
+    kernelmajversion: "2.6"
+    netmask_bond0_3: 255.255.255.128
+    processor2: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    ipaddress_bond0_2: 119.6.119.77
+    ipaddress_lo: 127.0.0.1
+    macaddress_bond0_5: D4:AE:52:75:DD:61
+    facterversion: 1.6.0
+    selinux: "false"
+    macaddress_em1: D4:AE:52:75:DD:61
+    uniqueid: 007f0100
+    network_bond0: 119.6.119.64
+    puppetversion: 2.6.11
+    interfaces: "bond0,bond0_1,bond0_2,bond0_3,bond0_4,bond0_5,em1,em2,lo"
+    uptime_days: "4"
+    macaddress_bond0_2: D4:AE:52:75:DD:61
+    productname: PowerEdge R510
+    processor7: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    hardwaremodel: x86_64
+    network_bond0_5: 124.161.62.0
+    uptime_seconds: "371454"
+    swapfree: 5.86 GB
+    netmask_bond0_5: 255.255.255.128
+    processor4: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    ipaddress_bond0_4: 124.161.62.34
+    manufacturer: Dell Inc.
+    processorcount: "8"
+    is_virtual: "false"
+    netmask_lo: 255.0.0.0
+    network_bond0_2: 119.6.119.64
+    hardwareisa: x86_64
+    netmask_bond0_2: 255.255.255.192
+    ipaddress_bond0_1: 119.6.119.87
+    processor1: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEA2A+9MLAcqT5EWbL+KyVajcKPfjNReqP+OcG7mvZbKCx1llm1QK7+sJIfg1NI3Mb59nhnVhZe1WGw7YMaUcHjIL43eo7Gux7eU9a5ftKhUPv6NwUo+qd2tOqoXUPUk4+QHTlC5+86tpgsbGdSI4dwnxI/IAJVAt44t5mRcktd3tEMcyIsEaS8IqwWScdHvOxJrKbhORZVZlRx/CJXT/avXj8yUsNfRuxd1YQNWdQooHcYTJPvLZ3WFMD0UzVMd0cVJunIl2dhqc1pMOr7dmdGbKe67KXgsLcvO3DWbLwq+Mi+EFaORURphLsr3+5D3ZkmfPIKO+lbMjTOo6+32HtaIw==
+    kernelrelease: 2.6.32-900.220.23.1.letv.el6.x86_64
+    macaddress_bond0_4: D4:AE:52:75:DD:61
+    ps: ps -ef
+    netmask_bond0: 255.255.255.192
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    kernelversion: 2.6.32
+    ipaddress_bond0: 119.6.119.97
+    macaddress_bond0_1: D4:AE:52:75:DD:61
+    clientversion: 2.6.11
+    rubyversion: 1.8.7
+    processor6: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    macaddress_bond0: D4:AE:52:75:DD:61
+    memorysize: 23.45 GB
+    uptime: 4 days
+    id: root
+    virtual: physical
+    network_bond0_4: 124.161.62.0
+    ipaddress: 119.6.119.97
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    operatingsystem: CentOS
+    netmask_bond0_4: 255.255.255.128
+    processor3: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    ipaddress_bond0_3: 124.161.62.18
+    environment: *id001
+    swapsize: 5.86 GB
+    uptime_hours: "103"
+    physicalprocessorcount: "1"
+    network_bond0_1: 119.6.119.64
+    macaddress_em2: D4:AE:52:75:DD:62
+    netmask: 255.255.255.192
+    processor0: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    netmask_bond0_1: 255.255.255.192
+    macaddress: D4:AE:52:75:DD:61
+  time: 2013-11-22 18:28:37.445808 +08:00

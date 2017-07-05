@@ -1,0 +1,67 @@
+--- !ruby/object:Puppet::Transaction::Report
+  configuration_version: 
+  host: cdn-zj-wz-ctc2-133
+  kind: apply
+  logs: 
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym debug
+      message: Loaded state in 0.01 seconds
+      source: Puppet
+      tags: 
+        - debug
+      time: 2013-11-18 18:20:02.081548 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym debug
+      message: Using cached certificate for ca
+      source: Puppet
+      tags: 
+        - debug
+      time: 2013-11-18 18:20:03.568510 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym debug
+      message: Using cached certificate for cdn-zj-wz-ctc2-133
+      source: Puppet
+      tags: 
+        - debug
+      time: 2013-11-18 18:20:03.569396 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym debug
+      message: Using cached certificate_revocation_list for ca
+      source: Puppet
+      tags: 
+        - debug
+      time: 2013-11-18 18:20:03.570537 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym debug
+      message: "catalog supports formats: b64_zlib_yaml dot marshal pson raw yaml; using b64_zlib_yaml"
+      source: Puppet
+      tags: 
+        - debug
+      time: 2013-11-18 18:20:03.572807 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      message: "Could not retrieve catalog from remote server: Error 400 on SERVER: Could not find default node or by name with 'cdn-zj-wz-ctc2-133' on node cdn-zj-wz-ctc2-133"
+      source: Puppet
+      tags: 
+        - err
+      time: 2013-11-18 18:20:03.871074 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym warning
+      message: Not using cache on failed catalog
+      source: Puppet
+      tags: 
+        - warning
+      time: 2013-11-18 18:20:03.871784 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      message: Could not retrieve catalog; skipping run
+      source: Puppet
+      tags: 
+        - err
+      time: 2013-11-18 18:20:03.872311 +08:00
+  metrics: {}
+  puppet_version: 2.6.11
+  report_format: 2
+  resource_statuses: {}
+  status: failed
+  time: 2013-11-18 18:20:02.069579 +08:00

@@ -1,0 +1,69 @@
+--- !ruby/object:Puppet::Node::Facts
+  expiration: 2013-11-18 18:37:52.789174 +08:00
+  name: cdn-cq-cnnet-51
+  values: 
+    hardwareisa: x86_64
+    id: root
+    netmask_lo: 255.0.0.0
+    architecture: x86_64
+    kernelmajversion: "2.6"
+    environment: production
+    ipaddress_bond0: 122.72.99.51
+    macaddress_em3: 90:B1:1C:12:D4:6B
+    macaddress_em2: 90:B1:1C:12:D4:6A
+    uptime: 228 days
+    macaddress_em1: 90:B1:1C:12:D4:69
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    operatingsystemrelease: "6.2"
+    swapfree: 5.85 GB
+    network_lo: 127.0.0.0
+    macaddress_em4: 90:B1:1C:12:D4:6C
+    physicalprocessorcount: "2"
+    sshdsakey: AAAAB3NzaC1kc3MAAACBALXPZHO0odhg25NGJBLfFKhfJqiLl4GFRFM3FKpMp9hvszMQBy/78bd6AHgArlCjx+sSW9yfvgXm+RCxMwUWpmDGdtgWiS58UNbNYJZrmoH/rTBLdh1/Pfc91i8s56H5+V0m7lvtizVbFpMP3P14SB4Hc1LZ7GduLz2RB7JTLQpJAAAAFQDoYfk5sjVfMgVaRbazJA3qLbLWnQAAAIEAiTVL7TwyUKhDfL8j1DuBkU9aWh7lPFtVcvCJHefxb2ZdyjnklrimjQftgjTEcF0fjFcj+OQ/yhTKr1W07nea9ZFdNXeXBKHKd93WMAWoBPlbVQDgf1Q1cyJtO/KDdyB9WBteNwtIVdneilyPcZf4lORxe4RzGsNrPmWyfm0BSaIAAACAK0ZPdFzH6rl/pWDsrQ9hQXS16/Y23T9V9+VgZSF0EF0lDFbnZUnShjVjUZmcgGYZVGugaBOBCjGrJ2jMn+YAZl7Hnbo02kOALbwoiT+Hjwc2tYYqbYRxN9Hj0FZ6x5SsbflItGE+6RzE8EaELBeuxOiDvyQcc5DFyuA9oTZMsKY=
+    clientcert: cdn-cq-cnnet-51
+    macaddress: 90:B1:1C:12:D4:69
+    puppetversion: 2.6.11
+    is_virtual: "false"
+    !ruby/sym _timestamp: 2013-11-18 18:22:58.215814 +08:00
+    operatingsystem: CentOS
+    network_bond0: 122.72.99.0
+    selinux: "false"
+    kernelrelease: 2.6.32-900.220.23.1.letv.el6.x86_64
+    ipaddress: 122.72.99.51
+    facterversion: 1.6.0
+    macaddress_bond0: 90:B1:1C:12:D4:69
+    hostname: CDN-CQ-CNNET-51
+    kernelversion: 2.6.32
+    uptime_days: "228"
+    timezone: CST
+    ps: ps -ef
+    memorysize: 125.99 GB
+    virtual: physical
+    clientversion: 2.6.11
+    kernel: Linux
+    processorcount: "8"
+    netmask: 255.255.255.192
+    rubyversion: 1.8.7
+    processor3: Intel(R) Xeon(R) CPU E5-2603 0 @ 1.80GHz
+    processor2: Intel(R) Xeon(R) CPU E5-2603 0 @ 1.80GHz
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEA1RxhaEOm2LSD+LnPZIGkMCDr5100H1KwxuUlQJGtEF3kV9bddBD2XTDmthkYPm7XthgcCNC6fkA3slRz2pMmwk+LyKmFnOwUpBsuAJ89gMtaktN1HXR+s71C/2QDoSWuMOZkgaZlKrRoKLPUUmrh+91A0WuqGHX4SCut7cLTGD2llxeQM2bceuiD9crL1NHtzQq7JiqJ84kKotzgFQTTNKBVv+nTI9JhSwg3tdqRxFlk1v4XWZ4tw5l4/noFPugNZpqpRN30hF6wFk/NzLhlvIjckkMlyXm+EANvshxowcFnJ3lY1j9CjPShxwP4cyR3ABW7GuKAxN5Ze5BubNYiQw==
+    processor1: Intel(R) Xeon(R) CPU E5-2603 0 @ 1.80GHz
+    uptime_hours: "5494"
+    processor0: Intel(R) Xeon(R) CPU E5-2603 0 @ 1.80GHz
+    processor7: Intel(R) Xeon(R) CPU E5-2603 0 @ 1.80GHz
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    processor6: Intel(R) Xeon(R) CPU E5-2603 0 @ 1.80GHz
+    ipaddress_lo: 127.0.0.1
+    processor5: Intel(R) Xeon(R) CPU E5-2603 0 @ 1.80GHz
+    processor4: Intel(R) Xeon(R) CPU E5-2603 0 @ 1.80GHz
+    manufacturer: Dell Inc.
+    type: Rack Mount Chassis
+    hardwaremodel: x86_64
+    uptime_seconds: "19780323"
+    memoryfree: 120.74 GB
+    netmask_bond0: 255.255.255.192
+    productname: PowerEdge R720xd
+    serialnumber: 695KF3X
+    swapsize: 5.86 GB
+    interfaces: "bond0,em1,em2,em3,em4,lo"
+    uniqueid: 007f0100

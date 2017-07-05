@@ -1,0 +1,32 @@
+--- !ruby/object:Puppet::Transaction::Report
+  configuration_version: 
+  host: cdn-sx-xa-cmcc-38
+  kind: apply
+  logs: 
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      message: "Could not retrieve catalog from remote server: Error 400 on SERVER: Could not find default node or by name with 'cdn-sx-xa-cmcc-38' on node cdn-sx-xa-cmcc-38"
+      source: Puppet
+      tags: 
+        - err
+      time: 2013-11-18 18:20:26.065807 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym warning
+      message: Not using cache on failed catalog
+      source: Puppet
+      tags: 
+        - warning
+      time: 2013-11-18 18:20:26.066527 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      message: Could not retrieve catalog; skipping run
+      source: Puppet
+      tags: 
+        - err
+      time: 2013-11-18 18:20:26.067001 +08:00
+  metrics: {}
+  puppet_version: 2.6.11
+  report_format: 2
+  resource_statuses: {}
+  status: failed
+  time: 2013-11-18 18:20:23.735063 +08:00

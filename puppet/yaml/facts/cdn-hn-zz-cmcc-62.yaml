@@ -1,0 +1,85 @@
+--- !ruby/object:Puppet::Node::Facts
+  expiration: 2013-11-18 18:38:47.495383 +08:00
+  name: cdn-hn-zz-cmcc-62
+  values: 
+    type: Rack Mount Chassis
+    processor23: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    processor8: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEAwhtxQl8w0Ohr6JjSRS/fMgy2sTwrKqcsxTGLCroI0erTdOihUZzjd6sqQCigPIjQoW3sX+KNwWUpQmDGoJ4r6erNlaUXoCnSCN5R3hoI5LVudiNtCw48PncSYy33j4ILXKFDFblBCV9VJ/DVF5cBNXaHdiDZ2nyie/COxyGMXme5CqiwjeEOVCQGB190pOboDcc+H3G4r2gfwzpnkulK3Fx484uPBm2DKja/o9B8RPBGUcr00ML0RHIP1ZxcHfujzdyhabYXBtv6IMWK2zgrX4my5nqMAlP+6T+8s9B8Y8Dt4JScDRdbKesi5/1VNsipWyLEL6CEFtRYM7jV1zeHdw==
+    clientversion: 2.6.11
+    processor10: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    macaddress_bond0: E4:11:5B:AC:B1:DA
+    !ruby/sym _timestamp: 2013-11-18 18:23:47.625109 +08:00
+    processor20: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    processor5: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    processor18: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    swapfree: 5.86 GB
+    memoryfree: 27.41 GB
+    hostname: CDN-HN-ZZ-CMCC-62
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    operatingsystem: CentOS
+    processor2: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    processor15: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    macaddress_eth2: E4:11:5B:AC:B1:DA
+    interfaces: "bond0,eth0,eth1,eth2,eth3,eth4,lo"
+    netmask_bond0: 255.255.255.0
+    memorysize: 31.35 GB
+    timezone: CST
+    hardwareisa: x86_64
+    selinux: "false"
+    productname: ...Qh
+    processor12: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    operatingsystemrelease: "6.2"
+    uptime_hours: "16"
+    processor22: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    hardwaremodel: x86_64
+    processor7: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    clientcert: cdn-hn-zz-cmcc-62
+    ipaddress_lo: 127.0.0.1
+    rubyversion: 1.8.7
+    network_lo: 127.0.0.0
+    netmask_lo: 255.0.0.0
+    architecture: x86_64
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    processor4: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    kernelrelease: 2.6.32-900.220.23.1.letv.el6.x86_64
+    processor17: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    uptime: 16:58 hours
+    macaddress_eth4: E4:11:5B:AC:B2:8C
+    uniqueid: 007f0100
+    uptime_seconds: "61123"
+    manufacturer: HP
+    physicalprocessorcount: "2"
+    processor1: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    processor14: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    kernelmajversion: "2.6"
+    macaddress_eth1: 44:1E:A1:48:EB:09
+    netmask: 255.255.255.0
+    processor9: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    network_bond0: 218.206.207.0
+    ipaddress: 218.206.207.62
+    virtual: physical
+    processorcount: "24"
+    kernelversion: 2.6.32
+    processor11: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    processor21: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    processor6: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    processor19: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    kernel: Linux
+    ps: ps -ef
+    processor3: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    facterversion: 1.6.0
+    uptime_days: "0"
+    is_virtual: "false"
+    puppetversion: 2.6.11
+    processor16: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    macaddress_eth3: E4:11:5B:AC:B2:C2
+    ipaddress_bond0: 218.206.207.62
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAIFgC5wI0w8lZipyFB0BWkOh2pbVLj0886mG6v+6gNa7dPKVmWrW4RsZFme9zrdogxwu+tj+ovJtAfwBU0tTn7o7NO5fb88oht2ydNuAP7sLMxSXA8lsxAU6A4diuX3E6ljpVsqMQ4xqZ7HESo+G32clybbE2RPD4XedPYNVVainAAAAFQDfxvcgv9VEPQdY9TXyXgmkgcQ3KwAAAIBg9yc8jrtL9TqS5y+jZ3dRuncmjSisaz3ovP3Hokve/X8o4Ir3ykNp2kSI5jQQXUJc/6VmiZiyv+vFWcinBv42y5m0OmLLLJhCXgpsmD7k9zRie9r6MtVU1agYvH46+9kYyLWuiwZuDtu2mKnBHjUSMOU+myevojnHzZMdz+JeOwAAAIBke7XzrOJ3fupmSgZ6on+DhwMJhKV8ZGLvA28mR88DnExwaloFG/TK/Vqft/TYYy9uwCchQx0ROZnPX7BSssp2YkxWG86MNcRdr3oKB4h4VFcQ3hzmaisqa37xrMgmr0NAzv3ATbgFLXxbtjDrVXcUr9+byOowM6cKjS4AMcwPjg==
+    macaddress: E4:11:5B:AC:B1:DA
+    id: root
+    processor0: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    swapsize: 5.86 GB
+    processor13: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz
+    environment: production
+    macaddress_eth0: 44:1E:A1:48:EB:08

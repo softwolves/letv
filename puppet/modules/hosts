@@ -1,0 +1,26 @@
+[puppet]
+117.121.54.95 ansible_ssh_private_key_file=/root/.ssh/cdnops
+117.121.54.96 ansible_ssh_private_key_file=/root/.ssh/cdnops
+117.121.54.97 ansible_ssh_private_key_file=/root/.ssh/cdnops
+117.121.54.185 ansible_ssh_private_key_file=/root/.ssh/cdnops
+117.121.2.50 ansible_ssh_private_key_file=/root/.ssh/cdnops
+117.121.2.51 ansible_ssh_private_key_file=/root/.ssh/cdnops
+117.121.54.74 ansible_ssh_private_key_file=/root/.ssh/cdnops
+10.204.29.228 ansible_ssh_private_key_file=/root/.ssh/cdnops
+10.204.29.232 ansible_ssh_private_key_file=/root/.ssh/cdnops
+10.204.29.233 ansible_ssh_private_key_file=/root/.ssh/cdnops
+10.204.29.235 ansible_ssh_private_key_file=/root/.ssh/cdnops
+10.130.91.144 ansible_ssh_private_key_file=/root/.ssh/cdnops
+10.130.91.145 ansible_ssh_private_key_file=/root/.ssh/cdnops
+10.110.122.39 ansible_ssh_private_key_file=/root/.ssh/cdnops
+10.110.122.49 ansible_ssh_private_key_file=/root/.ssh/cdnops
+10.110.122.54 ansible_ssh_private_key_file=/root/.ssh/cdnops
+10.110.122.55 ansible_ssh_private_key_file=/root/.ssh/cdnops
+10.110.122.37 ansible_ssh_private_key_file=/root/.ssh/cdnops
+10.110.122.38 ansible_ssh_private_key_file=/root/.ssh/cdnops
+10.110.122.46 ansible_ssh_private_key_file=/root/.ssh/cdnops
+10.120.22.123 ansible_ssh_private_key_file=/root/.ssh/cdnops
+10.120.22.161 ansible_ssh_private_key_file=/root/.ssh/cdnops
+10.120.29.70 ansible_ssh_private_key_file=/root/.ssh/cdnops
+10.120.29.66 ansible_ssh_private_key_file=/root/.ssh/cdnops
+10.120.29.65 ansible_ssh_private_key_file=/root/.ssh/cdnops

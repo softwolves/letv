@@ -1,0 +1,26 @@
+class systembase_cdn_spe::sysctl{
+  file{"/etc/security/limits.d/letv.conf":
+    ensure => file,
+    mode   => 644,
+    content => template("systembase_cdn_spe/letv.conf"),
+  }
+
+  file{"/etc/sysctl.conf":
+    ensure => file,
+    mode   => 644,
+    content => template("systembase_cdn_spe/sysctl.conf"),
+  }
+
+  file{"/etc/sysctl.d/letv.conf":
+    ensure => absent,
+  }
+
+  exec{"/sbin/sysctl -p /etc/sysctl.conf":
+    path => "/usr/bin:/usr/sbin:/bin:/usr/local/bin:/bin/:/sbin",
+    subscribe => [ File["/etc/sysctl.conf"],
+                   File["/etc/sysctl.d/letv.conf"],
+                 ],
+    refreshonly => true,
+  }
+
+}

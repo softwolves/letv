@@ -1,0 +1,74 @@
+--- !ruby/object:Puppet::Node::Facts
+  expiration: 2013-11-18 18:38:02.391579 +08:00
+  name: cdn-gd-sz-tianwei-129
+  values: 
+    type: Main Server Chassis
+    processor8: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEAwLK7XCDzjNCP1EJNhZIbcjKoMzP/TaulbyLjICukS3EXi2ToJTzgjbw13v43uOhiki23xJf48MjLXdB7fGhT9L2qalDcKUNEXNNd9YckkCh1saxtqWEc+tjR9/pIDSQXZ7cMKusSRjwfoPmm3t+/+bIfwPlm1muDOjfyLnjcMY/tq6JxNYtwJjiPnXoqVKL17ZBaaI5TeqFUTJcgNFo9r5d/+k0ZT2ihvsyYxej66gH8pl3301SIrHqtNVCsR/PlclIJzLpbN8M9PpMPNyi4IeJEfdddAGZ702ChD4kbBvj/qlfnYGnnC8D+JzpYyLprQ8FFa8q5whtze48YIUbK8w==
+    clientversion: 2.6.11
+    !ruby/sym _timestamp: 2013-11-18 18:23:02.613608 +08:00
+    processor10: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor5: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    network_eth0: 116.77.72.128
+    swapfree: 5.85 GB
+    memoryfree: 20.03 GB
+    hostname: CDN-GD-SZ-TianWei-129
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    processor2: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    operatingsystem: CentOS
+    processor15: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    interfaces: "eth0,eth1,lo"
+    memorysize: 23.46 GB
+    timezone: CST
+    hardwareisa: x86_64
+    productname: Lenovo WQ R520 G7
+    selinux: "false"
+    processor12: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    operatingsystemrelease: "6.2"
+    hardwaremodel: x86_64
+    processor7: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    uptime_hours: "9529"
+    clientcert: cdn-gd-sz-tianwei-129
+    ipaddress_lo: 127.0.0.1
+    rubyversion: 1.8.7
+    network_lo: 127.0.0.0
+    netmask_lo: 255.0.0.0
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    processor4: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    kernelrelease: 2.6.32-900.220.23.1.letv.el6.x86_64
+    uptime: 397 days
+    architecture: x86_64
+    uniqueid: "00000000"
+    uptime_seconds: "34305404"
+    manufacturer: Lenovo
+    netmask_eth0: 255.255.255.240
+    physicalprocessorcount: "2"
+    processor1: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor14: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    kernelmajversion: "2.6"
+    macaddress_eth1: 00:E0:81:E0:58:F5
+    netmask: 255.255.255.240
+    serialnumber: empty
+    processor9: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    ipaddress: 116.77.72.129
+    virtual: physical
+    processorcount: "16"
+    kernelversion: 2.6.32
+    processor11: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor6: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    kernel: Linux
+    ps: ps -ef
+    processor3: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    facterversion: 1.6.0
+    uptime_days: "397"
+    is_virtual: "false"
+    puppetversion: 2.6.11
+    ipaddress_eth0: 116.77.72.129
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAM2TelHffJVG1tVirl+mT9Xp7B35Hy/lauq3F99EkayU9fMy9ZtqJLj8AOe09GTtFzKSeJigOHEJGz+GXFBrMn+KCoR/0Y3KWYt3pqIq2K6S7ClAdhbwpAkTmVO4Ne2OFNXU7iM+PtY4YfhdHG1nOIN/t+oIZ5xxbqs14FyCLUBLAAAAFQDJCdaeFX066hSKVeVzbvnJXNM3+wAAAIB0RSWns8Q1oqIPkanjDSO/pspUDBPuKmeNemXLxPTYRkNKb1nPHFQphSj2RmoYNrlap12cv88vbtN9bQAaw6o0JKDKEguUZqK0Wt0Lc5Gcc/4GN/iTWPTd3RLj9iBA8+5Hb6KkasN3XA/4nAhkcBOhQel9nLNUQBf+luRF8TfOuQAAAIEAoR1bNn4YB2OZ4cOsJctmwun6E0GccvQ++u+Vj/J62+7z6Yf5zfLuVF9XJC2ygjjLcJ5pGbOgQc51DPhfT3tG+rgwTUTiEHhy6poUFT8LUIc8WbdhThXKw0xeKB3w/wILLgYgurl2bMJMByNSaGxdwWuhRl464z1pZR/MThjcBAk=
+    macaddress: 00:E0:81:E0:58:F4
+    id: root
+    swapsize: 5.86 GB
+    processor0: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor13: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    environment: production
+    macaddress_eth0: 00:E0:81:E0:58:F4

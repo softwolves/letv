@@ -1,0 +1,72 @@
+--- !ruby/object:Puppet::Node::Facts
+  expiration: 2013-11-18 18:36:38.118217 +08:00
+  name: cdn-zj-hz-cmcc-82
+  values: 
+    type: Rack Mount Chassis
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEA0Zw+6e7dY4s6rduyEia6re6B3wKsAj+P25QLTlnRMOiJ9b1Ld0JbrsofQGurBiR9Q5ykv5SnwN/EMl8GLzDSuz/VzuRCVfmUytww8PVJN1xKBDanmLJwukYj+f98NjetlEDUbLWqf6N3kHeH78qDGhlWNX2t95qnR4S1xd+iA+uPmF1iKp6Aog5QK7TQrfN/9HKDeTgWCtgmlgjMrDxrL//25kWtWStWVAV0h8cPlsqJVVf1J4pWkCsvcqRvQ+5ElzV4bFqWPnkeo9dUz899F1OeKAQtZA0MTBN/+ZVJAwP0F1LZZOgulYhFCz5pxfnQuYV5KhMpg+P/PXtEapT+fw==
+    clientversion: 2.6.11
+    macaddress_bond0: 34:40:B5:A4:A0:0A
+    !ruby/sym _timestamp: 2013-11-18 18:21:38.360910 +08:00
+    processor5: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    memoryfree: 20.17 GB
+    hostname: CDN-ZJ-HZ-CMCC-82
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    swapfree: 5.85 GB
+    processor2: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    operatingsystem: CentOS
+    interfaces: "bond0,bond0_1,eth0,eth1,lo,usb0"
+    netmask_bond0: 255.255.255.224
+    memorysize: 23.46 GB
+    timezone: CST
+    macaddress_bond0_1: 34:40:B5:A4:A0:0A
+    hardwareisa: x86_64
+    productname: "System x3630 M3 -[7377I4O]-"
+    selinux: "false"
+    operatingsystemrelease: "6.3"
+    hardwaremodel: x86_64
+    uptime_hours: "4676"
+    processor7: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    clientcert: cdn-zj-hz-cmcc-82
+    ipaddress_lo: 127.0.0.1
+    rubyversion: 1.8.7
+    network_lo: 127.0.0.0
+    netmask_lo: 255.0.0.0
+    ipaddress_bond0_1: 123.150.105.173
+    processor4: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    network_bond0_1: 123.150.105.160
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    macaddress_usb0: 36:40:B5:A4:A0:0E
+    kernelrelease: 2.6.32-902.279.9.1.letv.el6.x86_64
+    uptime: 194 days
+    architecture: x86_64
+    uniqueid: 007f0100
+    uptime_seconds: "16836360"
+    manufacturer: IBM
+    physicalprocessorcount: "1"
+    kernelmajversion: "2.6"
+    processor1: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    macaddress_eth1: 34:40:B5:A4:A0:0B
+    serialnumber: 06HRBE8
+    netmask: 255.255.255.224
+    network_bond0: 111.1.23.64
+    ipaddress: 111.1.23.82
+    processorcount: "8"
+    virtual: physical
+    kernelversion: 2.6.32
+    processor6: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    kernel: Linux
+    ps: ps -ef
+    processor3: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    facterversion: 1.6.0
+    uptime_days: "194"
+    is_virtual: "false"
+    puppetversion: 2.6.11
+    macaddress: 34:40:B5:A4:A0:0A
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAP9qI7zPCJ1qaXjUOJdLxi2+ER1EOODaT73GwyQBlutj+7yQSNiekJ+nyGtUIZsvjdWv6yXpT/XPsB4BvG03eeLJOGcnhS5cEKXKyMQ9VcVkMP1N0PqAWX9yEzpQh0r4kqLfbkIt7kNvhf4lhlqa8sLSH/mmumB6BSC7whKkKIOXAAAAFQCQv30snCst4lSWWiTkctNCocRxmwAAAIEAjmMphLTaWYRVpIW43wZY5Lh70cm203gOwQ2jQEJDHopI0833gbB8MJeeKwOu+pmfSRA/Jp1Jmk9VZpX2aZp4TFw2GWFN13GLOdvPI+d9SQi+jjBcw70Iaqgz7SCZk8t3eplRnedkzEvBVUa+38/Gx0/0oEHEcADiik+GIxSMl24AAACBANpZ/tafm0BCZJKoC5nqewZcennXsprSyJFeQhJ7LK6e6kLFsViMElojoAkaUDNUaXC0i7Y7T2MCSJeZ+VIv5HSo1IigMDI/+Ldmq869qJlfdLT9xLEWYWpkafM6oqKPLtZFDcTYuJHLTcUgqG4tc9ldgDw1shjS5Ntpvp87w1g+
+    ipaddress_bond0: 111.1.23.82
+    swapsize: 5.86 GB
+    netmask_bond0_1: 255.255.255.224
+    processor0: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    environment: production
+    macaddress_eth0: 34:40:B5:A4:A0:0A
+    id: root

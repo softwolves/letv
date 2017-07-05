@@ -1,0 +1,68 @@
+--- !ruby/object:Puppet::Node::Facts
+  expiration: 2013-11-22 18:44:14.063099 +08:00
+  name: cdn-gd-gz-ejk-216
+  values: 
+    processorcount: "8"
+    uptime: 23 days
+    operatingsystem: CentOS
+    netmask: 255.255.255.240
+    kernelmajversion: "2.6"
+    kernelrelease: 2.6.32-902.279.9.1.letv.el6.x86_64
+    swapfree: 5.85 GB
+    uptime_days: "23"
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    swapsize: 5.86 GB
+    manufacturer: IBM
+    type: Rack Mount Chassis
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEA9gp1qwY7cuLSdyH4mFFNqEsedP1erllEf7xmN2sNWNTAcZ87tQwaUP/1tiXY+FL02yJETbpwkpMm9/rI6nvm6ufm8SM66oMdBxf9fWKFyQ81cWO0pDQRh3mbdnIecShi5ReTZ6YSGmzict/Ghz3sbyid8u42iELDF0eFye+su+ef1bBVBBaEcBVZ+GsFFARfZSVCSqDKafi/8M1SuvZIUGqfywSnifAiXdxCSrTFXyUNAY0tlrMHajPMkuHd/riN+xViW3lGIwpFzQQJEhMGXrOhQMw2vZl9hjRSxOQ3W5KsJI86ZA7dwi0wc5HG5q6KP0z5cOkrKJSysJB9SHVYCQ==
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAOjxkYnWSDS5KAWeI3Glxragz9m/XcfOZwxh/aM9WPSdCa1rViK19//BpeNVJta+ss2TGkyKfcGfMrWqZ1prqttT7l2t9v3QD10UvAPpi/Y8FAH5BauMeE+0+IRJecQIF4loZKo8Qiboa1t8VAqT/W6mfH7dpt4pSNDnUBKuUp5xAAAAFQD+nUFcpgAGUyhZllQdAGkm1d85LwAAAIEAwuRjX43MH0798MIZPOjNTfwHikpy+YCoWoajVUDbxJonfgBYzGGvJbt0lExqv71oGwAdnPB2NFgLM07lzj3Jb74WUqh2kQ+eAIINISovg1DsTsOvz0QYWEz6OpDiFwotPHlXX35fx2BVd/O+is0iG7MPgJBeP52wNx/65oye4OcAAACBAMfn3ks9cMEh8unKHgL5OS4qA2/1Bl9j9WvlwNyaOzc2JqGpCR0DVr3Mj0I7InxzvYfVUnjfqqOrVu04TMSCyTl/Og9vjb2B/ewhZjWRWnWABPTHo/9t1VFXy1hXoun9vgbf/wkpL3DpmXqf8kr3fUbsqd5aGJaFdYHd3aabc4fx
+    operatingsystemrelease: "6.3"
+    macaddress_bond0: 34:40:B5:A4:65:A2
+    uniqueid: 007f0100
+    id: root
+    macaddress_usb0: 36:40:B5:A4:65:A6
+    memoryfree: 20.31 GB
+    memorysize: 23.46 GB
+    serialnumber: 06FZXB7
+    architecture: x86_64
+    !ruby/sym _timestamp: 2013-11-22 18:29:14.401686 +08:00
+    ipaddress_lo: 127.0.0.1
+    uptime_seconds: "1997318"
+    ipaddress: 14.18.17.216
+    selinux: "false"
+    environment: production
+    macaddress_eth0: 34:40:B5:A4:65:A2
+    macaddress_eth1: 34:40:B5:A4:65:A3
+    macaddress: 34:40:B5:A4:65:A2
+    processor3: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor7: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor2: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor6: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor1: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor5: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor0: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor4: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    interfaces: "bond0,eth0,eth1,lo,usb0"
+    productname: "System x3630 M3 -[7377I4O]-"
+    rubyversion: 1.8.7
+    clientversion: 2.6.11
+    ps: ps -ef
+    facterversion: 1.6.0
+    kernel: Linux
+    physicalprocessorcount: "1"
+    hostname: CDN-GD-GZ-EJK-216
+    network_bond0: 14.18.17.208
+    puppetversion: 2.6.11
+    ipaddress_bond0: 14.18.17.216
+    timezone: CST
+    netmask_bond0: 255.255.255.240
+    uptime_hours: "554"
+    clientcert: cdn-gd-gz-ejk-216
+    kernelversion: 2.6.32
+    virtual: physical
+    is_virtual: "false"
+    hardwaremodel: x86_64
+    hardwareisa: x86_64
+    network_lo: 127.0.0.0
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    netmask_lo: 255.0.0.0

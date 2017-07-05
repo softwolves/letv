@@ -1,0 +1,78 @@
+--- !ruby/object:Puppet::Node
+  classes: []
+  environment: &id001 production
+  expiration: 2013-11-22 19:03:02.299038 +08:00
+  name: cdn-hb-wh-ctc-12
+  parameters: 
+    clientcert: cdn-hb-wh-ctc-12
+    serialnumber: B2S1B3X
+    architecture: x86_64
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAK4VGXBU5wYK1eOAEcEjOmaNE+0BidMLX7tDxrR5QR1A9OC8x38GaQoGzpkF4hQVB0tq8aDpApQK97FijgJYIX6D0eVnU7tXl3kQqOwok8wiRzg8lCU6m8nOS5lzAJLjwpKkjJu6gmmBgJ9juOGj8Ue52t4gW+wcu47g1bBafWmdAAAAFQDxNTmpcgpfqI6XB01gPXNIW0YIfQAAAIAxaVtZztGAIMOnKNaUDiYeVGeRjmjz8KD1ejEOkscz6GziKVlAb/MLpoFwL0k5vG8zCe4upXoQsU0MavT1ZNEc6GpsVPPfoVHnSwye/TPW6DbT3/nRG62eiv6laka9BFcqawUSfDkZDXWdn6l556m+CtImPpI/hSgzTVLchq5Z0gAAAIBCZptJsIu8M21W0Z2Lx0wJlfDQR9ttQ1n9J5V6PsndJQQEgUXP0IBme4amkN3hEQfwa2cn53KOCu/Ffe3LfokgHc6rMsBtPaPGNID8D6t72SigQxEVMRIqbvG6yfIgXPLY6MUrnJYoG9WzbcmhbJblIUEY5G4wDSFMVzL6z/JWwA==
+    hostname: CDN-HB-WH-CTC-12
+    !ruby/sym _timestamp: 2013-11-22 18:33:02.206573 +08:00
+    memoryfree: 9.22 GB
+    type: Rack Mount Chassis
+    network_lo: 127.0.0.0
+    processor5: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    timezone: CST
+    kernel: Linux
+    operatingsystemrelease: "6.2"
+    kernelmajversion: "2.6"
+    ipaddress_bond0_2: 119.97.158.12
+    processor2: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    ipaddress_lo: 127.0.0.1
+    facterversion: 1.6.0
+    macaddress_em1: 90:B1:1C:3C:B8:B1
+    selinux: "false"
+    uniqueid: 353a2ed3
+    network_bond0: 119.97.158.0
+    puppetversion: 2.6.11
+    interfaces: "bond0,bond0_1,bond0_2,em1,em2,lo"
+    uptime_days: "125"
+    macaddress_bond0_2: 90:B1:1C:3C:B8:B1
+    productname: PowerEdge R510
+    processor7: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    hardwaremodel: x86_64
+    uptime_seconds: "10843062"
+    swapfree: 5.85 GB
+    processor4: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    manufacturer: Dell Inc.
+    processorcount: "8"
+    is_virtual: "false"
+    netmask_lo: 255.0.0.0
+    network_bond0_2: 119.97.158.0
+    hardwareisa: x86_64
+    netmask_bond0_2: 255.255.255.0
+    ipaddress_bond0_1: 119.97.158.38
+    processor1: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEA6ihoRj8sHFvRmn2VVWnS65taVubRxx6YQQ45LNnxGQWy2/on13JaU40wP//XTQqkH1BAmkqknqElFhaPzhFnjY+n07E+HdNt+2K5zp4G+wrXl6nc33I3qzYtWJ8M2w8TlUYAnk3LU+R3sGA3slECWmJ6rCidSNfz1ZJUIB1cEYhcVlODCINc46QwRbdu2NYoj/tq4sqsn37CeFPG0gK31/lh4AIOo/gSsPe6GhxZ+VjxFRHstsDpehPbozhNMc6uRfRUL7sG/uZs2rs3qukzScNzLWXGubfB7TAbpMMD4wlvI4pgQogeVjWFkaq/+1iLxvZzt6D8NUfVL7llga05rw==
+    kernelrelease: 2.6.32-900.220.23.1.letv.el6.x86_64
+    ps: ps -ef
+    netmask_bond0: 255.255.255.0
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    kernelversion: 2.6.32
+    ipaddress_bond0: 119.97.158.69
+    macaddress_bond0_1: 90:B1:1C:3C:B8:B1
+    clientversion: 2.6.11
+    rubyversion: 1.8.7
+    processor6: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    macaddress_bond0: 90:B1:1C:3C:B8:B1
+    memorysize: 11.62 GB
+    uptime: 125 days
+    virtual: physical
+    ipaddress: 119.97.158.69
+    id: root
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    processor3: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    environment: *id001
+    swapsize: 5.86 GB
+    operatingsystem: CentOS
+    network_bond0_1: 119.97.158.0
+    uptime_hours: "3011"
+    physicalprocessorcount: "1"
+    macaddress_em2: 90:B1:1C:3C:B8:B2
+    netmask: 255.255.255.0
+    netmask_bond0_1: 255.255.255.0
+    macaddress: 90:B1:1C:3C:B8:B1
+    processor0: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+  time: 2013-11-22 18:33:02.296015 +08:00

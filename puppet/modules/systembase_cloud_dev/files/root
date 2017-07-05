@@ -1,0 +1,26 @@
+0 */2 * * * /bin/sh /usr/local/etc/linux_update.sh > /dev/null 2>&1
+*/5 * * * * /bin/sh /usr/local/etc/analyzelog.sh > /dev/null 2>&1
+*/3 * * * * /bin/sh /usr/local/etc/restart_centos6_nginx.sh > /dev/null 2>&1
+2 2 * * * /bin/sh /usr/local/etc/crond_nginx.sh > /dev/null 2>&1
+#*/3 * * * * /bin/sh /usr/local/etc/restart_centos6_flash.sh > /dev/null 2>&1
+0 */1 * * * /bin/sh /letv/soft/tools/cdnwebtsd.sh > /dev/null 2>&1
+#*/3 * * * * /bin/sh /usr/local/etc/rest_linux_udp.sh > /dev/null 2>&1
+*/3 * * * * /bin/sh /usr/local/etc/restart_centos6_watchdog.sh > /dev/null 2>&1
+*/10 * * * * /bin/sh /data/smokeping/bin/smokeping.sh > /dev/null 2>&1
+5 */2 * * * /bin/sh /usr/local/etc/restart_smokeping.sh > /dev/null 2>&1
+*/3 * * * * /bin/sh /usr/local/etc/restart_centos6_crtmpserver.sh > /dev/null 2>&1
+*/6 * * * * /bin/sh /usr/local/zabbix/rsyslog_agent.sh > /dev/null 2>&1
+#*/6 * * * * /bin/sh /usr/local/zabbix/netconsole_agent.sh > /dev/null 2>&1
+# ntpdate
+#
+*/20 * * * * /usr/sbin/ntpdate 210.72.145.44 > /dev/null 2>&1
+*/30 * * * * /bin/sh /usr/local/etc/deletefile.sh >/dev/null 2>&1
+# Run puppet 
+#
+*/20 * * * * /bin/sh /letv/soft/tools/checkpuppet.sh > /dev/null 2>&1
+#ftp log for some node
+20 */1 * * * /bin/sh /usr/local/etc/logftp.sh > /dev/null 2>&1
+#curl check for monitor
+*/10 * * * * /bin/sh /letv/soft/tools/mars.sh > /dev/null 2>&1
+#check 404 log for storage
+56 */1 * * * /bin/sh /letv/soft/tools/checkfile.sh > /dev/null 2>&1

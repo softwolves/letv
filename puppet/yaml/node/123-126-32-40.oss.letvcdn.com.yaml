@@ -1,0 +1,82 @@
+--- !ruby/object:Puppet::Node
+  classes: []
+  environment: &id001 production
+  expiration: 2013-11-18 18:55:09.052514 +08:00
+  name: 123-126-32-40.oss.letvcdn.com
+  parameters: 
+    type: Rack Mount Chassis
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEAqx/xmOQOoFV1fS1N51xVKyd3rKf+u0tDX9jBGgUxfw4lOD7wSWUVu8ffkz+7aBdbtKFR+Jtg3WLn1Hx8SoFFeE96WX9fW6gND4T0KFw6ZjeknHGtrxBVrVuWQsAEaxoZkEvqtK0ELLMRLjGPQ4lU1qbecYTyB0ECwDu1oySXrmwq1IySnNuwt4Cd4JkS6VZ1nitdwDZ6pEH1KehE1a8s/V2bEAVojYt8XCLur57o6j1DCpEDYq6kx9UtgGiXv45dwuGz/rAVDopJQ7aSU7nAbb4Z6cJAkxhYhB1ba9YQ0Jsr980Pphy6RJQg+KuTlX6MpSuVteCQ+0rLzaKUITwvpQ==
+    processor8: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    clientversion: 2.6.11
+    !ruby/sym _timestamp: 2013-11-18 18:25:08.977920 +08:00
+    processor10: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor5: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    network_eth0: 123.126.32.0
+    memoryfree: 19.65 GB
+    hostname: 123-126-32-40.oss.letvcdn.com
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/maven/bin:/usr/local/java//bin:/usr/local/ant/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    swapfree: 5.85 GB
+    processor2: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    operatingsystem: CentOS
+    processor15: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    interfaces: "eth0,eth0_lan01,eth1,lo,usb0"
+    memorysize: 23.46 GB
+    timezone: CST
+    hardwareisa: x86_64
+    productname: "System x3630 M3 -[7377IYF]-"
+    selinux: "false"
+    operatingsystemrelease: "6.3"
+    processor12: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    hardwaremodel: x86_64
+    uptime_hours: "8538"
+    processor7: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    clientcert: 123-126-32-40.oss.letvcdn.com
+    rubyversion: 1.8.7
+    ipaddress_lo: 127.0.0.1
+    ipaddress_eth0_lan01: 10.126.32.40
+    network_lo: 127.0.0.0
+    netmask_lo: 255.0.0.0
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    processor4: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    macaddress_usb0: 5E:F3:FC:31:FE:BC
+    kernelrelease: 2.6.32-902.279.9.1.letv.el6.x86_64
+    uptime: 355 days
+    architecture: x86_64
+    uniqueid: 007f0100
+    uptime_seconds: "30740316"
+    manufacturer: IBM
+    netmask_eth0: 255.255.255.0
+    physicalprocessorcount: "2"
+    processor1: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor14: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    kernelmajversion: "2.6"
+    macaddress_eth1: 5C:F3:FC:31:FE:B9
+    serialnumber: 99A2431
+    processor9: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    netmask: 255.255.255.0
+    ipaddress: 123.126.32.40
+    virtual: physical
+    processorcount: "16"
+    kernelversion: 2.6.32
+    processor11: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor6: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    kernel: Linux
+    ps: ps -ef
+    netmask_eth0_lan01: 255.255.0.0
+    processor3: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    uptime_days: "355"
+    facterversion: 1.6.0
+    puppetversion: 2.6.11
+    is_virtual: "false"
+    macaddress_eth0_lan01: 5C:F3:FC:31:FE:B8
+    ipaddress_eth0: 123.126.32.40
+    macaddress: 5C:F3:FC:31:FE:B8
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAKeDXai4PgNmXL1egnzpIG37sSH2JIZhlAeW8Jqis7N5HGmKmGijt80d0DqUbs1LEKgbjmeCjfheEUnKEVTg/vhxAnqpZqM4qIv+DttbPYyBx0fYal8zEC2RCsP0Y1Bo3lgon5h9EyE0CJ77BmKX4XoRggBoj5LpUW5Bbdpnltg1AAAAFQC7H3BZ0/xV69UAHk/rBlUmwDKqdwAAAIEAld5STzum4dj7LHEicj+rhhoAwNoy0mGAc2wgeSdp/UZP57jk/zPKYzPVyN6odiKpJExcFcFywo+5NfNxjchKQEi3Bem24SQYz/z1tByp910bV8LB+NkaIr4e+4v+P4T+8KHX0W2jfD9RI+vf4OhkxHOZ4BthI9UILW62W4F8yjIAAACAZYSghHUhbvWgAOBjZJpmRfiBLBAJlmiEaNnqHyji+bh+WwBXms/n7s3iiLenyKsAZURJ9G5x6r54Pjq56btGAy0DYBDsr9S/7SQDycYTHgNSk6NsbreCVc39j/aNbK8SIl/bqe1lb9sg3D9lNGx7fNB/aSS4ikd11e6oGKxc2Z0=
+    environment: *id001
+    swapsize: 5.86 GB
+    processor0: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    network_eth0_lan01: 10.126.0.0
+    processor13: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    id: root
+    macaddress_eth0: 5C:F3:FC:31:FE:B8
+  time: 2013-11-18 18:25:09.046259 +08:00

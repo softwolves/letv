@@ -1,0 +1,32 @@
+--- !ruby/object:Puppet::Transaction::Report
+  configuration_version: 
+  host: cdn-gz-gy-cnc-141
+  kind: apply
+  logs: 
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      message: "Could not retrieve catalog from remote server: Error 400 on SERVER: Could not find default node or by name with 'cdn-gz-gy-cnc-141' on node cdn-gz-gy-cnc-141"
+      source: Puppet
+      tags: 
+        - err
+      time: 2013-11-18 18:20:23.297631 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      message: Using cached catalog
+      source: Puppet
+      tags: 
+        - notice
+      time: 2013-11-18 18:20:23.419763 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      message: "Failed to apply catalog: Duplicate definition: File[/letv/soft/checkfile.sh] is already defined in file /etc/puppet/manifests/rules/test.pp at line 11; cannot redefine"
+      source: Puppet
+      tags: 
+        - err
+      time: 2013-11-18 18:20:24.149717 +08:00
+  metrics: {}
+  puppet_version: 2.6.11
+  report_format: 2
+  resource_statuses: {}
+  status: failed
+  time: 2013-11-18 18:20:13.195433 +08:00

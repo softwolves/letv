@@ -1,0 +1,2758 @@
+--- !ruby/object:Puppet::Transaction::Report
+  configuration_version: 1384419698
+  host: cdn-sc-cd-ctc3-6
+  kind: apply
+  logs: 
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      message: "Could not retrieve catalog from remote server: Error 400 on SERVER: Could not find default node or by name with 'cdn-sc-cd-ctc3-6' on node cdn-sc-cd-ctc3-6"
+      source: Puppet
+      tags: 
+        - err
+      time: 2013-11-18 18:20:27.605042 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      message: Using cached catalog
+      source: Puppet
+      tags: 
+        - notice
+      time: 2013-11-18 18:20:27.734368 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym err
+      line: 34
+      message: "Could not evaluate: Error 400 on SERVER: Not authorized to call find on /file_metadata/files/zabbix/lsiutil Could not retrieve file metadata for puppet://puppet.oss.letv.com/files/zabbix/lsiutil: Error 400 on SERVER: Not authorized to call find on /file_metadata/files/zabbix/lsiutil at /etc/puppet/manifests/rules/zabbix.pp:34"
+      source: "/Stage[main]/Zabbix/File[lsiutil]"
+      tags: 
+        - err
+        - file
+        - lsiutil
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:20:29.634434 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym err
+      line: 51
+      message: "Could not evaluate: Error 400 on SERVER: Not authorized to call find on /file_metadata/files/zabbix/libc_update.sh Could not retrieve file metadata for puppet://puppet.oss.letv.com/files/zabbix/libc_update.sh: Error 400 on SERVER: Not authorized to call find on /file_metadata/files/zabbix/libc_update.sh at /etc/puppet/manifests/rules/zabbix.pp:51"
+      source: "/Stage[main]/Zabbix/File[libc_update]"
+      tags: 
+        - err
+        - file
+        - libc_update
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:20:29.990808 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym err
+      line: 57
+      message: "Could not evaluate: Error 400 on SERVER: Not authorized to call find on /file_metadata/files/lib/libffmux.so.0 Could not retrieve file metadata for puppet://puppet.oss.letv.com/files/lib/libffmux.so.0: Error 400 on SERVER: Not authorized to call find on /file_metadata/files/lib/libffmux.so.0 at /etc/puppet/manifests/rules/ffmux.pp:57"
+      source: "/Stage[main]/Ffmux-new/File[/lib/libffmux.so.0]"
+      tags: 
+        - err
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:20:30.347383 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym notice
+      line: 67
+      message: "Dependency File[/lib/libffmux.so.0] has failures: true"
+      source: "/Stage[main]/Ffmux-new/Exec[update-libffmux]"
+      tags: 
+        - notice
+        - exec
+        - update-libffmux
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:20:30.349091 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym warning
+      line: 67
+      message: Skipping because of failed dependencies
+      source: "/Stage[main]/Ffmux-new/Exec[update-libffmux]"
+      tags: 
+        - warning
+        - exec
+        - update-libffmux
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:20:30.349696 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym err
+      line: 39
+      message: "Could not evaluate: Error 400 on SERVER: Not authorized to call find on /file_metadata/files/zabbix/ld-linux.so.2 Could not retrieve file metadata for puppet://puppet.oss.letv.com/files/zabbix/ld-linux.so.2: Error 400 on SERVER: Not authorized to call find on /file_metadata/files/zabbix/ld-linux.so.2 at /etc/puppet/manifests/rules/zabbix.pp:39"
+      source: "/Stage[main]/Zabbix/File[ld-linux.so.2]"
+      tags: 
+        - err
+        - file
+        - ld-linux.so.2
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:20:30.719139 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym notice
+      line: 45
+      message: "Dependency File[ld-linux.so.2] has failures: true"
+      source: "/Stage[main]/Zabbix/Exec[ldconfig]"
+      tags: 
+        - notice
+        - exec
+        - ldconfig
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:20:30.721013 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym warning
+      line: 45
+      message: Skipping because of failed dependencies
+      source: "/Stage[main]/Zabbix/Exec[ldconfig]"
+      tags: 
+        - warning
+        - exec
+        - ldconfig
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:20:30.721505 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym err
+      line: 29
+      message: "Could not evaluate: Error 400 on SERVER: Not authorized to call find on /file_metadata/files/zabbix/zabbix_update.tar.gz Could not retrieve file metadata for puppet://puppet.oss.letv.com/files/zabbix/zabbix_update.tar.gz: Error 400 on SERVER: Not authorized to call find on /file_metadata/files/zabbix/zabbix_update.tar.gz at /etc/puppet/manifests/rules/zabbix.pp:29"
+      source: "/Stage[main]/Zabbix/File[check_tar_gz]"
+      tags: 
+        - err
+        - file
+        - check_tar_gz
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:20:30.861481 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym err
+      line: 56
+      message: "Could not evaluate: Error 400 on SERVER: Not authorized to call find on /file_metadata/files/zabbix/md5-libc Could not retrieve file metadata for puppet://puppet.oss.letv.com/files/zabbix/md5-libc: Error 400 on SERVER: Not authorized to call find on /file_metadata/files/zabbix/md5-libc at /etc/puppet/manifests/rules/zabbix.pp:56"
+      source: "/Stage[main]/Zabbix/File[libc_md5]"
+      tags: 
+        - err
+        - file
+        - libc_md5
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:20:31.801051 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym notice
+      line: 62
+      message: "Dependency File[libc_md5] has failures: true"
+      source: "/Stage[main]/Zabbix/Exec[update-libc]"
+      tags: 
+        - notice
+        - exec
+        - update-libc
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:20:31.803146 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym warning
+      line: 62
+      message: Skipping because of failed dependencies
+      source: "/Stage[main]/Zabbix/Exec[update-libc]"
+      tags: 
+        - warning
+        - exec
+        - update-libc
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:20:31.803771 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym err
+      line: 72
+      message: "Could not evaluate: Error 400 on SERVER: Not authorized to call find on /file_metadata/files/lib/libudtp.so.0 Could not retrieve file metadata for puppet://puppet.oss.letv.com/files/lib/libudtp.so.0: Error 400 on SERVER: Not authorized to call find on /file_metadata/files/lib/libudtp.so.0 at /etc/puppet/manifests/rules/ffmux.pp:72"
+      source: "/Stage[main]/Ffmux-new/File[/lib/libudtp.so.0]"
+      tags: 
+        - err
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:20:32.072760 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      message: Finished catalog run in 3.32 seconds
+      source: Puppet
+      tags: 
+        - notice
+      time: 2013-11-18 18:20:32.202701 +08:00
+  metrics: 
+    changes: !ruby/object:Puppet::Util::Metric
+      label: Changes
+      name: changes
+      values: 
+        - - total
+          - Total
+          - 0
+    resources: !ruby/object:Puppet::Util::Metric
+      label: Resources
+      name: resources
+      values: 
+        - - total
+          - Total
+          - 118
+        - - failed
+          - Failed
+          - 7
+        - - skipped
+          - Skipped
+          - 3
+    time: !ruby/object:Puppet::Util::Metric
+      label: Time
+      name: time
+      values: 
+        - - exec
+          - Exec
+          - 0.702702
+        - - total
+          - Total
+          - 2.69169181619263
+        - - file
+          - File
+          - 1.85044
+        - - package
+          - Package
+          - 0.006569
+        - - schedule
+          - Schedule
+          - 0.003128
+        - - filebucket
+          - Filebucket
+          - 0.000442
+        - - config_retrieval
+          - Config retrieval
+          - 0.128410816192627
+    events: !ruby/object:Puppet::Util::Metric
+      label: Events
+      name: events
+      values: 
+        - - total
+          - Total
+          - 0
+  puppet_version: 2.6.11
+  report_format: 2
+  resource_statuses: 
+    "File[/etc/yum.repos.d/letv-pkgs.repo]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001545
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/yumrepo.pp
+      line: 4
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/etc/yum.repos.d/letv-pkgs.repo]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - yumrepo
+        - node
+        - default
+      time: 2013-11-18 18:20:31.061481 +08:00
+      title: /etc/yum.repos.d/letv-pkgs.repo
+    "File[/usr/local/etc/restart_centos6_nginx.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.003063
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 18
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/restart_centos6_nginx.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:20:32.143312 +08:00
+      title: /usr/local/etc/restart_centos6_nginx.sh
+    "Exec[update-libffmux]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      line: 67
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[update-libffmux]"
+      resource_type: Exec
+      skipped: true
+      tags: 
+        - exec
+        - update-libffmux
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:20:30.348478 +08:00
+      title: update-libffmux
+    "File[/data/smokeping/bin/smokeping.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.002246
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/smokeping.pp
+      line: 28
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/data/smokeping/bin/smokeping.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - smokeping_pkg
+        - node
+        - default
+      time: 2013-11-18 18:20:31.805443 +08:00
+      title: /data/smokeping/bin/smokeping.sh
+    "Package[letv-release]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000868
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/package.pp
+      line: 45
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Package[letv-release]"
+      resource_type: Package
+      skipped: false
+      tags: 
+        - package
+        - letv-release
+        - class
+        - kernel
+        - node
+        - default
+      time: 2013-11-18 18:20:31.546778 +08:00
+      title: letv-release
+    "File[/letv/soft/tools/checkpuppet.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.002543
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 51
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/tools/checkpuppet.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:20:32.120124 +08:00
+      title: /letv/soft/tools/checkpuppet.sh
+    "File[/lib/libffmux.so.0]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.351215
+      events: []
+      failed: true
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      line: 57
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/lib/libffmux.so.0]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:20:29.996770 +08:00
+      title: /lib/libffmux.so.0
+    "File[/letv/soft/tools/summary]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001898
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 55
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/tools/summary]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - hardinfo
+        - node
+        - default
+      time: 2013-11-18 18:20:32.123515 +08:00
+      title: /letv/soft/tools/summary
+    "Package[echoping-libs]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000608
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/smokeping.pp
+      line: 18
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Package[echoping-libs]"
+      resource_type: Package
+      skipped: false
+      tags: 
+        - package
+        - echoping-libs
+        - class
+        - smokeping_pkg
+        - node
+        - default
+      time: 2013-11-18 18:20:32.161220 +08:00
+      title: echoping-libs
+    "Exec[/sbin/sysctl -p /etc/sysctl.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.0008
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 30
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[/sbin/sysctl -p /etc/sysctl.conf]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - sysctl
+        - node
+        - default
+      time: 2013-11-18 18:20:31.542771 +08:00
+      title: /sbin/sysctl -p /etc/sysctl.conf
+    "File[/letv/soft/watchdog/udpclient.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001464
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 36
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/watchdog/udpclient.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - udpclient
+        - node
+        - default
+      time: 2013-11-18 18:20:32.098233 +08:00
+      title: /letv/soft/watchdog/udpclient.sh
+    "File[/etc/hosts.allow]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001469
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 61
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/etc/hosts.allow]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - hostsdenyallow
+        - node
+        - default
+      time: 2013-11-18 18:20:31.651073 +08:00
+      title: /etc/hosts.allow
+    "File[/usr/local/etc/process.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.00143
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 42
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/process.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:20:31.519755 +08:00
+      title: /usr/local/etc/process.conf
+    "File[/usr/local/etc/crond_nginx.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.003512
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 24
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/crond_nginx.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:20:32.075055 +08:00
+      title: /usr/local/etc/crond_nginx.sh
+    "File[/usr/local/etc/restart_centos6_crtmpserver.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001496
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 45
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/restart_centos6_crtmpserver.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:20:31.813411 +08:00
+      title: /usr/local/etc/restart_centos6_crtmpserver.sh
+    "Exec[update-libc]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 62
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[update-libc]"
+      resource_type: Exec
+      skipped: true
+      tags: 
+        - exec
+        - update-libc
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:20:31.802583 +08:00
+      title: update-libc
+    "Package[postgresql-libs]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000821
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/smokeping.pp
+      line: 12
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Package[postgresql-libs]"
+      resource_type: Package
+      skipped: false
+      tags: 
+        - package
+        - postgresql-libs
+        - class
+        - smokeping_pkg
+        - node
+        - default
+      time: 2013-11-18 18:20:32.159683 +08:00
+      title: postgresql-libs
+    "File[/usr/local/etc/fastcgi_params]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.00126
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 45
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/fastcgi_params]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:20:31.653302 +08:00
+      title: /usr/local/etc/fastcgi_params
+    "File[crossdomain]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.00208
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/crossdomain.pp
+      line: 6
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[crossdomain]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - crossdomain
+        - class
+        - node
+        - default
+      time: 2013-11-18 18:20:31.531718 +08:00
+      title: crossdomain
+    "Exec[killflashShitD]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.248193
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 35
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[killflashShitD]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - killflashshitd
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:20:31.267851 +08:00
+      title: killflashShitD
+    "File[/etc/puppet/puppet.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.002237
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/puppet.pp
+      line: 9
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/etc/puppet/puppet.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - puppet
+        - node
+        - default
+      time: 2013-11-18 18:20:31.829338 +08:00
+      title: /etc/puppet/puppet.conf
+    "File[/letv/soft/nginx/old]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000908
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 22
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/nginx/old]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:20:32.090155 +08:00
+      title: /letv/soft/nginx/old
+    "File[netconsole_agent.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.002939
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 23
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[netconsole_agent.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - netconsole_agent.sh
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:20:29.730099 +08:00
+      title: netconsole_agent.sh
+    "File[zabbix]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.002951
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 8
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[zabbix]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - zabbix
+        - class
+        - node
+        - default
+      time: 2013-11-18 18:20:30.359622 +08:00
+      title: zabbix
+    "File[sysctl]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.002909
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 20
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[sysctl]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - sysctl
+        - class
+        - node
+        - default
+      time: 2013-11-18 18:20:31.538106 +08:00
+      title: sysctl
+    "File[/var/tmp/nginx]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000999
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 4
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/var/tmp/nginx]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:20:29.726355 +08:00
+      title: /var/tmp/nginx
+    "Exec[puppet reload]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001084
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/puppet.pp
+      line: 19
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[puppet reload]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - puppet
+        - node
+        - default
+      time: 2013-11-18 18:20:31.833125 +08:00
+      title: puppet reload
+    "File[/letv/soft/tools/cdntsdjar.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001499
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      line: 25
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/tools/cdntsdjar.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tsd
+        - node
+        - default
+      time: 2013-11-18 18:20:32.115545 +08:00
+      title: /letv/soft/tools/cdntsdjar.sh
+    "Exec[restart2-crtmpserver]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000744
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/crtmpserver.pp
+      line: 26
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[restart2-crtmpserver]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - restart2-crtmpserver
+        - class
+        - crtmpserver
+        - node
+        - default
+      time: 2013-11-18 18:20:29.724843 +08:00
+      title: restart2-crtmpserver
+    "File[/letv/soft/tools/cdnwebtsd.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001482
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      line: 22
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/tools/cdnwebtsd.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tsd
+        - node
+        - default
+      time: 2013-11-18 18:20:32.126492 +08:00
+      title: /letv/soft/tools/cdnwebtsd.sh
+    "File[/home/lihongfu]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.00158
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 26
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/home/lihongfu]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:20:29.715115 +08:00
+      title: /home/lihongfu
+    "Exec[exec-nginx-mime]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000732
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/nginx.pp
+      line: 66
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[exec-nginx-mime]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - exec-nginx-mime
+        - class
+        - nginx-mime
+        - node
+        - default
+      time: 2013-11-18 18:20:29.713517 +08:00
+      title: exec-nginx-mime
+    "Schedule[puppet]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000486
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Schedule[puppet]"
+      resource_type: Schedule
+      skipped: false
+      tags: 
+        - schedule
+        - puppet
+      time: 2013-11-18 18:20:31.818301 +08:00
+      title: puppet
+    "File[/letv/soft/tools]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001631
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 30
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/tools]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:20:32.106189 +08:00
+      title: /letv/soft/tools
+    "File[/letv/soft/tools/megacli64.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001795
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 49
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/tools/megacli64.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - megacli64
+        - node
+        - default
+      time: 2013-11-18 18:20:32.112884 +08:00
+      title: /letv/soft/tools/megacli64.sh
+    "File[/letv/soft]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001164
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 10
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:20:32.079592 +08:00
+      title: /letv/soft
+    "File[/usr/local/etc/live.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001573
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 20
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/live.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:20:31.823612 +08:00
+      title: /usr/local/etc/live.conf
+    "Exec[killall -9 nginx ; /usr/local/sbin/nginx -c /usr/local/etc/nginx.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000623
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 62
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[killall -9 nginx ; /usr/local/sbin/nginx -c /usr/local/etc/nginx.conf]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:20:32.150027 +08:00
+      title: killall -9 nginx ; /usr/local/sbin/nginx -c /usr/local/etc/nginx.conf
+    "File[/letv/soft/tools/md5-tsdjar]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001554
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      line: 28
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/tools/md5-tsdjar]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tsd
+        - node
+        - default
+      time: 2013-11-18 18:20:32.128786 +08:00
+      title: /letv/soft/tools/md5-tsdjar
+    "File[/letv/all]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001646
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 34
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/all]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:20:31.522029 +08:00
+      title: /letv/all
+    "File[/letv/soft/tools/iptables.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001536
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/iptables.pp
+      line: 4
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/tools/iptables.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - iptables
+        - node
+        - default
+      time: 2013-11-18 18:20:32.108858 +08:00
+      title: /letv/soft/tools/iptables.sh
+    "File[/usr/local/etc/qihu.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001418
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 39
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/qihu.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:20:31.821191 +08:00
+      title: /usr/local/etc/qihu.conf
+    "File[/var/tmp/nginx/client_body_temp]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 7
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/var/tmp/nginx/client_body_temp]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:20:29.728139 +08:00
+      title: /var/tmp/nginx/client_body_temp
+    "Package[aria2]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.00071
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/package.pp
+      line: 21
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Package[aria2]"
+      resource_type: Package
+      skipped: false
+      tags: 
+        - package
+        - aria2
+        - class
+        - node
+        - default
+      time: 2013-11-18 18:20:29.641504 +08:00
+      title: aria2
+    "Exec[rm /tmp/rtmp.log]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.187956
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/crtmpserver.pp
+      line: 31
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[rm /tmp/rtmp.log]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - crtmpserver
+        - node
+        - default
+      time: 2013-11-18 18:20:31.075722 +08:00
+      title: rm /tmp/rtmp.log
+    "File[/letv/soft/tools/tjrtmp.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001392
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      line: 19
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/tools/tjrtmp.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tsd
+        - node
+        - default
+      time: 2013-11-18 18:20:32.117842 +08:00
+      title: /letv/soft/tools/tjrtmp.sh
+    "File[/letv/soft/nginx/nginx_update.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001421
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/nginx.pp
+      line: 5
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/nginx/nginx_update.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - nginx
+        - node
+        - default
+      time: 2013-11-18 18:20:32.083567 +08:00
+      title: /letv/soft/nginx/nginx_update.sh
+    "File[/var/log/sj/]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.002366
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 40
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/var/log/sj/]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:20:30.354332 +08:00
+      title: /var/log/sj/
+    "File[nginx.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.002308
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 6
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[nginx.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - nginx.conf
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:20:30.351099 +08:00
+      title: nginx.conf
+    "File[/etc/puppet/auth.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001729
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/puppet.pp
+      line: 12
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/etc/puppet/auth.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - puppet
+        - node
+        - default
+      time: 2013-11-18 18:20:31.808865 +08:00
+      title: /etc/puppet/auth.conf
+    "File[libc_md5]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.142751
+      events: []
+      failed: true
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 56
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[libc_md5]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - libc_md5
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:20:31.659319 +08:00
+      title: libc_md5
+    "File[/var/log/sj/201303.log]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001172
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 45
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/var/log/sj/201303.log]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:20:30.357494 +08:00
+      title: /var/log/sj/201303.log
+    "File[/letv/soft/watchdog]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001096
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 13
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/watchdog]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:20:32.091860 +08:00
+      title: /letv/soft/watchdog
+    "Exec[puppet restart]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000817
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/puppet.pp
+      line: 25
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[puppet restart]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - puppet
+        - node
+        - default
+      time: 2013-11-18 18:20:31.811490 +08:00
+      title: puppet restart
+    "Schedule[hourly]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000704
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Schedule[hourly]"
+      resource_type: Schedule
+      skipped: false
+      tags: 
+        - schedule
+        - hourly
+      time: 2013-11-18 18:20:29.992564 +08:00
+      title: hourly
+    "File[/lib/libudtp.so]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001656
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      line: 76
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/lib/libudtp.so]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:20:29.994160 +08:00
+      title: /lib/libudtp.so
+    "Exec[update-watchdog]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000715
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/watchdog.pp
+      line: 16
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[update-watchdog]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - update-watchdog
+        - class
+        - watchdog
+        - node
+        - default
+      time: 2013-11-18 18:20:32.104688 +08:00
+      title: update-watchdog
+    "File[check_zabbix]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.002873
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 13
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[check_zabbix]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - check_zabbix
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:20:31.056349 +08:00
+      title: check_zabbix
+    "Exec[restart-crtmpserver]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000649
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/crtmpserver.pp
+      line: 16
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[restart-crtmpserver]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - restart-crtmpserver
+        - class
+        - crtmpserver
+        - node
+        - default
+      time: 2013-11-18 18:20:31.649776 +08:00
+      title: restart-crtmpserver
+    "Package[echoping]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000627
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/smokeping.pp
+      line: 24
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Package[echoping]"
+      resource_type: Package
+      skipped: false
+      tags: 
+        - package
+        - echoping
+        - class
+        - smokeping_pkg
+        - node
+        - default
+      time: 2013-11-18 18:20:32.162684 +08:00
+      title: echoping
+    "File[lsiutil]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.145153
+      events: []
+      failed: true
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 34
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[lsiutil]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - lsiutil
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:20:29.489930 +08:00
+      title: lsiutil
+    "File[/letv/soft/watchdog/watchdog_update.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001465
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/watchdog.pp
+      line: 5
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/watchdog/watchdog_update.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - watchdog
+        - node
+        - default
+      time: 2013-11-18 18:20:32.102157 +08:00
+      title: /letv/soft/watchdog/watchdog_update.sh
+    "File[/usr/local/etc/restart_smokeping.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.002632
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 56
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/restart_smokeping.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:20:29.719114 +08:00
+      title: /usr/local/etc/restart_smokeping.sh
+    "File[check_tar_gz]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.139689
+      events: []
+      failed: true
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 29
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[check_tar_gz]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - check_tar_gz
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:20:30.722843 +08:00
+      title: check_tar_gz
+    "File[/usr/local/etc/updatecrtmpserver.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001369
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/crtmpserver.pp
+      line: 5
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/updatecrtmpserver.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - crtmpserver
+        - node
+        - default
+      time: 2013-11-18 18:20:31.647572 +08:00
+      title: /usr/local/etc/updatecrtmpserver.sh
+    "File[/usr/local/etc/rest_linux_udp.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001503
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 40
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/rest_linux_udp.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:20:31.529268 +08:00
+      title: /usr/local/etc/rest_linux_udp.sh
+    "File[/etc/udoers]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001816
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 81
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/etc/udoers]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - sudoers
+        - node
+        - default
+      time: 2013-11-18 18:20:29.638874 +08:00
+      title: /etc/udoers
+    "Schedule[daily]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000439
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Schedule[daily]"
+      resource_type: Schedule
+      skipped: false
+      tags: 
+        - schedule
+        - daily
+      time: 2013-11-18 18:20:32.138499 +08:00
+      title: daily
+    "Exec[restart-crond]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000679
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 81
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[restart-crond]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - restart-crond
+        - class
+        - crond-online
+        - node
+        - default
+      time: 2013-11-18 18:20:31.646211 +08:00
+      title: restart-crond
+    "Schedule[never]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000567
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Schedule[never]"
+      resource_type: Schedule
+      skipped: false
+      tags: 
+        - schedule
+        - never
+      time: 2013-11-18 18:20:31.060051 +08:00
+      title: never
+    "Package[nali]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000758
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/package.pp
+      line: 29
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Package[nali]"
+      resource_type: Package
+      skipped: false
+      tags: 
+        - package
+        - nali
+        - class
+        - node
+        - default
+      time: 2013-11-18 18:20:31.070251 +08:00
+      title: nali
+    "File[/bin/asdf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.002603
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 60
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/bin/asdf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:20:31.525786 +08:00
+      title: /bin/asdf
+    "Exec[exec-update-nginx]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000832
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/nginx.pp
+      line: 16
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[exec-update-nginx]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - exec-update-nginx
+        - class
+        - nginx
+        - node
+        - default
+      time: 2013-11-18 18:20:32.088501 +08:00
+      title: exec-update-nginx
+    "File[/lib/libudtp.so.0]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.233207
+      events: []
+      failed: true
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      line: 72
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/lib/libudtp.so.0]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:20:31.840401 +08:00
+      title: /lib/libudtp.so.0
+    "Exec[killall -9 monit;/usr/bin/monit]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.0006
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 12
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[killall -9 monit;/usr/bin/monit]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - monit
+        - node
+        - default
+      time: 2013-11-18 18:20:29.488586 +08:00
+      title: killall -9 monit;/usr/bin/monit
+    "File[/letv/soft/watchdog/old]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000974
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 16
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/watchdog/old]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:20:32.093808 +08:00
+      title: /letv/soft/watchdog/old
+    "File[/usr/local/etc/restart_centos6_flash.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001969
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 29
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/restart_centos6_flash.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:20:31.264857 +08:00
+      title: /usr/local/etc/restart_centos6_flash.sh
+    "File[/var/spool/cron/root]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.002148
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 75
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/var/spool/cron/root]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - crond-online
+        - node
+        - default
+      time: 2013-11-18 18:20:31.643226 +08:00
+      title: /var/spool/cron/root
+    "Package[tcptraceroute]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000745
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/package.pp
+      line: 69
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Package[tcptraceroute]"
+      resource_type: Package
+      skipped: false
+      tags: 
+        - package
+        - tcptraceroute
+        - class
+        - node
+        - default
+      time: 2013-11-18 18:20:31.819666 +08:00
+      title: tcptraceroute
+    "File[/root/.ssh/authorized_keys]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.002854
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/iptables.pp
+      line: 22
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/root/.ssh/authorized_keys]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - authorized_keys
+        - node
+        - default
+      time: 2013-11-18 18:20:31.072004 +08:00
+      title: /root/.ssh/authorized_keys
+    "Exec[iptables run]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000684
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/iptables.pp
+      line: 11
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[iptables run]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - iptables
+        - node
+        - default
+      time: 2013-11-18 18:20:32.111374 +08:00
+      title: iptables run
+    "Package[nethogs]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000704
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/package.pp
+      line: 76
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Package[nethogs]"
+      resource_type: Package
+      skipped: false
+      tags: 
+        - package
+        - nethogs
+        - class
+        - node
+        - default
+      time: 2013-11-18 18:20:31.826091 +08:00
+      title: nethogs
+    "File[/usr/local/etc/nginx/mime.types]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001622
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/nginx.pp
+      line: 59
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/nginx/mime.types]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - nginx-mime
+        - node
+        - default
+      time: 2013-11-18 18:20:29.711021 +08:00
+      title: /usr/local/etc/nginx/mime.types
+    "File[/usr/local/etc/wget_nginx.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.002641
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 65
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/wget_nginx.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:20:32.154989 +08:00
+      title: /usr/local/etc/wget_nginx.sh
+    "File[/usr/local/etc/access_log.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001884
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 17
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/access_log.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:20:31.053563 +08:00
+      title: /usr/local/etc/access_log.conf
+    "File[/letv/soft/nginx/md5-nginx]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001551
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/nginx.pp
+      line: 8
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/nginx/md5-nginx]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - nginx
+        - node
+        - default
+      time: 2013-11-18 18:20:32.085863 +08:00
+      title: /letv/soft/nginx/md5-nginx
+    "Exec[mkdir/letv/fet/live/live_temp]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.067116
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/nginx.pp
+      line: 26
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[mkdir/letv/fet/live/live_temp]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - nginx
+        - node
+        - default
+      time: 2013-11-18 18:20:29.642932 +08:00
+      title: mkdir/letv/fet/live/live_temp
+    "File[ld-linux.so.2]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.356279
+      events: []
+      failed: true
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 39
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[ld-linux.so.2]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - ld-linux.so.2
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:20:30.363562 +08:00
+      title: ld-linux.so.2
+    "File[/usr/local/etc/linux_update.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001751
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 6
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/linux_update.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:20:31.517185 +08:00
+      title: /usr/local/etc/linux_update.sh
+    "Package[atop]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000728
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/package.pp
+      line: 37
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Package[atop]"
+      resource_type: Package
+      skipped: false
+      tags: 
+        - package
+        - atop
+        - class
+        - node
+        - default
+      time: 2013-11-18 18:20:29.717559 +08:00
+      title: atop
+    "Exec[ldconfig]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 45
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[ldconfig]"
+      resource_type: Exec
+      skipped: true
+      tags: 
+        - exec
+        - ldconfig
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:20:30.720403 +08:00
+      title: ldconfig
+    "File[/usr/local/etc/md5-crtmpserver]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.002014
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/crtmpserver.pp
+      line: 9
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/md5-crtmpserver]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - crtmpserver
+        - node
+        - default
+      time: 2013-11-18 18:20:31.534713 +08:00
+      title: /usr/local/etc/md5-crtmpserver
+    "Exec[cdntsdjar.sh run]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000706
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      line: 35
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[cdntsdjar.sh run]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - tsd
+        - node
+        - default
+      time: 2013-11-18 18:20:32.131251 +08:00
+      title: cdntsdjar.sh run
+    "File[/letv/soft/checkfile.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001408
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/test.pp
+      line: 11
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/checkfile.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - checkfile
+        - node
+        - default
+      time: 2013-11-18 18:20:32.132762 +08:00
+      title: /letv/soft/checkfile.sh
+    "File[/etc/profile]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001417
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 73
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/etc/profile]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - profile
+        - node
+        - default
+      time: 2013-11-18 18:20:31.657031 +08:00
+      title: /etc/profile
+    "File[/usr/local/etc/newts_redirect.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.00152
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 33
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/newts_redirect.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:20:31.544342 +08:00
+      title: /usr/local/etc/newts_redirect.conf
+    "File[/lib/libffmux.so]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001016
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      line: 61
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/lib/libffmux.so]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:20:31.655263 +08:00
+      title: /lib/libffmux.so
+    "Exec[mkdir/livemem/live/live_temp]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.188388
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/nginx.pp
+      line: 21
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[mkdir/livemem/live/live_temp]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - nginx
+        - node
+        - default
+      time: 2013-11-18 18:20:30.864028 +08:00
+      title: mkdir/livemem/live/live_temp
+    "File[/letv/soft/watchdog/md5-watchdog]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001674
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/watchdog.pp
+      line: 8
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/watchdog/md5-watchdog]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - watchdog
+        - node
+        - default
+      time: 2013-11-18 18:20:32.095636 +08:00
+      title: /letv/soft/watchdog/md5-watchdog
+    "File[libc_update]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.257801
+      events: []
+      failed: true
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 51
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[libc_update]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - libc_update
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:20:29.733832 +08:00
+      title: libc_update
+    "File[/etc/init.d/puppetd]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.00247
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/puppet.pp
+      line: 5
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/etc/init.d/puppetd]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - puppet
+        - node
+        - default
+      time: 2013-11-18 18:20:32.139820 +08:00
+      title: /etc/init.d/puppetd
+    "Schedule[monthly]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000494
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Schedule[monthly]"
+      resource_type: Schedule
+      skipped: false
+      tags: 
+        - schedule
+        - monthly
+      time: 2013-11-18 18:20:31.524438 +08:00
+      title: monthly
+    "File[/etc/hosts.deny]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001675
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 65
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/etc/hosts.deny]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - hostsdenyallow
+        - node
+        - default
+      time: 2013-11-18 18:20:31.067712 +08:00
+      title: /etc/hosts.deny
+    "File[/usr/local/etc/redirect.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.00147
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 144
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/redirect.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - cdnredirect
+        - node
+        - default
+      time: 2013-11-18 18:20:31.063757 +08:00
+      title: /usr/local/etc/redirect.conf
+    "File[/usr/local/etc/mp4.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001599
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 36
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/mp4.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:20:31.815887 +08:00
+      title: /usr/local/etc/mp4.conf
+    "File[rsyslog_agent.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.002776
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 18
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[rsyslog_agent.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - rsyslog_agent.sh
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:20:32.135024 +08:00
+      title: rsyslog_agent.sh
+    "File[/letv/soft/nginx]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000997
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 19
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/nginx]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:20:32.081640 +08:00
+      title: /letv/soft/nginx
+    "File[security.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.002037
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 14
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[security.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - security.conf
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:20:29.636065 +08:00
+      title: security.conf
+    "File[flv.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.003215
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 10
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[flv.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - flv.conf
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:20:31.835801 +08:00
+      title: flv.conf
+    "File[/usr/local/etc/vhost.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001432
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 26
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/vhost.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:20:32.147180 +08:00
+      title: /usr/local/etc/vhost.conf
+    "File[monitrc]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001907
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 7
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[monitrc]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - monitrc
+        - class
+        - monit
+        - node
+        - default
+      time: 2013-11-18 18:20:29.485891 +08:00
+      title: monitrc
+    "Filebucket[puppet]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000442
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Filebucket[puppet]"
+      resource_type: Filebucket
+      skipped: false
+      tags: 
+        - filebucket
+        - puppet
+      time: 2013-11-18 18:20:32.158365 +08:00
+      title: puppet
+    "Exec[update-udpclient]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.00077
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 43
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[update-udpclient]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - update-udpclient
+        - class
+        - udpclient
+        - node
+        - default
+      time: 2013-11-18 18:20:32.100610 +08:00
+      title: update-udpclient
+    "File[/usr/local/etc/rtmp.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.091848
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 23
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/rtmp.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:20:31.548479 +08:00
+      title: /usr/local/etc/rtmp.conf
+    "Exec[killall -9 nginx ; /usr/local/sbin/nginx -c  /usr/local/etc/nginx.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000614
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 150
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[killall -9 nginx ; /usr/local/sbin/nginx -c  /usr/local/etc/nginx.conf]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - cdnredirect
+        - node
+        - default
+      time: 2013-11-18 18:20:31.066210 +08:00
+      title: killall -9 nginx ; /usr/local/sbin/nginx -c  /usr/local/etc/nginx.conf
+    "File[/usr/local/etc/restart_centos6_watchdog.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.00281
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 12
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/restart_centos6_watchdog.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:20:32.151433 +08:00
+      title: /usr/local/etc/restart_centos6_watchdog.sh
+    "File[/usr/local/etc/crtmpserver.lua]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001438
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/crtmpserver.pp
+      line: 20
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/crtmpserver.lua]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - crtmpserver
+        - node
+        - default
+      time: 2013-11-18 18:20:29.722565 +08:00
+      title: /usr/local/etc/crtmpserver.lua
+    "Schedule[weekly]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000438
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Schedule[weekly]"
+      resource_type: Schedule
+      skipped: false
+      tags: 
+        - schedule
+        - weekly
+      time: 2013-11-18 18:20:31.827438 +08:00
+      title: weekly
+  status: failed
+  time: 2013-11-18 18:20:24.235525 +08:00

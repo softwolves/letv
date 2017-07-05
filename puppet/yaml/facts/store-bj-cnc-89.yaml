@@ -1,0 +1,84 @@
+--- !ruby/object:Puppet::Node::Facts
+  expiration: 2013-11-22 18:46:08.319532 +08:00
+  name: store-bj-cnc-89
+  values: 
+    serialnumber: 6CU317ZBGY
+    processor12: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    clientcert: store-bj-cnc-89
+    processor8: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    architecture: x86_64
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAJWQGVxuOK1alB9jP+nmVV1wnOcuzksTs90maQzltoQrAdvXXUyU3vOsbiqtXd+OzDKc0dwvOdKwJwwmBzYgzCpHEDiMsBVGS5A1IyMvv5QCEQOFuxfn9zZ7MC8kARNte0WV535UED+JFHpgPa5UmuKAdq2NPbPnDW/Ph2sdNfjTAAAAFQCbftuz91rtLNtONi2ylpt+ymcjUQAAAIBguTzIyXpj5VN3gE3KNR6igItjCzI4JniiRU8pwv6ppm8O7kQFjwqDmpQNTF/ULjsZxTmyzsTnNnR4yRTKYSSI5LElRq+6B1bIPu+AgDshLZIBqTkdmt53kjJEmYMPFsU1CHQOQ+qUdnwW2oe0hz0taSN4j5suY0PFdDNOGaxTrAAAAIBQfHpWiSbW6RRjBETh55r1GNG0TOWj4gcJKN5mTDzSD//xPrNaBt1DEQdUyXPliB8DcX51ks89zx/VPT/36S0Bhbx+cgFcS1cGhKdBwMFi+4r71dHmMAFw4hj5ibLqsC+S6PniBKl3DwZhzXSL/IVINsjtEbnSZcbLC92EsBee3g==
+    processor22: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    ipaddress_eth0: 123.125.89.89
+    hostname: Store-BJ-CNC-89
+    !ruby/sym _timestamp: 2013-11-22 18:31:08.438374 +08:00
+    memoryfree: 29.25 GB
+    type: Rack Mount Chassis
+    network_lo: 127.0.0.0
+    processor5: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    timezone: CST
+    kernel: Linux
+    macaddress_eth1: 6C:3B:E5:BE:DB:A1
+    processor17: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    operatingsystemrelease: "6.3"
+    kernelmajversion: "2.6"
+    ipaddress_lo: 127.0.0.1
+    netmask_eth0: 255.255.255.128
+    processor2: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    facterversion: 1.6.0
+    selinux: "false"
+    processor14: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    uniqueid: 007f0100
+    puppetversion: 2.6.11
+    interfaces: "eth0,eth1,eth2,eth3,lo"
+    uptime_days: "174"
+    productname: ProLiant DL380e Gen8
+    processor7: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    processor11: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    hardwaremodel: x86_64
+    processor21: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    macaddress_eth3: 6C:3B:E5:BE:DB:A3
+    uptime_seconds: "15099480"
+    processor19: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    swapfree: 5.85 GB
+    processor4: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    manufacturer: HP
+    processorcount: "24"
+    macaddress_eth0: 6C:3B:E5:BE:DB:A0
+    network_eth0: 123.125.89.0
+    is_virtual: "false"
+    netmask_lo: 255.0.0.0
+    processor16: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    processor1: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    hardwareisa: x86_64
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEAz56Gdw9si/aQqJ60VzCcD/TOQg6xEvjSQvlrKD65QNy2Qy8CLkB/ax2CmXambmBh1Vqf1JNILcOPuwaCEKf4vkFWjBBi0xBxpONW5TmnGqYHLWmTPDw6EK2rbWoEtTRprcL1cxWnlwCnSygn6IclAxqq7bCdQNhLRvUGWE4nW0YyHx9qr3qe7JYKsA/0xtpnHy7toXvZmhTp7QUB98dY815bk8O5+9Q+o1BUihvFbG8p5qd5ee1Z+0O3hFMpHing/GHc4UlCXdE23LUfLR/OqzIzsa/Z/xrqOV3Z7e/x59ED7TtSJJIKbvkZnlCrPMOCqYq32fe5Xy9/yH/5w77vlQ==
+    kernelrelease: 2.6.32-902.279.9.1.letv.el6.x86_64
+    processor9: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    ps: ps -ef
+    processor13: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    processor23: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    kernelversion: 2.6.32
+    clientversion: 2.6.11
+    rubyversion: 1.8.7
+    processor6: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    processor10: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    memorysize: 31.19 GB
+    uptime: 174 days
+    ipaddress: 123.125.89.89
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    virtual: physical
+    processor20: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    macaddress_eth2: 6C:3B:E5:BE:DB:A2
+    processor18: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    id: root
+    environment: production
+    processor3: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    swapsize: 5.86 GB
+    operatingsystem: CentOS
+    uptime_hours: "4194"
+    physicalprocessorcount: "2"
+    processor15: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    macaddress: 6C:3B:E5:BE:DB:A0
+    processor0: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    netmask: 255.255.255.128

@@ -1,0 +1,96 @@
+--- !ruby/object:Puppet::Node
+  classes: []
+  environment: &id001 production
+  expiration: 2013-11-18 18:53:45.708761 +08:00
+  name: cdn-sd-jn2-cnc-15
+  parameters: 
+    processor23: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    type: Rack Mount Chassis
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEA4bspX1Kha/hQR6yyoPPtMueWgL4lGqEWfObky//L+NnS0AONE4fAWn9gyqA46ZbuU8zuCv2FTlGn026YT5Qr6eZadAuBrBLtb2eZVA4UsuDXxZYmVOE3d1NRF+8SDOLDzBC+KYnM23wA2613DzIkNy4Cq6N+vo0nUf1Tf6f0OcFAA4n2hvn4fp6N0ajHvuIZ0F5GpWkY23YV7ShrEkSbv+7W2ED44dIq07+VNiVbu6pTq6loz/L3B+M3weD5yDJ2iRrxAkqq6l5nqb0Jf5b6oGxDglqXi6hWs8h3bHtnIGxuG4JteM3ohh/OJ9sGw4LyfGwL8GC+Bk+/04crR/7t6Q==
+    processor8: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    clientversion: 2.6.11
+    macaddress_bond0: D8:9D:67:64:59:D8
+    !ruby/sym _timestamp: 2013-11-18 18:23:45.659839 +08:00
+    processor10: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    ipaddress_bond0_2: 119.188.122.15
+    processor20: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    network_bond0_2: 119.188.122.0
+    processor5: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    processor18: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    memoryfree: 27.59 GB
+    hostname: CDN-SD-JN2-CNC-15
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    swapfree: 5.85 GB
+    processor2: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    operatingsystem: CentOS
+    processor15: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    macaddress_eth2: D8:9D:67:64:59:DA
+    interfaces: "bond0,bond0_1,bond0_2,eth0,eth1,eth2,eth3,lo"
+    netmask_bond0: 255.255.255.0
+    memorysize: 31.19 GB
+    timezone: CST
+    macaddress_bond0_1: D8:9D:67:64:59:D8
+    hardwareisa: x86_64
+    productname: ProLiant DL380e Gen8
+    selinux: "false"
+    processor12: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    operatingsystemrelease: "6.3"
+    processor22: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    hardwaremodel: x86_64
+    processor7: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    uptime_hours: "3507"
+    clientcert: cdn-sd-jn2-cnc-15
+    ipaddress_lo: 127.0.0.1
+    rubyversion: 1.8.7
+    network_lo: 127.0.0.0
+    netmask_lo: 255.0.0.0
+    ipaddress_bond0_1: 119.188.122.45
+    processor4: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    network_bond0_1: 119.188.122.0
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    kernelrelease: 2.6.32-902.279.9.1.letv.el6.x86_64
+    processor17: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    uptime: 146 days
+    architecture: x86_64
+    uniqueid: 007f0100
+    uptime_seconds: "12625435"
+    manufacturer: HP
+    physicalprocessorcount: "2"
+    netmask_bond0_2: 255.255.255.0
+    processor1: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    processor14: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    kernelmajversion: "2.6"
+    macaddress_eth1: D8:9D:67:64:59:D9
+    serialnumber: 6CU317ZBS3
+    processor9: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    netmask: 255.255.255.0
+    ipaddress: 119.188.122.77
+    network_bond0: 119.188.122.0
+    virtual: physical
+    processorcount: "24"
+    kernelversion: 2.6.32
+    processor11: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    processor21: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    processor19: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    processor6: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    kernel: Linux
+    ps: ps -ef
+    processor16: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    processor3: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    facterversion: 1.6.0
+    uptime_days: "146"
+    puppetversion: 2.6.11
+    is_virtual: "false"
+    macaddress_eth3: D8:9D:67:64:59:DB
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAO7mNCnP0/mgbru/MyL8wbeRwhOLtgUfNoVdLkU0M+Kl2DFqL21Hy1DM5F6LKEO2HXoo060TW8HMjUmvjpwtwbCmiEoWK73devSThyaMZJzaKjdta5X0eNfnnYjHJEYGY3zy2k66zLocYvYFVQ6R4mGu4zULXcaJpR70VSId0tHpAAAAFQD2xHDwrp4FwM51B+43Zq+8Y0pTWwAAAIAeyJLHK21UNadwHe9txgfw4TEm/DdmaZ/9FARySIHDTqZwG3snghQJil/W7f5bezOEM3GFqiBIP9KnJh/UsjzEKUStpjMoS6wZXctAOV1WAI5RjBqFQINZyo9qofxc4um0J2GszGBPx0cmVH2UFP8ufVJzNKpl3jT+HeDWlY5b1wAAAH96C24attg6kYzab16V/MybCkgWUB/lAkE3YfMn5rFX71f5R/MEhLPiF5so9sKy96iN9TY64p00V8XPNGsfYPbfWoGoWjMOhwD0EAjgSTFxbKihAWXIWmq1U/CUvMP/Xs7OTmFADdDxG9dt/HJJ3QQHxIbsaGyav9QBEyzufWXJ
+    macaddress: D8:9D:67:64:59:D8
+    macaddress_bond0_2: D8:9D:67:64:59:D8
+    ipaddress_bond0: 119.188.122.77
+    swapsize: 5.86 GB
+    netmask_bond0_1: 255.255.255.0
+    processor0: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    processor13: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    environment: *id001
+    id: root
+    macaddress_eth0: D8:9D:67:64:59:D8
+  time: 2013-11-18 18:23:45.705242 +08:00

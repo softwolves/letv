@@ -1,0 +1,29 @@
+class systembase_store_dev{
+  include systembase_store_dev::authorized_keys
+  include systembase_store_dev::crond
+#  include systembase_store_dev::crtmpserver
+  include systembase_store_dev::ffmux
+  include systembase_store_dev::hardinfo
+  include systembase_store_dev::hostsdenyallow
+  include systembase_store_dev::install
+  include systembase_store_dev::profile
+  include systembase_store_dev::service_stop
+  include systembase_store_dev::service_start
+  include systembase_store_dev::shellupdate
+  include systembase_store_dev::smokeping
+  include systembase_store_dev::sudoers
+  include systembase_store_dev::sysctl
+  include systembase_store_dev::tmpdir
+  include systembase_store_dev::yumrepo
+  include systembase_store_dev::dnsmasqservice
+  include systembase_store_dev::dnsmasqinstall
+  include systembase_store_dev::dnsmasqconf
+  include systembase_store_dev::ntp_config
+  include systembase_store_dev::ntp_service
+  include systembase_store_dev::monit_config
+  include systembase_store_dev::monit_service
+  include systembase_store_dev::fsserver
+  include systembase_store_dev::ssh_config
+  include systembase_store_dev::ssh_service
+  include systembase_store_dev::rsyslog_config
+}

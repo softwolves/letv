@@ -1,0 +1,70 @@
+--- !ruby/object:Puppet::Node
+  classes: []
+  environment: &id001 production
+  expiration: 2013-11-18 18:54:38.130667 +08:00
+  name: cdn-bj-dxt-76
+  parameters: 
+    id: root
+    hardwareisa: x86_64
+    netmask_lo: 255.0.0.0
+    architecture: x86_64
+    ipaddress_bond0: 124.193.120.76
+    environment: *id001
+    kernelmajversion: "2.6"
+    uptime: 140 days
+    physicalprocessorcount: "1"
+    macaddress_em1: D4:AE:52:75:D6:1E
+    macaddress_em2: D4:AE:52:75:D6:1F
+    operatingsystemrelease: "6.3"
+    network_lo: 127.0.0.0
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    swapfree: 5.85 GB
+    puppetversion: 2.6.11
+    macaddress: D4:AE:52:75:D6:1E
+    sshdsakey: AAAAB3NzaC1kc3MAAACBALzI2HPi9WwHfPQFAl8K8jNuMYf1bgkYAZygIs1IG+n1H0ID/8vXUilZiK9IsmtRwdXpVWcWozMCkDoh2YaryL9ZjQSk/4eTkSF3Ll7Ufoae/C3QWHhx0b1nwZDP9Ve9BC6lo78xk5XCyzYC1HZj+2uBTAdt533CwpnTSzNMIIpnAAAAFQD+yKRyCaWT8mp1+wPAUQcTcrD8ZQAAAIB/fj7m2+N53Ze31LQOiNJvAXJRRn8sobkZBDqvQFEUA6+TSbV5sVrXUBiNLgbK9Z9AJAraS6D6YiMjtrF9Gs7fPZES3B8EcgflxL+wHB1PZQC1V/zy3Ut6gCIKE+39jNkFEwlklpkW8ZCH3KrqUAOk8PlC7Iz/NN9dYDHuQWb9gwAAAIAYGa53Bpa4Et7cUj22R6KOUQU52Pquz8h1HS0WVP7CXv2JEpF8YEWANPNg6ksMQ7rrvTJic6KqrgCtE2CxDW0yMrR5wqVB+d31nLLOaTHXCbq+hiz2rAWoQS7ME9cfiN519lCPlEupVN8WXHDTSye6a+sRaWVjI+HZMcYkc/Vvmg==
+    clientcert: cdn-bj-dxt-76
+    is_virtual: "false"
+    !ruby/sym _timestamp: 2013-11-18 18:24:38.049678 +08:00
+    operatingsystem: CentOS
+    network_bond0: 124.193.120.64
+    ipaddress: 124.193.120.76
+    kernelrelease: 2.6.32-902.279.9.1.letv.el6.x86_64
+    selinux: "false"
+    kernelversion: 2.6.32
+    timezone: CST
+    ps: ps -ef
+    hostname: CDN-BJ-DXT-76
+    macaddress_bond0: D4:AE:52:75:D6:1E
+    facterversion: 1.6.0
+    uptime_days: "140"
+    memorysize: 23.45 GB
+    clientversion: 2.6.11
+    kernel: Linux
+    processorcount: "8"
+    netmask: 255.255.255.224
+    virtual: physical
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEAsl+zcg43uieYxSK+GOWpLNkSNyxQUpColLr+AkpHHOuigbiuZkgvUOXABqN1rZvtv8vtIwdCnnVc2KNrISFmSzLhc+lMMRVbAEti9q6JZrbkYwrgYnFAgCrSol1EqpeEZMjmQNaF3ZmPcQhaIij3ZXIk3xRolqET1WW0t5cK04MMseu6byEiI5EV0BoNjxwoq4aj9yVWBqNQdu90AQld2gy7CxS4AAJmM4VUJ++lx3Gnm+D0XRp6ogzxL0hHEOGqcR4/w7D//cjuWNPh1e0yUewAo/ofTsAUenl85dpQ0LXH4Is6NcHIxWsErQ7QSJZAoIr+29b6jz8osKUY4WYuWw==
+    rubyversion: 1.8.7
+    processor0: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    processor4: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor3: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    ipaddress_lo: 127.0.0.1
+    processor7: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor2: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor6: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor1: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor5: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    uptime_hours: "3368"
+    hardwaremodel: x86_64
+    manufacturer: Dell Inc.
+    type: Rack Mount Chassis
+    uptime_seconds: "12127968"
+    netmask_bond0: 255.255.255.224
+    memoryfree: 20.09 GB
+    productname: PowerEdge R510
+    uniqueid: 007f0100
+    swapsize: 5.86 GB
+    interfaces: "bond0,em1,em2,lo"
+    serialnumber: 1XFPC3X
+  time: 2013-11-18 18:24:38.107833 +08:00

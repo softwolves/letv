@@ -1,0 +1,5417 @@
+--- !ruby/object:Puppet::Transaction::Report
+  configuration_version: 1384419698
+  host: cdn-sx-xa-cmcc-71
+  kind: apply
+  logs: 
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: Caching certificate_revocation_list for ca
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:16:18.005963 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: Caching catalog for cdn-sx-xa-cmcc-71
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:16:24.195767 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: Applying configuration version '1384419698'
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:16:25.758151 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}c34e20b7904b66ea97328f1a3846a848"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:16:25.841800 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/puppet.pp
+      level: !ruby/sym info
+      line: 12
+      message: Filebucketed /etc/puppet/auth.conf to puppet with sum c34e20b7904b66ea97328f1a3846a848
+      source: "/Stage[main]/Puppet/File[/etc/puppet/auth.conf]"
+      tags: 
+        - info
+        - file
+        - class
+        - puppet
+        - node
+        - default
+      time: 2013-11-18 18:16:25.842961 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/puppet.pp
+      level: !ruby/sym notice
+      line: 12
+      message: "content changed '{md5}c34e20b7904b66ea97328f1a3846a848' to '{md5}240e3b7ac68c879010a85fde496be887'"
+      source: "/Stage[main]/Puppet/File[/etc/puppet/auth.conf]/content"
+      tags: 
+        - notice
+        - file
+        - class
+        - puppet
+        - node
+        - default
+      time: 2013-11-18 18:16:25.844577 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/puppet.pp
+      level: !ruby/sym info
+      line: 12
+      message: "Scheduling refresh of Exec[puppet restart]"
+      source: "/Stage[main]/Puppet/File[/etc/puppet/auth.conf]"
+      tags: 
+        - info
+        - file
+        - class
+        - puppet
+        - node
+        - default
+      time: 2013-11-18 18:16:25.845260 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/puppet.pp
+      level: !ruby/sym notice
+      line: 25
+      message: Triggered 'refresh' from 1 events
+      source: "/Stage[main]/Puppet/Exec[puppet restart]"
+      tags: 
+        - notice
+        - exec
+        - class
+        - puppet
+        - node
+        - default
+      time: 2013-11-18 18:16:26.812314 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}b521f4bbe2693fb6ceac9eaf94d157e6"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:16:26.852477 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tools.pp
+      level: !ruby/sym info
+      line: 20
+      message: Filebucketed /etc/sysctl.conf to puppet with sum b521f4bbe2693fb6ceac9eaf94d157e6
+      source: "/Stage[main]/Sysctl/File[sysctl]"
+      tags: 
+        - info
+        - file
+        - sysctl
+        - class
+        - node
+        - default
+      time: 2013-11-18 18:16:26.853755 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tools.pp
+      level: !ruby/sym notice
+      line: 20
+      message: "content changed '{md5}b521f4bbe2693fb6ceac9eaf94d157e6' to '{md5}d44cc4ae4de1ed7ed3be19c3ed897cbf'"
+      source: "/Stage[main]/Sysctl/File[sysctl]/content"
+      tags: 
+        - notice
+        - file
+        - sysctl
+        - class
+        - node
+        - default
+      time: 2013-11-18 18:16:26.855782 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tools.pp
+      level: !ruby/sym info
+      line: 20
+      message: "Scheduling refresh of Exec[/sbin/sysctl -p /etc/sysctl.conf]"
+      source: "/Stage[main]/Sysctl/File[sysctl]"
+      tags: 
+        - info
+        - file
+        - sysctl
+        - class
+        - node
+        - default
+      time: 2013-11-18 18:16:26.856667 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tools.pp
+      level: !ruby/sym notice
+      line: 30
+      message: Triggered 'refresh' from 1 events
+      source: "/Stage[main]/Sysctl/Exec[/sbin/sysctl -p /etc/sysctl.conf]"
+      tags: 
+        - notice
+        - exec
+        - class
+        - sysctl
+        - node
+        - default
+      time: 2013-11-18 18:16:26.922025 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}4f4e87d9e9b723da22f89491cb2d758d"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:16:26.958568 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tools.pp
+      level: !ruby/sym info
+      line: 65
+      message: Filebucketed /etc/hosts.deny to puppet with sum 4f4e87d9e9b723da22f89491cb2d758d
+      source: "/Stage[main]/Hostsdenyallow/File[/etc/hosts.deny]"
+      tags: 
+        - info
+        - file
+        - class
+        - hostsdenyallow
+        - node
+        - default
+      time: 2013-11-18 18:16:26.959780 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tools.pp
+      level: !ruby/sym notice
+      line: 65
+      message: "content changed '{md5}4f4e87d9e9b723da22f89491cb2d758d' to '{md5}d98ae97efce2ccd7b97fd105ce797cba'"
+      source: "/Stage[main]/Hostsdenyallow/File[/etc/hosts.deny]/content"
+      tags: 
+        - notice
+        - file
+        - class
+        - hostsdenyallow
+        - node
+        - default
+      time: 2013-11-18 18:16:26.961887 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}a43e7a987d2a5360fc75ff16519ff659"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:16:26.996540 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/crtmpserver.pp
+      level: !ruby/sym info
+      line: 20
+      message: Filebucketed /usr/local/etc/crtmpserver.lua to puppet with sum a43e7a987d2a5360fc75ff16519ff659
+      source: "/Stage[main]/Crtmpserver/File[/usr/local/etc/crtmpserver.lua]"
+      tags: 
+        - info
+        - file
+        - class
+        - crtmpserver
+        - node
+        - default
+      time: 2013-11-18 18:16:26.997184 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/crtmpserver.pp
+      level: !ruby/sym notice
+      line: 20
+      message: "content changed '{md5}a43e7a987d2a5360fc75ff16519ff659' to '{md5}8ed275a58012e603aa0105b8138c2aa0'"
+      source: "/Stage[main]/Crtmpserver/File[/usr/local/etc/crtmpserver.lua]/content"
+      tags: 
+        - notice
+        - file
+        - class
+        - crtmpserver
+        - node
+        - default
+      time: 2013-11-18 18:16:27.002594 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/crtmpserver.pp
+      level: !ruby/sym info
+      line: 20
+      message: "Scheduling refresh of Exec[restart2-crtmpserver]"
+      source: "/Stage[main]/Crtmpserver/File[/usr/local/etc/crtmpserver.lua]"
+      tags: 
+        - info
+        - file
+        - class
+        - crtmpserver
+        - node
+        - default
+      time: 2013-11-18 18:16:27.003345 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/crtmpserver.pp
+      level: !ruby/sym notice
+      line: 26
+      message: Triggered 'refresh' from 1 events
+      source: "/Stage[main]/Crtmpserver/Exec[restart2-crtmpserver]"
+      tags: 
+        - notice
+        - exec
+        - restart2-crtmpserver
+        - class
+        - crtmpserver
+        - node
+        - default
+      time: 2013-11-18 18:16:29.112722 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}8086541bd194f619a4c06e4bbe50ccd5"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:16:29.214498 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym info
+      line: 40
+      message: Filebucketed /usr/local/etc/rest_linux_udp.sh to puppet with sum 8086541bd194f619a4c06e4bbe50ccd5
+      source: "/Stage[main]/Linuxupdate/File[/usr/local/etc/rest_linux_udp.sh]"
+      tags: 
+        - info
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:16:29.215410 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym notice
+      line: 40
+      message: "content changed '{md5}8086541bd194f619a4c06e4bbe50ccd5' to '{md5}fe914f5f723c71c456b7669308aa18bc'"
+      source: "/Stage[main]/Linuxupdate/File[/usr/local/etc/rest_linux_udp.sh]/content"
+      tags: 
+        - notice
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:16:29.216493 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym notice
+      line: 56
+      message: "defined content as '{md5}4169639ba877bd3da4e112db41c17b70'"
+      source: "/Stage[main]/Linuxupdate/File[/usr/local/etc/restart_smokeping.sh]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:16:29.221988 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}343b14d6a93626e9668da50418555c9a"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:16:29.261978 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/app.pp
+      level: !ruby/sym info
+      line: 10
+      message: Filebucketed /usr/local/etc/flv.conf to puppet with sum 343b14d6a93626e9668da50418555c9a
+      source: "/Stage[main]/Centosconf/File[flv.conf]"
+      tags: 
+        - info
+        - file
+        - flv.conf
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:29.262953 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/app.pp
+      level: !ruby/sym notice
+      line: 10
+      message: "content changed '{md5}343b14d6a93626e9668da50418555c9a' to '{md5}08cf12690a16dd1ac42d21d12aeaa95b'"
+      source: "/Stage[main]/Centosconf/File[flv.conf]/content"
+      tags: 
+        - notice
+        - file
+        - flv.conf
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:29.264569 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/app.pp
+      level: !ruby/sym info
+      line: 10
+      message: "Scheduling refresh of Exec[killall -9 nginx ; /usr/local/sbin/nginx -c /usr/local/etc/nginx.conf]"
+      source: "/Stage[main]/Centosconf/File[flv.conf]"
+      tags: 
+        - info
+        - file
+        - flv.conf
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:29.265546 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym notice
+      line: 65
+      message: "defined content as '{md5}d34f352577832cb9797369d2b396b493'"
+      source: "/Stage[main]/Linuxupdate/File[/usr/local/etc/wget_nginx.sh]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:16:29.270133 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}3fb7d181e3e605ca91541c0d82753616"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:16:29.296593 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tools.pp
+      level: !ruby/sym info
+      line: 61
+      message: Filebucketed /etc/hosts.allow to puppet with sum 3fb7d181e3e605ca91541c0d82753616
+      source: "/Stage[main]/Hostsdenyallow/File[/etc/hosts.allow]"
+      tags: 
+        - info
+        - file
+        - class
+        - hostsdenyallow
+        - node
+        - default
+      time: 2013-11-18 18:16:29.297636 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tools.pp
+      level: !ruby/sym notice
+      line: 61
+      message: "content changed '{md5}3fb7d181e3e605ca91541c0d82753616' to '{md5}16d22ed4d507621e26849dce11c834cc'"
+      source: "/Stage[main]/Hostsdenyallow/File[/etc/hosts.allow]/content"
+      tags: 
+        - notice
+        - file
+        - class
+        - hostsdenyallow
+        - node
+        - default
+      time: 2013-11-18 18:16:29.299572 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/app.pp
+      level: !ruby/sym notice
+      line: 144
+      message: "defined content as '{md5}1f97f1770cae33e399079cb21e9aff7c'"
+      source: "/Stage[main]/Cdnredirect/File[/usr/local/etc/redirect.conf]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - cdnredirect
+        - node
+        - default
+      time: 2013-11-18 18:16:29.304232 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/app.pp
+      level: !ruby/sym info
+      line: 144
+      message: "Scheduling refresh of Exec[killall -9 nginx ; /usr/local/sbin/nginx -c  /usr/local/etc/nginx.conf]"
+      source: "/Stage[main]/Cdnredirect/File[/usr/local/etc/redirect.conf]"
+      tags: 
+        - info
+        - file
+        - class
+        - cdnredirect
+        - node
+        - default
+      time: 2013-11-18 18:16:29.304880 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/app.pp
+      level: !ruby/sym err
+      line: 150
+      message: "Failed to call refresh: killall -9 nginx ; /usr/local/sbin/nginx -c  /usr/local/etc/nginx.conf returned 1 instead of one of [0] at /etc/puppet/manifests/rules/app.pp:150"
+      source: "/Stage[main]/Cdnredirect/Exec[killall -9 nginx ; /usr/local/sbin/nginx -c  /usr/local/etc/nginx.conf]"
+      tags: 
+        - err
+        - exec
+        - class
+        - cdnredirect
+        - node
+        - default
+      time: 2013-11-18 18:16:29.730633 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}5ffabe7289b3e18215c74e3a6e21aa8c"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:16:29.761240 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tools.pp
+      level: !ruby/sym info
+      line: 81
+      message: Filebucketed /etc/sudoers to puppet with sum 5ffabe7289b3e18215c74e3a6e21aa8c
+      source: "/Stage[main]/Sudoers/File[/etc/udoers]"
+      tags: 
+        - info
+        - file
+        - class
+        - sudoers
+        - node
+        - default
+      time: 2013-11-18 18:16:29.762215 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tools.pp
+      level: !ruby/sym notice
+      line: 81
+      message: "content changed '{md5}5ffabe7289b3e18215c74e3a6e21aa8c' to '{md5}1ce6fd32c7f82e1d9694a4f247e48f4c'"
+      source: "/Stage[main]/Sudoers/File[/etc/udoers]/content"
+      tags: 
+        - notice
+        - file
+        - class
+        - sudoers
+        - node
+        - default
+      time: 2013-11-18 18:16:29.764244 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/app.pp
+      level: !ruby/sym notice
+      line: 17
+      message: "defined content as '{md5}8247f9e22baf1bf23b1461834613fb21'"
+      source: "/Stage[main]/Centosconf/File[/usr/local/etc/access_log.conf]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:29.769069 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/app.pp
+      level: !ruby/sym info
+      line: 17
+      message: "Scheduling refresh of Exec[killall -9 nginx ; /usr/local/sbin/nginx -c /usr/local/etc/nginx.conf]"
+      source: "/Stage[main]/Centosconf/File[/usr/local/etc/access_log.conf]"
+      tags: 
+        - info
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:29.769717 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym notice
+      line: 23
+      message: "defined content as '{md5}d41d8cd98f00b204e9800998ecf8427e'"
+      source: "/Stage[main]/Zabbix/File[netconsole_agent.sh]/ensure"
+      tags: 
+        - notice
+        - file
+        - netconsole_agent.sh
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:16:29.793845 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/app.pp
+      level: !ruby/sym notice
+      line: 26
+      message: "defined content as '{md5}08565818c8272a5165ad032cd909eab2'"
+      source: "/Stage[main]/Centosconf/File[/usr/local/etc/vhost.conf]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:29.796588 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/app.pp
+      level: !ruby/sym info
+      line: 26
+      message: "Scheduling refresh of Exec[killall -9 nginx ; /usr/local/sbin/nginx -c /usr/local/etc/nginx.conf]"
+      source: "/Stage[main]/Centosconf/File[/usr/local/etc/vhost.conf]"
+      tags: 
+        - info
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:29.797274 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym notice
+      line: 45
+      message: "defined content as '{md5}1c4ef16ced5ebc2f241d9b783bf5520b'"
+      source: "/Stage[main]/Linuxupdate/File[/usr/local/etc/restart_centos6_crtmpserver.sh]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:16:29.806941 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/app.pp
+      level: !ruby/sym notice
+      line: 33
+      message: "defined content as '{md5}55ec2baa0e0f0868e4c5e76f0af268d3'"
+      source: "/Stage[main]/Centosconf/File[/usr/local/etc/newts_redirect.conf]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:29.809501 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym notice
+      line: 72
+      message: mode changed '644' to '755'
+      source: "/Stage[main]/Ffmux-new/File[/lib/libudtp.so.0]/mode"
+      tags: 
+        - notice
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:16:30.135623 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}a9d1556dd3b9fb9020f6d766e94a268b"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:16:30.171638 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/app.pp
+      level: !ruby/sym info
+      line: 14
+      message: Filebucketed /usr/local/etc/security.conf to puppet with sum a9d1556dd3b9fb9020f6d766e94a268b
+      source: "/Stage[main]/Centosconf/File[security.conf]"
+      tags: 
+        - info
+        - file
+        - security.conf
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:30.172623 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/app.pp
+      level: !ruby/sym notice
+      line: 14
+      message: "content changed '{md5}a9d1556dd3b9fb9020f6d766e94a268b' to '{md5}a3e4ef36c396811f594910c458482fb2'"
+      source: "/Stage[main]/Centosconf/File[security.conf]/content"
+      tags: 
+        - notice
+        - file
+        - security.conf
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:30.174201 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/app.pp
+      level: !ruby/sym info
+      line: 14
+      message: "Scheduling refresh of Exec[killall -9 nginx ; /usr/local/sbin/nginx -c /usr/local/etc/nginx.conf]"
+      source: "/Stage[main]/Centosconf/File[security.conf]"
+      tags: 
+        - info
+        - file
+        - security.conf
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:30.175309 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}d6384115c1740dd10486fba92dd5ce4c"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:16:30.278533 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym info
+      line: 61
+      message: Filebucketed /lib/libffmux.so to puppet with sum d6384115c1740dd10486fba92dd5ce4c
+      source: "/Stage[main]/Ffmux-new/File[/lib/libffmux.so]"
+      tags: 
+        - info
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:16:30.287334 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym notice
+      line: 61
+      message: target changed 'libffmux.so.0' to '/lib/libffmux.so.0'
+      source: "/Stage[main]/Ffmux-new/File[/lib/libffmux.so]/target"
+      tags: 
+        - notice
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:16:30.301773 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym notice
+      line: 39
+      message: "defined content as '{md5}76f87298be833edd36f67c4577838dcd'"
+      source: "/Stage[main]/Zabbix/File[ld-linux.so.2]/ensure"
+      tags: 
+        - notice
+        - file
+        - ld-linux.so.2
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:16:36.431110 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym info
+      line: 39
+      message: "Scheduling refresh of Exec[ldconfig]"
+      source: "/Stage[main]/Zabbix/File[ld-linux.so.2]"
+      tags: 
+        - info
+        - file
+        - ld-linux.so.2
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:16:36.432264 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym notice
+      line: 45
+      message: Triggered 'refresh' from 1 events
+      source: "/Stage[main]/Zabbix/Exec[ldconfig]"
+      tags: 
+        - notice
+        - exec
+        - ldconfig
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:16:36.678928 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/app.pp
+      level: !ruby/sym notice
+      line: 45
+      message: "defined content as '{md5}822165a5f2bed79b8e0fdac84b97066e'"
+      source: "/Stage[main]/Centosconf/File[/usr/local/etc/fastcgi_params]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:36.684611 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/app.pp
+      level: !ruby/sym info
+      line: 45
+      message: "Scheduling refresh of Exec[killall -9 nginx ; /usr/local/sbin/nginx -c /usr/local/etc/nginx.conf]"
+      source: "/Stage[main]/Centosconf/File[/usr/local/etc/fastcgi_params]"
+      tags: 
+        - info
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:36.685504 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}bfc2387305cbcdcc7e0eac79b21e32dd"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:16:36.725964 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/iptables.pp
+      level: !ruby/sym info
+      line: 22
+      message: Filebucketed /root/.ssh/authorized_keys to puppet with sum bfc2387305cbcdcc7e0eac79b21e32dd
+      source: "/Stage[main]/Authorized_keys/File[/root/.ssh/authorized_keys]"
+      tags: 
+        - info
+        - file
+        - class
+        - authorized_keys
+        - node
+        - default
+      time: 2013-11-18 18:16:36.726635 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/iptables.pp
+      level: !ruby/sym notice
+      line: 22
+      message: "content changed '{md5}bfc2387305cbcdcc7e0eac79b21e32dd' to '{md5}65e00c5697283b6f7130b6e63512a6a3'"
+      source: "/Stage[main]/Authorized_keys/File[/root/.ssh/authorized_keys]/content"
+      tags: 
+        - notice
+        - file
+        - class
+        - authorized_keys
+        - node
+        - default
+      time: 2013-11-18 18:16:36.747470 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}d9a65de97c93240a7f1c6713d3e041da"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:16:36.789764 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym info
+      line: 75
+      message: Filebucketed /var/spool/cron/root to puppet with sum d9a65de97c93240a7f1c6713d3e041da
+      source: "/Stage[main]/Crond-online/File[/var/spool/cron/root]"
+      tags: 
+        - info
+        - file
+        - class
+        - crond-online
+        - node
+        - default
+      time: 2013-11-18 18:16:36.790817 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym notice
+      line: 75
+      message: "content changed '{md5}d9a65de97c93240a7f1c6713d3e041da' to '{md5}0552a389a0ef2017305da1fb3708dbeb'"
+      source: "/Stage[main]/Crond-online/File[/var/spool/cron/root]/content"
+      tags: 
+        - notice
+        - file
+        - class
+        - crond-online
+        - node
+        - default
+      time: 2013-11-18 18:16:36.810611 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym info
+      line: 75
+      message: "Scheduling refresh of Exec[restart-crond]"
+      source: "/Stage[main]/Crond-online/File[/var/spool/cron/root]"
+      tags: 
+        - info
+        - file
+        - class
+        - crond-online
+        - node
+        - default
+      time: 2013-11-18 18:16:36.811405 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym notice
+      line: 81
+      message: Triggered 'refresh' from 1 events
+      source: "/Stage[main]/Crond-online/Exec[restart-crond]"
+      tags: 
+        - notice
+        - exec
+        - restart-crond
+        - class
+        - crond-online
+        - node
+        - default
+      time: 2013-11-18 18:16:36.997668 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/nginx.pp
+      level: !ruby/sym notice
+      line: 21
+      message: executed successfully
+      source: "/Stage[main]/Nginx/Exec[mkdir/livemem/live/live_temp]/returns"
+      tags: 
+        - notice
+        - exec
+        - class
+        - nginx
+        - node
+        - default
+      time: 2013-11-18 18:16:37.136171 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}6502c9ed0bf9454a296107340768ac92"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:16:37.169245 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tools.pp
+      level: !ruby/sym info
+      line: 73
+      message: Filebucketed /etc/profile to puppet with sum 6502c9ed0bf9454a296107340768ac92
+      source: "/Stage[main]/Profile/File[/etc/profile]"
+      tags: 
+        - info
+        - file
+        - class
+        - profile
+        - node
+        - default
+      time: 2013-11-18 18:16:37.170298 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tools.pp
+      level: !ruby/sym notice
+      line: 73
+      message: "content changed '{md5}6502c9ed0bf9454a296107340768ac92' to '{md5}7434509dd1d9b7f3bfbf6bbae6aa5eb0'"
+      source: "/Stage[main]/Profile/File[/etc/profile]/content"
+      tags: 
+        - notice
+        - file
+        - class
+        - profile
+        - node
+        - default
+      time: 2013-11-18 18:16:37.172356 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/crtmpserver.pp
+      level: !ruby/sym notice
+      line: 5
+      message: "defined content as '{md5}4e4c43440973e532ada8a7daf8c01fe1'"
+      source: "/Stage[main]/Crtmpserver/File[/usr/local/etc/updatecrtmpserver.sh]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - crtmpserver
+        - node
+        - default
+      time: 2013-11-18 18:16:37.177363 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}c84cf792dd63106d1ca57f947a80ce2b"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:16:48.542010 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym info
+      line: 34
+      message: Filebucketed /usr/bin/lsiutil to puppet with sum c84cf792dd63106d1ca57f947a80ce2b
+      source: "/Stage[main]/Zabbix/File[lsiutil]"
+      tags: 
+        - info
+        - file
+        - lsiutil
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:16:48.543559 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym notice
+      line: 34
+      message: "content changed '{md5}c84cf792dd63106d1ca57f947a80ce2b' to '{md5}d027cdf942f29b57a5ae81b86b563b06'"
+      source: "/Stage[main]/Zabbix/File[lsiutil]/content"
+      tags: 
+        - notice
+        - file
+        - lsiutil
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:16:54.848750 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/crtmpserver.pp
+      level: !ruby/sym notice
+      line: 9
+      message: "defined content as '{md5}92caa360b3d651cc3e68c499d447b8d2'"
+      source: "/Stage[main]/Crtmpserver/File[/usr/local/etc/md5-crtmpserver]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - crtmpserver
+        - node
+        - default
+      time: 2013-11-18 18:16:54.853437 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/crtmpserver.pp
+      level: !ruby/sym info
+      line: 9
+      message: "Scheduling refresh of Exec[restart-crtmpserver]"
+      source: "/Stage[main]/Crtmpserver/File[/usr/local/etc/md5-crtmpserver]"
+      tags: 
+        - info
+        - file
+        - class
+        - crtmpserver
+        - node
+        - default
+      time: 2013-11-18 18:16:54.854562 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/crtmpserver.pp
+      level: !ruby/sym notice
+      line: 16
+      message: Triggered 'refresh' from 1 events
+      source: "/Stage[main]/Crtmpserver/Exec[restart-crtmpserver]"
+      tags: 
+        - notice
+        - exec
+        - restart-crtmpserver
+        - class
+        - crtmpserver
+        - node
+        - default
+      time: 2013-11-18 18:16:55.100365 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tools.pp
+      level: !ruby/sym notice
+      line: 7
+      message: "defined content as '{md5}412e1ac71081effd4eb40328ab21fa57'"
+      source: "/Stage[main]/Monit/File[monitrc]/ensure"
+      tags: 
+        - notice
+        - file
+        - monitrc
+        - class
+        - monit
+        - node
+        - default
+      time: 2013-11-18 18:16:55.105403 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tools.pp
+      level: !ruby/sym info
+      line: 7
+      message: "Scheduling refresh of Exec[killall -9 monit;/usr/bin/monit]"
+      source: "/Stage[main]/Monit/File[monitrc]"
+      tags: 
+        - info
+        - file
+        - monitrc
+        - class
+        - monit
+        - node
+        - default
+      time: 2013-11-18 18:16:55.106126 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tools.pp
+      level: !ruby/sym err
+      line: 12
+      message: "Failed to call refresh: monit: no process killed\nsh: /usr/bin/monit: No such file or directory\n"
+      source: "/Stage[main]/Monit/Exec[killall -9 monit;/usr/bin/monit]"
+      tags: 
+        - err
+        - exec
+        - class
+        - monit
+        - node
+        - default
+      time: 2013-11-18 18:16:55.231690 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym notice
+      line: 29
+      message: "defined content as '{md5}dab9cc5532d58fc1c0267322705e5b42'"
+      source: "/Stage[main]/Zabbix/File[check_tar_gz]/ensure"
+      tags: 
+        - notice
+        - file
+        - check_tar_gz
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:17:06.136913 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym notice
+      line: 56
+      message: "defined content as '{md5}055d982f57890bbc5f251e1abbc87a75'"
+      source: "/Stage[main]/Zabbix/File[libc_md5]/ensure"
+      tags: 
+        - notice
+        - file
+        - libc_md5
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:17:12.070454 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym info
+      line: 56
+      message: "Scheduling refresh of Exec[update-libc]"
+      source: "/Stage[main]/Zabbix/File[libc_md5]"
+      tags: 
+        - info
+        - file
+        - libc_md5
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:17:12.071681 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym err
+      line: 62
+      message: "Failed to call refresh: /bin/sh: /usr/local/zabbix/libc_update.sh: No such file or directory\n"
+      source: "/Stage[main]/Zabbix/Exec[update-libc]"
+      tags: 
+        - err
+        - exec
+        - update-libc
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:17:12.138214 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}968485be3185081352edd22fde472671"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:17:12.202034 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/nginx.pp
+      level: !ruby/sym info
+      line: 59
+      message: Filebucketed /usr/local/etc/nginx/mime.types to puppet with sum 968485be3185081352edd22fde472671
+      source: "/Stage[main]/Nginx-mime/File[/usr/local/etc/nginx/mime.types]"
+      tags: 
+        - info
+        - file
+        - class
+        - nginx-mime
+        - node
+        - default
+      time: 2013-11-18 18:17:12.203325 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/nginx.pp
+      level: !ruby/sym notice
+      line: 59
+      message: "content changed '{md5}968485be3185081352edd22fde472671' to '{md5}5b253e92f927047a1b6321ace5ac4973'"
+      source: "/Stage[main]/Nginx-mime/File[/usr/local/etc/nginx/mime.types]/content"
+      tags: 
+        - notice
+        - file
+        - class
+        - nginx-mime
+        - node
+        - default
+      time: 2013-11-18 18:17:12.205311 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/nginx.pp
+      level: !ruby/sym info
+      line: 59
+      message: "Scheduling refresh of Exec[exec-nginx-mime]"
+      source: "/Stage[main]/Nginx-mime/File[/usr/local/etc/nginx/mime.types]"
+      tags: 
+        - info
+        - file
+        - class
+        - nginx-mime
+        - node
+        - default
+      time: 2013-11-18 18:17:12.206255 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/nginx.pp
+      level: !ruby/sym err
+      line: 66
+      message: "Failed to call refresh: killall -9 nginx;/usr/local/sbin/nginx -c /usr/local/etc/nginx.conf returned 1 instead of one of [0] at /etc/puppet/manifests/rules/nginx.pp:66"
+      source: "/Stage[main]/Nginx-mime/Exec[exec-nginx-mime]"
+      tags: 
+        - err
+        - exec
+        - exec-nginx-mime
+        - class
+        - nginx-mime
+        - node
+        - default
+      time: 2013-11-18 18:17:12.633371 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      level: !ruby/sym notice
+      line: 34
+      message: created
+      source: "/Stage[main]/Tmpdir/File[/letv/all]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:17:12.664726 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym notice
+      line: 13
+      message: "defined content as '{md5}4bc98a42b165af038b29913cf09c19b4'"
+      source: "/Stage[main]/Zabbix/File[check_zabbix]/ensure"
+      tags: 
+        - notice
+        - file
+        - check_zabbix
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:17:12.755116 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym notice
+      line: 24
+      message: "defined content as '{md5}70668441cbbd8f4ca89092d57088a5a4'"
+      source: "/Stage[main]/Linuxupdate/File[/usr/local/etc/crond_nginx.sh]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:17:12.759123 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      level: !ruby/sym notice
+      line: 40
+      message: created
+      source: "/Stage[main]/Tmpdir/File[/var/log/sj/]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:17:12.774854 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      level: !ruby/sym notice
+      line: 26
+      message: owner changed 'root' to 'www'
+      source: "/Stage[main]/Tmpdir/File[/home/lihongfu]/owner"
+      tags: 
+        - notice
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:17:12.793790 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym notice
+      line: 8
+      message: "defined content as '{md5}f4ea327e5182e38cc7971c6e42a300c6'"
+      source: "/Stage[main]/Zabbix/File[zabbix]/ensure"
+      tags: 
+        - notice
+        - file
+        - zabbix
+        - class
+        - node
+        - default
+      time: 2013-11-18 18:17:12.797427 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket got a duplicate file {md5}d6384115c1740dd10486fba92dd5ce4c"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:17:31.832829 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym info
+      line: 57
+      message: Filebucketed /lib/libffmux.so.0 to puppet with sum d6384115c1740dd10486fba92dd5ce4c
+      source: "/Stage[main]/Ffmux-new/File[/lib/libffmux.so.0]"
+      tags: 
+        - info
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:17:31.833550 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym notice
+      line: 57
+      message: "content changed '{md5}d6384115c1740dd10486fba92dd5ce4c' to '{md5}b38aef732cf29b2919a6b2995bb3f24d'"
+      source: "/Stage[main]/Ffmux-new/File[/lib/libffmux.so.0]/content"
+      tags: 
+        - notice
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:17:39.117945 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym notice
+      line: 57
+      message: owner changed '1000' to 'root'
+      source: "/Stage[main]/Ffmux-new/File[/lib/libffmux.so.0]/owner"
+      tags: 
+        - notice
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:17:39.119611 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym notice
+      line: 57
+      message: group changed '1000' to 'root'
+      source: "/Stage[main]/Ffmux-new/File[/lib/libffmux.so.0]/group"
+      tags: 
+        - notice
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:17:39.121478 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym notice
+      line: 57
+      message: mode changed '775' to '755'
+      source: "/Stage[main]/Ffmux-new/File[/lib/libffmux.so.0]/mode"
+      tags: 
+        - notice
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:17:39.122628 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym info
+      line: 57
+      message: "Scheduling refresh of Exec[update-libffmux]"
+      source: "/Stage[main]/Ffmux-new/File[/lib/libffmux.so.0]"
+      tags: 
+        - info
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:17:39.123704 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym info
+      line: 57
+      message: "Scheduling refresh of Exec[update-libffmux]"
+      source: "/Stage[main]/Ffmux-new/File[/lib/libffmux.so.0]"
+      tags: 
+        - info
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:17:39.124445 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym info
+      line: 57
+      message: "Scheduling refresh of Exec[update-libffmux]"
+      source: "/Stage[main]/Ffmux-new/File[/lib/libffmux.so.0]"
+      tags: 
+        - info
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:17:39.124896 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym info
+      line: 57
+      message: "Scheduling refresh of Exec[update-libffmux]"
+      source: "/Stage[main]/Ffmux-new/File[/lib/libffmux.so.0]"
+      tags: 
+        - info
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:17:39.125306 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym err
+      line: 67
+      message: "Failed to call refresh: killall -9 nginx;killall -9 nginx;ldconfig;/usr/local/sbin/nginx -c /usr/local/etc/nginx.conf returned 1 instead of one of [0] at /etc/puppet/manifests/rules/ffmux.pp:67"
+      source: "/Stage[main]/Ffmux-new/Exec[update-libffmux]"
+      tags: 
+        - err
+        - exec
+        - update-libffmux
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:17:39.577984 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}ff2370cc0dc3337d6e25f75eb0c5ed9e"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:17:39.646384 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/smokeping.pp
+      level: !ruby/sym info
+      line: 28
+      message: Filebucketed /data/smokeping/bin/smokeping.sh to puppet with sum ff2370cc0dc3337d6e25f75eb0c5ed9e
+      source: "/Stage[main]/Smokeping_pkg/File[/data/smokeping/bin/smokeping.sh]"
+      tags: 
+        - info
+        - file
+        - class
+        - smokeping_pkg
+        - node
+        - default
+      time: 2013-11-18 18:17:39.646957 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/smokeping.pp
+      level: !ruby/sym notice
+      line: 28
+      message: "content changed '{md5}ff2370cc0dc3337d6e25f75eb0c5ed9e' to '{md5}a16424cb2143fed51cd82b063f1793e2'"
+      source: "/Stage[main]/Smokeping_pkg/File[/data/smokeping/bin/smokeping.sh]/content"
+      tags: 
+        - notice
+        - file
+        - class
+        - smokeping_pkg
+        - node
+        - default
+      time: 2013-11-18 18:17:39.648103 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}efe4c28a020c52bc5668c564581e7bff"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:17:39.689987 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/puppet.pp
+      level: !ruby/sym info
+      line: 5
+      message: Filebucketed /etc/init.d/puppetd to puppet with sum efe4c28a020c52bc5668c564581e7bff
+      source: "/Stage[main]/Puppet/File[/etc/init.d/puppetd]"
+      tags: 
+        - info
+        - file
+        - class
+        - puppet
+        - node
+        - default
+      time: 2013-11-18 18:17:39.691087 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/puppet.pp
+      level: !ruby/sym notice
+      line: 5
+      message: "content changed '{md5}efe4c28a020c52bc5668c564581e7bff' to '{md5}90b55a78ec55288a5e7e7cafba0cffd4'"
+      source: "/Stage[main]/Puppet/File[/etc/init.d/puppetd]/content"
+      tags: 
+        - notice
+        - file
+        - class
+        - puppet
+        - node
+        - default
+      time: 2013-11-18 18:17:39.694290 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym notice
+      line: 51
+      message: "defined content as '{md5}ae61964733a2cd0657b2509e0cc2a84d'"
+      source: "/Stage[main]/Zabbix/File[libc_update]/ensure"
+      tags: 
+        - notice
+        - file
+        - libc_update
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:17:45.633461 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}0abef2aea2b9303adcc4e67bcf19d12a"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:17:45.673705 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym info
+      line: 6
+      message: Filebucketed /usr/local/etc/linux_update.sh to puppet with sum 0abef2aea2b9303adcc4e67bcf19d12a
+      source: "/Stage[main]/Linuxupdate/File[/usr/local/etc/linux_update.sh]"
+      tags: 
+        - info
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:17:45.674612 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym notice
+      line: 6
+      message: "content changed '{md5}0abef2aea2b9303adcc4e67bcf19d12a' to '{md5}b79478ca896cdfa933d4e5625ef66543'"
+      source: "/Stage[main]/Linuxupdate/File[/usr/local/etc/linux_update.sh]/content"
+      tags: 
+        - notice
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:17:45.675629 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}14d85eabf6ab7623e14b10fdf1da1c86"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:17:45.779556 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym info
+      line: 18
+      message: Filebucketed /usr/local/etc/restart_centos6_nginx.sh to puppet with sum 14d85eabf6ab7623e14b10fdf1da1c86
+      source: "/Stage[main]/Linuxupdate/File[/usr/local/etc/restart_centos6_nginx.sh]"
+      tags: 
+        - info
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:17:45.780613 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym notice
+      line: 18
+      message: "content changed '{md5}14d85eabf6ab7623e14b10fdf1da1c86' to '{md5}37ca80fe47ec2ddc41b067df99cc085d'"
+      source: "/Stage[main]/Linuxupdate/File[/usr/local/etc/restart_centos6_nginx.sh]/content"
+      tags: 
+        - notice
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:17:45.783306 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym notice
+      line: 18
+      message: mode changed '644' to '755'
+      source: "/Stage[main]/Linuxupdate/File[/usr/local/etc/restart_centos6_nginx.sh]/mode"
+      tags: 
+        - notice
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:17:45.785012 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}f20eebd277c933eba9c4234fdc55a769"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:17:45.818965 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/puppet.pp
+      level: !ruby/sym info
+      line: 9
+      message: Filebucketed /etc/puppet/puppet.conf to puppet with sum f20eebd277c933eba9c4234fdc55a769
+      source: "/Stage[main]/Puppet/File[/etc/puppet/puppet.conf]"
+      tags: 
+        - info
+        - file
+        - class
+        - puppet
+        - node
+        - default
+      time: 2013-11-18 18:17:45.819995 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/puppet.pp
+      level: !ruby/sym notice
+      line: 9
+      message: "content changed '{md5}f20eebd277c933eba9c4234fdc55a769' to '{md5}6bef11f4ef298d7f853e3632da035181'"
+      source: "/Stage[main]/Puppet/File[/etc/puppet/puppet.conf]/content"
+      tags: 
+        - notice
+        - file
+        - class
+        - puppet
+        - node
+        - default
+      time: 2013-11-18 18:17:45.821640 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/puppet.pp
+      level: !ruby/sym info
+      line: 9
+      message: "Scheduling refresh of Exec[puppet reload]"
+      source: "/Stage[main]/Puppet/File[/etc/puppet/puppet.conf]"
+      tags: 
+        - info
+        - file
+        - class
+        - puppet
+        - node
+        - default
+      time: 2013-11-18 18:17:45.822816 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/puppet.pp
+      level: !ruby/sym notice
+      line: 19
+      message: Triggered 'refresh' from 1 events
+      source: "/Stage[main]/Puppet/Exec[puppet reload]"
+      tags: 
+        - notice
+        - exec
+        - class
+        - puppet
+        - node
+        - default
+      time: 2013-11-18 18:17:46.730098 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/app.pp
+      level: !ruby/sym notice
+      line: 42
+      message: "defined content as '{md5}cf1526567b3e0a64d23ca61ae7de7a3b'"
+      source: "/Stage[main]/Centosconf/File[/usr/local/etc/process.conf]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:17:46.734907 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/app.pp
+      level: !ruby/sym info
+      line: 42
+      message: "Scheduling refresh of Exec[killall -9 nginx ; /usr/local/sbin/nginx -c /usr/local/etc/nginx.conf]"
+      source: "/Stage[main]/Centosconf/File[/usr/local/etc/process.conf]"
+      tags: 
+        - info
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:17:46.736048 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/app.pp
+      level: !ruby/sym notice
+      line: 62
+      message: Triggered 'refresh' from 6 events
+      source: "/Stage[main]/Centosconf/Exec[killall -9 nginx ; /usr/local/sbin/nginx -c /usr/local/etc/nginx.conf]"
+      tags: 
+        - notice
+        - exec
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:17:47.403403 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}f8d4a04ce050d89be6eb0ca813304f56"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:17:47.438466 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym info
+      line: 12
+      message: Filebucketed /usr/local/etc/restart_centos6_watchdog.sh to puppet with sum f8d4a04ce050d89be6eb0ca813304f56
+      source: "/Stage[main]/Linuxupdate/File[/usr/local/etc/restart_centos6_watchdog.sh]"
+      tags: 
+        - info
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:17:47.439172 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym notice
+      line: 12
+      message: "content changed '{md5}f8d4a04ce050d89be6eb0ca813304f56' to '{md5}b54ec3afedc86ce2c468fefea27d24f9'"
+      source: "/Stage[main]/Linuxupdate/File[/usr/local/etc/restart_centos6_watchdog.sh]/content"
+      tags: 
+        - notice
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:17:47.441213 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym notice
+      line: 12
+      message: mode changed '644' to '755'
+      source: "/Stage[main]/Linuxupdate/File[/usr/local/etc/restart_centos6_watchdog.sh]/mode"
+      tags: 
+        - notice
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:17:47.442235 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}75edc55254a11101a70999001b1be768"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:17:47.498653 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym info
+      line: 60
+      message: Filebucketed /bin/asdf to puppet with sum 75edc55254a11101a70999001b1be768
+      source: "/Stage[main]/Linuxupdate/File[/bin/asdf]"
+      tags: 
+        - info
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:17:47.499664 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym notice
+      line: 60
+      message: "content changed '{md5}75edc55254a11101a70999001b1be768' to '{md5}b670d16f07946781c1d618be7c34245c'"
+      source: "/Stage[main]/Linuxupdate/File[/bin/asdf]/content"
+      tags: 
+        - notice
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:17:47.516129 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym notice
+      line: 18
+      message: owner changed 'root' to 'zabbix'
+      source: "/Stage[main]/Zabbix/File[rsyslog_agent.sh]/owner"
+      tags: 
+        - notice
+        - file
+        - rsyslog_agent.sh
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:17:47.519541 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      level: !ruby/sym notice
+      line: 18
+      message: group changed 'root' to 'zabbix'
+      source: "/Stage[main]/Zabbix/File[rsyslog_agent.sh]/group"
+      tags: 
+        - notice
+        - file
+        - rsyslog_agent.sh
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:17:47.520743 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      level: !ruby/sym notice
+      line: 30
+      message: created
+      source: "/Stage[main]/Tmpdir/File[/letv/soft/tools]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:17:47.539068 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tools.pp
+      level: !ruby/sym notice
+      line: 55
+      message: "defined content as '{md5}dce720c20bbcd5048303712f32795b2e'"
+      source: "/Stage[main]/Hardinfo/File[/letv/soft/tools/summary]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - hardinfo
+        - node
+        - default
+      time: 2013-11-18 18:17:47.542479 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/iptables.pp
+      level: !ruby/sym notice
+      line: 4
+      message: "defined content as '{md5}6f9d564d9cc32801307942c4bdfa957f'"
+      source: "/Stage[main]/Iptables/File[/letv/soft/tools/iptables.sh]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - iptables
+        - node
+        - default
+      time: 2013-11-18 18:17:47.545238 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/iptables.pp
+      level: !ruby/sym info
+      line: 4
+      message: "Scheduling refresh of Exec[iptables run]"
+      source: "/Stage[main]/Iptables/File[/letv/soft/tools/iptables.sh]"
+      tags: 
+        - info
+        - file
+        - class
+        - iptables
+        - node
+        - default
+      time: 2013-11-18 18:17:47.545951 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/iptables.pp
+      level: !ruby/sym notice
+      line: 11
+      message: Triggered 'refresh' from 1 events
+      source: "/Stage[main]/Iptables/Exec[iptables run]"
+      tags: 
+        - notice
+        - exec
+        - class
+        - iptables
+        - node
+        - default
+      time: 2013-11-18 18:17:47.671447 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      level: !ruby/sym notice
+      line: 51
+      message: "defined content as '{md5}22213b2aa7745e77781a6711d09317e4'"
+      source: "/Stage[main]/Linuxupdate/File[/letv/soft/tools/checkpuppet.sh]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:17:47.677458 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tools.pp
+      level: !ruby/sym notice
+      line: 49
+      message: "defined content as '{md5}693ded4ed34a367b191fecdb193ea87f'"
+      source: "/Stage[main]/Megacli64/File[/letv/soft/tools/megacli64.sh]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - megacli64
+        - node
+        - default
+      time: 2013-11-18 18:17:47.682178 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym notice
+      line: 22
+      message: "defined content as '{md5}1d49d3acfdb05dc890b02f2ae4b3312e'"
+      source: "/Stage[main]/Tsd/File[/letv/soft/tools/cdnwebtsd.sh]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - tsd
+        - node
+        - default
+      time: 2013-11-18 18:17:47.685954 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym notice
+      line: 19
+      message: "defined content as '{md5}a067f1662cd14a7cae80d10ae46a4550'"
+      source: "/Stage[main]/Tsd/File[/letv/soft/tools/tjrtmp.sh]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - tsd
+        - node
+        - default
+      time: 2013-11-18 18:17:47.688622 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym notice
+      line: 25
+      message: "defined content as '{md5}524b20abcb43eaea8925d96e880809dc'"
+      source: "/Stage[main]/Tsd/File[/letv/soft/tools/cdntsdjar.sh]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - tsd
+        - node
+        - default
+      time: 2013-11-18 18:17:47.691267 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym notice
+      line: 28
+      message: "defined content as '{md5}71c6fc374715cdd4b4881bbfc759edbe'"
+      source: "/Stage[main]/Tsd/File[/letv/soft/tools/md5-tsdjar]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - tsd
+        - node
+        - default
+      time: 2013-11-18 18:17:47.693918 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym info
+      line: 28
+      message: "Scheduling refresh of Exec[cdntsdjar.sh run]"
+      source: "/Stage[main]/Tsd/File[/letv/soft/tools/md5-tsdjar]"
+      tags: 
+        - info
+        - file
+        - class
+        - tsd
+        - node
+        - default
+      time: 2013-11-18 18:17:47.694573 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      level: !ruby/sym notice
+      line: 35
+      message: Triggered 'refresh' from 1 events
+      source: "/Stage[main]/Tsd/Exec[cdntsdjar.sh run]"
+      tags: 
+        - notice
+        - exec
+        - class
+        - tsd
+        - node
+        - default
+      time: 2013-11-18 18:17:48.060195 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/watchdog.pp
+      level: !ruby/sym notice
+      line: 5
+      message: "defined content as '{md5}f812b0f6a0d2bc59b61d49039c8e5d99'"
+      source: "/Stage[main]/Watchdog/File[/letv/soft/watchdog/watchdog_update.sh]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - watchdog
+        - node
+        - default
+      time: 2013-11-18 18:17:48.066751 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/watchdog.pp
+      level: !ruby/sym notice
+      line: 8
+      message: "defined content as '{md5}831a4d7d82d883b73b2c3667a56dd093'"
+      source: "/Stage[main]/Watchdog/File[/letv/soft/watchdog/md5-watchdog]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - watchdog
+        - node
+        - default
+      time: 2013-11-18 18:17:48.071040 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/watchdog.pp
+      level: !ruby/sym info
+      line: 8
+      message: "Scheduling refresh of Exec[update-watchdog]"
+      source: "/Stage[main]/Watchdog/File[/letv/soft/watchdog/md5-watchdog]"
+      tags: 
+        - info
+        - file
+        - class
+        - watchdog
+        - node
+        - default
+      time: 2013-11-18 18:17:48.072114 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/watchdog.pp
+      level: !ruby/sym notice
+      line: 16
+      message: Triggered 'refresh' from 1 events
+      source: "/Stage[main]/Watchdog/Exec[update-watchdog]"
+      tags: 
+        - notice
+        - exec
+        - update-watchdog
+        - class
+        - watchdog
+        - node
+        - default
+      time: 2013-11-18 18:17:48.198353 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tools.pp
+      level: !ruby/sym notice
+      line: 36
+      message: "defined content as '{md5}f45a6637fd1d43de33c1aaecbadeeae5'"
+      source: "/Stage[main]/Udpclient/File[/letv/soft/watchdog/udpclient.sh]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - udpclient
+        - node
+        - default
+      time: 2013-11-18 18:17:48.202825 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tools.pp
+      level: !ruby/sym info
+      line: 36
+      message: "Scheduling refresh of Exec[update-udpclient]"
+      source: "/Stage[main]/Udpclient/File[/letv/soft/watchdog/udpclient.sh]"
+      tags: 
+        - info
+        - file
+        - class
+        - udpclient
+        - node
+        - default
+      time: 2013-11-18 18:17:48.203934 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tools.pp
+      level: !ruby/sym err
+      line: 43
+      message: "Failed to call refresh: Command exceeded timeout at /etc/puppet/manifests/rules/tools.pp:43"
+      source: "/Stage[main]/Udpclient/Exec[update-udpclient]"
+      tags: 
+        - err
+        - exec
+        - update-udpclient
+        - class
+        - udpclient
+        - node
+        - default
+      time: 2013-11-18 18:22:48.208691 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      level: !ruby/sym notice
+      line: 16
+      message: created
+      source: "/Stage[main]/Tmpdir/File[/letv/soft/watchdog/old]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:22:48.212719 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: "FileBucket adding {md5}d672a5c1f422c5382f92289da6e7d7db"
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:22:48.260821 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/nginx.pp
+      level: !ruby/sym info
+      line: 5
+      message: Filebucketed /letv/soft/nginx/nginx_update.sh to puppet with sum d672a5c1f422c5382f92289da6e7d7db
+      source: "/Stage[main]/Nginx/File[/letv/soft/nginx/nginx_update.sh]"
+      tags: 
+        - info
+        - file
+        - class
+        - nginx
+        - node
+        - default
+      time: 2013-11-18 18:22:48.261802 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/nginx.pp
+      level: !ruby/sym notice
+      line: 5
+      message: "content changed '{md5}d672a5c1f422c5382f92289da6e7d7db' to '{md5}3c895ff29beb1bf160e718a61ee60fe5'"
+      source: "/Stage[main]/Nginx/File[/letv/soft/nginx/nginx_update.sh]/content"
+      tags: 
+        - notice
+        - file
+        - class
+        - nginx
+        - node
+        - default
+      time: 2013-11-18 18:22:48.263414 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      level: !ruby/sym notice
+      line: 22
+      message: created
+      source: "/Stage[main]/Tmpdir/File[/letv/soft/nginx/old]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:22:48.267420 +08:00
+    - !ruby/object:Puppet::Util::Log
+      file: /etc/puppet/manifests/rules/test.pp
+      level: !ruby/sym notice
+      line: 11
+      message: "defined content as '{md5}d41d8cd98f00b204e9800998ecf8427e'"
+      source: "/Stage[main]/Checkfile/File[/letv/soft/checkfile.sh]/ensure"
+      tags: 
+        - notice
+        - file
+        - class
+        - checkfile
+        - node
+        - default
+      time: 2013-11-18 18:22:48.269925 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      message: Creating state file /var/lib/puppet/state/state.yaml
+      source: Puppet
+      tags: 
+        - info
+      time: 2013-11-18 18:22:48.270752 +08:00
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      message: Finished catalog run in 383.25 seconds
+      source: Puppet
+      tags: 
+        - notice
+      time: 2013-11-18 18:22:48.290493 +08:00
+  metrics: 
+    changes: !ruby/object:Puppet::Util::Metric
+      label: Changes
+      name: changes
+      values: 
+        - - total
+          - Total
+          - 71
+    resources: !ruby/object:Puppet::Util::Metric
+      label: Resources
+      name: resources
+      values: 
+        - - failed_to_restart
+          - Failed to restart
+          - 6
+        - - changed
+          - Changed
+          - 65
+        - - out_of_sync
+          - Out of sync
+          - 65
+        - - total
+          - Total
+          - 118
+        - - restarted
+          - Restarted
+          - 11
+    time: !ruby/object:Puppet::Util::Metric
+      label: Time
+      name: time
+      values: 
+        - - config_retrieval
+          - Config retrieval
+          - 6.71502780914307
+        - - file
+          - File
+          - 74.55947
+        - - schedule
+          - Schedule
+          - 0.002679
+        - - total
+          - Total
+          - 81.6447148091431
+        - - filebucket
+          - Filebucket
+          - 0.000481
+        - - exec
+          - Exec
+          - 0.360271
+        - - package
+          - Package
+          - 0.0067860000000001
+    events: !ruby/object:Puppet::Util::Metric
+      label: Events
+      name: events
+      values: 
+        - - total
+          - Total
+          - 71
+        - - success
+          - Success
+          - 71
+  puppet_version: 2.6.11
+  report_format: 2
+  resource_statuses: 
+    "File[/etc/yum.repos.d/letv-pkgs.repo]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.014997
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/yumrepo.pp
+      line: 4
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/etc/yum.repos.d/letv-pkgs.repo]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - yumrepo
+        - node
+        - default
+      time: 2013-11-18 18:17:06.139894 +08:00
+      title: /etc/yum.repos.d/letv-pkgs.repo
+    "File[/usr/local/etc/restart_centos6_nginx.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 2
+      changed: true
+      evaluation_time: 0.039408
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}37ca80fe47ec2ddc41b067df99cc085d"
+          historical_value: 
+          message: "content changed '{md5}14d85eabf6ab7623e14b10fdf1da1c86' to '{md5}37ca80fe47ec2ddc41b067df99cc085d'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}14d85eabf6ab7623e14b10fdf1da1c86"
+          property: content
+          status: success
+          time: 2013-11-18 18:17:45.776050 +08:00
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "755"
+          historical_value: 
+          message: mode changed '644' to '755'
+          name: !ruby/sym mode_changed
+          previous_value: "644"
+          property: mode
+          status: success
+          time: 2013-11-18 18:17:45.784602 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 18
+      out_of_sync: true
+      out_of_sync_count: 2
+      resource: "File[/usr/local/etc/restart_centos6_nginx.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:17:45.746399 +08:00
+      title: /usr/local/etc/restart_centos6_nginx.sh
+    "Exec[update-libffmux]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.025847
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      line: 67
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[update-libffmux]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - update-libffmux
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:17:39.126217 +08:00
+      title: update-libffmux
+    "File[/data/smokeping/bin/smokeping.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.047264
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}a16424cb2143fed51cd82b063f1793e2"
+          historical_value: 
+          message: "content changed '{md5}ff2370cc0dc3337d6e25f75eb0c5ed9e' to '{md5}a16424cb2143fed51cd82b063f1793e2'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}ff2370cc0dc3337d6e25f75eb0c5ed9e"
+          property: content
+          status: success
+          time: 2013-11-18 18:17:39.643068 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/smokeping.pp
+      line: 28
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/data/smokeping/bin/smokeping.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - smokeping_pkg
+        - node
+        - default
+      time: 2013-11-18 18:17:39.601597 +08:00
+      title: /data/smokeping/bin/smokeping.sh
+    "Package[letv-release]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000796
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/package.pp
+      line: 45
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Package[letv-release]"
+      resource_type: Package
+      skipped: false
+      tags: 
+        - package
+        - letv-release
+        - class
+        - kernel
+        - node
+        - default
+      time: 2013-11-18 18:17:45.744780 +08:00
+      title: letv-release
+    "File[/letv/soft/tools/checkpuppet.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.005152
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}22213b2aa7745e77781a6711d09317e4'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:47.674644 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 51
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/letv/soft/tools/checkpuppet.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:17:47.673285 +08:00
+      title: /letv/soft/tools/checkpuppet.sh
+    "File[/lib/libffmux.so.0]": !ruby/object:Puppet::Resource::Status
+      change_count: 4
+      changed: true
+      evaluation_time: 26.324859
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}b38aef732cf29b2919a6b2995bb3f24d"
+          historical_value: 
+          message: "content changed '{md5}d6384115c1740dd10486fba92dd5ce4c' to '{md5}b38aef732cf29b2919a6b2995bb3f24d'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}d6384115c1740dd10486fba92dd5ce4c"
+          property: content
+          status: success
+          time: 2013-11-18 18:17:31.670699 +08:00
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: 0
+          historical_value: 
+          message: owner changed '1000' to 'root'
+          name: !ruby/sym owner_changed
+          previous_value: 1000
+          property: owner
+          status: success
+          time: 2013-11-18 18:17:39.118879 +08:00
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: root
+          historical_value: 
+          message: group changed '1000' to 'root'
+          name: !ruby/sym group_changed
+          previous_value: 1000
+          property: group
+          status: success
+          time: 2013-11-18 18:17:39.120616 +08:00
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "755"
+          historical_value: 
+          message: mode changed '775' to '755'
+          name: !ruby/sym mode_changed
+          previous_value: "775"
+          property: mode
+          status: success
+          time: 2013-11-18 18:17:39.122237 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      line: 57
+      out_of_sync: true
+      out_of_sync_count: 4
+      resource: "File[/lib/libffmux.so.0]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:17:12.798616 +08:00
+      title: /lib/libffmux.so.0
+    "File[/letv/soft/tools/summary]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.002734
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}dce720c20bbcd5048303712f32795b2e'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:47.541086 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 55
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/letv/soft/tools/summary]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - hardinfo
+        - node
+        - default
+      time: 2013-11-18 18:17:47.540331 +08:00
+      title: /letv/soft/tools/summary
+    "Package[echoping-libs]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000791
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/smokeping.pp
+      line: 18
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Package[echoping-libs]"
+      resource_type: Package
+      skipped: false
+      tags: 
+        - package
+        - echoping-libs
+        - class
+        - smokeping_pkg
+        - node
+        - default
+      time: 2013-11-18 18:16:37.003219 +08:00
+      title: echoping-libs
+    "Exec[/sbin/sysctl -p /etc/sysctl.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000452
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 30
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[/sbin/sysctl -p /etc/sysctl.conf]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - sysctl
+        - node
+        - default
+      time: 2013-11-18 18:16:26.857678 +08:00
+      title: /sbin/sysctl -p /etc/sysctl.conf
+    "File[/letv/soft/watchdog/udpclient.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.003577
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}f45a6637fd1d43de33c1aaecbadeeae5'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:48.201447 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 36
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/letv/soft/watchdog/udpclient.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - udpclient
+        - node
+        - default
+      time: 2013-11-18 18:17:48.200208 +08:00
+      title: /letv/soft/watchdog/udpclient.sh
+    "File[/etc/hosts.allow]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.029351
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}16d22ed4d507621e26849dce11c834cc"
+          historical_value: 
+          message: "content changed '{md5}3fb7d181e3e605ca91541c0d82753616' to '{md5}16d22ed4d507621e26849dce11c834cc'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}3fb7d181e3e605ca91541c0d82753616"
+          property: content
+          status: success
+          time: 2013-11-18 18:16:29.293444 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 61
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/etc/hosts.allow]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - hostsdenyallow
+        - node
+        - default
+      time: 2013-11-18 18:16:29.271285 +08:00
+      title: /etc/hosts.allow
+    "File[/usr/local/etc/process.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.003838
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}cf1526567b3e0a64d23ca61ae7de7a3b'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:46.733476 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 42
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/usr/local/etc/process.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:17:46.732075 +08:00
+      title: /usr/local/etc/process.conf
+    "File[/usr/local/etc/restart_centos6_crtmpserver.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.002022
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}1c4ef16ced5ebc2f241d9b783bf5520b'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:16:29.806162 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 45
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/usr/local/etc/restart_centos6_crtmpserver.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:16:29.805498 +08:00
+      title: /usr/local/etc/restart_centos6_crtmpserver.sh
+    "File[/usr/local/etc/crond_nginx.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.003311
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}70668441cbbd8f4ca89092d57088a5a4'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:12.757349 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 24
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/usr/local/etc/crond_nginx.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:17:12.756482 +08:00
+      title: /usr/local/etc/crond_nginx.sh
+    "Exec[update-libc]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000714
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 62
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[update-libc]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - update-libc
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:17:12.073107 +08:00
+      title: update-libc
+    "Package[postgresql-libs]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000822
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/smokeping.pp
+      line: 12
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Package[postgresql-libs]"
+      resource_type: Package
+      skipped: false
+      tags: 
+        - package
+        - postgresql-libs
+        - class
+        - smokeping_pkg
+        - node
+        - default
+      time: 2013-11-18 18:16:37.001526 +08:00
+      title: postgresql-libs
+    "File[/usr/local/etc/fastcgi_params]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.004146
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}822165a5f2bed79b8e0fdac84b97066e'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:16:36.682979 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 45
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/usr/local/etc/fastcgi_params]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:36.681291 +08:00
+      title: /usr/local/etc/fastcgi_params
+    "File[crossdomain]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001385
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/crossdomain.pp
+      line: 6
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[crossdomain]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - crossdomain
+        - class
+        - node
+        - default
+      time: 2013-11-18 18:17:12.635270 +08:00
+      title: crossdomain
+    "Exec[killflashShitD]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.065681
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 35
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[killflashShitD]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - killflashshitd
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:16:29.116037 +08:00
+      title: killflashShitD
+    "File[/etc/puppet/puppet.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.034756
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}6bef11f4ef298d7f853e3632da035181"
+          historical_value: 
+          message: "content changed '{md5}f20eebd277c933eba9c4234fdc55a769' to '{md5}6bef11f4ef298d7f853e3632da035181'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}f20eebd277c933eba9c4234fdc55a769"
+          property: content
+          status: success
+          time: 2013-11-18 18:17:45.815629 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/puppet.pp
+      line: 9
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/etc/puppet/puppet.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - puppet
+        - node
+        - default
+      time: 2013-11-18 18:17:45.787858 +08:00
+      title: /etc/puppet/puppet.conf
+    "File[/letv/soft/nginx/old]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.001614
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym directory
+          historical_value: 
+          message: created
+          name: !ruby/sym directory_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:22:48.267017 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 22
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/letv/soft/nginx/old]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:22:48.266364 +08:00
+      title: /letv/soft/nginx/old
+    "File[netconsole_agent.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.023974
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}d41d8cd98f00b204e9800998ecf8427e'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:16:29.771446 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 23
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[netconsole_agent.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - netconsole_agent.sh
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:16:29.770624 +08:00
+      title: netconsole_agent.sh
+    "File[zabbix]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.003056
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}f4ea327e5182e38cc7971c6e42a300c6'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:12.795802 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 8
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[zabbix]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - zabbix
+        - class
+        - node
+        - default
+      time: 2013-11-18 18:17:12.794967 +08:00
+      title: zabbix
+    "File[sysctl]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.041852
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}d44cc4ae4de1ed7ed3be19c3ed897cbf"
+          historical_value: 
+          message: "content changed '{md5}b521f4bbe2693fb6ceac9eaf94d157e6' to '{md5}d44cc4ae4de1ed7ed3be19c3ed897cbf'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}b521f4bbe2693fb6ceac9eaf94d157e6"
+          property: content
+          status: success
+          time: 2013-11-18 18:16:26.848479 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 20
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[sysctl]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - sysctl
+        - class
+        - node
+        - default
+      time: 2013-11-18 18:16:26.814742 +08:00
+      title: sysctl
+    "File[/var/tmp/nginx]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.017144
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 4
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/var/tmp/nginx]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:17:39.580737 +08:00
+      title: /var/tmp/nginx
+    "Exec[puppet reload]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000487
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/puppet.pp
+      line: 19
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[puppet reload]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - puppet
+        - node
+        - default
+      time: 2013-11-18 18:17:45.824379 +08:00
+      title: puppet reload
+    "File[/letv/soft/tools/cdntsdjar.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.002089
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}524b20abcb43eaea8925d96e880809dc'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:47.690462 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      line: 25
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/letv/soft/tools/cdntsdjar.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tsd
+        - node
+        - default
+      time: 2013-11-18 18:17:47.689745 +08:00
+      title: /letv/soft/tools/cdntsdjar.sh
+    "Exec[restart2-crtmpserver]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000489
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/crtmpserver.pp
+      line: 26
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[restart2-crtmpserver]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - restart2-crtmpserver
+        - class
+        - crtmpserver
+        - node
+        - default
+      time: 2013-11-18 18:16:27.004354 +08:00
+      title: restart2-crtmpserver
+    "Schedule[puppet]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.00028
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Schedule[puppet]"
+      resource_type: Schedule
+      skipped: false
+      tags: 
+        - schedule
+        - puppet
+      time: 2013-11-18 18:16:29.803794 +08:00
+      title: puppet
+    "File[/letv/soft/tools/cdnwebtsd.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.002577
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}1d49d3acfdb05dc890b02f2ae4b3312e'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:47.685150 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      line: 22
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/letv/soft/tools/cdnwebtsd.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tsd
+        - node
+        - default
+      time: 2013-11-18 18:17:47.683988 +08:00
+      title: /letv/soft/tools/cdnwebtsd.sh
+    "Exec[exec-nginx-mime]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000568
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/nginx.pp
+      line: 66
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[exec-nginx-mime]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - exec-nginx-mime
+        - class
+        - nginx-mime
+        - node
+        - default
+      time: 2013-11-18 18:17:12.207460 +08:00
+      title: exec-nginx-mime
+    "File[/home/lihongfu]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.017121
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: 504
+          historical_value: 
+          message: owner changed 'root' to 'www'
+          name: !ruby/sym owner_changed
+          previous_value: 0
+          property: owner
+          status: success
+          time: 2013-11-18 18:17:12.793431 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 26
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/home/lihongfu]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:17:12.777303 +08:00
+      title: /home/lihongfu
+    "File[/letv/soft/tools]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.015598
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym directory
+          historical_value: 
+          message: created
+          name: !ruby/sym directory_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:47.538234 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 30
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/letv/soft/tools]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:17:47.524062 +08:00
+      title: /letv/soft/tools
+    "File[/letv/soft/tools/megacli64.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.003736
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}693ded4ed34a367b191fecdb193ea87f'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:47.680545 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 49
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/letv/soft/tools/megacli64.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - megacli64
+        - node
+        - default
+      time: 2013-11-18 18:17:47.679364 +08:00
+      title: /letv/soft/tools/megacli64.sh
+    "File[/letv/soft]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000605
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 10
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:17:47.522943 +08:00
+      title: /letv/soft
+    "File[/letv/soft/tools/md5-tsdjar]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.00209
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}71c6fc374715cdd4b4881bbfc759edbe'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:47.693118 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      line: 28
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/letv/soft/tools/md5-tsdjar]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tsd
+        - node
+        - default
+      time: 2013-11-18 18:17:47.692393 +08:00
+      title: /letv/soft/tools/md5-tsdjar
+    "Exec[killall -9 nginx ; /usr/local/sbin/nginx -c /usr/local/etc/nginx.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000431
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 62
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[killall -9 nginx ; /usr/local/sbin/nginx -c /usr/local/etc/nginx.conf]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:17:46.737491 +08:00
+      title: killall -9 nginx ; /usr/local/sbin/nginx -c /usr/local/etc/nginx.conf
+    "File[/letv/all]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.028599
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym directory
+          historical_value: 
+          message: created
+          name: !ruby/sym directory_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:12.638210 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 34
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/letv/all]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:17:12.637286 +08:00
+      title: /letv/all
+    "File[/usr/local/etc/live.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.007167
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 20
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/live.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:30.136721 +08:00
+      title: /usr/local/etc/live.conf
+    "Exec[rm /tmp/rtmp.log]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.064329
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/crtmpserver.pp
+      line: 31
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[rm /tmp/rtmp.log]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - crtmpserver
+        - node
+        - default
+      time: 2013-11-18 18:17:45.676875 +08:00
+      title: rm /tmp/rtmp.log
+    "File[/usr/local/etc/qihu.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.015265
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 39
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/qihu.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:17:12.668504 +08:00
+      title: /usr/local/etc/qihu.conf
+    "File[/var/tmp/nginx/client_body_temp]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001587
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 7
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/var/tmp/nginx/client_body_temp]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:17:39.598930 +08:00
+      title: /var/tmp/nginx/client_body_temp
+    "Package[aria2]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001031
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/package.pp
+      line: 21
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Package[aria2]"
+      resource_type: Package
+      skipped: false
+      tags: 
+        - package
+        - aria2
+        - class
+        - node
+        - default
+      time: 2013-11-18 18:17:47.406025 +08:00
+      title: aria2
+    "File[/letv/soft/tools/iptables.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.002214
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}6f9d564d9cc32801307942c4bdfa957f'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:47.544384 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/iptables.pp
+      line: 4
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/letv/soft/tools/iptables.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - iptables
+        - node
+        - default
+      time: 2013-11-18 18:17:47.543633 +08:00
+      title: /letv/soft/tools/iptables.sh
+    "File[/letv/soft/tools/tjrtmp.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.002117
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}a067f1662cd14a7cae80d10ae46a4550'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:47.687815 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      line: 19
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/letv/soft/tools/tjrtmp.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tsd
+        - node
+        - default
+      time: 2013-11-18 18:17:47.687102 +08:00
+      title: /letv/soft/tools/tjrtmp.sh
+    "File[/letv/soft/nginx/nginx_update.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.046937
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}3c895ff29beb1bf160e718a61ee60fe5"
+          historical_value: 
+          message: "content changed '{md5}d672a5c1f422c5382f92289da6e7d7db' to '{md5}3c895ff29beb1bf160e718a61ee60fe5'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}d672a5c1f422c5382f92289da6e7d7db"
+          property: content
+          status: success
+          time: 2013-11-18 18:22:48.257496 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/nginx.pp
+      line: 5
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/letv/soft/nginx/nginx_update.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - nginx
+        - node
+        - default
+      time: 2013-11-18 18:22:48.217378 +08:00
+      title: /letv/soft/nginx/nginx_update.sh
+    "File[/var/log/sj/]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.015064
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym directory
+          historical_value: 
+          message: created
+          name: !ruby/sym directory_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:12.761242 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 40
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/var/log/sj/]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:17:12.760443 +08:00
+      title: /var/log/sj/
+    "File[nginx.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001132
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 6
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[nginx.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - nginx.conf
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:29.217832 +08:00
+      title: nginx.conf
+    "File[/etc/puppet/auth.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.084103
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}240e3b7ac68c879010a85fde496be887"
+          historical_value: 
+          message: "content changed '{md5}c34e20b7904b66ea97328f1a3846a848' to '{md5}240e3b7ac68c879010a85fde496be887'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}c34e20b7904b66ea97328f1a3846a848"
+          property: content
+          status: success
+          time: 2013-11-18 18:16:25.817478 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/puppet.pp
+      line: 12
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/etc/puppet/auth.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - puppet
+        - node
+        - default
+      time: 2013-11-18 18:16:25.761012 +08:00
+      title: /etc/puppet/auth.conf
+    "File[libc_md5]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 5.916075
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}055d982f57890bbc5f251e1abbc87a75'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:06.407808 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 56
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[libc_md5]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - libc_md5
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:17:06.155382 +08:00
+      title: libc_md5
+    "Exec[puppet restart]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.00047
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/puppet.pp
+      line: 25
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[puppet restart]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - puppet
+        - node
+        - default
+      time: 2013-11-18 18:16:25.846123 +08:00
+      title: puppet restart
+    "File[/var/log/sj/201303.log]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000714
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 45
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/var/log/sj/201303.log]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:17:12.776065 +08:00
+      title: /var/log/sj/201303.log
+    "File[/letv/soft/watchdog]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001055
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 13
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/watchdog]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:17:48.061898 +08:00
+      title: /letv/soft/watchdog
+    "Schedule[hourly]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000307
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Schedule[hourly]"
+      resource_type: Schedule
+      skipped: false
+      tags: 
+        - schedule
+        - hourly
+      time: 2013-11-18 18:16:30.302928 +08:00
+      title: hourly
+    "File[/lib/libudtp.so]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000714
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      line: 76
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/lib/libudtp.so]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:16:29.266463 +08:00
+      title: /lib/libudtp.so
+    "Exec[update-watchdog]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000741
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/watchdog.pp
+      line: 16
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[update-watchdog]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - update-watchdog
+        - class
+        - watchdog
+        - node
+        - default
+      time: 2013-11-18 18:17:48.073685 +08:00
+      title: update-watchdog
+    "File[check_zabbix]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.005847
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}4bc98a42b165af038b29913cf09c19b4'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:12.751729 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 13
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[check_zabbix]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - check_zabbix
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:17:12.750068 +08:00
+      title: check_zabbix
+    "Exec[restart-crtmpserver]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.00048
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/crtmpserver.pp
+      line: 16
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[restart-crtmpserver]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - restart-crtmpserver
+        - class
+        - crtmpserver
+        - node
+        - default
+      time: 2013-11-18 18:16:54.855496 +08:00
+      title: restart-crtmpserver
+    "Package[echoping]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000739
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/smokeping.pp
+      line: 24
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Package[echoping]"
+      resource_type: Package
+      skipped: false
+      tags: 
+        - package
+        - echoping
+        - class
+        - smokeping_pkg
+        - node
+        - default
+      time: 2013-11-18 18:16:37.004923 +08:00
+      title: echoping
+    "File[lsiutil]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 17.671337
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}d027cdf942f29b57a5ae81b86b563b06"
+          historical_value: 
+          message: "content changed '{md5}c84cf792dd63106d1ca57f947a80ce2b' to '{md5}d027cdf942f29b57a5ae81b86b563b06'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}c84cf792dd63106d1ca57f947a80ce2b"
+          property: content
+          status: success
+          time: 2013-11-18 18:16:48.535957 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 34
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[lsiutil]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - lsiutil
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:16:37.178560 +08:00
+      title: lsiutil
+    "File[/letv/soft/watchdog/watchdog_update.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.003866
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}f812b0f6a0d2bc59b61d49039c8e5d99'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:48.065356 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/watchdog.pp
+      line: 5
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/letv/soft/watchdog/watchdog_update.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - watchdog
+        - node
+        - default
+      time: 2013-11-18 18:17:48.063788 +08:00
+      title: /letv/soft/watchdog/watchdog_update.sh
+    "File[/usr/local/etc/restart_smokeping.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.003091
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}4169639ba877bd3da4e112db41c17b70'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:16:29.220247 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 56
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/usr/local/etc/restart_smokeping.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:16:29.219479 +08:00
+      title: /usr/local/etc/restart_smokeping.sh
+    "File[check_tar_gz]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 10.9044
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}dab9cc5532d58fc1c0267322705e5b42'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:00.542442 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 29
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[check_tar_gz]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - check_tar_gz
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:16:55.233560 +08:00
+      title: check_tar_gz
+    "File[/usr/local/etc/updatecrtmpserver.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.00219
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}4e4c43440973e532ada8a7daf8c01fe1'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:16:37.176494 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/crtmpserver.pp
+      line: 5
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/usr/local/etc/updatecrtmpserver.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - crtmpserver
+        - node
+        - default
+      time: 2013-11-18 18:16:37.175758 +08:00
+      title: /usr/local/etc/updatecrtmpserver.sh
+    "File[/usr/local/etc/rest_linux_udp.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.034627
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}fe914f5f723c71c456b7669308aa18bc"
+          historical_value: 
+          message: "content changed '{md5}8086541bd194f619a4c06e4bbe50ccd5' to '{md5}fe914f5f723c71c456b7669308aa18bc'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}8086541bd194f619a4c06e4bbe50ccd5"
+          property: content
+          status: success
+          time: 2013-11-18 18:16:29.210808 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 40
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/usr/local/etc/rest_linux_udp.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:16:29.182609 +08:00
+      title: /usr/local/etc/rest_linux_udp.sh
+    "File[/etc/udoers]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.032805
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}1ce6fd32c7f82e1d9694a4f247e48f4c"
+          historical_value: 
+          message: "content changed '{md5}5ffabe7289b3e18215c74e3a6e21aa8c' to '{md5}1ce6fd32c7f82e1d9694a4f247e48f4c'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}5ffabe7289b3e18215c74e3a6e21aa8c"
+          property: content
+          status: success
+          time: 2013-11-18 18:16:29.758130 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 81
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/etc/udoers]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - sudoers
+        - node
+        - default
+      time: 2013-11-18 18:16:29.732424 +08:00
+      title: /etc/udoers
+    "Schedule[daily]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000506
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Schedule[daily]"
+      resource_type: Schedule
+      skipped: false
+      tags: 
+        - schedule
+        - daily
+      time: 2013-11-18 18:17:45.742122 +08:00
+      title: daily
+    "Exec[restart-crond]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000574
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 81
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[restart-crond]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - restart-crond
+        - class
+        - crond-online
+        - node
+        - default
+      time: 2013-11-18 18:16:36.812532 +08:00
+      title: restart-crond
+    "Schedule[never]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000418
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Schedule[never]"
+      resource_type: Schedule
+      skipped: false
+      tags: 
+        - schedule
+        - never
+      time: 2013-11-18 18:17:06.138676 +08:00
+      title: never
+    "Package[nali]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000502
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/package.pp
+      line: 29
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Package[nali]"
+      resource_type: Package
+      skipped: false
+      tags: 
+        - package
+        - nali
+        - class
+        - node
+        - default
+      time: 2013-11-18 18:17:47.521954 +08:00
+      title: nali
+    "File[/bin/asdf]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.073345
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}b670d16f07946781c1d618be7c34245c"
+          historical_value: 
+          message: "content changed '{md5}75edc55254a11101a70999001b1be768' to '{md5}b670d16f07946781c1d618be7c34245c'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}75edc55254a11101a70999001b1be768"
+          property: content
+          status: success
+          time: 2013-11-18 18:17:47.495558 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 60
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/bin/asdf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:17:47.443595 +08:00
+      title: /bin/asdf
+    "Exec[exec-update-nginx]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000475
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/nginx.pp
+      line: 16
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[exec-update-nginx]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - exec-update-nginx
+        - class
+        - nginx
+        - node
+        - default
+      time: 2013-11-18 18:22:48.265408 +08:00
+      title: exec-update-nginx
+    "File[/lib/libudtp.so.0]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.325604
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "755"
+          historical_value: 
+          message: mode changed '644' to '755'
+          name: !ruby/sym mode_changed
+          previous_value: "644"
+          property: mode
+          status: success
+          time: 2013-11-18 18:16:30.135351 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      line: 72
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/lib/libudtp.so.0]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:16:29.810589 +08:00
+      title: /lib/libudtp.so.0
+    "Exec[killall -9 monit;/usr/bin/monit]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000403
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 12
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[killall -9 monit;/usr/bin/monit]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - monit
+        - node
+        - default
+      time: 2013-11-18 18:16:55.107030 +08:00
+      title: killall -9 monit;/usr/bin/monit
+    "File[/letv/soft/watchdog/old]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.003024
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym directory
+          historical_value: 
+          message: created
+          name: !ruby/sym directory_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:22:48.211959 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 16
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/letv/soft/watchdog/old]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:22:48.210640 +08:00
+      title: /letv/soft/watchdog/old
+    "File[/usr/local/etc/restart_centos6_flash.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000923
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 29
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/restart_centos6_flash.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:17:45.786402 +08:00
+      title: /usr/local/etc/restart_centos6_flash.sh
+    "File[/var/spool/cron/root]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.061097
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}0552a389a0ef2017305da1fb3708dbeb"
+          historical_value: 
+          message: "content changed '{md5}d9a65de97c93240a7f1c6713d3e041da' to '{md5}0552a389a0ef2017305da1fb3708dbeb'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}d9a65de97c93240a7f1c6713d3e041da"
+          property: content
+          status: success
+          time: 2013-11-18 18:16:36.785687 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 75
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/var/spool/cron/root]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - crond-online
+        - node
+        - default
+      time: 2013-11-18 18:16:36.750293 +08:00
+      title: /var/spool/cron/root
+    "Package[tcptraceroute]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000791
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/package.pp
+      line: 69
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Package[tcptraceroute]"
+      resource_type: Package
+      skipped: false
+      tags: 
+        - package
+        - tcptraceroute
+        - class
+        - node
+        - default
+      time: 2013-11-18 18:16:37.174449 +08:00
+      title: tcptraceroute
+    "File[/root/.ssh/authorized_keys]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.062488
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}65e00c5697283b6f7130b6e63512a6a3"
+          historical_value: 
+          message: "content changed '{md5}bfc2387305cbcdcc7e0eac79b21e32dd' to '{md5}65e00c5697283b6f7130b6e63512a6a3'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}bfc2387305cbcdcc7e0eac79b21e32dd"
+          property: content
+          status: success
+          time: 2013-11-18 18:16:36.721952 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/iptables.pp
+      line: 22
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/root/.ssh/authorized_keys]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - authorized_keys
+        - node
+        - default
+      time: 2013-11-18 18:16:36.686610 +08:00
+      title: /root/.ssh/authorized_keys
+    "Exec[iptables run]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000497
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/iptables.pp
+      line: 11
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[iptables run]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - iptables
+        - node
+        - default
+      time: 2013-11-18 18:17:47.546884 +08:00
+      title: iptables run
+    "Package[nethogs]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000438
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/package.pp
+      line: 76
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Package[nethogs]"
+      resource_type: Package
+      skipped: false
+      tags: 
+        - package
+        - nethogs
+        - class
+        - node
+        - default
+      time: 2013-11-18 18:16:29.804595 +08:00
+      title: nethogs
+    "File[/usr/local/etc/wget_nginx.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.002963
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}d34f352577832cb9797369d2b396b493'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:16:29.268540 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 65
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/usr/local/etc/wget_nginx.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:16:29.267745 +08:00
+      title: /usr/local/etc/wget_nginx.sh
+    "File[/usr/local/etc/nginx/mime.types]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.065744
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}5b253e92f927047a1b6321ace5ac4973"
+          historical_value: 
+          message: "content changed '{md5}968485be3185081352edd22fde472671' to '{md5}5b253e92f927047a1b6321ace5ac4973'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}968485be3185081352edd22fde472671"
+          property: content
+          status: success
+          time: 2013-11-18 18:17:12.196781 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/nginx.pp
+      line: 59
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/usr/local/etc/nginx/mime.types]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - nginx-mime
+        - node
+        - default
+      time: 2013-11-18 18:17:12.140492 +08:00
+      title: /usr/local/etc/nginx/mime.types
+    "File[/usr/local/etc/access_log.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.002049
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}8247f9e22baf1bf23b1461834613fb21'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:16:29.768258 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 17
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/usr/local/etc/access_log.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:29.767576 +08:00
+      title: /usr/local/etc/access_log.conf
+    "File[/letv/soft/nginx/md5-nginx]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000876
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/nginx.pp
+      line: 8
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/nginx/md5-nginx]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - nginx
+        - node
+        - default
+      time: 2013-11-18 18:22:48.215888 +08:00
+      title: /letv/soft/nginx/md5-nginx
+    "Exec[mkdir/letv/fet/live/live_temp]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.064551
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/nginx.pp
+      line: 26
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[mkdir/letv/fet/live/live_temp]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - nginx
+        - node
+        - default
+      time: 2013-11-18 18:17:12.684318 +08:00
+      title: mkdir/letv/fet/live/live_temp
+    "File[ld-linux.so.2]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 6.128343
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}76f87298be833edd36f67c4577838dcd'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:16:30.589033 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 39
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[ld-linux.so.2]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - ld-linux.so.2
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:16:30.303741 +08:00
+      title: ld-linux.so.2
+    "File[/usr/local/etc/linux_update.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.041162
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}b79478ca896cdfa933d4e5625ef66543"
+          historical_value: 
+          message: "content changed '{md5}0abef2aea2b9303adcc4e67bcf19d12a' to '{md5}b79478ca896cdfa933d4e5625ef66543'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}0abef2aea2b9303adcc4e67bcf19d12a"
+          property: content
+          status: success
+          time: 2013-11-18 18:17:45.669777 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 6
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/usr/local/etc/linux_update.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:17:45.635098 +08:00
+      title: /usr/local/etc/linux_update.sh
+    "Package[atop]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000876000000000099
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/package.pp
+      line: 37
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Package[atop]"
+      resource_type: Package
+      skipped: false
+      tags: 
+        - package
+        - atop
+        - class
+        - node
+        - default
+      time: 2013-11-18 18:16:36.999782 +08:00
+      title: atop
+    "Exec[ldconfig]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000689
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 45
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[ldconfig]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - ldconfig
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:16:36.433739 +08:00
+      title: ldconfig
+    "File[/usr/local/etc/md5-crtmpserver]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.003525
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}92caa360b3d651cc3e68c499d447b8d2'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:16:54.852070 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/crtmpserver.pp
+      line: 9
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/usr/local/etc/md5-crtmpserver]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - crtmpserver
+        - node
+        - default
+      time: 2013-11-18 18:16:54.850869 +08:00
+      title: /usr/local/etc/md5-crtmpserver
+    "Exec[cdntsdjar.sh run]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.00045
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      line: 35
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[cdntsdjar.sh run]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - tsd
+        - node
+        - default
+      time: 2013-11-18 18:17:47.695502 +08:00
+      title: cdntsdjar.sh run
+    "File[/letv/soft/checkfile.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.002017
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}d41d8cd98f00b204e9800998ecf8427e'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:22:48.269159 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/test.pp
+      line: 11
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/letv/soft/checkfile.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - checkfile
+        - node
+        - default
+      time: 2013-11-18 18:22:48.268470 +08:00
+      title: /letv/soft/checkfile.sh
+    "File[/etc/profile]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.035119
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}7434509dd1d9b7f3bfbf6bbae6aa5eb0"
+          historical_value: 
+          message: "content changed '{md5}6502c9ed0bf9454a296107340768ac92' to '{md5}7434509dd1d9b7f3bfbf6bbae6aa5eb0'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}6502c9ed0bf9454a296107340768ac92"
+          property: content
+          status: success
+          time: 2013-11-18 18:16:37.165987 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 73
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/etc/profile]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - profile
+        - node
+        - default
+      time: 2013-11-18 18:16:37.138328 +08:00
+      title: /etc/profile
+    "File[/usr/local/etc/newts_redirect.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.002013
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}55ec2baa0e0f0868e4c5e76f0af268d3'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:16:29.808712 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 33
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/usr/local/etc/newts_redirect.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:29.808027 +08:00
+      title: /usr/local/etc/newts_redirect.conf
+    "File[/lib/libffmux.so]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.126213
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: /lib/libffmux.so.0
+          historical_value: 
+          message: target changed 'libffmux.so.0' to '/lib/libffmux.so.0'
+          name: !ruby/sym target_changed
+          previous_value: libffmux.so.0
+          property: target
+          status: success
+          time: 2013-11-18 18:16:30.177030 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/ffmux.pp
+      line: 61
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/lib/libffmux.so]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - ffmux-new
+        - node
+        - default
+      time: 2013-11-18 18:16:30.176254 +08:00
+      title: /lib/libffmux.so
+    "File[/letv/soft/watchdog/md5-watchdog]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.003386
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}831a4d7d82d883b73b2c3667a56dd093'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:48.069706 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/watchdog.pp
+      line: 8
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/letv/soft/watchdog/md5-watchdog]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - watchdog
+        - node
+        - default
+      time: 2013-11-18 18:17:48.068575 +08:00
+      title: /letv/soft/watchdog/md5-watchdog
+    "Exec[mkdir/livemem/live/live_temp]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.131076
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: 
+            - "0"
+          historical_value: 
+          message: executed successfully
+          name: !ruby/sym executed_command
+          previous_value: !ruby/sym notrun
+          property: returns
+          status: success
+          time: 2013-11-18 18:16:37.070687 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/nginx.pp
+      line: 21
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "Exec[mkdir/livemem/live/live_temp]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - nginx
+        - node
+        - default
+      time: 2013-11-18 18:16:37.006069 +08:00
+      title: mkdir/livemem/live/live_temp
+    "File[libc_update]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 5.938363
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}ae61964733a2cd0657b2509e0cc2a84d'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:17:44.960294 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 51
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[libc_update]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - libc_update
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:17:39.696128 +08:00
+      title: libc_update
+    "File[/etc/init.d/puppetd]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.04618
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}90b55a78ec55288a5e7e7cafba0cffd4"
+          historical_value: 
+          message: "content changed '{md5}efe4c28a020c52bc5668c564581e7bff' to '{md5}90b55a78ec55288a5e7e7cafba0cffd4'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}efe4c28a020c52bc5668c564581e7bff"
+          property: content
+          status: success
+          time: 2013-11-18 18:17:39.685496 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/puppet.pp
+      line: 5
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/etc/init.d/puppetd]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - puppet
+        - node
+        - default
+      time: 2013-11-18 18:17:39.649392 +08:00
+      title: /etc/init.d/puppetd
+    "Schedule[monthly]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000642
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Schedule[monthly]"
+      resource_type: Schedule
+      skipped: false
+      tags: 
+        - schedule
+        - monthly
+      time: 2013-11-18 18:17:12.666825 +08:00
+      title: monthly
+    "File[/etc/hosts.deny]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.039063
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}d98ae97efce2ccd7b97fd105ce797cba"
+          historical_value: 
+          message: "content changed '{md5}4f4e87d9e9b723da22f89491cb2d758d' to '{md5}d98ae97efce2ccd7b97fd105ce797cba'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}4f4e87d9e9b723da22f89491cb2d758d"
+          property: content
+          status: success
+          time: 2013-11-18 18:16:26.954959 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 65
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/etc/hosts.deny]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - hostsdenyallow
+        - node
+        - default
+      time: 2013-11-18 18:16:26.924205 +08:00
+      title: /etc/hosts.deny
+    "File[/usr/local/etc/redirect.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.003234
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}1f97f1770cae33e399079cb21e9aff7c'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:16:29.302780 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 144
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/usr/local/etc/redirect.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - cdnredirect
+        - node
+        - default
+      time: 2013-11-18 18:16:29.301606 +08:00
+      title: /usr/local/etc/redirect.conf
+    "File[/usr/local/etc/mp4.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.001208
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 36
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/mp4.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:29.765859 +08:00
+      title: /usr/local/etc/mp4.conf
+    "File[rsyslog_agent.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 2
+      changed: true
+      evaluation_time: 0.003827
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: 502
+          historical_value: 
+          message: owner changed 'root' to 'zabbix'
+          name: !ruby/sym owner_changed
+          previous_value: 0
+          property: owner
+          status: success
+          time: 2013-11-18 18:17:47.519179 +08:00
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: zabbix
+          historical_value: 
+          message: group changed 'root' to 'zabbix'
+          name: !ruby/sym group_changed
+          previous_value: 0
+          property: group
+          status: success
+          time: 2013-11-18 18:17:47.520222 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/zabbix.pp
+      line: 18
+      out_of_sync: true
+      out_of_sync_count: 2
+      resource: "File[rsyslog_agent.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - rsyslog_agent.sh
+        - class
+        - zabbix
+        - node
+        - default
+      time: 2013-11-18 18:17:47.517563 +08:00
+      title: rsyslog_agent.sh
+    "File[/letv/soft/nginx]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000918
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tmpdir.pp
+      line: 19
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/letv/soft/nginx]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - tmpdir
+        - node
+        - default
+      time: 2013-11-18 18:22:48.214499 +08:00
+      title: /letv/soft/nginx
+    "File[security.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.03047
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}a3e4ef36c396811f594910c458482fb2"
+          historical_value: 
+          message: "content changed '{md5}a9d1556dd3b9fb9020f6d766e94a268b' to '{md5}a3e4ef36c396811f594910c458482fb2'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}a9d1556dd3b9fb9020f6d766e94a268b"
+          property: content
+          status: success
+          time: 2013-11-18 18:16:30.168493 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 14
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[security.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - security.conf
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:30.144610 +08:00
+      title: security.conf
+    "File[flv.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.042343
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}08cf12690a16dd1ac42d21d12aeaa95b"
+          historical_value: 
+          message: "content changed '{md5}343b14d6a93626e9668da50418555c9a' to '{md5}08cf12690a16dd1ac42d21d12aeaa95b'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}343b14d6a93626e9668da50418555c9a"
+          property: content
+          status: success
+          time: 2013-11-18 18:16:29.258761 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 10
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[flv.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - flv.conf
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:29.223124 +08:00
+      title: flv.conf
+    "File[monitrc]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.003657
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}412e1ac71081effd4eb40328ab21fa57'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:16:55.103988 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 7
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[monitrc]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - monitrc
+        - class
+        - monit
+        - node
+        - default
+      time: 2013-11-18 18:16:55.102439 +08:00
+      title: monitrc
+    "File[/usr/local/etc/vhost.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.002029
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: !ruby/sym file
+          historical_value: 
+          message: "defined content as '{md5}08565818c8272a5165ad032cd909eab2'"
+          name: !ruby/sym file_created
+          previous_value: !ruby/sym absent
+          property: ensure
+          status: success
+          time: 2013-11-18 18:16:29.795799 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 26
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/usr/local/etc/vhost.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:29.795111 +08:00
+      title: /usr/local/etc/vhost.conf
+    "Filebucket[puppet]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000481
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Filebucket[puppet]"
+      resource_type: Filebucket
+      skipped: false
+      tags: 
+        - filebucket
+        - puppet
+      time: 2013-11-18 18:17:45.743368 +08:00
+      title: puppet
+    "Exec[update-udpclient]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000484
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/tools.pp
+      line: 43
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[update-udpclient]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - update-udpclient
+        - class
+        - udpclient
+        - node
+        - default
+      time: 2013-11-18 18:17:48.205062 +08:00
+      title: update-udpclient
+    "File[/usr/local/etc/rtmp.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.005278
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 23
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "File[/usr/local/etc/rtmp.conf]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - centosconf
+        - node
+        - default
+      time: 2013-11-18 18:16:29.798106 +08:00
+      title: /usr/local/etc/rtmp.conf
+    "Exec[killall -9 nginx ; /usr/local/sbin/nginx -c  /usr/local/etc/nginx.conf]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000383
+      events: []
+      failed: false
+      file: /etc/puppet/manifests/rules/app.pp
+      line: 150
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Exec[killall -9 nginx ; /usr/local/sbin/nginx -c  /usr/local/etc/nginx.conf]"
+      resource_type: Exec
+      skipped: false
+      tags: 
+        - exec
+        - class
+        - cdnredirect
+        - node
+        - default
+      time: 2013-11-18 18:16:29.305783 +08:00
+      title: killall -9 nginx ; /usr/local/sbin/nginx -c  /usr/local/etc/nginx.conf
+    "File[/usr/local/etc/restart_centos6_watchdog.sh]": !ruby/object:Puppet::Resource::Status
+      change_count: 2
+      changed: true
+      evaluation_time: 0.034746
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}b54ec3afedc86ce2c468fefea27d24f9"
+          historical_value: 
+          message: "content changed '{md5}f8d4a04ce050d89be6eb0ca813304f56' to '{md5}b54ec3afedc86ce2c468fefea27d24f9'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}f8d4a04ce050d89be6eb0ca813304f56"
+          property: content
+          status: success
+          time: 2013-11-18 18:17:47.435917 +08:00
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "755"
+          historical_value: 
+          message: mode changed '644' to '755'
+          name: !ruby/sym mode_changed
+          previous_value: "644"
+          property: mode
+          status: success
+          time: 2013-11-18 18:17:47.441963 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/linux_update.pp
+      line: 12
+      out_of_sync: true
+      out_of_sync_count: 2
+      resource: "File[/usr/local/etc/restart_centos6_watchdog.sh]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - linuxupdate
+        - node
+        - default
+      time: 2013-11-18 18:17:47.408182 +08:00
+      title: /usr/local/etc/restart_centos6_watchdog.sh
+    "File[/usr/local/etc/crtmpserver.lua]": !ruby/object:Puppet::Resource::Status
+      change_count: 1
+      changed: true
+      evaluation_time: 0.0391010000000001
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          desired_value: "{md5}8ed275a58012e603aa0105b8138c2aa0"
+          historical_value: 
+          message: "content changed '{md5}a43e7a987d2a5360fc75ff16519ff659' to '{md5}8ed275a58012e603aa0105b8138c2aa0'"
+          name: !ruby/sym content_changed
+          previous_value: "{md5}a43e7a987d2a5360fc75ff16519ff659"
+          property: content
+          status: success
+          time: 2013-11-18 18:16:26.993744 +08:00
+      failed: false
+      file: /etc/puppet/manifests/rules/crtmpserver.pp
+      line: 20
+      out_of_sync: true
+      out_of_sync_count: 1
+      resource: "File[/usr/local/etc/crtmpserver.lua]"
+      resource_type: File
+      skipped: false
+      tags: 
+        - file
+        - class
+        - crtmpserver
+        - node
+        - default
+      time: 2013-11-18 18:16:26.964248 +08:00
+      title: /usr/local/etc/crtmpserver.lua
+    "Schedule[weekly]": !ruby/object:Puppet::Resource::Status
+      change_count: 0
+      changed: false
+      evaluation_time: 0.000526
+      events: []
+      failed: false
+      file: 
+      line: 
+      out_of_sync: false
+      out_of_sync_count: 0
+      resource: "Schedule[weekly]"
+      resource_type: Schedule
+      skipped: false
+      tags: 
+        - schedule
+        - weekly
+      time: 2013-11-18 18:16:29.114641 +08:00
+      title: weekly
+  status: changed
+  time: 2013-11-18 18:16:16.229624 +08:00

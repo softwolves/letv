@@ -1,0 +1,76 @@
+--- !ruby/object:Puppet::Node::Facts
+  expiration: 2013-11-22 18:45:03.127357 +08:00
+  name: cdn-sx-ty-cmcc-111
+  values: 
+    clientcert: cdn-sx-ty-cmcc-111
+    processor8: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor12: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    serialnumber: 210231771610B4001752
+    architecture: x86_64
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAKqBjk68wwsp+la3nlliBESa90fT/eRRWKVbIZmutc+ToK3pmVVcKiFXqEMYkeERveKMQYMtRC9lX5QdlNRvxzo3zr0UFya0CX79XFW+ExCvq2rkd84/JffUz9va0loR0EH3oFxNgG62k4CDraZRjWhRuheerexyZpj3Tw3L/NLLAAAAFQD5zH8H39fhG6e6ez3O4Ff+Tw7lGQAAAIBzS302PefVd6XheXYl4x0czMXbvdPORqwG4DB5lJXOmmmhtRBj5AligB82TwwIQXump1SUUfn3r4YC7ZkhoW2dMYM6l9l10GBwsaMEnpWu5oMOwGj1m2t+WpmD3OHeUIea8DD9EJ3MjzAYEOtoIDOTYppU0NiEgTlAgPrHQ2MRuwAAAIASVy6zdqRK0MBmX3fFN2mhThHncsJUBL0yo3PzyeDLDd7y6KN6zN6hrDwvvkKtEszi6WcKr0mX7RL8Wdg9k2SIghW+MFGzv8e1bExQkxDqz76dEryAFltvBSM6mmQsk0OaDGnFBGE4kQ9FoNuxS4mSdqn4ygpSFg4dfWN2ZD9iLg==
+    type: Main Server Chassis
+    ipaddress_eth0: 221.180.21.111
+    hostname: CDN-SX-TY-CMCC-111
+    !ruby/sym _timestamp: 2013-11-22 18:30:08.286420 +08:00
+    memoryfree: 12.02 GB
+    network_lo: 127.0.0.0
+    processor5: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    timezone: CST
+    kernel: Linux
+    macaddress_eth1: 08:19:A6:25:3F:8C
+    operatingsystemrelease: "6.2"
+    kernelmajversion: "2.6"
+    ipaddress_lo: 127.0.0.1
+    processor2: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    netmask_eth0: 255.255.255.224
+    facterversion: 1.6.0
+    selinux: "false"
+    processor14: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    uniqueid: 007f0100
+    puppetversion: 2.6.11
+    interfaces: "eth0,eth1,eth2,eth3,lo"
+    uptime_days: "23"
+    productname: Tecal RH2285
+    processor7: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor11: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    swapfree: 5.85 GB
+    hardwaremodel: x86_64
+    macaddress_eth3: 00:1B:21:A2:DB:D3
+    uptime_seconds: "1997329"
+    processor4: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    manufacturer: "Huawei Technologies Co., Ltd."
+    processorcount: "16"
+    is_virtual: "false"
+    netmask_lo: 255.0.0.0
+    macaddress_eth0: 08:19:A6:25:3F:8B
+    network_eth0: 221.180.21.96
+    hardwareisa: x86_64
+    processor1: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEA4umRAI+R0LPBGJLK531gE4xgACitpfrpzn5pDqL1RjgCY+8MPhLpKRbcZRWIO308pkroRiAeuO73+0JxKWhUH0qhTZm4idxiCSgmwhEo0/HNNKCzuJttnOuZ3Gwqmk8GIl+xZjlGrobUuw5QXd7gfEquq2XHIivNqWBG8NEFz8qFrs9vRRgA3ZZqbVgB6PNVzjO89qbcRvMczXyYteFfdISRvXKRsbUZ3DO1BmLVxGA0E9myVIUchIkbJ/hj4+DJ8U/U5K+5Osd8DZ3w0QE6FG74aJXYuj/Fq4JaXObLbCwR6eaEo43Ed95h7a0Y2Au54pd2nCT0NI4vF7YeY3JTYQ==
+    kernelrelease: 2.6.32-900.220.23.1.letv.el6.x86_64
+    ps: ps -ef
+    processor9: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor13: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    kernelversion: 2.6.32
+    clientversion: 2.6.11
+    rubyversion: 1.8.7
+    processor6: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor10: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    memorysize: 15.57 GB
+    uptime: 23 days
+    id: root
+    virtual: physical
+    macaddress_eth2: 00:1B:21:A2:DB:D2
+    ipaddress: 221.180.21.111
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    operatingsystem: CentOS
+    processor3: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    environment: production
+    swapsize: 5.86 GB
+    uptime_hours: "554"
+    physicalprocessorcount: "2"
+    processor15: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    netmask: 255.255.255.224
+    macaddress: 08:19:A6:25:3F:8B
+    processor0: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz

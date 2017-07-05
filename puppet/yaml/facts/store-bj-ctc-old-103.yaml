@@ -1,0 +1,62 @@
+--- !ruby/object:Puppet::Node::Facts
+  expiration: 2013-11-22 18:43:39.556332 +08:00
+  name: store-bj-ctc-old-103
+  values: 
+    network_eth0: 220.181.117.96
+    kernelmajversion: "2.6"
+    operatingsystem: CentOS
+    uptime: 34 days
+    netmask_eth0: 255.255.255.224
+    kernelrelease: 2.6.32-letv.2.220.4.1.el6.x86_64
+    processorcount: "4"
+    netmask: 255.255.255.224
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEA7Ke8NwlnI1Dj9KEaD39KGeJxOrZbomusfU5oW1ySmuH3+gHAl4ZmaX9VoDZbhxr7GC6D9PHSTpGolAqci0onn113RNB4juB3YeVi3VMHMHvidgB8eLocY/ABtJIHQckoABzujC4qxcuyWptOUvlUYXh9kDTBvRBL8t83HOUAYZE1RNrnRKURFK1moOsvefowRTceXv/AlSo/7QRSjVOkqAH0knspOlpKTGWQmbAmKubLaAYJod9R4830jeUwTihMs9EO9iuPRz7EoBUfjZ8Ltcn95aO6GHGzko10S9ex6NuNTsiLGlNeAg+DVH0O1m7DrKqZw+8pSa9w3hxXxPvBLw==
+    swapsize: 5.86 GB
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    manufacturer: HP
+    type: Rack Mount Chassis
+    uptime_days: "34"
+    swapfree: 5.86 GB
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAJNNSfT/dufBouPVMrKKH7UelNSGA/aFsOg2DUdFBch9Ucs241n4k7bzV1/WK1kLxaNiMIOcXuyVf+fXUCnGvij8wqbqt2FK41Kc2PbaODohXe2GDgKJuM8+1Jn1X+D3E91dEV8bN7G+i523gQf/SKJX3k9RtHTjivPha+Jqf7q7AAAAFQDqrMOXh/jZubtj5XVR75gWGvjyUwAAAIAH4e+L+0YFOxyMqk97ougglHIxzkv3bRk8ZYnVshYE5QNDwkrBEyGgEBROTy1SlV9MnIUkmvcDae/8tTeVpSb8GkPads0+/SrNFrUHhyasUQ7tHUwrSuA1Qx5yxdmu6VdWB6k0Ak/rYIwmFOyxBDjQDzJmhI5lCgCG+rpcGIlvkQAAAIAfoL5fqEyR0lMBgJePa4O9T3tzJNf+pFZF/95pl9wrYnW25EHxexHV5ZvLxfQO+NQfkbZoyB7UWNnLPhS4ayiarUJTe/Ozt16oWaIip54Z2BaIvxgXG55t4gvSZjCAIhohXABYp8jNkx/gSwWLEJIAwxkVhlbCG2BfVE8nfj/s4A==
+    memoryfree: 6.20 GB
+    id: root
+    memorysize: 7.68 GB
+    operatingsystemrelease: "6.2"
+    uniqueid: "00000000"
+    architecture: x86_64
+    serialnumber: CNG951S5YQ
+    !ruby/sym _timestamp: 2013-11-22 18:28:39.995222 +08:00
+    uptime_seconds: "3019166"
+    selinux: "false"
+    ipaddress: 220.181.117.103
+    ipaddress_lo: 127.0.0.1
+    processor3: Intel(R) Xeon(R) CPU           E5504  @ 2.00GHz
+    processor2: Intel(R) Xeon(R) CPU           E5504  @ 2.00GHz
+    macaddress: F4:CE:46:87:DE:5E
+    environment: production
+    processor1: Intel(R) Xeon(R) CPU           E5504  @ 2.00GHz
+    processor0: Intel(R) Xeon(R) CPU           E5504  @ 2.00GHz
+    macaddress_eth1: F4:CE:46:87:DE:5F
+    macaddress_eth0: F4:CE:46:87:DE:5E
+    rubyversion: 1.8.7
+    productname: ProLiant DL180 G6
+    interfaces: "eth0,eth1,lo"
+    clientversion: 2.6.11
+    facterversion: 1.6.0
+    ps: ps -ef
+    kernel: Linux
+    hostname: Store-BJ-CTC-old-103
+    puppetversion: 2.6.11
+    timezone: CST
+    physicalprocessorcount: "1"
+    clientcert: store-bj-ctc-old-103
+    kernelversion: 2.6.32
+    uptime_hours: "838"
+    ipaddress_eth0: 220.181.117.103
+    hardwareisa: x86_64
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    hardwaremodel: x86_64
+    netmask_lo: 255.0.0.0
+    is_virtual: "false"
+    virtual: physical
+    network_lo: 127.0.0.0

@@ -1,0 +1,40 @@
+{
+  "log":
+  {
+	"name": "Global Logger",
+	"type": "FILE|STDOUT|STDERR",  // marks: FILE|STDOUT|STDERR
+	"level": "INFO|WARNING|ERROR|FATAL", // marks: TRACE|INFO|WARNING|ERROR|FATAL
+	"append": true,
+	"file": "/letv/imgcdn-log/watchdog.log",
+	"timeCapacity": 1,
+	"sizeCapacity": 10,
+	"timeMilliSeconds": true
+  },
+  "server":
+  {
+	"broker":"failover:(tcp://amq.cache.lecloud.com:80?wireFormat=openwire,tcp://amq1.cache.lecloud.com:80?wireFormat=openwire,tcp://36.110.219.148:80?wireFormat=openwire,tcp://amq2.cache.lecloud.com:80?wireFormat=openwire,tcp://111.206.209.98:80?wireFormat=openwire,tcp://amq3.cache.lecloud.com:80?wireFormat=openwire,tcp://115.182.200.103:80?wireFormat=openwire,tcp://amq4.cache.lecloud.com:80?wireFormat=openwire,tcp://111.13.145.138:80?wireFormat=openwire)?timeout=5000&useExponentialBackOff=false&maxReconnectAttempts=-1&priorityBackup=true&priorityURIs=tcp://amq.cache.lecloud.com:80?wireFormat=openwire",
+	"nginxHost":"stats.cache.lecloud.com",
+	"switchIP":"192.168.1.100",
+	"gatewayId":"gate-001",
+	"controlHostPort":"control.cache.lecloud.com:8080"
+  },
+  "local":{
+	"nodeId":"*",
+	"serverId":"*",
+	"atsConfigPath":"/etc/trafficserver",
+	"threadCount": 8,
+	"reportServerInterval":10,
+	"updateGatewayConfigInterval":120,
+	"videoCDNWatchdog":1,
+	"reportLocalBands":1,
+	"reportGatewayBands":1,
+	"reportBands":1,
+	"atsStatReportAddress":"stats.cache.lecloud.com",
+	"atsLogUploadAddress":"stats.cache.lecloud.com",
+	"atsStatDataPath":"/letv/trafficserver/log/realstat/",
+	"atsLogDataPath":"/letv/trafficserver/log/",
+	"consumerTopic":"Control-Commands-Video-Level1",
+	"logKeepInterval":"24"
+  }
+}
+

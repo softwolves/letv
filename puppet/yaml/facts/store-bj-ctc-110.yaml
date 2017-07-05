@@ -1,0 +1,84 @@
+--- !ruby/object:Puppet::Node::Facts
+  expiration: 2013-11-18 18:39:25.937666 +08:00
+  name: store-bj-ctc-110
+  values: 
+    processor23: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    type: Rack Mount Chassis
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEAvhKgadYIzmrTYKf8INDudb1QltoD9glbMLjKCFpNIffENv83o5gfMw7q+EOjhCAvSFfZqmnUM4rGEpEX/MbQmz/lFdAJUMMJABBxnxlBs1dmEhp3ot3jMthsJRkk7sq8hGgjdFkZXQXpc3Gg+L68QYGx2mD5qqvhHg7LQUshxEaYbgtd5kZ2HfldDMk2sSzxjrq1PvZkbvjTtPbtrOW3dMoquNipgevU5qvvXTPjqyceXK97wyAJKlDH2YydKVN4hK7zQSY36N1W2vDb6NeSHbNFl8CFbj5YX2P8PpfK4h2fTrhBVDm/af1ZUW2F7txihAzam9niHbOerqvl8t4skQ==
+    processor8: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    clientversion: 2.6.11
+    !ruby/sym _timestamp: 2013-11-18 18:24:26.034665 +08:00
+    processor10: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    processor5: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    processor20: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    network_eth0: 220.181.155.0
+    processor18: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    memoryfree: 28.41 GB
+    hostname: Store-BJ-CTC-110
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    swapfree: 5.86 GB
+    processor2: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    operatingsystem: CentOS
+    processor15: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    macaddress_eth2: 2C:59:E5:41:FD:82
+    interfaces: "eth0,eth1,eth2,eth3,lo"
+    memorysize: 31.19 GB
+    timezone: CST
+    hardwareisa: x86_64
+    selinux: "false"
+    productname: ProLiant DL380e Gen8
+    processor12: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    operatingsystemrelease: "6.3"
+    uptime_hours: "743"
+    clientcert: store-bj-ctc-110
+    processor22: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    hardwaremodel: x86_64
+    processor7: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    network_lo: 127.0.0.0
+    rubyversion: 1.8.7
+    ipaddress_lo: 127.0.0.1
+    netmask_lo: 255.0.0.0
+    architecture: x86_64
+    processor4: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    kernelrelease: 2.6.32-902.279.9.1.letv.el6.x86_64
+    uptime: 30 days
+    processor17: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    uniqueid: 007f0100
+    uptime_seconds: "2678273"
+    manufacturer: HP
+    netmask_eth0: 255.255.255.0
+    physicalprocessorcount: "2"
+    processor1: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    processor14: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    kernelmajversion: "2.6"
+    macaddress_eth1: 2C:59:E5:41:FD:81
+    serialnumber: 6CU3393JG9
+    processor9: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    netmask: 255.255.255.0
+    ipaddress: 220.181.155.110
+    processorcount: "24"
+    virtual: physical
+    kernelversion: 2.6.32
+    processor11: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    processor19: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    processor21: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    processor6: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    kernel: Linux
+    ps: ps -ef
+    processor16: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    is_virtual: "false"
+    processor3: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    uptime_days: "30"
+    facterversion: 1.6.0
+    puppetversion: 2.6.11
+    ipaddress_eth0: 220.181.155.110
+    macaddress_eth3: 2C:59:E5:41:FD:83
+    macaddress: 2C:59:E5:41:FD:80
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAOWnpNVenZkhoVDdvzqsU2AYCI0ZVYv0+muf1Dfm9DHc3MnZBveRRyU1MNy/ilDJiuTTYmH21eufT8v0XfaSmohUBv8cJJOiIiQUGP+qCJeObNhV1pjZtpbWx5D/7CDDkgw8jgQU7FsjRVXa2ZFXS5Dw4L7HxJ30VYGIXFD1WTVzAAAAFQCbnUf9dRaotDgJLXAjCnxAE0MN6wAAAIAvIfDYFIx/XUGZlE091J2i91EX2UJWyE8V77lgvHKPj+AaUm3xyfJx8aIoyq6myC+9sdQS0KNqmSS3GbaNHQasUeZOvBl4Y2l71umtUS7NLJWnakgzXXQtxG3yVyS1MuYQDeC5Sh1s8bqDVkuqbnixZm/H2Cgyqf7iFl7j7dwY6gAAAIBdBvWamz9AXq66mtRx08tHHkUYnMKSB5s7TcsChC50x0WG6nflELNwaUMktv2PPS20/RiUkqHscO4Nnfa90zSk3u6uwSTGO8FajI3QvKXqr/GzAcSlUU+kVx88b7Gc/7E08bQUuJCagaV8876wwe1kL71vqLJbZOTz46vDhGBOrg==
+    swapsize: 5.86 GB
+    processor0: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    processor13: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz
+    environment: production
+    id: root
+    macaddress_eth0: 2C:59:E5:41:FD:80

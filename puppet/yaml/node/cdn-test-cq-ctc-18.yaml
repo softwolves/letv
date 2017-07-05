@@ -1,0 +1,65 @@
+--- !ruby/object:Puppet::Node
+  classes: []
+  environment: &id001 production
+  expiration: 2013-11-18 18:52:46.154275 +08:00
+  name: cdn-test-cq-ctc-18
+  parameters: 
+    netmask_lo: 255.0.0.0
+    macaddress_eth0: E0:CB:4E:00:5C:B9
+    macaddress_eth1: E0:CB:4E:00:5C:81
+    id: root
+    ipaddress_eth0: 119.84.47.18
+    hardwareisa: x86_64
+    architecture: x86_64
+    kernelmajversion: "2.6"
+    environment: *id001
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    physicalprocessorcount: "1"
+    network_lo: 127.0.0.0
+    operatingsystemrelease: "6.3"
+    swapfree: 5.85 GB
+    uptime: 33 days
+    macaddress: E0:CB:4E:00:5C:B9
+    clientcert: cdn-test-cq-ctc-18
+    is_virtual: "false"
+    puppetversion: 2.6.11
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAOIGqa/OyCdc4wI7BuPPO/b0RvTkB+gtcCQCEfdkbyqD1REG1Dm2MjkAaOebTt2vARpg+ScHV9+RJQNdcdvyG4qNuHfTwrFFay9T+2rMqonEbPTIbSWkak+85rsY5cupKW0rhv5qYIh0DDz+RetDJrhY2KCkRdJJMO9rp7WuhW6DAAAAFQDODW/2ex2FJaCxJDQg28x2wNREDwAAAIARmIe1ofuR4aLnMECh2oITRPGw7K0u6tV1nBb+ORCnEjTRmx0jGY7/wgPnJUAMMTpFWa63apFa4jnSxEZWJKR6RR+UjIKQ4yNCMBEgCUdDx1NwF4gkLzBbC2mRRVC2BAS7KnQ7b224hvJ28/vPPmWeO96OUPrFFr6gPpBInlRzAAAAAIAnVJJ255ZBp4whFJJf5u+44cAG2N4qRhpQvdl0n+ZBTTF5e05e1hL6KPfkckxw4Q9inyxRoOb+9X26KKCTUBoxtrcMt1asU5O4R2hzqpvhceckbvQhad1aEj1L+p031u25XsvUX5klfi43XouSaLxi2kkwUL/T4OeQYLJu6PxNWA==
+    !ruby/sym _timestamp: 2013-11-18 18:22:46.111734 +08:00
+    ipaddress: 119.84.47.18
+    operatingsystem: CentOS
+    kernelrelease: 2.6.32-903.279.9.1.letv.el6.x86_64
+    netmask_eth0: 255.255.255.128
+    selinux: "false"
+    facterversion: 1.6.0
+    uptime_days: "33"
+    timezone: CST
+    hostname: CDN-TEST-CQ-CTC-18
+    kernelversion: 2.6.32
+    ps: ps -ef
+    network_eth0: 119.84.47.0
+    netmask: 255.255.255.128
+    clientversion: 2.6.11
+    processorcount: "4"
+    kernel: Linux
+    virtual: physical
+    memorysize: 3.73 GB
+    ipaddress_lo: 127.0.0.1
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    uptime_hours: "795"
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEApoWumnoH3dHKBD4Z5Jf+nuD858WcK82GX0J6DWDhEqiobCGpMluyH2aKAulkmVP2AtujoAQSnu0BE5DKimp45yN7YRgdDJLc5ApK+eXozuKmOvhPQmhRniyaHixHch/OQCNX7WWuNp4r3MKyulEcssOxBJuFKv5D88UhVDLV/t4urk/UW98NWM47Tc8LYtyKhMSnrhRnG4O6v95Xe5VnppxQV6vQu/vzm+Yw+DTvHkMw4Dyv/I1VAfqoQH+HBzl1SMkfm+pntphyfX6Uthi6a+yLAxtq2ur4hS8+m+FfoHHRU4WAjtAWmeHIcAoPayeAnOC/+UcHoQpEiV5dvUxqXQ==
+    rubyversion: 1.8.7
+    processor1: Intel(R) Xeon(R) CPU           E5504  @ 2.00GHz
+    processor0: Intel(R) Xeon(R) CPU           E5504  @ 2.00GHz
+    processor3: Intel(R) Xeon(R) CPU           E5504  @ 2.00GHz
+    processor2: Intel(R) Xeon(R) CPU           E5504  @ 2.00GHz
+    manufacturer: System manufacturer
+    type: Desktop
+    hardwaremodel: x86_64
+    memoryfree: 2.63 GB
+    uptime_seconds: "2864363"
+    uniqueid: 007f0100
+    serialnumber: System Serial Number
+    productname: System Product Name
+    interfaces: "eth0,eth1,lo"
+    swapsize: 5.86 GB
+  time: 2013-11-18 18:22:46.150818 +08:00

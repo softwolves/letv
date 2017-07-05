@@ -1,0 +1,91 @@
+--- !ruby/object:Puppet::Node::Facts
+  expiration: 2013-11-18 18:39:26.985960 +08:00
+  name: cdn-gd-fs3-ctc-74
+  values: 
+    processor23: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    processor8: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    type: Desktop
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEAxOkluNLHe9tIr5GnpwJPEAGSc1F5k9luEDf9wGzg/Hg7Xvx55npfHzIxzPXpMlfmm3OHUMXmrjR7K1065BOgSmQiDpJKmU67eR4mFnQaXpJ8Mw779CUMWRPVHjCMp06D5RIvXutAHNoYW7+OSbcT/Z9wKqy4wOs32q33DEnEbU6J19qPwwFfYM0SyX2RpG0UEWrBpUCnNxKEKbX2UWSjk0wY3wFbGkFxM+2hHG7S5bVELZYz++lPK33bR3xeEdvskIkZGIUhm4vtfk/eE9oP4mdcLthrUZO7lGQkQuOK4khZylPpOLZfQ68+2FQN+Ngwu9xfMdJE8C8NYZQ5uGv5Vw==
+    clientversion: 2.6.11
+    processor10: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    macaddress_bond0: 00:25:90:C7:22:C6
+    !ruby/sym _timestamp: 2013-11-18 18:24:27.192984 +08:00
+    processor20: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    processor18: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    processor5: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    ipaddress_bond0_2: 183.60.210.74
+    network_bond0_2: 183.60.210.64
+    hostname: CDN-GD-FS3-CTC-74
+    memoryfree: 29.90 GB
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    swapfree: 5.86 GB
+    processor2: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    operatingsystem: CentOS
+    processor15: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    netmask_bond0: 255.255.255.192
+    memorysize: 31.32 GB
+    timezone: CST
+    interfaces: "bond0,bond0_1,bond0_2,eth0,eth1,lo"
+    macaddress_bond0_1: 00:25:90:C7:22:C6
+    hardwareisa: x86_64
+    productname: R5210-G9
+    selinux: "false"
+    processor12: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    operatingsystemrelease: "6.3"
+    processor22: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    hardwaremodel: x86_64
+    uptime_hours: "6"
+    processor7: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    clientcert: cdn-gd-fs3-ctc-74
+    rubyversion: 1.8.7
+    ipaddress_lo: 127.0.0.1
+    network_lo: 127.0.0.0
+    netmask_lo: 255.0.0.0
+    network_bond0_1: 183.60.210.64
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    ipaddress_bond0_1: 183.60.210.88
+    processor4: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    kernelrelease: 2.6.32-903.279.9.1.letv.el6.x86_64
+    processor17: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    uptime: 6:48 hours
+    architecture: x86_64
+    uniqueid: 007f0100
+    uptime_seconds: "24537"
+    manufacturer: SuperCloud
+    physicalprocessorcount: "2"
+    kernelmajversion: "2.6"
+    netmask_bond0_2: 255.255.255.192
+    processor1: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    processor14: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    macaddress_eth1: 00:25:90:C7:22:C7
+    serialnumber: B2U1131000022
+    processor9: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    netmask: 255.255.255.192
+    ipaddress: 183.60.210.104
+    network_bond0: 183.60.210.64
+    processorcount: "24"
+    virtual: physical
+    kernelversion: 2.6.32
+    processor11: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    processor21: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    processor6: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    processor19: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    kernel: Linux
+    ps: ps -ef
+    uptime_days: "0"
+    puppetversion: 2.6.11
+    processor3: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    facterversion: 1.6.0
+    is_virtual: "false"
+    processor16: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    macaddress_bond0_2: 00:25:90:C7:22:C6
+    sshdsakey: AAAAB3NzaC1kc3MAAACBALq243357311hgNG55hczNaBebw+4FmGAn1EcsvXoRPkNk5F++q0uw4hIoCaeYhicfwmV7MINmwyyoq6pcTDcnXxOetl18muCfTpuelgjiS0PSx5AazkTpu5KbAiiAV6FNGInSix3SnVLQzE/k5fSebRvEMSqa1KgRrc+cbYMie/AAAAFQCZ7axJTH40q7UgLKFk1A0fzL8bIwAAAIA7gr/uB9OhHNKAcgRD3+iVhkDhTc+GGnjD5sNYxjpktQoo/Tp9cVaqygU8VBzV/v5VyxEKjgY70apnFi7fIkGDChGzk+DetbVXe+uA0MdRiAAmqTnzVxT8m0ADWg7KBh/80OegaNCsSQsxCaex1VRNBT0nRbsLeMU6slO9zEVLSgAAAIBaOhErYeYpZ12YbJVEgoyZwihujZaNSLTdn2H6LfSLuAbpDPqbbv1k+yPIbwCPhpZn8038Inb0GlcFqIReBtD0WzaVyigy0Z1r2GbHYCFYynVllJBj+QxeQi0zsdwgAMMFkJL3EI18pEqrYu3Aib1PJRz4rHV3KcP6fUWncTCPyA==
+    macaddress: 00:25:90:C7:22:C6
+    ipaddress_bond0: 183.60.210.104
+    processor13: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    processor0: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    swapsize: 5.86 GB
+    netmask_bond0_1: 255.255.255.192
+    environment: production
+    id: root
+    macaddress_eth0: 00:25:90:C7:22:C6

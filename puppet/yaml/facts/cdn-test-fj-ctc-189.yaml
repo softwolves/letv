@@ -1,0 +1,76 @@
+--- !ruby/object:Puppet::Node::Facts
+  expiration: 2013-11-18 18:39:05.062926 +08:00
+  name: cdn-test-fj-ctc-189
+  values: 
+    type: Rack Mount Chassis
+    processor8: Intel(R) Xeon(R) CPU           E5630  @ 2.53GHz
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEA4OtETsGQ+Sfsd5iv6eut31MClFWNctikG10FSarAM5j1FavtvzCtUu+ePmaN9k9Fd5Nn5h1hhSCKA/rin7i4Ah4eWHvlrx9OzR1kILZwoUnrd+VoQCr2wn/sWWPMEQrUlogpVChggbeP4peiLunje8wUm04QY1+MW1dlrzYYVoox0RBLr6cirtVatpK4X8UrLB5GW3Me93Ca4KTqFsGNjzn0vPyfGfVuvJ2BVfcWuC8jHYk1TXJB77aAg4lBFmeBuQOJ/DFwoVqtY+X26XMZU7jSkTMWZjfVwPhCvPuVf9zURYBHpUliu/O4E6vPrdjGyWtMQcN25yuxZRYFKJaBsw==
+    clientversion: 2.6.11
+    netmask_em1: 255.255.255.224
+    !ruby/sym _timestamp: 2013-11-18 18:24:05.332164 +08:00
+    processor10: Intel(R) Xeon(R) CPU           E5630  @ 2.53GHz
+    processor5: Intel(R) Xeon(R) CPU           E5630  @ 2.53GHz
+    macaddress_em2: 84:2B:2B:2B:14:81
+    memoryfree: 22.01 GB
+    hostname: CDN-TEST-FJ-CTC-189
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    swapfree: 5.85 GB
+    processor2: Intel(R) Xeon(R) CPU           E5630  @ 2.53GHz
+    operatingsystem: CentOS
+    processor15: Intel(R) Xeon(R) CPU           E5630  @ 2.53GHz
+    timezone: CST
+    interfaces: "em1,em2,em3,em4,lo"
+    memorysize: 23.45 GB
+    hardwareisa: x86_64
+    productname: PowerEdge R710
+    selinux: "false"
+    operatingsystemrelease: "6.3"
+    processor12: Intel(R) Xeon(R) CPU           E5630  @ 2.53GHz
+    processor7: Intel(R) Xeon(R) CPU           E5630  @ 2.53GHz
+    hardwaremodel: x86_64
+    uptime_hours: "1088"
+    clientcert: cdn-test-fj-ctc-189
+    macaddress_em4: 84:2B:2B:2B:14:85
+    ipaddress_lo: 127.0.0.1
+    rubyversion: 1.8.7
+    network_em1: 202.109.223.160
+    network_lo: 127.0.0.0
+    netmask_lo: 255.0.0.0
+    architecture: x86_64
+    processor4: Intel(R) Xeon(R) CPU           E5630  @ 2.53GHz
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    kernelrelease: 2.6.32-903.279.9.1.letv.el6.x86_64
+    macaddress_em1: 84:2B:2B:2B:14:7F
+    uptime: 45 days
+    uniqueid: 007f0100
+    uptime_seconds: "3919218"
+    manufacturer: Dell Inc.
+    physicalprocessorcount: "2"
+    ipaddress_em1: 202.109.223.189
+    processor1: Intel(R) Xeon(R) CPU           E5630  @ 2.53GHz
+    processor14: Intel(R) Xeon(R) CPU           E5630  @ 2.53GHz
+    kernelmajversion: "2.6"
+    serialnumber: 5FW2Y2X
+    processor9: Intel(R) Xeon(R) CPU           E5630  @ 2.53GHz
+    netmask: 255.255.255.224
+    ipaddress: 202.109.223.189
+    virtual: physical
+    processorcount: "16"
+    kernelversion: 2.6.32
+    processor11: Intel(R) Xeon(R) CPU           E5630  @ 2.53GHz
+    processor6: Intel(R) Xeon(R) CPU           E5630  @ 2.53GHz
+    macaddress_em3: 84:2B:2B:2B:14:83
+    kernel: Linux
+    ps: ps -ef
+    processor3: Intel(R) Xeon(R) CPU           E5630  @ 2.53GHz
+    facterversion: 1.6.0
+    uptime_days: "45"
+    is_virtual: "false"
+    puppetversion: 2.6.11
+    macaddress: 84:2B:2B:2B:14:7F
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAIbteYxwpumk69fyGCxssJ93zOwzEjGkptB9amofiA6oW1/AXbDP7skoG/mFC+2zEwdfbRkrZ7Au2gDHvWkxW50aFCCFkjKhsZexDciBVwoER8lEMpYamr1Zq5eYHswsF6LtwXb+dgLm2anPjdWqG2/6HxIj78Hos7q22IdlaulhAAAAFQCSgPTcaGiedzRUPJolZf5SalBE/QAAAIB/Ako01hH8mtvAE+ItQp0MAoMIhMf2rzro7tbJvUvEfqh9lb76itMf75DSMe8oihq9XAfj4f77K3+oExDMnTeXTDL4ndraGu1bDE7lFxwN+xvs7K4evdogjew/1KPOn5Nuw2Ux4MMPA0Q6mT4YbbSEqJQYItKr7gZVZ4uirTa/mQAAAIBYC6256+BMEyDZpUU2M+mFaYHVFn944YT0ZegZK6eN4MEqjCS2urWDo0NMHcmrsVCaKgfrRiEGpu4LWlfAWV4Oc+6Fcnuv5gFjl/05+Oin/vDB25wYbcOuO2E6PujaKcDjATqHqIQBIMuy7eihGSIQdShwMk5oxv2pb3KTPBZ94Q==
+    swapsize: 5.86 GB
+    processor0: Intel(R) Xeon(R) CPU           E5630  @ 2.53GHz
+    processor13: Intel(R) Xeon(R) CPU           E5630  @ 2.53GHz
+    environment: production
+    id: root

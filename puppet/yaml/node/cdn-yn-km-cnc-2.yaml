@@ -1,0 +1,71 @@
+--- !ruby/object:Puppet::Node
+  classes: []
+  environment: &id001 production
+  expiration: 2013-11-18 18:53:43.031124 +08:00
+  name: cdn-yn-km-cnc-2
+  parameters: 
+    macaddress_eth0: 34:40:B5:A4:7B:AA
+    macaddress_eth1: 34:40:B5:A4:7B:AB
+    hardwareisa: x86_64
+    netmask_lo: 255.0.0.0
+    id: root
+    kernelmajversion: "2.6"
+    environment: *id001
+    ipaddress_bond0: 14.204.33.2
+    architecture: x86_64
+    swapfree: 5.68 GB
+    physicalprocessorcount: "1"
+    uptime: 12 days
+    network_lo: 127.0.0.0
+    operatingsystemrelease: "6.3"
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
+    is_virtual: "false"
+    sshdsakey: AAAAB3NzaC1kc3MAAACBAOHCbjq/xjTa1gU0XdU7Ok8xk49D/5pylGoA76Cw8LlwQDZmjHKZkjWvQN7km6N+NalgVTfmpWlIPcFHJWH0/3AdQExfvNyafgS7tibmXjaOI7u7Q3zfUvcX89o1mLlTPpiIll5owfr2NFDjLDRfJJxqPb6nAjsflAUcYqEHMDA1AAAAFQDwPq2p5IvNd/TsIdjw/gjeKL+xOQAAAIEA2PqJ440s2yUyOD6pnC9ua3EbZnWbrve7Dgn19BARvnhc+Mq0ZUjVbKgNVfMzOoHJeWiRFhJiAOnfw8unsOhpOE+jYwcX98DYjrSVl+h/ds9261nDPvBDlI3aSJgEcEIQzzSUjD1ScHBx1CuEsdYlINO0RjZjd17vAXBuhU38N2oAAACBAJQdeTLMeuUCnomkPI3zpAq018LUZ/O4GFa13HDOxbma1CVmRKrFPsk6Y1Y1NOtFJ0jrtmFi0FIJ1EdHW8HfBjhhvnxadsuR8LvyYKTmAJ75iHUPhUMXW0B4llP5K88k3IL/BgnyHq3YvQgDVwekVzzLHTcWnNcZKPPCHKKwu22M
+    puppetversion: 2.6.11
+    !ruby/sym _timestamp: 2013-11-18 18:23:42.957200 +08:00
+    clientcert: cdn-yn-km-cnc-2
+    macaddress: 34:40:B5:A4:7B:AA
+    network_bond0: 14.204.33.0
+    ipaddress: 14.204.33.2
+    kernelrelease: 2.6.32-902.279.9.1.letv.el6.x86_64
+    operatingsystem: CentOS
+    selinux: "false"
+    ps: ps -ef
+    hostname: CDN-YN-KM-CNC-2
+    timezone: CST
+    macaddress_bond0: 34:40:B5:A4:7B:AA
+    facterversion: 1.6.0
+    uptime_days: "12"
+    kernelversion: 2.6.32
+    memorysize: 23.46 GB
+    clientversion: 2.6.11
+    kernel: Linux
+    netmask: 255.255.255.224
+    macaddress_usb0: 36:40:B5:A4:7B:AE
+    processorcount: "8"
+    virtual: physical
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEAxy8EZWMh+Bb8X76B5CrAl7vRYww/FO06Wr6L39/6NwzBwY/ys1uUOjJ40Uv5Pidys6jQxaYBQBBa1kZ7fLChD6bh6kZyi0f9L47PYO5gPR+96rYVAE+0o7cCEPFYeZBBuU2CzXvjEY5K+ZTlwCrIVibuPR9IJj5SB5Te6DJnOje+/jS3NeNl7UZGNR4zz+1mTHztKLzYp0wvsalcayqeWf+biMi4Niot/KnabSdHMER2RzIivo09DYYWdn7X8Wiv4z3KtpMvS8ZFTHNzElMR1YN51vNTIFuZ6r99Cpg/MfqSUX6d9bim3cmS3b8KpwLrKEVEDX2TZLmqRv34G5P2NQ==
+    processor3: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor7: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor2: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor6: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor1: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor5: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor0: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    processor4: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz
+    rubyversion: 1.8.7
+    ipaddress_lo: 127.0.0.1
+    uptime_hours: "288"
+    manufacturer: IBM
+    type: Rack Mount Chassis
+    hardwaremodel: x86_64
+    uptime_seconds: "1038685"
+    memoryfree: 20.36 GB
+    netmask_bond0: 255.255.255.224
+    productname: "System x3630 M3 -[7377I4O]-"
+    swapsize: 5.86 GB
+    interfaces: "bond0,eth0,eth1,lo,usb0"
+    serialnumber: 06FZXK4
+    uniqueid: 007f0100
+  time: 2013-11-18 18:23:43.016652 +08:00

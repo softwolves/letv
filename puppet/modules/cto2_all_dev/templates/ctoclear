@@ -1,0 +1,6 @@
+#!/bin/bash
+
+iptables -t nat -D OUTPUT -p tcp -j CTO > /dev/null 2>&1
+iptables -t nat -D PREROUTING -p tcp -j CTO > /dev/null 2>&1
+iptables -t nat -F CTO > /dev/null 2>&1
+iptables -t nat -X CTO > /dev/null 2>&1

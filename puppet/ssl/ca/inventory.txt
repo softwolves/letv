@@ -1,0 +1,4 @@
+# Inventory of signed certificates
+# SERIAL NOT_BEFORE NOT_AFTER SUBJECT
+0x0001 2017-06-27T04:01:42GMT 2022-06-27T04:01:42GMT /CN=Puppet CA: puppet.oss.letv.com
+0x0002 2017-06-27T04:01:43GMT 2022-06-27T04:01:43GMT /CN=puppet.oss.letv.com

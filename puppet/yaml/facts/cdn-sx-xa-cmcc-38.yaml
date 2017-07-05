@@ -1,0 +1,84 @@
+--- !ruby/object:Puppet::Node::Facts
+  expiration: 2013-11-18 18:35:25.096529 +08:00
+  name: cdn-sx-xa-cmcc-38
+  values: 
+    processor23: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    processor8: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    type: Desktop
+    sshrsakey: AAAAB3NzaC1yc2EAAAABIwAAAQEAoPaDVDTUlXCOWNcrbg9b398mvlTZlZkvLg2Sll6ndc+B7iICS+xEVf/i1vnkn+DL7vFB+IngrGr4cxhpzE/4o/i60FnxzU2l19NawAyAIiIrf5dA7VQAXOUr37y4OujcA8zylYln/E+n8QX6wggpPCZaiHLgYXwqt379NELBcyfuLOuLI4ImLuwDQit3pw9X02ONaUHIstiz2kuhBmQsVECk3GVJfIxPzJSbgp9EhAO0z77FoiOBEHObIi7orceIE1g2eBntExwnTuKkWdMC5eePG36L1Vqr0bQB1P9s+whI7MkzSgR5kK9tohel/3b16pEnyGe2IVKCTaO6X4/IwQ==
+    clientversion: 2.6.11
+    processor10: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    !ruby/sym _timestamp: 2013-11-18 18:20:25.301097 +08:00
+    processor5: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    processor20: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    processor18: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    ipaddress_eth2: 120.192.249.38
+    memoryfree: 22.95 GB
+    hostname: CDN-SX-XA-CMCC-38
+    path: /usr/local/jdk1.6.0_33/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
+    swapfree: 5.86 GB
+    processor2: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    operatingsystem: CentOS
+    processor15: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    macaddress_eth2: 00:25:90:D4:88:06
+    memorysize: 23.43 GB
+    interfaces: "eth0,eth1,eth2,eth3,lo"
+    timezone: CST
+    hardwareisa: x86_64
+    productname: X9DRL-3F/iF
+    selinux: "false"
+    processor12: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    operatingsystemrelease: "6.3"
+    uptime_hours: "0"
+    hardwaremodel: x86_64
+    processor22: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    processor7: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    network_eth2: 120.192.249.0
+    clientcert: cdn-sx-xa-cmcc-38
+    ipaddress_lo: 127.0.0.1
+    rubyversion: 1.8.7
+    network_lo: 127.0.0.0
+    netmask_lo: 255.0.0.0
+    uptime: 0:35 hours
+    rubysitedir: /usr/lib/ruby/site_ruby/1.8
+    processor4: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    kernelrelease: 2.6.32-902.279.9.1.letv.el6.x86_64
+    processor17: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    architecture: x86_64
+    uniqueid: 007f0100
+    uptime_seconds: "2143"
+    manufacturer: Supermicro
+    physicalprocessorcount: "2"
+    macaddress_eth1: 00:1B:21:69:D6:3D
+    processor1: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    processor14: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    kernelmajversion: "2.6"
+    serialnumber: "0123456789"
+    processor9: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    netmask: 255.255.255.0
+    ipaddress: 120.192.249.38
+    kernelversion: 2.6.32
+    virtual: physical
+    processorcount: "24"
+    processor11: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    processor21: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    processor6: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    processor19: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    kernel: Linux
+    ps: ps -ef
+    netmask_eth2: 255.255.255.0
+    processor3: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    uptime_days: "0"
+    facterversion: 1.6.0
+    is_virtual: "false"
+    puppetversion: 2.6.11
+    processor16: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    macaddress_eth3: 00:25:90:D4:88:07
+    macaddress: 00:1B:21:69:D6:3C
+    sshdsakey: AAAAB3NzaC1kc3MAAACBANcTs3+sPBgYJqbh/5XvOv4lAKA35xuE8pRcwhunR+ZgpFa9MqnSLiX1QNOX71Di/fKMMsaIcM6kNAWwFj0yRq0Ks4wh1WyC9Rg+/FbJkjt6ZMKkDzpSch39WVovtLOiXm0J4ofDlTNLMHFdKGKmZ4+x0K53D6kIh3BpyLa7PyVNAAAAFQCJRwIp+9Ixu6Qr738GfWnqIbkYgQAAAIAQAHgkMrfQIVBvpO1P2JhaxGppaXlo0Ls8fO+06Hh38Vy5UhtOnFJitIFutPqsqat/RdLG8n3AT9vmHeUVSpLdJZ+X4LOWXCJ+hT3gV1a7OqW3DT2FmW+5TzoDTtrEt66szi56TTXZrO2Ld8V9zUQ+cX4Dqt4uAcGKRmxdaoJ/awAAAIAkOh0Bsh5dZO6qUb5L+DApNR/t32jpFX4mb5TsQe/KMjHYvyoo+lb0unOoA5+4dNtdtxH7GKOe5Y8AoFk1QLi1lJWi9IDdQ30/8YgLPQCsVKzRCC3eLbKYYA7s+F37SefFYByPN0sWSNIIRF8E9ru+o+GlQ7U1xetbV7UkUuFgOA==
+    processor13: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    swapsize: 5.86 GB
+    processor0: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+    environment: production
+    macaddress_eth0: 00:1B:21:69:D6:3C
+    id: root
