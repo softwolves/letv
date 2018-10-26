@@ -1,3 +1,0 @@
-# hosts.allow   Letv Center control.
-# chmod 644
-sshd:192.168.115:allow

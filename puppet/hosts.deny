@@ -1,3 +1,0 @@
-# hosts.allow   Letv Center control.
-# chmod 644
-sshd:all:deny

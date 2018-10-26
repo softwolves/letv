@@ -1,9 +1,0 @@
-# hosts.allow   Letv Center control.
-# chmod 644
-#sshd:all:deny
-snmpd:all:deny
-sshd:ALL:spawn (echo "security notice from host `/bin/hostname`" ;\
-             echo；/usr/sbin/safe_finger @%h) | \
-             /bin/mail -s "%d-%h security" root & \
-             :twist (/bin/echo -e "\nl401\nWARNING connectiong not allowed.\n\n")
-

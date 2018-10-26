@@ -1,9 +1,0 @@
-[master]    
-fileserverconfig = /etc/puppet/fileserver.conf    
-reports = log, foreman    
-servertype=mongrel    
-ssl_client_header = HTTP_X_SSL_SUBJECT    
-vardir = /var/puppet/
-ca = true
-#    autosign = /etc/puppet/autosign.conf
-    autosign = true
